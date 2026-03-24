@@ -196,17 +196,17 @@ fact([connection,X,Z],chk1,_) \ fact([connection,X,Y],add,U1), fact([connection,
 	X \== Y |
 	fact([connection,X,Y],chk1,U1), 
 	fact([connection,Y,Z],chk1,U2),	
-	applied_rules(1,bwd2).
+	applied_rules(1,bwd).
 fact([connection,X,Z],chk1,_), fact([connection,X,Y],O1,_) \ fact([connection,Y,Z],add,U2) <=>
 	member(O1, [chk1, prv]),
 	X \== Y |
 	fact([connection,Y,Z],chk1,U2),	
-	applied_rules(1,bwd2).	
+	applied_rules(1,bwd).	
 fact([connection,X,Z],chk1,_), fact([connection,Y,Z],O2,_) \ fact([connection,X,Y],add,U1)<=>
 	member(O2, [chk1, prv]),
 	X \== Y |
 	fact([connection,X,Y],chk1,U1),	
-	applied_rules(1,bwd2).	
+	applied_rules(1,bwd).	
 
 	
 % turn facts without proof into del-facts
