@@ -10,7 +10,6 @@ connections among ways of OSM map data based on GPS tracks
 	available_input/1, extract_input/2,
 	update/2, stream_end/0,
 	fact/3, finish_update/0,
-	check_done/0, no_del/0,
 	num_updates/1,
 	clean/0, applied_rules/2, print/0.
 
