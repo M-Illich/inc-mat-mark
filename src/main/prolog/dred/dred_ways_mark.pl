@@ -3,6 +3,8 @@ Delete/Rederive
 with marking 
 (focus on negative marks)
 
+instead of 'apply', read stream when new rule applied
+
 connections among ways of OSM map data based on GPS tracks
 */
 
@@ -12,8 +14,6 @@ connections among ways of OSM map data based on GPS tracks
 	available_input/1, extract_input/2,
 	update/3, stream_end/0,
 	fact/4, finish_update/0,
-	check_done/0, no_del/0,
-	apply/0, 
 	num_updates/1, current_update/1,
 	marked_facts/2, marked_facts/3, pending_fact/3,
 	clean/0, applied_rules/2, print/0.
@@ -30,7 +30,6 @@ init(Port) <=>
 		(	stream(Stream),
 			num_updates(0),
 			current_update(1),
-			apply,
 			read_stream(infinite),
 			% indicate end of procesing
 			writeln(Stream,"end"),
@@ -40,27 +39,6 @@ init(Port) <=>
 		close(Stream)
 	).		
 
-
-% -- statistical information --
-% count number of rule applications for each phase
-applied_rules(N,P), applied_rules(M,P) <=>
-	K is N + M,
-	applied_rules(K,P).
-	
-% distinguish between explicit and implicit facts	
-	% explicit
-marked_facts(N,add,[nextInWay|_]) <=> marked_facts(N,ex).	
-	% implicit
-marked_facts(N,add,[connection|_]) <=> marked_facts(N,im).
-
-% count number of marked facts
-marked_facts(N,O), marked_facts(M,O) <=>
-	K is N + M,
-	marked_facts(K,O).	
-	
-% print out collected statistics
-print, applied_rules(N,P) ==> writeln(applied_rules(N,P)).
-print, marked_facts(N,O) ==> writeln(marked_facts(N,O)).
 
 
 % -- remove constraints for simpler output --
@@ -111,12 +89,9 @@ num_updates(N) \ extract_input(X,Y) <=>
 	update(add,A,N).	
 		
 	
-% if next update already available, we stop looking for it
-current_update(U), num_updates(N), apply \ apply <=> 
-	U < N, N \== 1 |
-	true.
-% else we check stream for update without waiting	
-apply \ apply <=> 
+% check if next update available after deriving a fact
+applied_rules(1,O), num_updates(U), current_update(U) ==> 
+	O \== del |
 	read_stream(0.0).		
 
 
@@ -177,20 +152,18 @@ phase(1) <=> phase(2).
 
 
 % -- re-add deleted facts that still have some alternative derivation --
-apply, phase(2), 
+phase(2), 
 fact([nextInWay,X1,Y1,Z1],add,M1,U), fact([nextInWay,X2,Y2,Z2],add,M2,_) 
 \ fact([connection,Z1,Z2],del,_,_) <=> 
 	Z1 \== Z2,
 	(X1 == X2 ; X1 == Y2 ; Y1 == X2 ; Y1 == Y2) |
-	apply,
 	get_mark([M1,M2],M),
 	fact([connection,Z1,Z2],add,M,U),
 	applied_rules(1,red).
-apply, phase(2), 
+phase(2), 
 fact([connection,X,Y],add,M1,U), fact([connection,Y,Z],add,M2,_) 
 \ fact([connection,X,Z],del,_,_) <=> 
 	X \== Y |
-	apply,
 	get_mark([M1,M2],M),
 	fact([connection,X,Z],add,M,U),
 	applied_rules(1,red).	
@@ -207,28 +180,26 @@ phase(3) <=> true.
 % -- insertions --
 
 % finish processing when every new fact has been inserted
-current_update(U) \ update(add,[],U) <=> apply, phase(5), finish_update.
+current_update(U) \ update(add,[],U) <=> phase(5), finish_update.
 % insert every new fact
 current_update(U) \ update(add,[F|Fs],U) <=>
 	fact(F,add,_,U),
 	update(add,Fs,U).
 	
 % -- compute new derivable facts	--
-phase(5), apply, current_update(U), 
+phase(5), current_update(U), 
 fact([nextInWay,X1,Y1,Z1],add,M1,U1), fact([nextInWay,X2,Y2,Z2],add,M2,U2)  ==> 
 	Z1 \== Z2,
 	member(U,[U1,U2]),
 	(X1 == X2 ; X1 == Y2 ; Y1 == X2 ; Y1 == Y2) |
-	apply,
 	get_mark([M1,M2],M),
 	fact([connection,Z1,Z2],add,M,U),
 	applied_rules(1,ins).
 	
-phase(5), apply, current_update(U), 
+phase(5), current_update(U), 
 fact([connection,X,Y],add,M1,U1), fact([connection,Y,Z],add,M2,U2) ==> 
 	X \== Y,
 	member(U,[U1,U2]) |	
-	apply,
 	get_mark([M1,M2],M),
 	fact([connection,X,Z],add,M,U),
 	applied_rules(1,ins).
@@ -253,6 +224,31 @@ finish_update, phase(5), current_update(U) <=>
 	V is U + 1,
 	read_stream(infinite),
 	current_update(V).
+
+
+
+% -- statistical information --
+% count number of rule applications for each phase
+applied_rules(N,P), applied_rules(M,P) <=>
+	K is N + M,
+	applied_rules(K,P).
+	
+% distinguish between explicit and implicit facts	
+	% explicit
+marked_facts(N,add,[nextInWay|_]) <=> marked_facts(N,ex).	
+	% implicit
+marked_facts(N,add,[connection|_]) <=> marked_facts(N,im).
+
+% count number of marked facts
+marked_facts(N,O), marked_facts(M,O) <=>
+	K is N + M,
+	marked_facts(K,O).	
+	
+% print out collected statistics
+print, applied_rules(N,P) ==> writeln(applied_rules(N,P)).
+print, marked_facts(N,O) ==> writeln(marked_facts(N,O)).
+
+
 
 % -----------------------------
 % assign second variable to 1 iff first one is 1
