@@ -10,7 +10,7 @@ The general idea of the evaluated approach is that we mark facts that are delete
 
 # General Information:
 - Algorithms are implemented in Constraint Handling Rules (CHR) based on SWI-Prolog ([link](https://www.swi-prolog.org/pldoc/man?section=chr))
-- For a given set of Datalog rules, we consider four CHR programs: DRed with(out) Marking and B/F with(out) Marking
-- At the moment, Datalog rules have to be manually transformed into suitable CHR rules for each program
+- For a given set of Datalog rules, we consider five CHR programs: DRed with(out) Marking, B/F with(out) Marking, and non-incremental materialization
+- At the moment, Datalog rules have to be manually transformed into suitable CHR programs
 - Java code is used to conduct the evaluation (based on `src/main/java/eval/Evaluation`) by providing an update stream over a local port, calling the tested algorithm, and reading the produced answer stream
 - During the execution of a CHR program, we measure the needed CPU time, the number of applied rules for each algorithm phase, and the number of marked facts (if available)
