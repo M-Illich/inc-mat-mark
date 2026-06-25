@@ -1,0 +1,43 @@
+package data;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.junit.Test;
+
+public class AtomTest {
+	
+	@Test
+	public void testConstructor() {
+		Atom bracket = new Atom("[p, X, 2]");
+		Atom atom = new Atom("p(X, 2)");
+		Atom atomBracket = new Atom("q[?x, Y, z]");
+		
+
+
+		assertEquals("p", bracket.predicate);
+		assertEquals("X", bracket.arguments.get(0));
+		assertEquals("2", bracket.arguments.get(1));
+		assertEquals(2, bracket.arguments.size());
+
+		assertEquals("p", atom.predicate);
+		assertEquals("X", atom.arguments.get(0));
+		assertEquals("2", atom.arguments.get(1));
+		assertEquals(2, atom.arguments.size());
+		
+		assertEquals(bracket, atom);
+		
+		assertEquals("q", atomBracket.predicate);
+		assertEquals("Xx", atomBracket.arguments.get(0));
+		assertEquals("Y", atomBracket.arguments.get(1));
+		assertEquals("z", atomBracket.arguments.get(2));
+		assertEquals(3, atomBracket.arguments.size());
+		
+		Set<Atom> set = new HashSet<>(Set.of(atom));
+		assertTrue(set.contains(bracket));
+	}
+
+}

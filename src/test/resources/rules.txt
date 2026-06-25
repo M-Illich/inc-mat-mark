@@ -1,0 +1,10 @@
+@test
+#rules
+
+h(?x,?y) :- b(?x,?y).
+
+% comment
+
+p[X,Y] :-
+	q[X],
+	r[Y] .
