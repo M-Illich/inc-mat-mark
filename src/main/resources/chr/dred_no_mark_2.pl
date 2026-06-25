@@ -11,4 +11,6 @@ finish_update \ applied_rules(N,P), applied_rules_list(P,L) <=>
 	applied_rules_list(P,K).
 	
 % -- move on to next update --
-finish_update, phase(5) <=> read_stream(infinite).
+finish_update, phase(5) <=> 
+	applied_rules_init,
+	read_stream(infinite).
