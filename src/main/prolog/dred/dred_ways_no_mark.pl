@@ -10,8 +10,10 @@ connections among ways of OSM map data based on GPS tracks
 	available_input/1, extract_input/2,
 	update/2, stream_end/0,
 	fact/3, finish_update/0,
-	num_updates/1,
-	clean/0, applied_rules/2, print/0.
+	num_updates/1, 
+	applied_rules/2, 	applied_rules_list/2, 
+	applied_rules_init, applied_rules_list_init,
+	clean/0, print/0.
 
 %:- chr_option(debug, off).
 :- chr_option(optimize, off).
@@ -24,6 +26,8 @@ init(Port) <=>
 		tcp_connect(Port, Stream, []),		
 		(	stream(Stream),
 			num_updates(0),
+			applied_rules_init,
+			applied_rules_list_init,
 			read_stream(infinite),
 			% indicate end of procesing
 			writeln(Stream,"end"),
@@ -41,7 +45,19 @@ applied_rules(N,P), applied_rules(M,P) <=>
 	applied_rules(K,P).
 	
 % print out collected statistics
-print, applied_rules(N,P) ==> writeln(applied_rules(N,P)).
+print, applied_rules_list(P,L) ==> writeln(applied_rules(P,L)).
+
+% initialie lists to collect number of applied rules for each update
+applied_rules_list_init <=>
+	applied_rules_list(del,[]),
+	applied_rules_list(red,[]),
+	applied_rules_list(ins,[]).
+	
+% introduce counter for each type of rules
+applied_rules_init <=>
+	applied_rules(0,del),
+	applied_rules(0,red),
+	applied_rules(0,ins).		
 
 
 % -- remove constraints for simpler output --
@@ -175,6 +191,11 @@ fact([connection,X,Y],add,U1), fact([connection,Y,Z],add,U2) ==>
 finish_update, stream(S), num_updates(N) ==> writeln(S,materialization(N)). 	
 finish_update, stream(S), fact(F,add,_) ==> writeln(S,F).	
 finish_update, stream(S) ==> writeln(S,""), flush_output(S).
+
+% collect numbers of applied rules
+finish_update \ applied_rules(N,P), applied_rules_list(P,L) <=>
+	append(L,[N],K),
+	applied_rules_list(P,K).
 
 % -- move on to next update --
 finish_update, phase(5) <=> read_stream(infinite).
