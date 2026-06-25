@@ -165,21 +165,23 @@ current_update(U) \ update(del,[F|Fs],U) <=>
 	fact(F,del,_,U),
 	update(del,Fs,U).
 
-% store del-facts of next update	 for marking
-update(del,[F|Fs],U) <=>
-	pending_fact(F,del,U),
-	update(del,Fs,U).
+% store facts of next update for marking
+update(O,[F|Fs],U) <=>
+	pending_fact(F,O,U),
+	update(O,Fs,U).
 
 	
 	
 %-----------------
 % no duplicates
 % save mark if duplicate is marked
-fact(F,O,M1,_) \ fact(F,O,M2,_) <=> check_neg_mark([M2],M1).
+fact(F,add,M1,_) \ fact(F,add,M2,_) <=> check_neg_mark([M2],M1).
+fact([P|L],del,M1,_) \ fact([P|L],del,M2,_) <=> check_pos_mark([(P,del,M2)],M1).
 
-% mark facts that are deleted by next update
-fact(F,_,M,_) \ pending_fact(F,del,_) <=>
-	var(M) |
+% mark facts that are changed by next update
+fact(F,O1,M,_) \ pending_fact(F,O2,_) <=>
+	var(M),
+	O1 \== O2 |
 	M = 1.
 	
 
@@ -230,23 +232,27 @@ fact([connection,X,Y],add,M1,U), fact([connection,Y,Z],add,M2,_)
 phase(2) <=> phase(3).
 
 
-% -- remove facts that cannot be rederived --
+% -- keep marked del-facts for next update --
+phase(3), num_updates(N) \ fact(F,del,1,_) <=> 
+	pending_fact(F,add,N),
+	marked_facts(1,del,F).
+
+% -- remove (unmarked) facts that cannot be rederived --
 phase(3) \ fact(_,del,_,_) <=> true.
-phase(3) <=> true.
+
+% note: update-constraint ensures that we first process update before moving to insertion phase
+phase(3), update(add,[],_) <=> phase(4).
 
 
 %-------------------------------------------------
 % -- insertions --
 
-% finish processing when every new fact has been inserted
-current_update(U) \ update(add,[],U) <=> phase(4), finish_update.
 % insert every new fact
-current_update(U) \ update(add,[F|Fs],U) <=>
-	fact(F,add,_,U),
-	update(add,Fs,U).
+phase(4), current_update(U) \ pending_fact(F,add,U) <=> fact(F,add,_,U).
+phase(4) <=> phase(5), finish_update.
 	
 % -- compute new derivable facts	--
-phase(4), current_update(U), 
+phase(5), current_update(U), 
 fact([nextInWay,X1,Y1,Z1],add,M1,U1), fact([nextInWay,X2,Y2,Z2],add,M2,U2)  ==> 
 	Z1 \== Z2,
 	member(U,[U1,U2]),
@@ -255,7 +261,7 @@ fact([nextInWay,X1,Y1,Z1],add,M1,U1), fact([nextInWay,X2,Y2,Z2],add,M2,U2)  ==>
 	fact([connection,Z1,Z2],add,M,U),
 	applied_rules(1,ins).
 	
-phase(4), current_update(U), 
+phase(5), current_update(U), 
 fact([connection,X,Y],add,M1,U1), fact([connection,Y,Z],add,M2,U2) ==> 
 	X \== Y,
 	member(U,[U1,U2]) |	
@@ -287,7 +293,7 @@ count_marked_facts \ marked_facts(N,P), marked_facts_list(P,L) <=>
 count_marked_facts <=> true.
 
 % start next update's processing
-finish_update, phase(4), current_update(U) <=> 
+finish_update, phase(5), current_update(U) <=> 
 	count_marked_facts,
 	applied_rules_init,
 	marked_facts_init,

@@ -23,7 +23,7 @@ public class PrologTest {
 
 		testProlog(dir + "dred/dred_ways_no_mark_new.pl", dir + "dred/dred_ways_mark_new.pl",
 				dir + "materialize_ways.pl", "src/main/resources/updates/ways/updates_track1"); // "src/test/resources/updates_ways";
-																								// //
+																								
 //		System.out.println("");
 //		System.out.println("--------");
 //		System.out.println("");

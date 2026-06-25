@@ -158,22 +158,24 @@ current_update(U) \ update(del,[F|Fs],U) <=>
 	fact(F,del,_,U),
 	update(del,Fs,U).
 
-% store del-facts of next update	 for marking
-update(del,[F|Fs],U) <=>
-	pending_fact(F,del,U),
-	update(del,Fs,U).
+% store facts of next update for marking
+update(O,[F|Fs],U) <=>
+	pending_fact(F,O,U),
+	update(O,Fs,U).
 
 	
 %-----------------
 % no duplicates
 % save mark if duplicate is marked
-fact(F,O,M1,_) \ fact(F,O,M2,_) <=> check_neg_mark([M2],M1).
+fact(F,add,M1,_) \ fact(F,add,M2,_) <=> check_neg_mark([M2],M1).
+fact([P|L],del,M1,_) \ fact([P|L],del,M2,_) <=> check_pos_mark([(P,del,M2)],M1).
 
-% mark facts that are deleted by next update
-fact(F,_,M,_) \ pending_fact(F,del,_) <=>
-	var(M) |
+% mark facts that are changed by next update
+fact(F,O1,M,_) \ pending_fact(F,O2,_) <=>
+	var(M),
+	O1 \== O2 |
 	M = 1.
-	
+		
 
 %-------------------------------------------------
 % -- deletions --

@@ -124,6 +124,7 @@ phase(1) <=> phase(2).
 % -- re-add deleted facts that still have some alternative derivation --
 phase(2), fact([e, X, Y],add,_) \ fact([p, X, Y],del,U) <=> true | fact([p, X, Y],add,U), applied_rules(1,red).
 phase(2), fact([e, X, Y],add,_), fact([p, Y, Z],add,_) \ fact([p, X, Z],del,U) <=> true | fact([p, X, Z],add,U), applied_rules(1,red).
+
 phase(2) <=> phase(3).
 
 
@@ -136,15 +137,15 @@ phase(3) <=> true.
 % -- insertions --
 
 % finish processing when every new fact has been inserted
-update(add,[]) <=> phase(4), finish_update.
+update(add,[]) <=> phase(5), finish_update.
 % insert every new fact
 num_updates(U) \ update(add,[F|Fs]) <=>
 	fact(F,add,U),
 	update(add,Fs).
 	
 % -- compute new derivable facts	--
-phase(4), fact([e, X, Y],add,U1) ==> member(U,[U1]) | fact([p, X, Y],add,U), applied_rules(1,ins).
-phase(4), fact([e, X, Y],add,U1), fact([p, Y, Z],add,U2) ==> member(U,[U1,U2]) | fact([p, X, Z],add,U), applied_rules(1,ins).
+phase(5), fact([e, X, Y],add,U1) ==> member(U,[U1]) | fact([p, X, Y],add,U), applied_rules(1,ins).
+phase(5), fact([e, X, Y],add,U1), fact([p, Y, Z],add,U2) ==> member(U,[U1,U2]) | fact([p, X, Z],add,U), applied_rules(1,ins).
 
 %----------------
 % -- write materialization to stream --
@@ -158,4 +159,4 @@ finish_update \ applied_rules(N,P), applied_rules_list(P,L) <=>
 	applied_rules_list(P,K).
 	
 % -- move on to next update --
-finish_update, phase(4) <=> read_stream(infinite).
+finish_update, phase(5) <=> read_stream(infinite).

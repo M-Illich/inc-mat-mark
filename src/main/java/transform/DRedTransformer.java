@@ -20,13 +20,6 @@ import data.Rule;
  */
 public class DRedTransformer {
 
-	public DRedTransformer() {
-		// TODO
-	}
-
-	/**
-	 * TODO mark deleted explicit facts for positive marking
-	 */
 
 	/**
 	 * 
@@ -71,8 +64,6 @@ public class DRedTransformer {
 				writer.write(createRederiveRule(rule, mark));
 				writer.newLine();
 			}
-			writer.write("phase(2) <=> phase(3).");
-			writer.newLine();
 			writer.write("");
 			writer.newLine();
 
@@ -239,7 +230,7 @@ public class DRedTransformer {
 	public String createInsertRule(Rule rule, boolean withMark) {
 
 		// initialize transformed rule
-		String chr = "phase(4)";
+		String chr = "phase(5)";
 		// add transformed body atoms
 		for (int i = 0; i < rule.body.size(); i++) {
 			chr += ", fact(" + rule.body.get(i).toString() + ",add" + (withMark ? ",M" + (i + 1) : "") + ",U" + (i + 1)

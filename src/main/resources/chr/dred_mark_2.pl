@@ -21,7 +21,7 @@ count_marked_facts \ marked_facts(N,P), marked_facts_list(P,L) <=>
 count_marked_facts <=> true.
 
 % start next update's processing
-finish_update, phase(4), current_update(U) <=> 
+finish_update, phase(5), current_update(U) <=> 
 	count_marked_facts,
 	applied_rules_init,
 	marked_facts_init,

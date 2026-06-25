@@ -130,6 +130,7 @@ phase(2), fact([nextInWay, X, _, Z1],add,_), fact([nextInWay, _, X, Z2],add,_) \
 phase(2), fact([nextInWay, _, X, Z1],add,_), fact([nextInWay, X, _, Z2],add,_) \ fact([connection, Z1, Z2],del,U) <=> Z1 \== Z2, true | fact([connection, Z1, Z2],add,U), applied_rules(1,red).
 phase(2), fact([nextInWay, _, X, Z1],add,_), fact([nextInWay, _, X, Z2],add,_) \ fact([connection, Z1, Z2],del,U) <=> Z1 \== Z2, true | fact([connection, Z1, Z2],add,U), applied_rules(1,red).
 phase(2), fact([connection, X, Y],add,_), fact([connection, Y, Z],add,_) \ fact([connection, X, Z],del,U) <=> X \== Y, true | fact([connection, X, Z],add,U), applied_rules(1,red).
+
 phase(2) <=> phase(3).
 
 
@@ -142,18 +143,18 @@ phase(3) <=> true.
 % -- insertions --
 
 % finish processing when every new fact has been inserted
-update(add,[]) <=> phase(4), finish_update.
+update(add,[]) <=> phase(5), finish_update.
 % insert every new fact
 num_updates(U) \ update(add,[F|Fs]) <=>
 	fact(F,add,U),
 	update(add,Fs).
 	
 % -- compute new derivable facts	--
-phase(4), fact([nextInWay, X, _, Z1],add,U1), fact([nextInWay, X, _, Z2],add,U2) ==> Z1 \== Z2, member(U,[U1,U2]) | fact([connection, Z1, Z2],add,U), applied_rules(1,ins).
-phase(4), fact([nextInWay, X, _, Z1],add,U1), fact([nextInWay, _, X, Z2],add,U2) ==> Z1 \== Z2, member(U,[U1,U2]) | fact([connection, Z1, Z2],add,U), applied_rules(1,ins).
-phase(4), fact([nextInWay, _, X, Z1],add,U1), fact([nextInWay, X, _, Z2],add,U2) ==> Z1 \== Z2, member(U,[U1,U2]) | fact([connection, Z1, Z2],add,U), applied_rules(1,ins).
-phase(4), fact([nextInWay, _, X, Z1],add,U1), fact([nextInWay, _, X, Z2],add,U2) ==> Z1 \== Z2, member(U,[U1,U2]) | fact([connection, Z1, Z2],add,U), applied_rules(1,ins).
-phase(4), fact([connection, X, Y],add,U1), fact([connection, Y, Z],add,U2) ==> X \== Y, member(U,[U1,U2]) | fact([connection, X, Z],add,U), applied_rules(1,ins).
+phase(5), fact([nextInWay, X, _, Z1],add,U1), fact([nextInWay, X, _, Z2],add,U2) ==> Z1 \== Z2, member(U,[U1,U2]) | fact([connection, Z1, Z2],add,U), applied_rules(1,ins).
+phase(5), fact([nextInWay, X, _, Z1],add,U1), fact([nextInWay, _, X, Z2],add,U2) ==> Z1 \== Z2, member(U,[U1,U2]) | fact([connection, Z1, Z2],add,U), applied_rules(1,ins).
+phase(5), fact([nextInWay, _, X, Z1],add,U1), fact([nextInWay, X, _, Z2],add,U2) ==> Z1 \== Z2, member(U,[U1,U2]) | fact([connection, Z1, Z2],add,U), applied_rules(1,ins).
+phase(5), fact([nextInWay, _, X, Z1],add,U1), fact([nextInWay, _, X, Z2],add,U2) ==> Z1 \== Z2, member(U,[U1,U2]) | fact([connection, Z1, Z2],add,U), applied_rules(1,ins).
+phase(5), fact([connection, X, Y],add,U1), fact([connection, Y, Z],add,U2) ==> X \== Y, member(U,[U1,U2]) | fact([connection, X, Z],add,U), applied_rules(1,ins).
 
 %----------------
 % -- write materialization to stream --
@@ -167,4 +168,4 @@ finish_update \ applied_rules(N,P), applied_rules_list(P,L) <=>
 	applied_rules_list(P,K).
 	
 % -- move on to next update --
-finish_update, phase(4) <=> read_stream(infinite).
+finish_update, phase(5) <=> read_stream(infinite).
