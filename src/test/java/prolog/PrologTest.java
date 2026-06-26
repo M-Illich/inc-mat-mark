@@ -18,17 +18,18 @@ public class PrologTest {
 	@Test
 	public void testProlog() {
 
-		System.out.println("Ways test - DRed");
 		String dir = "src/main/prolog/";
+		String updates = "src/test/resources/updates_ways"; // "src/main/resources/updates/ways/updates_track2";
+		String simple = dir + "materialize_ways.pl";
 
-		testProlog(dir + "dred/dred_ways_no_mark_new.pl", dir + "dred/dred_ways_mark_new.pl",
-				dir + "materialize_ways.pl", "src/main/resources/updates/ways/updates_track1"); // "src/test/resources/updates_ways";
-																								
-//		System.out.println("");
-//		System.out.println("--------");
-//		System.out.println("");
-//		System.out.println("Ways test - B/F");			//TODO
-//		testProlog(dir + "bf/bf_ways_no_mark.pl", dir + "bf/bf_ways_alt.pl", dir + "materialize_ways.pl");
+		System.out.println("Ways test - DRed");
+		testProlog(dir + "dred/dred_ways_no_mark.pl", dir + "dred/dred_ways_mark.pl", simple, updates);
+
+		System.out.println("");
+		System.out.println("--------");
+		System.out.println("");
+		System.out.println("Ways test - B/F");
+		testProlog(dir + "bf/bf_ways_no_mark.pl", dir + "bf/bf_ways_mark.pl", simple, updates);
 
 	}
 
@@ -39,13 +40,13 @@ public class PrologTest {
 		// compute materialization without marking
 		UpdateStreamRun usrNoMark = new RealUpdateStreamRun(file1, updateFolder);
 		System.out.println(file1);
-		usrNoMark.execute(false, false, true);
+		usrNoMark.execute(false, false, false);
 		System.out.println("");
 
 		// compute materialization with marking approach
 		UpdateStreamRun usrMark = new RealUpdateStreamRun(file2, updateFolder);
 		System.out.println(file2);
-		usrMark.execute(false, false, true);
+		usrMark.execute(false, false, false);
 		System.out.println("");
 
 		// compute materialization with marking approach

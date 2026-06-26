@@ -13,8 +13,13 @@ connections among ways of OSM map data based on GPS tracks
 	fact/4, finish_update/0,
 	check_done/0, no_del/0,
 	num_updates/1, current_update/1,
-	marked_facts/2, marked_facts/3, pending_fact/3,
-	clean/0, applied_rules/2, print/0.
+	pending_fact/3,
+	marked_facts/2, marked_facts/3, applied_rules/2, 
+	applied_rules_list/2, marked_facts_list/2,
+	applied_rules_init, marked_facts_init,
+	applied_rules_list_init, marked_facts_list_init,
+	count_marked_facts, check_neg_mark/2,
+	clean/0, print/0.
 
 %:- chr_option(debug, off).
 :- chr_option(optimize, off).
@@ -28,6 +33,10 @@ init(Port) <=>
 		(	stream(Stream),
 			num_updates(0),
 			current_update(1),
+			applied_rules_init,
+			applied_rules_list_init,
+			marked_facts_init,
+			marked_facts_list_init,
 			read_stream(infinite),
 			% indicate end of procesing
 			writeln(Stream,"end"),
@@ -38,13 +47,33 @@ init(Port) <=>
 	).		
 
 
-
 % -- remove constraints for simpler output --
 clean \ fact(_,_,_,_) <=> true.	
 clean \ stream(_) <=> true.
 clean \ phase(_) <=> true.	
 		
 
+% -- initialie lists to collect number of applied rules and marked facts for each update --
+applied_rules_list_init <=>
+	applied_rules_list(del,[]),
+	applied_rules_list(bwd,[]),
+	applied_rules_list(fwd,[]),
+	applied_rules_list(ins,[]).
+marked_facts_list_init <=>
+	marked_facts_list(negIm,[]),
+	marked_facts_list(negEx,[]).
+	
+% introduce counter for each type of rules
+applied_rules_init <=>
+	applied_rules(0,del),
+	applied_rules(0,bwd),
+	applied_rules(0,fwd),
+	applied_rules(0,ins).	
+% introduce counter for each type of marked facts
+marked_facts_init <=>
+	marked_facts(0,negIm),		
+	marked_facts(0,negEx).		
+		
 
 %-------------------------------------------------	
 % -- read input from stream --
@@ -116,7 +145,7 @@ update(del,[F|Fs],U) <=>
 %-----------------
 % no duplicates
 % save mark if duplicate is marked
-fact(F,O,M1,_) \ fact(F,O,M2,_) <=> get_mark([M2],M1).
+fact(F,O,M1,_) \ fact(F,O,M2,_) <=> M1 = M2.
 
 % mark facts that are deleted by next update
 fact(F,_,M,_) \ pending_fact(F,del,_) <=>
@@ -167,37 +196,39 @@ fact(F,prv,_,_) \ fact(F,_,_,_) <=> true.
 	
 
 % - forward -
-fact([nextInWay,X1,Y1,Z1],prv,M1,_), fact([nextInWay,X2,Y2,Z2],prv,M2,_) 
-\ fact([connection,Z1,Z2],chk1,_,U) <=> 
+fact([P|L],chk1,M,U) <=> explicit(P) | fact([P|L],prv,M,U).
+
+fact([nextInWay,X1,Y1,Z1],prv,M1,_), fact([nextInWay,X2,Y2,Z2],prv,M2,_) \ fact([connection,Z1,Z2],O,_,U) <=> 
+	member(O,[chk,chk1]),
 	Z1 \== Z2,
 	(X1 == X2 ; X1 == Y2 ; Y1 == X2 ; Y1 == Y2) |
-	get_mark([M1,M2],M),
+	check_neg_mark([(nextInWay,M1),(nextInWay,M2)],M),
 	fact([connection,Z1,Z2],prv,M,U),
 	applied_rules(1,fwd).
 		
-fact([connection,X,Y],prv,_,_), fact([connection,Y,Z],prv,_,_)  
-\ fact([connection,X,Z],chk1,_,U) <=>
+fact([connection,X,Y],prv,_,_), fact([connection,Y,Z],prv,_,_) \ fact([connection,X,Z],O,_,U) <=>
+	member(O,[chk,chk1]),
 	X \== Y |
 	fact([connection,X,Z],prv,_,U),
 	applied_rules(1,fwd).		
 	
-fact([nextInWay,X1,Y1,Z1],prv,M1,_), fact([nextInWay,X2,Y2,Z2],prv,M2,_) 
-\ fact([connection,Z1,Z2],chk,_,U) <=> 
-	Z1 \== Z2,
-	(X1 == X2 ; X1 == Y2 ; Y1 == X2 ; Y1 == Y2)	|
-	get_mark([M1,M2],M),
-	fact([connection,Z1,Z2],prv,M,U),
-	applied_rules(1,fwd).
-		
-fact([connection,X,Y],prv,_,_), fact([connection,Y,Z],prv,_,_)  
-\ fact([connection,X,Z],chk,_,U) <=>
-	X \== Y |
-	fact([connection,X,Z],prv,_,U),
-	applied_rules(1,fwd).		
-
-
 	
 % - backward -
+fact([connection,Z1,Z2],chk1,_,_), fact([nextInWay,X1,Y1,Z1],O1,M1,U1), fact([nextInWay,X2,Y2,Z2],O2,M2,U2) ==>
+	\+member(del,[O1,O2]),
+	(X1 == X2 ; X1 == Y2 ; Y1 == X2 ; Y1 == Y2) |
+	fact([nextInWay,X1,Y1,Z1],chk1,M1,U1), 
+	fact([nextInWay,X2,Y2,Z2],chk1,M2,U2),	
+	applied_rules(1,bwd).
+
+fact([connection,X,Z],chk1,_,_), fact([connection,X,Y],O1,M1,U1), fact([connection,Y,Z],O2,M2,U2) ==>
+	\+member(del,[O1,O2]),
+	X \== Y |
+	fact([connection,X,Y],chk1,M1,U1), 
+	fact([connection,Y,Z],chk1,M2,U2),	
+	applied_rules(1,bwd).
+
+/*
 fact([connection,Z1,Z2],chk1,_,_) \
 fact([nextInWay,X1,Y1,Z1],add,M1,U1), fact([nextInWay,X2,Y2,Z2],add,M2,U2) <=>
 	Z1 \== Z2,
@@ -236,7 +267,7 @@ fact([connection,X,Z],chk1,_,_), fact([connection,Y,Z],O2,_,_)
 	X \== Y |
 	fact([connection,X,Y],chk1,M1,U1),	
 	applied_rules(1,bwd).	
-
+*/
 	
 % turn facts without proof into del-facts
 check_done \ fact(F,chk1,M,U) <=> fact(F,del,M,U).
@@ -270,7 +301,7 @@ fact([nextInWay,X1,Y1,Z1],add,M1,U1), fact([nextInWay,X2,Y2,Z2],add,M2,U2) ==>
 	member(U,[U1,U2]),
 	Z1 \== Z2,
 	(X1 == X2 ; X1 == Y2 ; Y1 == X2 ; Y1 == Y2) |
-	get_mark([M1,M2],M),
+	check_neg_mark([(nextInWay,M1),(nextInWay,M2)],M),
 	fact([connection,Z1,Z2],add,M,U),
 	applied_rules(1,ins).
 phase(5), current_update(U), 
@@ -291,50 +322,62 @@ finish_update, stream(S) ==> writeln(S,""), flush_output(S).
 
 % -- move on to next update --
 % transform marked explicit add-facts into del-facts
-finish_update \ fact([nextInWay,X,Y,Z],add,1,U) <=> 
-	fact([nextInWay,X,Y,Z],del,_,U),
-	marked_facts(1,add,[nextInWay,X,Y,Z]).
+finish_update \ fact([P|L],add,1,U) <=> 
+	explicit(P) |
+	fact([P|L],del,_,U),
+	marked_facts(1,add,[P|L]).
 % ... and marked implicit add-facts into facts that need to be checked
-finish_update \ fact([connection,X,Y],add,1,U) <=> 
-	fact([connection,X,Y],chk,_,U),
-	marked_facts(1,add,[connection,X,Y]).
+finish_update \ fact(F,add,1,U) <=> 
+	fact(F,chk,_,U),
+	marked_facts(1,add,F).
+
+% collect numbers of applied rules and marked facts 
+finish_update \ applied_rules(N,P), applied_rules_list(P,L) <=>
+	append(L,[N],K),
+	applied_rules_list(P,K).
+count_marked_facts \ marked_facts(N,P), marked_facts_list(P,L) <=>
+	append(L,[N],K),
+	marked_facts_list(P,K).	
+count_marked_facts <=> true.
 
 % start next update's processing
 finish_update, phase(5), current_update(U) <=> 
+	count_marked_facts,
+	applied_rules_init,
+	marked_facts_init,
 	V is U + 1,
 	read_stream(infinite),
 	current_update(V).
 	
-	
+
+% -----------------------------
+% check if at least one element is marked, indicated by 1
+check_neg_mark([],_) <=> true.		
+check_neg_mark([(P,1)|_],M) <=> explicit(P) | M = 1.
+check_neg_mark([_|L],M) <=> check_neg_mark(L,M).	
+
 
 % -- statistical information --
 % count number of rule applications for each phase
 applied_rules(N,P), applied_rules(M,P) <=>
 	K is N + M,
 	applied_rules(K,P).
-	
+		
 % distinguish between explicit and implicit facts	
 	% explicit
-marked_facts(N,add,[nextInWay|_]) <=> marked_facts(N,ex).	
+marked_facts(N,add,[P|_]) <=> explicit(P) | marked_facts(N,negEx).	
 	% implicit
-marked_facts(N,add,[connection|_]) <=> marked_facts(N,im).
+marked_facts(N,add,_) <=> marked_facts(N,negIm).
 
 % count number of marked facts
 marked_facts(N,O), marked_facts(M,O) <=>
 	K is N + M,
-	marked_facts(K,O).	
-	
+	marked_facts(K,O).		
+
 % print out collected statistics
-print, applied_rules(N,P) ==> writeln(applied_rules(N,P)).
-print, marked_facts(N,O) ==> writeln(marked_facts(N,O)).
+print, applied_rules_list(P,L) ==> writeln(applied_rules(P,L)).
+print, marked_facts_list(O,L) ==> writeln(marked_facts(O,L)).
 
-	
 
-% -----------------------------
-% assign second variable to 1 iff first one is 1
-get_mark([X],_) :- var(X).
-get_mark([1],1).	
-get_mark([X,Y],_) :- var(X), var(Y).
-get_mark([X,Y],Z) :- var(X), Y == 1, Z = 1.
-get_mark([X,Y],Z) :- var(Y), X == 1, Z = 1.
-get_mark([1,1],1).	
+% -- predicates for explicit facts --
+explicit(nextInWay).

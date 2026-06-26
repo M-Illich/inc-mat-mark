@@ -50,30 +50,6 @@ clean \ stream(_) <=> true.
 clean \ phase(_) <=> true.	
 
 
-% -- statistical information --
-% count number of rule applications for each phase
-applied_rules(N,P), applied_rules(M,P) <=>
-	K is N + M,
-	applied_rules(K,P).
-
-% distinguish between explicit and implicit facts			
-	% explicit
-marked_facts(N,add,[P|_]) <=> explicit(P) | marked_facts(N,negEx).	
-marked_facts(N,del,[P|_]) <=> explicit(P) | marked_facts(N,posEx).	
-	% implicit
-marked_facts(N,add,_) <=> marked_facts(N,negIm).
-marked_facts(N,del,_) <=> marked_facts(N,posIm).
-
-% count number of marked facts
-marked_facts(N,O), marked_facts(M,O) <=>
-	K is N + M,
-	marked_facts(K,O).		
-
-% print out collected statistics
-print, applied_rules_list(P,L) ==> writeln(applied_rules(P,L)).
-print, marked_facts_list(O,L) ==> writeln(marked_facts(O,L)).
-
-
 % -- initialize lists to collect number of applied rules and marked facts for each update --
 applied_rules_list_init <=>
 	applied_rules_list(del,[]),
