@@ -25,34 +25,70 @@ public class Atom {
 	 * 
 	 */
 	public Atom(String string) {
-		// transform variables that start with ? into ones that start with uppercase
-		// letter
-		string = string.replace("?", "X");
 
-		// [predicate, arg1, arg2, ...]
-		if (string.startsWith("[") && string.endsWith("]")) {
-			String[] parts = string.substring(1, string.length() - 1).split(",");
-			for (int i = 0; i < parts.length; i++) {
-				parts[i] = parts[i].trim();
-			}
-			this.predicate = parts[0];
-			this.arguments = Arrays.asList(parts).subList(1, parts.length);
+		// transform atom into form [p, a1, a2, ...]
+		if (!string.startsWith("[")) {
+
+			// transform p(...) into p[...]
+			string = string.replace("(", "[");
+			string = string.replace(")", "]");
+
+			String predicate = string.substring(0, string.indexOf("["));
+			string = "[" + predicate + ", " + string.substring(string.indexOf("[") + 1);
 		}
 
-		else {
-			// transform p[...] into p(...)
-			string = string.replace("[", "(");
-			string = string.replace("]", ")");
+		String[] parts = string.substring(1, string.length() - 1).split(",");
+		for (int i = 0; i < parts.length; i++) {
+			String s = parts[i].trim();
 
-			// predicate(arg1, arg2, ...)
-			this.predicate = string.substring(0, string.indexOf("("));
-			String[] parts = string.substring(string.indexOf("(") + 1, string.length() - 1).split(",");
-			for (int i = 0; i < parts.length; i++) {
-				parts[i] = parts[i].trim();
+			// surround elements that contain colon with '...' for compatibility with
+			// SWI-Prolog
+			if (s.contains(":")) {
+				s = "'" + s + "'";
 			}
-			this.arguments = Arrays.asList(parts).subList(0, parts.length);
+			// ensure correct format of variables for SWI-Prolog
+			s = ensureUppercaseVariables(s);
+
+			parts[i] = s;
+
+		}
+		this.predicate = parts[0];
+		this.arguments = Arrays.asList(parts).subList(1, parts.length);
+
+	}
+
+	/**
+	 * Transform variables that start with ? into ones that start with uppercase in
+	 * the given String, e.g., {@code p(?x)} turns into {@code p(X)}
+	 * 
+	 * @param atom {@code String} of an atom
+	 * @return {@code String}
+	 */
+	public String ensureUppercaseVariables(String atom) {
+
+		char[] chars = atom.toCharArray();
+		for (int i = 0; i < chars.length; i++) {
+			if (chars[i] == '?') {
+				i++;
+				chars[i] = (chars[i] + "").toUpperCase().charAt(0);
+			}
 		}
 
+		return String.valueOf(chars).replace("?", "");
+	}
+
+	/**
+	 * Check if String is a variable in the form of {@code ?x} or {@code X} (upper
+	 * case).
+	 * 
+	 * @param arg A {@code String}
+	 * @return {@code true} if argument is a variable, else {@code false}
+	 */
+	public boolean isVariable(String arg) {
+		if (arg.startsWith("?") || Character.isUpperCase(arg.charAt(0))) {
+			return true;
+		}
+		return false;
 	}
 
 	/**

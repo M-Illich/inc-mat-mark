@@ -10,7 +10,6 @@ import java.util.Set;
 import org.junit.Test;
 
 import data.Fact;
-import eval.RealUpdateStreamRun;
 import eval.UpdateStreamRun;
 
 public class PrologTest {
@@ -38,13 +37,13 @@ public class PrologTest {
 		int numberOfUpdates = new File(updateFolder).listFiles().length;
 
 		// compute materialization without marking
-		UpdateStreamRun usrNoMark = new RealUpdateStreamRun(file1, updateFolder);
+		UpdateStreamRun usrNoMark = new UpdateStreamRun(file1, updateFolder);
 		System.out.println(file1);
 		usrNoMark.execute(false, false, false);
 		System.out.println("");
 
 		// compute materialization with marking approach
-		UpdateStreamRun usrMark = new RealUpdateStreamRun(file2, updateFolder);
+		UpdateStreamRun usrMark = new UpdateStreamRun(file2, updateFolder);
 		System.out.println(file2);
 		usrMark.execute(false, false, false);
 		System.out.println("");

@@ -14,12 +14,12 @@ import org.junit.Test;
 import data.Fact;
 import data.Update;
 
-public class RealUpdateTest {
+public class UpdateRunTest {
 
 	String updateFolder = "src/test/resources/updates_ways";
 	File file0 = new File(updateFolder + "/01.pl");
 	File file1 = new File(updateFolder + "/02.pl");
-	RealUpdateStreamRun usr = new RealUpdateStreamRun("no_file", updateFolder);
+	UpdateStreamRun usr = new UpdateStreamRun("no_file", updateFolder);
 
 	// facts occurring in test files
 	Fact f1 = new Fact("nextInWay(1, 2, 1)");

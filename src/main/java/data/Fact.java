@@ -28,17 +28,4 @@ public class Fact extends Atom {
 		return true;
 	}
 
-	/**
-	 * Check if String is a variable in the form of {@code ?x} or {@code X} (upper case).
-	 * 
-	 * @param arg A {@code String}
-	 * @return {@code true} if argument is a variable, else {@code false}
-	 */
-	private boolean isVariable(String arg) {
-		if (arg.startsWith("?") || Character.isUpperCase(arg.charAt(0))) {
-			return true;
-		}
-		return false;
-	}
-
 }

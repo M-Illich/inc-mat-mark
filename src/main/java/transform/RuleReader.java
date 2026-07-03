@@ -33,7 +33,7 @@ public class RuleReader {
 			String rule = "";
 
 			while ((line = reader.readLine()) != null) {
-				if (!(line.startsWith("@") || line.startsWith("#") || line.startsWith("%"))) {
+				if (!(line.startsWith("@") || line.startsWith("#") || line.startsWith("%") || line.startsWith("PREFIX"))) {
 					// write whole rule into single String
 					rule += line;
 					// line contains end of rule

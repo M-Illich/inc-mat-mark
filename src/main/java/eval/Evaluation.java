@@ -99,7 +99,7 @@ public class Evaluation {
 			writer = new PrintWriter("results/results-" + approach + "-" + updatesName + ".csv", "UTF-8");
 
 			// create update stream
-			RealUpdateStreamRun usr = new RealUpdateStreamRun(file, updateFolder);
+			UpdateStreamRun usr = new UpdateStreamRun(file, updateFolder);
 
 			float avgStreamCpuTime = 0;
 			List<Long> avgUpdateCpuTimes = new LinkedList<>();
