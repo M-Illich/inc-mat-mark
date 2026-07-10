@@ -1,0 +1,50 @@
+PREFIX owl: http://www.w3.org/2002/07/owl#
+PREFIX rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+PREFIX rdfs: http://www.w3.org/2000/01/rdf-schema#
+PREFIX xsd: http://www.w3.org/2001/XMLSchema#
+PREFIX skos: http://www.w3.org/2004/02/skos/core#
+
+skos:Collection[?X] :- skos:OrderedCollection[?X] .
+% skos:broader[?X,?Y] :- skos:broadMatch[?X,?Y] .
+skos:mappingRelation[?X,?Y] :- skos:broadMatch[?X,?Y] .
+skos:narrowMatch[?X,?Y] :- skos:broadMatch[?Y,?X] .
+skos:broadMatch[?X,?Y] :- skos:narrowMatch[?Y,?X] .
+skos:broaderTransitive[?X,?Y] :- skos:broader[?X,?Y] .
+skos:narrower[?X,?Y] :- skos:broader[?Y,?X] .
+% skos:broader[?X,?Y] :- skos:narrower[?Y,?X] .
+skos:semanticRelation[?X,?Y] :- skos:broaderTransitive[?X,?Y] .
+skos:narrowerTransitive[?X,?Y] :- skos:broaderTransitive[?Y,?X] .
+skos:broaderTransitive[?X,?Y] :- skos:narrowerTransitive[?Y,?X] .
+skos:broaderTransitive[?X,?Z] :- skos:broaderTransitive[?X,?Y], skos:broaderTransitive[?Y,?Z] .
+skos:mappingRelation[?X,?Y] :- skos:closeMatch[?X,?Y] .
+skos:closeMatch[?X,?Y] :- skos:closeMatch[?Y,?X] .
+skos:closeMatch[?X,?Y] :- skos:exactMatch[?X,?Y] .
+skos:exactMatch[?X,?Y] :- skos:exactMatch[?Y,?X] .
+skos:exactMatch[?X,?Z] :- skos:exactMatch[?X,?Y], skos:exactMatch[?Y,?Z] .
+skos:topConceptOf[?X,?Y] :- skos:hasTopConcept[?Y,?X] .
+skos:hasTopConcept[?X,?Y] :- skos:topConceptOf[?Y,?X] .
+skos:ConceptScheme[?X] :- skos:hasTopConcept[?X,?Y] .
+skos:Concept[?Y] :- skos:hasTopConcept[?X,?Y] .
+skos:ConceptScheme[?Y] :- skos:inScheme[?X,?Y] .
+skos:semanticRelation[?X,?Y] :- skos:mappingRelation[?X,?Y] .
+skos:Collection[?X] :- skos:member[?X,?Y] .
+owl:sameAs[?Y,?Z] :- skos:memberList[?X,?Y], skos:memberList[?X,?Z] .
+skos:OrderedCollection[?X] :- skos:memberList[?X,?Y] .
+skos:mappingRelation[?X,?Y] :- skos:narrowMatch[?X,?Y] .
+skos:narrower[?X,?Y] :- skos:narrowMatch[?X,?Y] .
+skos:narrowerTransitive[?X,?Y] :- skos:narrower[?X,?Y] .
+skos:semanticRelation[?X,?Y] :- skos:narrowerTransitive[?X,?Y] .
+skos:narrowerTransitive[?X,?Z] :- skos:narrowerTransitive[?X,?Y], skos:narrowerTransitive[?Y,?Z] .
+skos:semanticRelation[?X,?Y] :- skos:related[?X,?Y] .
+skos:related[?X,?Y] :- skos:related[?Y,?X] .
+skos:mappingRelation[?X,?Y] :- skos:relatedMatch[?X,?Y] .
+skos:related[?X,?Y] :- skos:relatedMatch[?X,?Y] .
+skos:relatedMatch[?X,?Y] :- skos:relatedMatch[?Y,?X] .
+skos:Concept[?X] :- skos:semanticRelation[?X,?Y] .
+skos:Concept[?Y] :- skos:semanticRelation[?X,?Y] .
+skos:inScheme[?X,?Y] :- skos:topConceptOf[?X,?Y] .
+skos:Concept[?X] :- skos:topConceptOf[?X,?Y] .
+skos:ConceptScheme[?Y] :- skos:topConceptOf[?X,?Y] .
+
+
+

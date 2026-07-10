@@ -1,0 +1,367 @@
+% we changed rules so that hasParent is explicit
+
+p:hasFather[?X,?Y] :- p:hasParent[?X,?Y], p:maleInFamilinx[?Y] .
+p:hasMother[?X,?Y] :- p:hasParent[?X,?Y], p:femaleInFamilinx[?Y] .
+p:hasChild[?X,?Y] :- p:hasSon[?X,?Y] .
+p:isAuntInLawOf[?X0,?X3] :- p:isWifeOf[?X0,?X1], p:brotherOf[?X1,?X2], p:isParentOf[?X2,?X3] .
+p:hasChild[?X,?Y] :- p:hasDaughter[?X,?Y] .
+p:hasGreatUncle[?X,?Y] :- p:isGreatUncleOf[?Y,?X] .
+p:isGreatUncleOf[?X,?Y] :- p:hasGreatUncle[?Y,?X] .
+p:isSecondCousinOf[?X0,?X3] :- p:hasGrandParent[?X0,?X1], p:isSiblingOf[?X1,?X2], p:grandParentOf[?X2,?X3] .
+p:hasGrandParent[?X,?Y] :- p:hasGrandmother[?X,?Y] .
+p:knownAs[?X,?Y] :- p:alsoKnownAs[?X,?Y] .
+p:directSiblingOf[?X,?Y] :- p:directSiblingOf[?Y,?X] .
+owl:sameAs[?Y1,?Y2] :- p:hasBirthYear[?X,?Y1], p:hasBirthYear[?X,?Y2] .
+p:Man[?X1] :- p:hasHusband[?X,?X1] .
+p:isRelationOf[?X,?Y] :- p:isInLawOf[?X,?Y] .
+p:hasChild[?X,?Y] :- p:isChildOf[?Y,?X] .
+p:isChildOf[?X,?Y] :- p:hasChild[?Y,?X] .
+p:isParentInLawOf[?X,?Y] :- p:hasParentInLaw[?Y,?X] .
+p:hasParentInLaw[?X,?Y] :- p:isParentInLawOf[?Y,?X] .
+p:isForefatherOf[?X,?Z] :- p:isForefatherOf[?X,?Y], p:isForefatherOf[?Y,?Z] .
+p:Woman[?X1] :- p:hasAunt[?X,?X1] .
+p:isBloodRelationOf[?X,?Y] :- p:hasGreatUncle[?X,?Y] .
+p:Person[?X] :- p:hasDeathYear[?X,?X1] .
+p:hasParentInLaw[?X,?Y] :- p:hasMotherInLaw[?X,?Y] .
+p:isInLawOf[?X,?Y] :- p:isAuntInLawOf[?X,?Y] .
+p:isBloodRelationOf[?X,?Y] :- p:isFirstCousinOf[?X,?Y] .
+p:hasFatherInLaw[?X0,?X2] :- p:isSpouseOf[?X0,?X1], p:hasFather[?X1,?X2] .
+p:hasAncestor[?X,?Y] :- p:hasForeFather[?X,?Y] .
+owl:sameAs[?Y1,?Y2] :- p:hasMother[?X,?Y1], p:hasMother[?X,?Y2] .
+p:hasAuntInLaw[?X,?Y] :- p:hasAuntInLaw[?Y,?X] .
+p:hasAuntInLaw[?X,?Y] :- p:hasAuntInLaw[?Y,?X] .
+p:Person[?X] :- p:Grandparent[?X] .
+p:Grandparent[?X] :- p:Person[?X], p:isParentOf[?X,?X1], p:Person[?X1], p:isParentOf[?X1,?X2], p:Person[?X2] .
+p:Woman[?X] :- p:isAuntInLawOf[?X,?X1] .
+% p:hasParent[?X,?Y] :- p:hasMother[?X,?Y] .
+p:isBloodRelationOf[?X,?Y] :- p:hasUncle[?X,?Y] .
+p:Person[?X] :- p:alsoKnownAs[?X,?X1] .
+p:Person[?X] :- p:GreatUncle[?X] .
+p:GreatUncle[?X] :- p:Person[?X], p:brotherOf[?X,?X1], p:Person[?X1], p:isParentOf[?X1,?X2], p:Person[?X2], p:isParentOf[?X2,?X3], p:Person[?X3] .
+p:Person[?X1] :- p:hasParent[?X,?X1] .
+p:Person[?X1] :- p:isFirstCousinOnceRemovedOf[?X,?X1] .
+p:Woman[?X] :- p:isAuntOf[?X,?X1] .
+p:Person[?X] :- p:hasSon[?X,?X1] .
+p:DomainEntity[?X] :- p:Marriage[?X] .
+p:isBloodRelationOf[?X,?Y] :- p:hasAunt[?X,?Y] .
+p:isUncleOf[?X0,?X2] :- p:brotherOf[?X0,?X1], p:isParentOf[?X1,?X2] .
+p:Marriage[?X1] :- p:isPartnerIn[?X,?X1] .
+p:hasGreatGrandmother[?X,?Y] :- p:isGreatGrandmotherOf[?Y,?X] .
+p:isGreatGrandmotherOf[?X,?Y] :- p:hasGreatGrandmother[?Y,?X] .
+p:Person[?X] :- p:hasBirthYear[?X,?X1] .
+p:Woman[?X] :- p:MotherInLaw[?X] .
+p:MotherInLaw[?X] :- p:Woman[?X], p:isMotherOf[?X,?X1], p:Person[?X1], p:isSpouseOf[?X1,?X2], p:Person[?X2] .
+p:isMalePartnerIn[?X,?Y] :- p:hasMalePartner[?Y,?X] .
+p:hasMalePartner[?X,?Y] :- p:isMalePartnerIn[?Y,?X] .
+p:Man[?X] :- p:hasWife[?X,?X1] .
+p:isAncestorOf[?X,?Y] :- p:isForefatherOf[?X,?Y] .
+p:Person[?X] :- p:Grandfather[?X] .
+p:Grandfather[?X] :- p:Person[?X], p:isFatherOf[?X,?X1], p:Person[?X1], p:isParentOf[?X1,?X2], p:Person[?X2] .
+p:Sex[?X] :- p:Female[?X] .
+p:Person[?X1] :- p:hasAncestor[?X,?X1] .
+p:Person[?X] :- p:Uncle[?X] .
+p:Uncle[?X] :- p:Person[?X], p:brotherOf[?X,?X1], p:Person[?X1], p:isParentOf[?X1,?X2], p:Person[?X2] .
+p:Person[?X1] :- p:isNephewOf[?X,?X1] .
+p:isRelationOf[?X,?Z] :- p:isRelationOf[?X,?Y], p:isRelationOf[?Y,?Z] .
+p:Person[?X] :- p:hasGrandmother[?X,?X1] .
+p:Person[?X] :- p:isRelationOf[?X,?X1] .
+p:Woman[?X] :- p:isFemalePartnerIn[?X,?X1] .
+p:sisterOf[?X,?Y] :- p:hasSister[?Y,?X] .
+p:hasSister[?X,?Y] :- p:sisterOf[?Y,?X] .
+p:Person[?X] :- p:directSiblingOf[?X,?X1] .
+p:Person[?X1] :- p:isThirdCousinOf[?X,?X1] .
+p:Sex[?X1] :- p:hasGender[?X,?X1] .
+p:hasDaughter[?X,?Y] :- p:isDaughterOf[?Y,?X] .
+p:isDaughterOf[?X,?Y] :- p:hasDaughter[?Y,?X] .
+p:Man[?X1] :- p:hasGreatGrandfather[?X,?X1] .
+p:Person[?X1] :- p:isSiblingInLawOf[?X,?X1] .
+p:hasSon[?X,?Y] :- p:isSonOf[?Y,?X] .
+p:isSonOf[?X,?Y] :- p:hasSon[?Y,?X] .
+p:DomainEntity[?X] :- p:Sex[?X] .
+p:hasHusband[?X,?Y] :- p:isHusbandOf[?Y,?X] .
+p:isHusbandOf[?X,?Y] :- p:hasHusband[?Y,?X] .
+p:isInLawOf[?X,?Y] :- p:isUncleInLawOf[?X,?Y] .
+p:isParentInLawOf[?X0,?X2] :- p:isParentOf[?X0,?X1], p:isSpouseOf[?X1,?X2] .
+p:Man[?X] :- p:isBrotherInLawOf[?X,?X1] .
+p:isBrotherInLawOf[?X0,?X2] :- p:hasWife[?X0,?X1], p:hasBrother[?X1,?X2] .
+p:Person[?X] :- p:BloodRelation[?X] .
+p:BloodRelation[?X] :- p:Person[?X], p:isBloodRelationOf[?X,?X1], p:Person[?X1] .
+owl:Nothing[?X] :- p:Marriage[?X], p:Sex[?X] .
+p:Man[?X1] :- p:hasFatherInLaw[?X,?X1] .
+p:Person[?X] :- p:isSiblingOf[?X,?X1] .
+p:Man[?X1] :- p:hasForeFather[?X,?X1] .
+p:hasChild[?X,?Y] :- p:isParentOf[?X,?Y] .
+p:isParentOf[?X,?Y] :- p:hasChild[?X,?Y] .
+p:directSiblingOf[?X,?Y] :- p:brotherOf[?X,?Y] .
+p:Person[?X] :- p:hasGreatGrandParent[?X,?X1] .
+p:hasGrandParent[?X,?Y] :- p:hasGrandfather[?X,?Y] .
+% p:hasParent[?X,?Y] :- p:isDaughterOf[?X,?Y] .
+p:Man[?X1] :- p:hasUncle[?X,?X1] .
+p:hasForeMother[?X,?Y] :- p:hasMother[?X,?Y] .
+p:Person[?X1] :- p:hasGrandParent[?X,?X1] .
+p:hasGrandmother[?X0,?X2] :- p:hasParent[?X0,?X1], p:hasMother[?X1,?X2] .
+p:isSisterInLawOf[?X0,?X2] :- p:hasWife[?X0,?X1], p:hasBrother[?X1,?X2] .
+p:Person[?X1] :- p:isAuntInLawOf[?X,?X1] .
+p:Person[?X1] :- p:sisterOf[?X,?X1] .
+p:Woman[?X] :- p:Wife[?X] .
+p:Wife[?X] :- p:Woman[?X], p:isFemalePartnerIn[?X,?X1], p:Marriage[?X1], p:hasMalePartner[?X1,?X2], p:Man[?X2] .
+owl:sameAs[?Y1,?Y2] :- p:hasDeathYear[?X,?Y1], p:hasDeathYear[?X,?Y2] .
+p:isPartnerIn[?X,?Y] :- p:hasPartner[?Y,?X] .
+p:hasPartner[?X,?Y] :- p:isPartnerIn[?Y,?X] .
+p:directSiblingOf[?X,?Y] :- p:sisterOf[?X,?Y] .
+p:hasForeFather[?X,?Y] :- p:isForefatherOf[?Y,?X] .
+p:isForefatherOf[?X,?Y] :- p:hasForeFather[?Y,?X] .
+p:hasFather[?X,?Y] :- p:isFatherOf[?Y,?X] .
+p:isFatherOf[?X,?Y] :- p:hasFather[?Y,?X] .
+p:Person[?X] :- p:isSpouseOf[?X,?X1] .
+p:isUncleInLawOf[?X0,?X3] :- p:isHusbandOf[?X0,?X1], p:sisterOf[?X1,?X2], p:isParentOf[?X2,?X3] .
+p:Person[?X] :- p:hasForeMother[?X,?X1] .
+p:Person[?X] :- p:ThirdCousin[?X] .
+p:ThirdCousin[?X] :- p:Person[?X], p:hasParent[?X,?X1], p:hasParent[?X1,?X2], p:Person[?X2], p:hasParent[?X2,?X3], p:Person[?X3], p:isSiblingOf[?X3,?X4], p:Person[?X4], p:isParentOf[?X4,?X5], p:Person[?X5], p:isParentOf[?X5,?X6], p:Person[?X6], p:isParentOf[?X6,?X7], p:Person[?X7] .
+p:Person[?X] :- p:Woman[?X] .
+p:Woman[?X] :- p:Person[?X], p:hasGender[?X,?X1], p:Female[?X1] .
+p:isFirstCousinOf[?X0,?X3] :- p:hasParent[?X0,?X1], p:isSiblingOf[?X1,?X2], p:isParentOf[?X2,?X3] .
+p:hasAncestor[?X,?Y] :- p:hasForeMother[?X,?Y] .
+p:isSpouseOf[?X,?Y] :- p:isSpouseOf[?Y,?X] .
+p:isAuntOf[?X0,?X2] :- p:sisterOf[?X0,?X1], p:isParentOf[?X1,?X2] .
+p:Person[?X] :- p:isFirstCousinOf[?X,?X1] .
+p:hasAncestor[?X,?Y] :- p:hasGreatGrandParent[?X,?Y] .
+p:isSiblingInLawOf[?X,?Y] :- p:isSisterInLawOf[?X,?Y] .
+p:hasGreatAunt[?X,?Y] :- p:isGreatAuntOf[?Y,?X] .
+p:isGreatAuntOf[?X,?Y] :- p:hasGreatAunt[?Y,?X] .
+p:Person[?X] :- p:Spouse[?X] .
+p:Spouse[?X] :- p:Person[?X], p:isSpouseOf[?X,?X1], p:Person[?X1] .
+p:Marriage[?X1] :- p:isMalePartnerIn[?X,?X1] .
+p:Person[?X] :- p:hasMother[?X,?X1] .
+p:Person[?X1] :- p:isBrotherInLawOf[?X,?X1] .
+p:Woman[?X] :- p:Mother[?X] .
+p:Mother[?X] :- p:Woman[?X], p:isMotherOf[?X,?X1], p:Person[?X1] .
+p:Person[?X] :- p:hasDaughter[?X,?X1] .
+p:Person[?X1] :- p:isUncleOf[?X,?X1] .
+p:Person[?X] :- p:FirstCousin[?X] .
+p:FirstCousin[?X] :- p:Person[?X], p:hasParent[?X,?X1], p:Person[?X1], p:isSiblingOf[?X1,?X2], p:Person[?X2], p:isParentOf[?X2,?X3], p:Person[?X3] .
+p:Person[?X] :- p:isBloodRelationOf[?X,?X1] .
+p:hasMotherInLaw[?X,?Y] :- p:isMotherInLawOf[?Y,?X] .
+p:isMotherInLawOf[?X,?Y] :- p:hasMotherInLaw[?Y,?X] .
+p:Person[?X1] :- p:isGreatAuntOf[?X,?X1] .
+p:Person[?X] :- p:hasFamilyName[?X,?X1] .
+p:hasGrandfather[?X0,?X2] :- p:hasParent[?X0,?X1], p:hasFather[?X1,?X2] .
+p:Person[?X] :- p:Son[?X] .
+p:Son[?X] :- p:Person[?X], p:isSonOf[?X,?X1], p:Person[?X1] .
+p:isThirdCousinOf[?X0,?X3] :- p:hasGreatGrandParent[?X0,?X1], p:isSiblingOf[?X1,?X2], p:isGreatGrandParentOf[?X2,?X3] .
+p:hasGrandfather[?X,?Y] :- p:isGrandfatherOf[?Y,?X] .
+p:isGrandfatherOf[?X,?Y] :- p:hasGrandfather[?Y,?X] .
+p:isSpouseOf[?X,?Y] :- p:hasWife[?X,?Y] .
+p:Person[?X] :- p:Daughter[?X] .
+p:Daughter[?X] :- p:Person[?X], p:isDaughterOf[?X,?X1], p:Person[?X1] .
+p:hasParentInLaw[?X,?Y] :- p:hasFatherInLaw[?X,?Y] .
+p:Man[?X] :- p:MaleAncestor[?X] .
+p:MaleAncestor[?X] :- p:Man[?X], p:isAncestorOf[?X,?X1], p:Person[?X1] .
+p:hasFatherInLaw[?X,?Y] :- p:isFatherInLawOf[?Y,?X] .
+p:isFatherInLawOf[?X,?Y] :- p:hasFatherInLaw[?Y,?X] .
+p:Woman[?X1] :- p:hasDaughter[?X,?X1] .
+owl:sameAs[?Y1,?Y2] :- p:hasFather[?X,?Y1], p:hasFather[?X,?Y2] .
+p:Person[?X] :- p:hasForeFather[?X,?X1] .
+p:isInLawOf[?X,?Y] :- p:isSpouseOf[?X,?Y] .
+p:brotherOf[?X,?Y] :- p:hasBrother[?Y,?X] .
+p:hasBrother[?X,?Y] :- p:brotherOf[?Y,?X] .
+p:Woman[?X] :- p:sisterOf[?X,?X1] .
+p:Person[?X] :- p:Parent[?X] .
+p:Parent[?X] :- p:Person[?X], p:isParentOf[?X,?X1], p:Person[?X1] .
+p:Man[?X] :- p:isMalePartnerIn[?X,?X1] .
+p:Man[?X1] :- p:hasSon[?X,?X1] .
+p:Woman[?X] :- p:isGreatAuntOf[?X,?X1] .
+p:Man[?X] :- p:isNephewOf[?X,?X1] .
+p:isBloodRelationOf[?X,?Y] :- p:isFirstCousinOnceRemovedOf[?X,?Y] .
+p:Man[?X] :- p:Forefather[?X] .
+p:Forefather[?X] :- p:Man[?X], p:isForefatherOf[?X,?X1], p:Person[?X1] .
+p:Woman[?X1] :- p:hasForeMother[?X,?X1] .
+p:Woman[?X] :- p:isNieceOf[?X,?X1] .
+p:Person[?X1] :- p:isInLawOf[?X,?X1] .
+p:Person[?X] :- p:SecondCousin[?X] .
+p:SecondCousin[?X] :- p:Person[?X], p:hasParent[?X,?X1], p:Person[?X1], p:hasParent[?X1,?X2], p:Person[?X2], p:isSiblingOf[?X2,?X3], p:Person[?X3], p:isParentOf[?X3,?X4], p:Person[?X4], p:isParentOf[?X4,?X5], p:Person[?X5] .
+p:Person[?X1] :- p:hasChild[?X,?X1] .
+p:isRelationOf[?X,?Y] :- p:isRelationOf[?Y,?X] .
+p:isSecondCousinOf[?X,?Y] :- p:isSecondCousinOf[?Y,?X] .
+p:Person[?X1] :- p:isNieceOf[?X,?X1] .
+p:hasGrandmother[?X,?Y] :- p:isGrandmotherOf[?Y,?X] .
+p:isGrandmotherOf[?X,?Y] :- p:hasGrandmother[?Y,?X] .
+p:isInLawOf[?X,?Y] :- p:isSiblingInLawOf[?X,?Y] .
+p:Person[?X] :- p:Ancestor[?X] .
+p:Ancestor[?X] :- p:Person[?X], p:isAncestorOf[?X,?X1], p:Person[?X1] .
+p:Woman[?X1] :- p:hasGreatAunt[?X,?X1] .
+p:isSiblingOf[?X,?Y] :- p:isSiblingOf[?Y,?X] .
+p:isAncestorOf[?X,?Y] :- p:isForemotherOf[?X,?Y] .
+p:isForemotherOf[?X,?Z] :- p:isForemotherOf[?X,?Y], p:isForemotherOf[?Y,?Z] .
+p:hasForeFather[?X,?Z] :- p:hasForeFather[?X,?Y], p:hasForeFather[?Y,?Z] .
+p:isSpouseOf[?X,?Y] :- p:hasHusband[?X,?Y] .
+p:Person[?X1] :- p:isParentInLawOf[?X,?X1] .
+p:Person[?X] :- p:knownAs[?X,?X1] .
+p:Man[?X1] :- p:hasBrother[?X,?X1] .
+p:Person[?X1] :- p:isGreatUncleOf[?X,?X1] .
+p:Person[?X] :- p:hasFather[?X,?X1] .
+p:hasWife[?X0,?X2] :- p:isMalePartnerIn[?X0,?X1], p:hasFemalePartner[?X1,?X2] .
+% p:hasParent[?X,?Y] :- p:isSonOf[?X,?Y] .
+p:hasHusband[?X0,?X2] :- p:isFemalePartnerIn[?X0,?X1], p:hasMalePartner[?X1,?X2] .
+p:isSiblingOf[?X,?Y] :- p:directSiblingOf[?X,?Y] .
+p:Woman[?X1] :- p:hasMotherInLaw[?X,?X1] .
+p:isBloodRelationOf[?X,?Y] :- p:isSiblingOf[?X,?Y] .
+% p:hasParent[?X,?Y] :- p:isParentOf[?Y,?X] .
+p:isParentOf[?X,?Y] :- p:hasParent[?Y,?X] .
+p:Person[?X] :- p:ParentInLaw[?X] .
+p:ParentInLaw[?X] :- p:Person[?X], p:isParentOf[?X,?X1], p:Person[?X1], p:isSpouseOf[?X1,?X2], p:Person[?X2] .
+p:Person[?X1] :- p:brotherOf[?X,?X1] .
+p:Person[?X] :- p:formerlyKnownAs[?X,?X1] .
+p:hasAncestor[?X,?Y] :- p:hasParent[?X,?Y] .
+p:Person[?X] :- p:Cousin[?X] .
+p:Cousin[?X] :- p:Person[?X], p:hasAncestor[?X,?X1], p:Person[?X1], p:isSiblingOf[?X1,?X2], p:Person[?X2], p:isParentOf[?X2,?X3], p:Person[?X3] .
+p:Person[?X] :- p:GreatGrandparent[?X] .
+p:GreatGrandparent[?X] :- p:Person[?X], p:isParentOf[?X,?X1], p:Person[?X1], p:isParentOf[?X1,?X2], p:Person[?X2], p:isParentOf[?X2,?X3], p:Person[?X3] .
+p:Person[?X] :- p:hasParent[?X,?X1] .
+p:hasUncle[?X,?Y] :- p:isUncleOf[?Y,?X] .
+p:isUncleOf[?X,?Y] :- p:hasUncle[?Y,?X] .
+p:Woman[?X] :- p:hasHusband[?X,?X1] .
+p:Woman[?X1] :- p:hasWife[?X,?X1] .
+p:knownAs[?X,?Y] :- p:formerlyKnownAs[?X,?Y] .
+p:isFirstCousinOf[?X,?Y] :- p:isFirstCousinOf[?Y,?X] .
+p:Person[?X] :- p:isFirstCousinOnceRemovedOf[?X,?X1] .
+p:Man[?X1] :- p:hasGrandfather[?X,?X1] .
+p:hasForeMother[?X,?Z] :- p:hasForeMother[?X,?Y], p:hasForeMother[?Y,?Z] .
+p:hasAunt[?X,?Y] :- p:isAuntOf[?Y,?X] .
+p:isAuntOf[?X,?Y] :- p:hasAunt[?Y,?X] .
+p:Man[?X] :- p:isUncleOf[?X,?X1] .
+p:hasForeFather[?X,?Y] :- p:hasFather[?X,?Y] .
+p:DomainEntity[?X] :- p:Person[?X] .
+p:Person[?X] :- p:hasGreatUncle[?X,?X1] .
+p:Person[?X1] :- p:isUncleInLawOf[?X,?X1] .
+p:Woman[?X] :- p:FemaleDescendent[?X] .
+p:FemaleDescendent[?X] :- p:Woman[?X], p:hasAncestor[?X,?X1], p:Person[?X1] .
+p:Person[?X] :- p:hasGreatGrandmother[?X,?X1] .
+p:Person[?X] :- p:isPartnerIn[?X,?X1] .
+p:isUncleInLawOf[?X,?Y] :- p:hasUncleInLaw[?Y,?X] .
+p:hasUncleInLaw[?X,?Y] :- p:isUncleInLawOf[?Y,?X] .
+p:Woman[?X] :- p:FemaleAncestor[?X] .
+p:FemaleAncestor[?X] :- p:Woman[?X], p:isAncestorOf[?X,?X1], p:Person[?X1] .
+p:isBloodRelationOf[?X,?Y] :- p:isNieceOf[?X,?Y] .
+p:Marriage[?X1] :- p:isFemalePartnerIn[?X,?X1] .
+owl:sameAs[?Y1,?Y2] :- p:hasGender[?X,?Y1], p:hasGender[?X,?Y2] .
+p:Person[?X] :- p:hasBrother[?X,?X1] .
+p:hasAncestor[?X,?Z] :- p:hasAncestor[?X,?Y], p:hasAncestor[?Y,?Z] .
+% p:hasParent[?X,?Y] :- p:hasFather[?X,?Y] .
+p:Woman[?X] :- p:Foremother[?X] .
+p:Foremother[?X] :- p:Woman[?X], p:isForemotherOf[?X,?X1], p:Person[?X1] .
+p:isFirstCousinOnceRemovedOf[?X,?Y] :- p:isFirstCousinOnceRemovedOf[?Y,?X] .
+p:Person[?X1] :- p:directSiblingOf[?X,?X1] .
+p:isBloodRelationOf[?X,?Y] :- p:isBloodRelationOf[?Y,?X] .
+p:hasAncestor[?X,?Y] :- p:isAncestorOf[?Y,?X] .
+p:isAncestorOf[?X,?Y] :- p:hasAncestor[?Y,?X] .
+p:Person[?X] :- p:hasUncle[?X,?X1] .
+p:hasAncestor[?X,?Y] :- p:hasGrandParent[?X,?Y] .
+p:isGreatUncleOf[?X0,?X2] :- p:brotherOf[?X0,?X1], p:grandParentOf[?X1,?X2] .
+p:hasGreatGrandfather[?X0,?X2] :- p:hasParent[?X0,?X1], p:hasGrandfather[?X1,?X2] .
+p:Sex[?X] :- p:Male[?X] .
+p:isBloodRelationOf[?X,?Y] :- p:hasAncestor[?X,?Y] .
+p:Woman[?X1] :- p:hasMother[?X,?X1] .
+owl:Nothing[?X] :- p:Female[?X], p:Male[?X] .
+p:Person[?X] :- p:hasMotherInLaw[?X,?X1] .
+p:isBloodRelationOf[?X,?Y] :- p:hasGreatAunt[?X,?Y] .
+owl:Nothing[?X] :- p:Person[?X], p:Sex[?X] .
+p:Person[?X1] :- p:isRelationOf[?X,?X1] .
+p:Person[?X1] :- p:isSecondCousinOf[?X,?X1] .
+p:isSisterInLawOf[?X,?Y] :- p:hasBrotherInLaw[?Y,?X] .
+p:hasBrotherInLaw[?X,?Y] :- p:isSisterInLawOf[?Y,?X] .
+p:Person[?X1] :- p:isSiblingOf[?X,?X1] .
+p:isSiblingInLawOf[?X0,?X2] :- p:isSpouseOf[?X0,?X1], p:isSiblingOf[?X1,?X2] .
+p:Person[?X] :- p:Man[?X] .
+p:Man[?X] :- p:Person[?X], p:hasGender[?X,?X1], p:Male[?X1] .
+p:hasGreatGrandParent[?X,?Y] :- p:isGreatGrandParentOf[?Y,?X] .
+p:isGreatGrandParentOf[?X,?Y] :- p:hasGreatGrandParent[?Y,?X] .
+p:Person[?X] :- p:hasGreatAunt[?X,?X1] .
+p:Man[?X] :- p:isUncleInLawOf[?X,?X1] .
+p:Person[?X] :- p:isThirdCousinOf[?X,?X1] .
+p:Man[?X] :- p:Father[?X] .
+p:Father[?X] :- p:Man[?X], p:isFatherOf[?X,?X1], p:Person[?X1] .
+p:isBloodRelationOf[?X,?Y] :- p:isNephewOf[?X,?Y] .
+p:Person[?X] :- p:hasAunt[?X,?X1] .
+p:Person[?X] :- p:hasAncestor[?X,?X1] .
+p:Person[?X] :- p:isSiblingInLawOf[?X,?X1] .
+p:Marriage[?X] :- p:marriageYear[?X,?X1] .
+p:Man[?X] :- p:brotherOf[?X,?X1] .
+p:isFirstCousinOnceRemovedOf[?X0,?X2] :- p:isFirstCousinOf[?X0,?X1], p:isParentOf[?X1,?X2] .
+p:Man[?X] :- p:FatherInLaw[?X] .
+p:FatherInLaw[?X] :- p:Man[?X], p:isFatherOf[?X,?X1], p:Person[?X1], p:isSpouseOf[?X1,?X2], p:Person[?X2] .
+p:Person[?X1] :- p:hasGreatGrandParent[?X,?X1] .
+p:hasGreatGrandfather[?X,?Y] :- p:isGreatGrandfatherOf[?Y,?X] .
+p:isGreatGrandfatherOf[?X,?Y] :- p:hasGreatGrandfather[?Y,?X] .
+p:isBloodRelationOf[?X,?Y] :- p:isUncleOf[?X,?Y] .
+p:Person[?X1] :- p:isSpouseOf[?X,?X1] .
+p:Person[?X] :- p:isInLawOf[?X,?X1] .
+p:Man[?X1] :- p:hasGreatUncle[?X,?X1] .
+p:isBloodRelationOf[?X,?Z] :- p:isBloodRelationOf[?X,?Y], p:isBloodRelationOf[?Y,?Z] .
+p:Person[?X] :- p:GreatGrandfather[?X] .
+p:GreatGrandfather[?X] :- p:Person[?X], p:isFatherOf[?X,?X1], p:Person[?X1], p:isParentOf[?X1,?X2], p:Person[?X2], p:isParentOf[?X2,?X3], p:Person[?X3] .
+p:Person[?X1] :- p:isFirstCousinOf[?X,?X1] .
+p:isPartnerIn[?X,?Y] :- p:isMalePartnerIn[?X,?Y] .
+p:Person[?X] :- p:isSecondCousinOf[?X,?X1] .
+p:Person[?X] :- p:hasGrandParent[?X,?X1] .
+p:hasGreatGrandParent[?X,?Y] :- p:hasGreatGrandmother[?X,?Y] .
+p:isBrotherInLawOf[?X,?Y] :- p:hasBrotherInLaw[?Y,?X] .
+p:hasBrotherInLaw[?X,?Y] :- p:isBrotherInLawOf[?Y,?X] .
+p:Person[?X] :- p:Grandmother[?X] .
+p:Grandmother[?X] :- p:Person[?X], p:isMotherOf[?X,?X1], p:Person[?X1], p:isParentOf[?X1,?X2], p:Person[?X2] .
+p:hasMotherInLaw[?X0,?X2] :- p:isSpouseOf[?X0,?X1], p:hasMother[?X1,?X2] .
+p:Man[?X] :- p:Husband[?X] .
+p:Husband[?X] :- p:Man[?X], p:isMalePartnerIn[?X,?X1], p:Marriage[?X1], p:hasFemalePartner[?X1,?X2], p:Woman[?X2] .
+p:Woman[?X1] :- p:hasGrandmother[?X,?X1] .
+p:isBloodRelationOf[?X,?Y] :- p:isThirdCousinOf[?X,?Y] .
+p:Person[?X] :- p:hasGender[?X,?X1] .
+p:isFemalePartnerIn[?X,?Y] :- p:hasFemalePartner[?Y,?X] .
+p:hasFemalePartner[?X,?Y] :- p:isFemalePartnerIn[?Y,?X] .
+p:Person[?X] :- p:InLaw[?X] .
+p:InLaw[?X] :- p:Person[?X], p:isInLawOf[?X,?X1], p:Person[?X1] .
+p:isSiblingInLawOf[?X,?Y] :- p:isSiblingInLawOf[?Y,?X] .
+p:Person[?X] :- p:Descendent[?X] .
+p:Descendent[?X] :- p:Person[?X], p:hasAncestor[?X,?X1], p:Person[?X1] .
+p:isInLawOf[?X,?Y] :- p:isParentInLawOf[?X,?Y] .
+owl:Nothing[?X] :- p:Marriage[?X], p:Person[?X] .
+p:isBloodRelationOf[?X,?Y] :- p:isSecondCousinOf[?X,?Y] .
+p:Person[?X] :- p:hasGreatGrandfather[?X,?X1] .
+p:isRelationOf[?X,?Y] :- p:isBloodRelationOf[?X,?Y] .
+p:Person[?X] :- p:PersonWithManySibling[?X] .
+p:Man[?X1] :- p:hasFather[?X,?X1] .
+p:hasGrandParent[?X,?Y] :- p:grandParentOf[?Y,?X] .
+p:grandParentOf[?X,?Y] :- p:hasGrandParent[?Y,?X] .
+p:Man[?X] :- p:MaleDescendent[?X] .
+p:MaleDescendent[?X] :- p:Man[?X], p:hasAncestor[?X,?X1], p:Person[?X1] .
+p:isNephewOf[?X0,?X2] :- p:isSonOf[?X0,?X1], p:isSiblingOf[?X1,?X2] .
+p:isInLawOf[?X,?Y] :- p:isInLawOf[?Y,?X] .
+p:hasGreatGrandmother[?X0,?X2] :- p:hasParent[?X0,?X1], p:hasGrandmother[?X1,?X2] .
+p:hasForeMother[?X,?Y] :- p:isForemotherOf[?Y,?X] .
+p:isForemotherOf[?X,?Y] :- p:hasForeMother[?Y,?X] .
+p:Woman[?X1] :- p:hasGreatGrandmother[?X,?X1] .
+p:isSiblingInLawOf[?X,?Y] :- p:isBrotherInLawOf[?X,?Y] .
+p:Person[?X] :- p:ParentOfSmallFamily[?X] .
+p:Person[?X] :- p:ParentOfLargeFamily[?X] .
+p:Person[?X] :- p:Aunt[?X] .
+p:Aunt[?X] :- p:Person[?X], p:sisterOf[?X,?X1], p:Person[?X1], p:isParentOf[?X1,?X2], p:Person[?X2] .
+p:hasMother[?X,?Y] :- p:isMotherOf[?Y,?X] .
+p:isMotherOf[?X,?Y] :- p:hasMother[?Y,?X] .
+p:Person[?X] :- p:hasGrandfather[?X,?X1] .
+p:isThirdCousinOf[?X,?Y] :- p:isThirdCousinOf[?Y,?X] .
+p:Person[?X1] :- p:isSisterInLawOf[?X,?X1] .
+p:hasWife[?X,?Y] :- p:isWifeOf[?Y,?X] .
+p:isWifeOf[?X,?Y] :- p:hasWife[?Y,?X] .
+p:Woman[?X] :- p:isSisterInLawOf[?X,?X1] .
+p:Person[?X] :- p:hasFatherInLaw[?X,?X1] .
+p:Man[?X] :- p:isGreatUncleOf[?X,?X1] .
+p:isPartnerIn[?X,?Y] :- p:isFemalePartnerIn[?X,?Y] .
+p:Person[?X1] :- p:isAuntOf[?X,?X1] .
+p:isNieceOf[?X0,?X2] :- p:isDaughterOf[?X0,?X1], p:isSiblingOf[?X1,?X2] .
+p:isGreatAuntOf[?X0,?X2] :- p:sisterOf[?X0,?X1], p:grandParentOf[?X1,?X2] .
+p:Person[?X1] :- p:isBloodRelationOf[?X,?X1] .
+p:Person[?X] :- p:hasChild[?X,?X1] .
+p:Person[?X] :- p:GreatGreatGrandparent[?X] .
+p:GreatGreatGrandparent[?X] :- p:Person[?X], p:isParentOf[?X,?X1], p:Person[?X1], p:isParentOf[?X1,?X2], p:Person[?X2], p:isParentOf[?X2,?X3], p:Person[?X3], p:isParentOf[?X3,?X4], p:Person[?X4] .
+p:hasGreatGrandParent[?X,?Y] :- p:hasGreatGrandfather[?X,?Y] .
+p:isSiblingOf[?X,?Z] :- p:isSiblingOf[?X,?Y], p:isSiblingOf[?Y,?Z] .
+p:Person[?X] :- p:isParentInLawOf[?X,?X1] .

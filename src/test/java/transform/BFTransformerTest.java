@@ -89,5 +89,18 @@ public class BFTransformerTest {
 		assertEquals(exp1, bfTr.createBackwardRule(rule, true));
 		assertEquals(exp2, bfTr.createBackwardRule(rule, false));
 	}
+	
+	@Test
+	public void testCreateInsertRule() {
+		Rule rule = new Rule(new Atom("p(X,Z)"), List.of(new Atom("e(X,Y)"), new Atom("p(Y,Z)")),
+				List.of(new Constraint("X < Y")));
+		String exp1 = "phase(5), fact([e, X, Y],add,M1,U1), fact([p, Y, Z],add,M2,U2) ==> X < Y, member(U,[U1,U2]) | check_neg_mark([(e,M1),(p,M2)],M), fact([p, X, Z],add,M,U), applied_rules(1,ins).";
+		String exp2 = "phase(5), fact([e, X, Y],add,U1), fact([p, Y, Z],add,U2) ==> X < Y, member(U,[U1,U2]) | fact([p, X, Z],add,U), applied_rules(1,ins).";
+
+		BFTransformer dt = new BFTransformer(List.of(rule));
+		
+		assertEquals(exp1, dt.createInsertRule(rule, true));
+		assertEquals(exp2, dt.createInsertRule(rule, false));
+	}
 
 }

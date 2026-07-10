@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.LinkedList;
 import java.util.List;
 import data.Constraint;
 import data.Rule;
@@ -14,6 +15,11 @@ import data.Rule;
  * reflects the Backward/Forward algorithm.
  */
 public class BFTransformer extends Transformer {
+
+	/*
+	 * TODO insertion rules requires different marking operation than Transformer
+	 * (predicate,mark) instead of only mark
+	 */
 
 	/**
 	 * 
@@ -129,13 +135,30 @@ public class BFTransformer extends Transformer {
 	}
 
 	public String createBackwardRule(Rule rule, boolean withMark) {
+
 		// initialize transformed rule with changing head atom
 		String chr = "fact(" + rule.head.toString() + ",chk1" + (withMark ? ",_" : "") + ",_)";
 
+		List<String> bodyStrings = new LinkedList<>();
+
 		// add changing body atoms
 		for (int i = 0; i < rule.body.size(); i++) {
-			chr += ", fact(" + rule.body.get(i).toString() + ",O" + (i + 1) + (withMark ? ",M" + (i + 1) : "") + ",U"
-					+ (i + 1) + ")";
+			String bodyAtom = rule.body.get(i).toString();
+			// replace anonymous variables by named ones
+			String var = "Anon";
+			while (bodyAtom.contains(var)) {
+				var += "0";
+			}
+			int k = 0;
+			while (bodyAtom.contains(", _")) {
+				bodyAtom = bodyAtom.replaceFirst(", _", ", " + var + k);
+				k++;
+			}
+
+			chr += ", fact(" + bodyAtom + ",O" + (i + 1) + (withMark ? ",M" + (i + 1) : "") + ",U" + (i + 1) + ")";
+
+			// memorize Strings of body atoms for remaining parts of CHR rule
+			bodyStrings.add(bodyAtom);
 		}
 		chr += " ==> ";
 
@@ -150,10 +173,14 @@ public class BFTransformer extends Transformer {
 		chr += "]) | ";
 
 		// add transformed body atoms
-		for (int i = 0; i < rule.body.size(); i++) {
-			chr += "fact(" + rule.body.get(i).toString() + ",chk1" + (withMark ? ",M" + (i + 1) : "") + ",U" + (i + 1)
+		for (int i = 0; i < bodyStrings.size(); i++) {
+			chr += "fact(" + bodyStrings.get(i).toString() + ",chk1" + (withMark ? ",M" + (i + 1) : "") + ",U" + (i + 1)
 					+ "), ";
 		}
+//		for (int i = 0; i < rule.body.size(); i++) {
+//			chr += "fact(" + rule.body.get(i).toString() + ",chk1" + (withMark ? ",M" + (i + 1) : "") + ",U" + (i + 1)
+//					+ "), ";
+//		}
 		chr += "applied_rules(1,bwd).";
 
 		return chr;
@@ -179,11 +206,11 @@ public class BFTransformer extends Transformer {
 		}
 
 		// initialize transformed rule
-		String chr = "fact(" + rule.body.get(0).toString() + ",prv" + markPart + (withMark ? "1" : "") + ",_)";
+		String chr = "fact(" + rule.body.get(0).toString() + ",prv" + markPart + (noExplicit ? "" : "1") + ",_)";
 
 		// add transformed body atoms
 		for (int i = 1; i < rule.body.size(); i++) {
-			chr += ", fact(" + rule.body.get(i).toString() + ",prv" + markPart + (withMark ? (i + 1) : "") + ",_)";
+			chr += ", fact(" + rule.body.get(i).toString() + ",prv" + markPart + (noExplicit ? "" : (i + 1)) + ",_)";
 		}
 		// add changing head atom
 		chr += " \\ fact(" + rule.head.toString() + ",O" + (withMark ? ",_" : "") + ",U) <=> ";
@@ -195,11 +222,16 @@ public class BFTransformer extends Transformer {
 
 		// only compute marking if at least one explicit body fact given
 		if (!noExplicit) {
-			chr += "check_neg_mark([(" + rule.body.get(0).predicate + ",M1)";
-			for (int i = 1; i < rule.body.size(); i++) {
-				chr += ",(" + rule.body.get(i).predicate + ",M" + (i + 1) + ")";
+			if (rule.body.size() == 1) {
+				// directly use marking variable of body atom for head
+				markPart = ",M1";
+			} else {
+				chr += "check_neg_mark([(" + rule.body.get(0).predicate + ",M1)";
+				for (int i = 1; i < rule.body.size(); i++) {
+					chr += ",(" + rule.body.get(i).predicate + ",M" + (i + 1) + ")";
+				}
+				chr += "],M), ";
 			}
-			chr += "],M), ";
 		}
 
 		// add new head
@@ -237,6 +269,54 @@ public class BFTransformer extends Transformer {
 		chr += "]) | ";
 		// add new head
 		chr += "fact(" + rule.head.toString() + ",chk" + (withMark ? ",_" : "") + ",U), applied_rules(1,del).";
+
+		return chr;
+	}
+
+	/**
+	 * Create the CHR rule for the insertion phase of algorithm based on the given
+	 * Datalog rule.
+	 * 
+	 * @param rule     A {@link Rule}
+	 * @param withMark {@code boolean} States whether or not the rule should include
+	 *                 fact marking
+	 * @return A {@code String} with the transformed CHR rule
+	 */
+	public String createInsertRule(Rule rule, boolean withMark) {
+
+		// initialize transformed rule
+		String chr = "phase(5)";
+		// add transformed body atoms
+		for (int i = 0; i < rule.body.size(); i++) {
+			chr += ", fact(" + rule.body.get(i).toString() + ",add" + (withMark ? ",M" + (i + 1) : "") + ",U" + (i + 1)
+					+ ")";
+		}
+		// add guard conditions
+		chr += " ==> ";
+		for (Constraint con : rule.constraints) {
+			chr += con.toString() + ", ";
+		}
+		chr += "member(U,[U1";
+		for (int i = 1; i < rule.body.size(); i++) {
+			chr += ",U" + (i + 1);
+		}
+		chr += "]) | ";
+
+		if (rule.body.size() == 1) {
+			// directly use marking variable of body atom for head
+			chr += "fact(" + rule.head.toString() + ",add" + (withMark ? ",M1" : "") + ",U), applied_rules(1,ins).";
+		} else {
+			// add marking if needed
+			if (withMark) {
+				chr += "check_neg_mark([(" + rule.body.get(0).predicate + ",M1)";
+				for (int i = 1; i < rule.body.size(); i++) {
+					chr += ",(" + rule.body.get(i).predicate + ",M" + (i + 1) + ")";
+				}
+				chr += "],M), ";
+			}
+			// add new head
+			chr += "fact(" + rule.head.toString() + ",add" + (withMark ? ",M" : "") + ",U), applied_rules(1,ins).";
+		}
 
 		return chr;
 	}

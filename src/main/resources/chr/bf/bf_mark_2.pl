@@ -1,6 +1,6 @@
 	
 % turn facts without proof into del-facts
-check_done \ fact(F,chk1,M,U) <=> fact(F,del,M,U).
+check_done \ fact(F,chk1,_,U) <=> fact(F,del,_,U).
 check_done <=> true.
 
 

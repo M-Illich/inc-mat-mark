@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -21,6 +22,9 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 
 import data.Fact;
+import data.Rule;
+import data.Update;
+import eval.UpdateStreamRun;
 
 /**
  * Extract Datalog facts from OWL ontologies
@@ -28,14 +32,74 @@ import data.Fact;
 public class FactExtracter {
 
 	public static void main(String[] args) {
+		try {
 
-		File fileOWL = new File("src/main/resources/University0_0.owl"); // univ-bench.owl
+			String testCase = "Family"; // "Claros"; // "Relations"; // "LUBM"; // "DBpedia"; //  
+			System.out.println("Test case: " + testCase);
+			System.out.println();
 
-		File fileRDF = new File("src/main/resources/clarosTest.txt");
+			// read rules
+			System.out.println("Read rules.");
+			RuleReader rr = new RuleReader(new File("src/main/resources/" + testCase + "/" + testCase + ".dlog"));
+			rr.ruleSizes.forEach((k, v) -> System.out.println("  Rule body size " + k + ": " + v));
 
-		for (Fact f : getFactsFromOWL(fileOWL)) {
-			System.out.println(f);
+//			for (Rule r : rr.rules) {
+//				System.out.println(r.toString());
+//			}
+//			System.out.println();
+
+			// transform Datalog rules into CHR programs
+			System.out.println("Transform rules into CHR.");
+			DRedTransformer trf = new DRedTransformer(rr.rules);
+//			BFTransformer trf = new BFTransformer(rr.rules);
+			String chrNoMark = 	trf.createCHRProgram(testCase, false);	// "src/main/prolog/bf/bf_LUBM_no_mark.pl";
+			String chrMark = trf.createCHRProgram(testCase, true);	//"src/main/prolog/bf/bf_LUBM_mark.pl";	
+			
+
+			Set<Fact> dataPool;
+			if (testCase == "LUBM") {
+				// OWL
+				File fileOWL = new File("src/main/resources/LUBM/University0_0.owl"); // univ-bench.owl
+				dataPool = getFactsFromOWL(fileOWL);
+			} else {
+				// RDF
+				File fileRDF = new File("src/main/resources/" + testCase + "/" + testCase);
+				dataPool = getFactsFromRDF(fileRDF, "TURTLE");
+			}
+
+			System.out.println("Create updates.");
+			// ensure that only explicit facts are used for updates
+			dataPool.removeIf(f -> !trf.explicitPredicates.contains(f.predicate));
+			// create update sequence
+			UpdatesCreator uc = new UpdatesCreator(dataPool);
+			List<Update> updates = uc.createRandomUpdates(20, 100, 30, 0, 0, 228418490);
+
+//			for (Update update : updates) {
+//				System.out.println(update.toString());
+//			}
+			System.out.println();
+
+			
+			// apply algorithms on update streams
+			System.out.println("No marking:");
+			UpdateStreamRun usr = new UpdateStreamRun(chrNoMark, updates);
+			usr.execute(false, false, true);
+			System.out.println("time per update: " + usr.statistics.updateTimes.toString());
+			System.out.println();
+
+			System.out.println("Marking:");
+			usr = new UpdateStreamRun(chrMark, updates);
+			usr.execute(false, false, true);
+			System.out.println("time per update: " + usr.statistics.updateTimes.toString());
+			System.out.println();
+
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
+
+//		for (Fact f : dataset) {
+//			System.out.println(f);
+//		}
 
 //		for (Fact f : getFactsFromRDF(fileRDF, "TURTLE")) {
 //			System.out.println(f);
@@ -118,7 +182,9 @@ public class FactExtracter {
 			String object = model.shortForm(s.getObject().toString());
 			// wrap literal in "..."
 			if (s.getObject().isLiteral()) {
-				object = "\"" + object + "\"";
+				if (!object.startsWith("\"")) {
+					object = "\"" + object + "\"";
+				}
 			}
 			// prevent that blank nodes are interpreted as variables
 			if (subject.startsWith("_")) {
@@ -131,9 +197,9 @@ public class FactExtracter {
 			// special treatment for standard RDF properties
 			if (predicate.equals("rdf:type")) {
 				// subject is argument for object (class)
-				fact = new Fact("[" + object + "," + subject + "]");
+				fact = new Fact(object, List.of(subject));
 			} else {
-				fact = new Fact("[" + predicate + "," + subject + "," + object + "]");
+				fact = new Fact(predicate, List.of(subject, object));
 			}
 
 			facts.add(fact);

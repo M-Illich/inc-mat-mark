@@ -53,8 +53,8 @@ public class Rule {
 			}
 		}
 
-		// replace singleton variables by unnamed variables
-		removeSingletonVariables();
+		// replace singleton variables by anonymous variables
+		replaceSingletonVariables();
 
 		/*
 		 * TODO handle rules with constraints, e.g., X < Y etc.
@@ -67,7 +67,7 @@ public class Rule {
 	 * Replace variables that only occur once in the rule by unnamed variables (to
 	 * avoid conflicts with SWI-Prolog)
 	 */
-	public void removeSingletonVariables() {
+	public void replaceSingletonVariables() {
 		HashSet<String> checkedVariables = new HashSet<>();
 
 		for (int i = 0; i < body.size(); i++) {

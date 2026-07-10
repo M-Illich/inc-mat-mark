@@ -3,8 +3,10 @@ package transform;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 import data.Rule;
 
@@ -17,8 +19,14 @@ public class RuleReader {
 	public File srcFile;
 	List<Rule> rules;
 
+	/**
+	 * store how many rules exist (value) with certain number of body atoms (key)
+	 */
+	Map<Integer, Integer> ruleSizes;
+
 	public RuleReader(File fileName) {
 		srcFile = fileName;
+		ruleSizes = new HashMap<>();
 		rules = readRules(srcFile);
 	}
 
@@ -33,15 +41,21 @@ public class RuleReader {
 			String rule = "";
 
 			while ((line = reader.readLine()) != null) {
-				if (!(line.startsWith("@") || line.startsWith("#") || line.startsWith("%") || line.startsWith("PREFIX"))) {
+				if (!(line.startsWith("@") || line.startsWith("#") || line.startsWith("%")
+						|| line.startsWith("PREFIX"))) {
 					// write whole rule into single String
 					rule += line;
 					// line contains end of rule
 					if (line.trim().endsWith(".")) {
 						// transform String into Rule object
-						ruleList.add(new Rule(rule));
+						Rule r = new Rule(rule);
+						ruleList.add(r);
 						// reset String for next rule
 						rule = "";
+						// memorize body size of rule
+						ruleSizes.putIfAbsent(r.body.size(), 0);
+						ruleSizes.compute(r.body.size(), (_, v) -> v + 1);
+
 					}
 				}
 			}

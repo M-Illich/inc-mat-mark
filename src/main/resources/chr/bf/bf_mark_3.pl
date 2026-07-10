@@ -11,11 +11,13 @@ finish_update, stream(S) ==> writeln(S,""), flush_output(S).
 finish_update \ fact([P|L],add,1,U) <=> 
 	explicit(P) |
 	fact([P|L],del,_,U),
-	marked_facts(1,add,[P|L]).
+	% marked_facts(1,add,[P|L]).
+	marked_facts(1,negEx).
 % ... and marked implicit add-facts into facts that need to be checked
 finish_update \ fact(F,add,1,U) <=> 
 	fact(F,chk,_,U),
-	marked_facts(1,add,F).
+	% marked_facts(1,add,F).
+	marked_facts(1,negIm).
 
 % collect numbers of applied rules and marked facts 
 finish_update \ applied_rules(N,P), applied_rules_list(P,L) <=>
@@ -51,9 +53,9 @@ applied_rules(N,P), applied_rules(M,P) <=>
 		
 % distinguish between explicit and implicit facts	
 	% explicit
-marked_facts(N,add,[P|_]) <=> explicit(P) | marked_facts(N,negEx).	
+%marked_facts(N,add,[P|_]) <=> explicit(P) | marked_facts(N,negEx).	
 	% implicit
-marked_facts(N,add,_) <=> marked_facts(N,negIm).
+%marked_facts(N,add,_) <=> marked_facts(N,negIm).
 
 % count number of marked facts
 marked_facts(N,O), marked_facts(M,O) <=>

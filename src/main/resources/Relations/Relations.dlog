@@ -1,0 +1,1518 @@
+@prefix obo: <http://purl.obolibrary.org/obo/>
+@prefix owl: <http://www.w3.org/2002/07/owl#>
+@prefix foaf: <http://xmlns.com/foaf/0.1/>
+@prefix go: <http://www.geneontology.org/formats/oboInOwl#>
+
+obo:BFO_0000040[?X] :- obo:RO_0003000[?X,?X1] .
+obo:RO_0002487[?X,?Y] :- obo:RO_0002490[?X,?Y] .
+obo:RO_0003302[?X,?Y] :- obo:RO_0001020[?X,?Y] .
+obo:RO_0002170[?X,?Y] :- obo:RO_0002178[?X,?Y] .
+obo:RO_0002286[?X,?Y] :- obo:RO_0002203[?X,?Y] .
+obo:CARO_0000003[?X] :- obo:RO_0002372[?X,?X1] .
+obo:RO_0002234[?X0,?X2] :- obo:RO_0002230[?X0,?X1], obo:RO_0002234[?X1,?X2] .
+obo:BFO_0000002[?X] :- obo:RO_0002506[?X,?X1] .
+obo:RO_0002487[?X,?Y] :- obo:RO_0002496[?X,?Y] .
+obo:RO_0002328[?X,?Y] :- obo:RO_0002353[?X,?Y] .
+obo:RO_0002258[?X,?Y] :- obo:RO_0002256[?X,?Y] .
+obo:RO_0002440[?X,?Y] :- obo:RO_0002443[?X,?Y] .
+obo:RO_0002514[?X,?Y] :- obo:RO_0002522[?X,?Y] .
+obo:RO_0004028[?X0,?X2] :- obo:RO_0009501[?X0,?X1], obo:RO_0002233[?X1,?X2] .
+obo:BFO_0000051[?X,?Y] :- obo:RO_0002248[?X,?Y] .
+obo:CARO_0000003[?X1] :- obo:RO_0002295[?X,?X1] .
+obo:BFO_0000040[?X] :- obo:RO_0011013[?X,?X1] .
+obo:RO_0002244[?X,?Y] :- obo:RO_0002242[?X,?Y] .
+obo:BFO_0000040[?X] :- obo:RO_0002595[?X,?X1] .
+obo:BFO_0000040[?X] :- obo:RO_0002448[?X,?X1] .
+obo:RO_0002444[?X,?Y] :- obo:RO_0002235[?X,?Y] .
+obo:RO_0002211[?X,?Y] :- obo:RO_0002212[?X,?Y] .
+obo:RO_0002313[?X,?Y] :- obo:RO_0002020[?X,?Y] .
+obo:RO_0002212[?X0,?X2] :- obo:RO_0002230[?X0,?X1], obo:RO_0002212[?X1,?X2] .
+obo:RO_0002130[?X,?Y] :- obo:RO_0002110[?X,?Y] .
+obo:CARO_0001001[?X] :- obo:RO_0002134[?X,?X1] .
+obo:CL_0000000[?X] :- obo:RO_0002009[?X,?X1] .
+obo:RO_0002018[?X,?Y] :- obo:RO_0002017[?X,?Y] .
+obo:RO_0002131[?X,?Y] :- obo:RO_0002101[?X,?Y] .
+obo:BFO_0000051[?X,?Y] :- obo:RO_0002104[?X,?Y] .
+obo:CARO_0000003[?X1] :- obo:RO_0002179[?X,?X1], obo:CARO_0000006[?X] .
+obo:RO_0002233[?X1,?X2] :- obo:RO_0002233[?X,?X2], obo:RO_0002025[?X,?X1] .
+obo:RO_0002574[?X,?Y] :- obo:RO_0002459[?X,?Y] .
+obo:CARO_0000003[?X1] :- obo:RO_0002004[?X,?X1] .
+obo:RO_0002329[?X,?Y] :- obo:RO_0002326[?X,?Y] .
+obo:RO_0002497[?X0,?X2] :- obo:BFO_0000050[?X0,?X1], obo:RO_0002497[?X1,?X2] .
+obo:RO_0002211[?X0,?X2] :- obo:RO_0002578[?X0,?X1], obo:RO_0002578[?X1,?X2] .
+obo:RO_0002618[?X,?Y] :- obo:RO_0002622[?X,?Y] .
+obo:BFO_0000051[?X,?Y] :- obo:RO_0002224[?X,?Y] .
+obo:RO_0002331[?X0,?X2] :- obo:RO_0002331[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:BFO_0000050[?X,?Y] :- obo:RO_0002576[?X,?Y] .
+obo:RO_0002233[?X,?Y] :- obo:RO_0002400[?X,?Y] .
+obo:BFO_0000017[?X] :- obo:RO_0004000[?X,?X1] .
+obo:RO_0002524[?X,?Y] :- obo:RO_0002518[?X,?Y] .
+obo:RO_0002162[?X0,?X2] :- obo:RO_0002206[?X0,?X1], obo:RO_0002162[?X1,?X2] .
+obo:RO_0002090[?X0,?X2] :- obo:RO_0002230[?X0,?X1], obo:RO_0002224[?X1,?X2] .
+owl:Nothing[?X,?Y] :- obo:RO_0003301[?X,?Y], obo:RO_0003301[?Y,?X] .
+obo:RO_0002336[?X,?Y] :- obo:RO_0002015[?X,?Y] .
+obo:RO_0002134[?X0,?X2] :- obo:RO_0002134[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002314[?X,?Y] :- obo:RO_0000052[?X,?Y] .
+obo:BFO_0000040[?X] :- obo:RO_0009003[?X,?X1] .
+obo:RO_0002418[?X,?Y] :- obo:RO_0002427[?Y,?X] .
+obo:RO_0002427[?X,?Y] :- obo:RO_0002418[?Y,?X] .
+obo:RO_0002162[?X0,?X2] :- obo:RO_0002225[?X0,?X1], obo:RO_0002162[?X1,?X2] .
+obo:RO_0002441[?X0,?X3] :- obo:RO_0002461[?X0,?X1], obo:RO_0002466[?X1,?X2], obo:RO_0002461[?X3,?X2] .
+obo:RO_0002640[?X,?Y] :- obo:RO_0002641[?Y,?X] .
+obo:RO_0002641[?X,?Y] :- obo:RO_0002640[?Y,?X] .
+obo:RO_0002211[?X,?Z] :- obo:RO_0002211[?X,?Y], obo:RO_0002211[?Y,?Z] .
+obo:RO_0002323[?X,?Y] :- obo:RO_0002163[?X,?Y] .
+obo:BFO_0000015[?X1] :- obo:RO_0009501[?X,?X1] .
+obo:RO_0002494[?X,?Y] :- obo:RO_0002495[?X,?Y] .
+obo:RO_0003302[?X,?Y] :- obo:RO_0003304[?X,?Y] .
+obo:BFO_0000050[?X,?Y] :- obo:RO_0002380[?X,?Y] .
+obo:BFO_0000040[?X1] :- obo:RO_0002332[?X,?X1] .
+obo:RO_0002410[?X,?Y] :- obo:RO_0002506[?X,?Y] .
+obo:RO_0002213[?X,?Z] :- obo:RO_0002213[?X,?Y], obo:RO_0002213[?Y,?Z] .
+obo:RO_0002295[?X,?Y] :- obo:RO_0002355[?X,?Y] .
+obo:RO_0002414[?X,?Y] :- obo:RO_0002413[?X,?Y] .
+obo:RO_0004000[?X,?Y] :- obo:RO_0004003[?X,?Y] .
+obo:RO_0002211[?X,?Y] :- obo:RO_0002334[?Y,?X] .
+obo:RO_0002334[?X,?Y] :- obo:RO_0002211[?Y,?X] .
+obo:RO_0002159[?X,?Y] :- obo:RO_0002159[?Y,?X] .
+obo:RO_0002467[?X,?X] :- obo:GO_0085030[?X] .
+obo:RO_0002158[?X0,?X2] :- obo:RO_0002156[?X0,?X1], obo:RO_0002157[?X1,?X2] .
+obo:RO_0002321[?X,?Y] :- obo:RO_0002303[?X,?Y] .
+obo:BFO_0000040[?X1] :- obo:RO_0011015[?X,?X1] .
+obo:BFO_0000040[?X1] :- obo:RO_0003002[?X,?X1] .
+obo:RO_0002328[?X,?Y] :- obo:RO_0002432[?X,?Y] .
+obo:RO_0002375[?X,?Y] :- obo:RO_0002569[?X,?Y] .
+obo:RO_0002430[?X0,?X2] :- obo:RO_0002327[?X0,?X1], obo:RO_0002212[?X1,?X2] .
+obo:RO_0002496[?X0,?X2] :- obo:RO_0002496[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:BFO_0000050[?X,?Y] :- obo:RO_0002496[?X,?Y], obo:RO_NonExist[?X] .
+obo:BFO_0000050[?X,?Y] :- obo:RO_0002131[?X,?Y], obo:RO_NonExist[?X] .
+obo:BFO_0000050[?X,?Y] :- obo:RO_0002162[?X,?Y], obo:RO_NonExist[?X] .
+obo:RO_0040036[?X,?Y] :- obo:RO_0002315[?X,?Y] .
+obo:RO_0002377[?X,?Y] :- obo:RO_0002382[?X,?Y] .
+obo:RO_0002559[?X,?Y] :- obo:RO_0002507[?X,?Y] .
+obo:RO_0001025[?X0,?X2] :- obo:RO_0001025[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002314[?X0,?X2] :- obo:RO_0002314[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002233[?X0,?X2] :- obo:RO_0002224[?X0,?X1], obo:RO_0002233[?X1,?X2] .
+obo:RO_0002213[?X,?Y] :- obo:RO_0002336[?Y,?X] .
+obo:RO_0002336[?X,?Y] :- obo:RO_0002213[?Y,?X] .
+obo:RO_0002496[?X,?Y] :- obo:RO_0002583[?X,?Y] .
+obo:RO_0002177[?X,?Y] :- obo:RO_0002371[?X,?Y] .
+obo:RO_0002448[?X,?Y] :- obo:RO_0002449[?X,?Y] .
+obo:RO_0002328[?X,?Y] :- obo:RO_0002567[?X,?Y] .
+obo:RO_0002233[?X,?Y] :- obo:RO_0004009[?X,?Y] .
+obo:BFO_0000063[?X0,?X2] :- obo:RO_0002092[?X0,?X1], obo:BFO_0000063[?X1,?X2] .
+obo:RO_0002459[?X,?Y] :- obo:RO_0002460[?Y,?X] .
+obo:RO_0002460[?X,?Y] :- obo:RO_0002459[?Y,?X] .
+obo:RO_0002158[?X,?Y] :- obo:RO_0002158[?Y,?X] .
+obo:RO_0002599[?X,?Y] :- obo:RO_0002606[?X,?Y] .
+obo:RO_0002212[?X,?Y] :- obo:RO_0002335[?Y,?X] .
+obo:RO_0002335[?X,?Y] :- obo:RO_0002212[?Y,?X] .
+owl:topObjectProperty[?X,?Y] :- obo:RO_0002201[?X,?Y] .
+obo:RO_0002330[?X,?Y] :- obo:RO_0002292[?X,?Y] .
+obo:CARO_0001010[?X1] :- obo:RO_0002574[?X,?X1] .
+obo:RO_0002497[?X0,?X3] :- obo:RO_0002593[?X0,?X1], obo:BFO_0000063[?X1,?X2], obo:RO_0002593[?X3,?X2] .
+obo:RO_0002412[?X,?Y] :- obo:RO_0002413[?X,?Y] .
+obo:BFO_0000062[?X,?Y] :- obo:RO_0002404[?X,?Y] .
+obo:RO_0002592[?X,?Y] :- obo:RO_0002590[?X,?Y] .
+obo:RO_0002100[?X0,?X2] :- obo:RO_0002100[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:BFO_0000015[?X1] :- obo:RO_0002214[?X,?X1], obo:BFO_0000015[?X] .
+obo:RO_0002598[?X,?Y] :- obo:RO_0002600[?X,?Y] .
+obo:RO_0002564[?X,?Y] :- obo:RO_0002481[?X,?Y] .
+obo:RO_0002440[?X,?Y] :- obo:RO_0008501[?X,?Y] .
+obo:RO_0001018[?X,?Y] :- obo:RO_0001019[?Y,?X] .
+obo:RO_0001019[?X,?Y] :- obo:RO_0001018[?Y,?X] .
+obo:BFO_0000050[?X,?Y] :- obo:RO_0002007[?X,?Y] .
+obo:BFO_0000050[?X,?Y] :- obo:RO_0002525[?X,?Y] .
+obo:RO_0002244[?X,?Y] :- obo:RO_0002309[?X,?Y] .
+obo:RO_0002313[?X0,?X2] :- obo:RO_0002313[?X0,?X1], obo:BFO_0000051[?X1,?X2] .
+obo:CL_0000000[?X1] :- obo:RO_0002348[?X,?X1] .
+obo:RO_0004007[?X,?Y] :- obo:RO_0004009[?X,?Y] .
+obo:BFO_0000004[?X1] :- obo:RO_0002479[?X,?X1] .
+obo:BFO_0000040[?X1] :- obo:RO_0002449[?X,?X1] .
+obo:RO_0000057[?X0,?X3] :- obo:BFO_0000051[?X0,?X1], obo:BFO_0000055[?X1,?X2], obo:RO_0000052[?X2,?X3] .
+obo:RO_0002371[?X,?Y] :- obo:RO_0002373[?X,?Y] .
+obo:RO_0002515[?X,?Y] :- obo:RO_0002531[?X,?Y] .
+obo:RO_0002207[?X,?Y] :- obo:RO_0002495[?X,?Y] .
+obo:RO_0002384[?X,?Y] :- obo:RO_0002387[?X,?Y] .
+obo:RO_0002297[?X,?Y] :- obo:RO_0002587[?X,?Y] .
+obo:RO_0002258[?X,?Y] :- obo:RO_0002286[?Y,?X] .
+obo:RO_0002286[?X,?Y] :- obo:RO_0002258[?Y,?X] .
+obo:RO_0002445[?X,?Y] :- obo:RO_0002633[?X,?Y] .
+obo:RO_0002434[?X,?Y] :- obo:RO_0002435[?X,?Y] .
+obo:CARO_0000003[?X1] :- obo:RO_0002100[?X,?X1] .
+obo:RO_0002233[?X,?Y] :- obo:RO_0002586[?X,?Y] .
+obo:RO_0002492[?X0,?X2] :- obo:RO_0002593[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0040035[?X,?Y] :- obo:RO_0004023[?X,?Y] .
+obo:RO_0011022[?X,?Y] :- obo:RO_0011024[?X,?Y] .
+obo:RO_0002409[?X0,?X2] :- obo:RO_0002408[?X0,?X1], obo:RO_0002408[?X1,?X2] .
+obo:RO_0002170[?X,?Y] :- obo:RO_0002371[?X,?Y] .
+obo:RO_0040035[?X,?Y] :- obo:RO_0004029[?X,?Y] .
+obo:BFO_0000040[?X1] :- obo:RO_0002434[?X,?X1] .
+obo:RO_0002206[?X0,?X2] :- obo:RO_0002206[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002264[?X0,?X2] :- obo:RO_0002327[?X0,?X1], obo:RO_0002418[?X1,?X2] .
+obo:RO_0004019[?X,?Y] :- obo:RO_0004020[?X,?Y] .
+obo:BFO_0000003[?X1] :- obo:RO_0002501[?X,?X1] .
+obo:BFO_0000015[?X1] :- obo:RO_0002334[?X,?X1] .
+obo:RO_0002444[?X,?Y] :- obo:RO_0002624[?X,?Y] .
+obo:RO_0002529[?X,?Y] :- obo:RO_0002530[?X,?Y] .
+obo:RO_0002432[?X0,?X2] :- obo:RO_0002327[?X0,?X1], obo:BFO_0000066[?X1,?X2] .
+obo:RO_0002202[?X,?Z] :- obo:RO_0002202[?X,?Y], obo:RO_0002202[?Y,?Z] .
+obo:RO_0008507[?X,?Y] :- obo:RO_0008508[?Y,?X] .
+obo:RO_0008508[?X,?Y] :- obo:RO_0008507[?Y,?X] .
+obo:BFO_0000002[?X1] :- obo:RO_0002214[?X,?X1], obo:BFO_0000002[?X] .
+obo:RO_0002302[?X,?Y] :- obo:RO_0002606[?Y,?X] .
+obo:RO_0002606[?X,?Y] :- obo:RO_0002302[?Y,?X] .
+obo:RO_0002321[?X,?Y] :- obo:RO_0002437[?X,?Y] .
+obo:RO_0002424[?X,?Y] :- obo:RO_0002426[?X,?Y] .
+obo:RO_0002203[?X,?Z] :- obo:RO_0002203[?X,?Y], obo:RO_0002203[?Y,?Z] .
+obo:RO_0002120[?X,?Y] :- obo:RO_0002107[?X,?Y] .
+obo:RO_0002411[?X,?Y] :- obo:RO_0002412[?X,?Y] .
+obo:RO_0002211[?X,?Y] :- obo:RO_0002578[?X,?Y] .
+obo:BFO_0000015[?X1] :- obo:RO_0002215[?X,?X1] .
+obo:BFO_0000015[?X1] :- obo:RO_0002414[?X,?X1] .
+obo:RO_0002101[?X,?Y] :- obo:RO_0002132[?Y,?X] .
+obo:RO_0002132[?X,?Y] :- obo:RO_0002101[?Y,?X] .
+obo:RO_0002371[?X,?Y] :- obo:RO_0002371[?Y,?X] .
+owl:Nothing[?X,?Y] :- obo:RO_0002551[?X,?Y], obo:RO_0002551[?Y,?X] .
+obo:RO_0002515[?X,?Y] :- obo:RO_0002530[?X,?Y] .
+obo:RO_0002427[?X,?Z] :- obo:RO_0002427[?X,?Y], obo:RO_0002427[?Y,?Z] .
+obo:RO_0002566[?X0,?X3] :- obo:RO_0002327[?X0,?X1], obo:RO_0002411[?X1,?X2], obo:RO_0002233[?X2,?X3] .
+obo:RO_0004019[?X,?Y] :- obo:RO_0004021[?X,?Y] .
+obo:RO_0002551[?X,?Y] :- obo:RO_0002576[?Y,?X] .
+obo:RO_0002576[?X,?Y] :- obo:RO_0002551[?Y,?X] .
+obo:RO_0003000[?X,?Y] :- obo:RO_0003001[?Y,?X] .
+obo:RO_0003001[?X,?Y] :- obo:RO_0003000[?Y,?X] .
+obo:RO_0008506[?X,?Y] :- obo:RO_0008506[?Y,?X] .
+obo:BFO_0000040[?X] :- obo:RO_0009002[?X,?X1] .
+obo:RO_0002527[?X,?Y] :- obo:RO_0002527[?Y,?X] .
+obo:RO_0002213[?X,?Y] :- obo:RO_0002407[?X,?Y] .
+obo:RO_0002205[?X0,?X2] :- obo:RO_0002511[?X0,?X1], obo:RO_0002513[?X1,?X2] .
+obo:RO_0002444[?X,?Y] :- obo:RO_0002632[?X,?Y] .
+obo:RO_0002371[?X,?Y] :- obo:RO_0002372[?X,?Y] .
+obo:RO_0002384[?X,?Y] :- obo:RO_0002386[?X,?Y] .
+obo:RO_0002466[?X,?X] :- obo:GO_0085031[?X] .
+obo:RO_0002526[?X,?Y] :- obo:RO_0002526[?Y,?X] .
+obo:BFO_0000002[?X1] :- obo:RO_HOM0000000[?X,?X1], obo:BFO_0000002[?X] .
+obo:RO_0004024[?X0,?X2] :- obo:RO_0004025[?X0,?X1], obo:RO_0002215[?X1,?X2] .
+obo:CARO_0000006[?X] :- obo:RO_0002104[?X,?X1] .
+obo:RO_0002552[?X,?Y] :- obo:RO_0002301[?X,?Y] .
+obo:RO_0002202[?X,?Y] :- obo:RO_0002494[?X,?Y] .
+obo:RO_0002514[?X,?Y] :- obo:RO_0002521[?X,?Y] .
+obo:RO_0002514[?X,?Y] :- obo:RO_0002527[?X,?Y] .
+obo:RO_0004019[?X,?Y] :- obo:RO_0004030[?X,?Y] .
+obo:RO_0002131[?X,?Y] :- obo:RO_0002100[?X,?Y] .
+obo:BFO_0000040[?X1] :- obo:RO_0011014[?X,?X1] .
+obo:RO_0002087[?X,?Y] :- obo:RO_0002405[?X,?Y] .
+obo:RO_0002017[?X,?Y] :- obo:RO_0002016[?X,?Y] .
+obo:BFO_0000015[?X1] :- obo:RO_0002010[?X,?X1] .
+obo:RO_0002263[?X0,?X2] :- obo:RO_0002327[?X0,?X1], obo:RO_0002411[?X1,?X2] .
+obo:OGMS_0000031[?X] :- obo:RO_0004026[?X,?X1] .
+obo:RO_0000057[?X0,?X2] :- obo:BFO_0000051[?X0,?X1], obo:RO_0000057[?X1,?X2] .
+obo:BFO_0000002[?X1] :- obo:RO_0002330[?X,?X1] .
+obo:BFO_0000002[?X] :- obo:RO_0002566[?X,?X1] .
+obo:CARO_0001010[?X] :- obo:RO_0008506[?X,?X1] .
+owl:topObjectProperty[?X,?Y] :- obo:RO_0002200[?X,?Y] .
+obo:CARO_0000003[?X] :- obo:RO_0002567[?X,?X1] .
+obo:RO_0002476[?X,?Y] :- obo:RO_0002478[?X,?Y] .
+obo:RO_0002017[?X,?Y] :- obo:RO_0002025[?X,?Y] .
+obo:CARO_0000003[?X] :- obo:RO_0002576[?X,?X1] .
+obo:RO_0002328[?X,?Y] :- obo:RO_0002352[?X,?Y] .
+obo:RO_0002131[?X,?Y] :- obo:BFO_0000051[?X,?Y] .
+obo:RO_0002440[?X,?Y] :- obo:RO_0002442[?X,?Y] .
+obo:RO_0002292[?X,?Y] :- obo:RO_0002009[?X,?Y] .
+obo:RO_0002206[?X,?Y] :- obo:RO_0002245[?X,?Y] .
+obo:RO_0000057[?X,?Y] :- obo:RO_0002333[?X,?Y] .
+obo:RO_0002103[?X,?Y] :- obo:RO_0002109[?X,?Y] .
+obo:RO_0002526[?X0,?X2] :- obo:RO_0002524[?X0,?X1], obo:RO_0002525[?X1,?X2] .
+obo:RO_0002454[?X,?Y] :- obo:RO_0002553[?X,?Y] .
+obo:RO_0002438[?X,?Y] :- obo:RO_0002470[?X,?Y] .
+obo:RO_0002375[?X,?Y] :- obo:RO_0002252[?X,?Y] .
+obo:RO_0002481[?X,?X] :- obo:GO_0016301[?X] .
+obo:RO_0002479[?X,?Y] :- obo:RO_0002232[?X,?Y] .
+obo:RO_0004024[?X0,?X2] :- obo:RO_0004024[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0008501[?X,?Y] :- obo:RO_0008502[?Y,?X] .
+obo:RO_0008502[?X,?Y] :- obo:RO_0008501[?Y,?X] .
+obo:RO_0002598[?X0,?X2] :- obo:RO_0002215[?X0,?X1], obo:RO_0002213[?X1,?X2] .
+obo:RO_0002344[?X,?Y] :- obo:RO_0002342[?X,?Y] .
+obo:BFO_0000015[?X] :- obo:RO_0002231[?X,?X1] .
+obo:RO_0002011[?X0,?X2] :- obo:RO_0002211[?X0,?X1], obo:RO_0002313[?X1,?X2] .
+obo:RO_0002330[?X,?Y] :- obo:RO_0002205[?X,?Y] .
+obo:RO_0002444[?X,?Y] :- obo:RO_0002208[?X,?Y] .
+obo:RO_0003305[?X,?Y] :- obo:RO_0003309[?X,?Y] .
+obo:RO_0002255[?X0,?X2] :- obo:RO_0002203[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002263[?X,?Y] :- obo:RO_0004034[?X,?Y] .
+obo:RO_0008503[?X,?Y] :- obo:RO_0008504[?Y,?X] .
+obo:RO_0008504[?X,?Y] :- obo:RO_0008503[?Y,?X] .
+obo:RO_0002103[?X,?Y] :- obo:RO_0002112[?X,?Y] .
+owl:Nothing[?X,?Y] :- obo:RO_0002378[?X,?Y], obo:RO_0002382[?X,?Y] .
+obo:RO_0002586[?X,?Y] :- obo:RO_0002590[?X,?Y] .
+obo:RO_0002554[?X0,?X2] :- obo:RO_0002445[?X0,?X1], obo:RO_0002445[?X1,?X2] .
+owl:Nothing[?X,?Y] :- obo:RO_0002378[?X,?Y], obo:RO_0002383[?X,?Y] .
+obo:RO_0002455[?X,?Y] :- obo:RO_0002456[?Y,?X] .
+obo:RO_0002456[?X,?Y] :- obo:RO_0002455[?Y,?X] .
+obo:RO_0004032[?X,?Y] :- obo:RO_0004034[?X,?Y] .
+obo:CARO_0000006[?X1] :- obo:RO_0002551[?X,?X1] .
+obo:RO_0002113[?X,?Y] :- obo:RO_0002102[?X,?Y] .
+obo:RO_0002328[?X,?Y] :- obo:RO_0002431[?X,?Y] .
+obo:BFO_0000020[?X] :- obo:RO_0002573[?X,?X1] .
+obo:RO_0002521[?X,?Y] :- obo:RO_0002521[?Y,?X] .
+obo:RO_0002344[?X,?Y] :- obo:RO_0002339[?X,?Y] .
+obo:RO_0002328[?X,?Y] :- obo:RO_0002584[?X,?Y] .
+obo:RO_0003302[?X,?Y] :- obo:RO_0003303[?X,?Y] .
+obo:RO_0002616[?X,?Y] :- obo:RO_0002558[?X,?Y] .
+obo:RO_0000057[?X,?Y] :- obo:RO_0002505[?X,?Y] .
+obo:RO_0002438[?X,?Y] :- obo:RO_0002458[?X,?Y] .
+obo:RO_0004010[?X,?Y] :- obo:RO_0004012[?X,?Y] .
+obo:RO_0002494[?X,?Z] :- obo:RO_0002494[?X,?Y], obo:RO_0002494[?Y,?Z] .
+obo:BFO_0000002[?X] :- obo:RO_0002205[?X,?X1] .
+obo:RO_0002410[?X,?Y] :- obo:RO_0002608[?X,?Y] .
+obo:RO_0002447[?X0,?X3] :- obo:RO_0002215[?X0,?X1], obo:RO_0002481[?X1,?X2], obo:RO_0002400[?X2,?X3] .
+obo:BFO_0000004[?X] :- obo:RO_0002487[?X,?X1] .
+obo:BFO_0000040[?X1] :- obo:RO_0003001[?X,?X1] .
+obo:RO_0002377[?X,?Y] :- obo:RO_0002378[?X,?Y] .
+obo:RO_0002386[?X,?Y] :- obo:RO_0002257[?X,?Y] .
+obo:RO_0002131[?X,?Y] :- obo:RO_0002151[?X,?Y] .
+obo:RO_0000057[?X,?Y] :- obo:RO_0004007[?X,?Y] .
+obo:RO_0002375[?X,?Y] :- obo:RO_0002381[?X,?Y] .
+obo:RO_0004000[?X,?Y] :- obo:RO_0004004[?X,?Y] .
+obo:RO_0002320[?X,?Y] :- obo:RO_HOM0000003[?X,?Y] .
+obo:RO_0002212[?X2,?X1] :- obo:RO_0002213[?X2,?X], obo:RO_0002212[?X,?X1] .
+obo:RO_0002212[?X,?X2] :- obo:RO_0002212[?X,?X1], obo:RO_0002213[?X1,?X2] .
+obo:RO_0002088[?X,?Y] :- obo:RO_0002085[?X,?Y] .
+obo:RO_0002574[?X,?Y] :- obo:RO_0002555[?X,?Y] .
+obo:RO_0002156[?X,?Y] :- obo:RO_0002157[?Y,?X] .
+obo:RO_0002157[?X,?Y] :- obo:RO_0002156[?Y,?X] .
+obo:BFO_0000040[?X] :- obo:RO_0011004[?X,?X1] .
+obo:RO_0002438[?X,?Y] :- obo:RO_0002457[?X,?Y] .
+obo:RO_0002103[?X,?Y] :- obo:RO_0002120[?Y,?X] .
+obo:RO_0002120[?X,?Y] :- obo:RO_0002103[?Y,?X] .
+obo:RO_0002213[?X,?Y] :- obo:RO_0002629[?X,?Y] .
+obo:BFO_0000004[?X1] :- obo:RO_0010001[?X,?X1] .
+obo:RO_0002292[?X,?Y] :- obo:RO_0002293[?X,?Y] .
+obo:BFO_0000051[?X,?Y] :- obo:RO_0002524[?X,?Y] .
+obo:BFO_0000003[?X1] :- obo:RO_0002487[?X,?X1] .
+obo:RO_0002497[?X0,?X2] :- obo:RO_0002497[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002327[?X0,?X2] :- obo:RO_0002327[?X0,?X1], obo:RO_0002017[?X1,?X2] .
+obo:RO_0002634[?X,?Y] :- obo:RO_0002635[?Y,?X] .
+obo:RO_0002635[?X,?Y] :- obo:RO_0002634[?Y,?X] .
+obo:RO_0010001[?X0,?X2] :- obo:RO_0000052[?X0,?X1], obo:RO_0000058[?X1,?X2] .
+obo:RO_0002157[?X,?Z] :- obo:RO_0002157[?X,?Y], obo:RO_0002157[?Y,?Z] .
+obo:RO_0002431[?X,?Y] :- obo:RO_0002331[?X,?Y] .
+obo:RO_0004033[?X,?Y] :- obo:RO_0004035[?X,?Y] .
+obo:RO_0002162[?X0,?X2] :- obo:RO_0002202[?X0,?X1], obo:RO_0002162[?X1,?X2] .
+obo:CARO_0000003[?X1] :- obo:RO_0004030[?X,?X1] .
+obo:RO_0002156[?X,?Z] :- obo:RO_0002156[?X,?Y], obo:RO_0002156[?Y,?Z] .
+obo:BFO_0000040[?X1] :- obo:RO_0001023[?X,?X1] .
+obo:RO_0002375[?X,?Y] :- obo:RO_0002380[?X,?Y] .
+obo:RO_0002295[?X,?Y] :- obo:RO_0002299[?X,?Y] .
+obo:RO_0002522[?X,?Y] :- obo:RO_0002523[?Y,?X] .
+obo:RO_0002523[?X,?Y] :- obo:RO_0002522[?Y,?X] .
+obo:BFO_0000002[?X1] :- obo:RO_0002506[?X,?X1] .
+obo:BFO_0000040[?X1] :- obo:RO_0003000[?X,?X1] .
+owl:Nothing[?X,?X] :- obo:RO_0002551[?X,?X] .
+obo:RO_0002103[?X,?Y] :- obo:RO_0002108[?X,?Y] .
+obo:RO_0002479[?X,?Y] :- obo:RO_0002231[?X,?Y] .
+obo:RO_0004000[?X,?Y] :- obo:RO_0004005[?X,?Y] .
+obo:CARO_0000003[?X1] :- obo:RO_0004027[?X,?X1] .
+obo:BFO_0000040[?X1] :- obo:RO_0002448[?X,?X1] .
+obo:RO_0004010[?X,?Y] :- obo:RO_0004013[?X,?Y] .
+obo:RO_0002344[?X,?Y] :- obo:RO_0002338[?X,?Y] .
+obo:RO_0002418[?X,?Y] :- obo:RO_0002411[?X,?Y] .
+obo:RO_0002327[?X2,?X1] :- obo:RO_0002327[?X2,?X], obo:BFO_0000051[?X,?X1], obo:GO_0003674[?X] .
+obo:RO_0002571[?X,?Y] :- obo:RO_0002572[?X,?Y] .
+obo:RO_0002636[?X,?Y] :- obo:RO_0002637[?Y,?X] .
+obo:RO_0002637[?X,?Y] :- obo:RO_0002636[?Y,?X] .
+obo:RO_0002131[?X,?Y] :- obo:RO_0002132[?X,?Y] .
+obo:RO_0002424[?X,?Y] :- obo:RO_0002425[?X,?Y] .
+obo:BFO_0000040[?X] :- obo:RO_0002473[?X,?X1] .
+obo:BFO_0000040[?X1] :- obo:RO_0009003[?X,?X1] .
+obo:RO_0002162[?X0,?X2] :- obo:RO_0002214[?X0,?X1], obo:RO_0002162[?X1,?X2] .
+obo:RO_0002375[?X,?Y] :- obo:RO_0002377[?X,?Y] .
+obo:RO_0002488[?X0,?X2] :- obo:RO_0002583[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002448[?X,?Y] :- obo:RO_0002450[?X,?Y] .
+obo:RO_0011010[?X,?Y] :- obo:RO_0011014[?X,?Y] .
+obo:GO_0008150[?X] :- obo:RO_0002295[?X,?X1] .
+obo:CARO_0001010[?X] :- obo:RO_0002574[?X,?X1] .
+obo:RO_0004026[?X,?Y] :- obo:RO_0004027[?X,?Y] .
+obo:BFO_0000015[?X] :- obo:RO_0002310[?X] .
+obo:BFO_0000015[?X] :- obo:RO_0002211[?X,?X1] .
+obo:RO_0002438[?X,?Y] :- obo:RO_0002439[?X,?Y] .
+obo:RO_0002110[?X0,?X2] :- obo:RO_0002110[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002204[?X0,?X2] :- obo:RO_0002512[?X0,?X1], obo:RO_0002510[?X1,?X2] .
+obo:RO_0002436[?X,?Y] :- obo:RO_0002448[?X,?Y] .
+obo:BFO_0000015[?X1] :- obo:RO_0004021[?X,?X1] .
+obo:RO_0002131[?X,?Y] :- obo:RO_0002509[?X,?Y] .
+obo:RO_0002384[?X,?Y] :- obo:RO_0002385[?X,?Y] .
+obo:RO_0000056[?X,?Y] :- obo:RO_0002461[?X,?Y] .
+obo:RO_0004031[?X0,?X2] :- obo:RO_0002327[?X0,?X1], obo:BFO_0000051[?X1,?X2] .
+obo:RO_0002295[?X,?Y] :- obo:RO_0002585[?X,?Y] .
+obo:RO_0002158[?X,?Z] :- obo:RO_0002158[?X,?Y], obo:RO_0002158[?Y,?Z] .
+obo:RO_0002632[?X,?Y] :- obo:RO_0002633[?Y,?X] .
+obo:RO_0002633[?X,?Y] :- obo:RO_0002632[?Y,?X] .
+obo:RO_0002413[?X0,?X2] :- obo:RO_0002402[?X0,?X1], obo:RO_0002400[?X1,?X2] .
+obo:RO_0004017[?X,?Y] :- obo:RO_0004019[?X,?Y] .
+obo:RO_0040036[?X,?Y] :- obo:RO_0002592[?X,?Y] .
+obo:RO_0002159[?X,?Z] :- obo:RO_0002159[?X,?Y], obo:RO_0002159[?Y,?Z] .
+obo:BFO_0000040[?X1] :- obo:RO_0002571[?X,?X1] .
+obo:RO_0002445[?X,?Y] :- obo:RO_0002637[?X,?Y] .
+obo:CARO_0000000[?X1] :- obo:RO_0002384[?X,?X1] .
+obo:RO_0002566[?X,?Y] :- obo:RO_0011003[?X,?Y] .
+obo:RO_0002524[?X,?Z] :- obo:RO_0002524[?X,?Y], obo:RO_0002524[?Y,?Z] .
+obo:RO_0002629[?X1,?X2] :- obo:RO_0002629[?X,?X2], obo:RO_0002025[?X,?X1] .
+obo:RO_0004033[?X0,?X2] :- obo:RO_0002327[?X0,?X1], obo:RO_0004046[?X1,?X2] .
+obo:RO_0000057[?X,?Y] :- obo:RO_0002218[?X,?Y] .
+obo:RO_0002523[?X,?Z] :- obo:RO_0002523[?X,?Y], obo:RO_0002523[?Y,?Z] .
+obo:RO_0002410[?X,?Y] :- obo:RO_0004017[?X,?Y] .
+obo:RO_0002213[?X0,?X2] :- obo:RO_0002230[?X0,?X1], obo:RO_0002213[?X1,?X2] .
+obo:BFO_0000015[?X] :- obo:RO_0002018[?X,?X1] .
+obo:RO_0002492[?X0,?X2] :- obo:RO_0002492[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002525[?X,?Y] :- obo:RO_0002517[?X,?Y] .
+obo:RO_0002001[?X,?Z] :- obo:RO_0002001[?X,?Y], obo:RO_0002001[?Y,?Z] .
+obo:RO_0002213[?X0,?X2] :- obo:RO_0002212[?X0,?X1], obo:RO_0002212[?X1,?X2] .
+obo:RO_0002524[?X,?Y] :- obo:RO_0002520[?X,?Y] .
+obo:RO_0002502[?X,?Y] :- obo:RO_0002314[?X,?Y] .
+obo:RO_0002525[?X,?Z] :- obo:RO_0002525[?X,?Y], obo:RO_0002525[?Y,?Z] .
+obo:RO_0002496[?X0,?X3] :- obo:RO_0002583[?X0,?X1], obo:BFO_0000062[?X1,?X2], obo:RO_0002583[?X3,?X2] .
+obo:RO_0002131[?X,?Y] :- obo:RO_0002379[?X,?Y] .
+obo:RO_0002323[?X,?Y] :- obo:RO_0002177[?X,?Y] .
+obo:CARO_0000000[?X] :- obo:RO_0002226[?X,?X1] .
+obo:RO_0004046[?X,?Y] :- obo:RO_0002305[?X,?Y] .
+obo:RO_0002331[?X2,?X] :- obo:RO_0002327[?X2,?X1], obo:BFO_0000050[?X1,?X], obo:GO_0008150[?X] .
+obo:RO_0002428[?X0,?X2] :- obo:RO_0002331[?X0,?X1], obo:RO_0002211[?X1,?X2] .
+obo:RO_0002522[?X,?Z] :- obo:RO_0002522[?X,?Y], obo:RO_0002522[?Y,?Z] .
+obo:BFO_0000040[?X] :- obo:RO_0011015[?X,?X1] .
+obo:OGMS_0000031[?X] :- obo:RO_0004027[?X,?X1] .
+obo:RO_0002529[?X,?Y] :- obo:RO_0002529[?Y,?X] .
+obo:RO_0002529[?X,?Y] :- obo:RO_0002529[?Y,?X] .
+obo:RO_0002330[?X,?Y] :- obo:RO_0002204[?X,?Y] .
+obo:RO_0002524[?X,?Y] :- obo:RO_0002525[?Y,?X] .
+obo:RO_0002525[?X,?Y] :- obo:RO_0002524[?Y,?X] .
+obo:RO_0002638[?X,?Y] :- obo:RO_0002639[?Y,?X] .
+obo:RO_0002639[?X,?Y] :- obo:RO_0002638[?Y,?X] .
+obo:RO_0040036[?X,?Y] :- obo:RO_0002343[?X,?Y] .
+obo:RO_0002320[?X,?Y] :- obo:RO_0002159[?X,?Y] .
+obo:CARO_0000003[?X1] :- obo:RO_0002315[?X,?X1] .
+obo:RO_0001018[?X,?Y] :- obo:RO_0002004[?X,?Y] .
+obo:RO_0002022[?X,?Y] :- obo:RO_0002578[?Y,?X] .
+obo:RO_0002578[?X,?Y] :- obo:RO_0002022[?Y,?X] .
+obo:RO_0002162[?X0,?X2] :- obo:RO_0002295[?X0,?X1], obo:RO_0002162[?X1,?X2] .
+obo:BFO_0000040[?X] :- obo:RO_0002437[?X,?X1] .
+obo:RO_0002114[?X,?Y] :- obo:RO_0002115[?Y,?X] .
+obo:RO_0002115[?X,?Y] :- obo:RO_0002114[?Y,?X] .
+obo:RO_0002500[?X,?Y] :- obo:RO_0002596[?X,?Y] .
+obo:RO_0002465[?X,?X] :- obo:GO_0044403[?X] .
+obo:RO_0011009[?X,?Y] :- obo:RO_0011015[?X,?Y] .
+obo:RO_0002442[?X0,?X3] :- obo:RO_0002461[?X0,?X1], obo:RO_0002467[?X1,?X2], obo:RO_0002461[?X3,?X2] .
+obo:BFO_0000015[?X] :- obo:RO_0002337[?X,?X1] .
+obo:RO_0002320[?X,?Y] :- obo:RO_0002162[?X,?Y] .
+obo:RO_0002323[?X,?Y] :- obo:RO_0002000[?X,?Y] .
+obo:RO_0002264[?X,?Y] :- obo:RO_0002263[?X,?Y] .
+obo:RO_0002528[?X,?Z] :- obo:RO_0002528[?X,?Y], obo:RO_0002528[?Y,?Z] .
+obo:RO_0002553[?X0,?X2] :- obo:RO_0002444[?X0,?X1], obo:RO_0002444[?X1,?X2] .
+obo:RO_0002496[?X0,?X2] :- obo:BFO_0000050[?X0,?X1], obo:RO_0002496[?X1,?X2] .
+obo:UPHENO_0001001[?X1] :- obo:RO_0002200[?X,?X1] .
+obo:RO_0002563[?X,?Y] :- obo:RO_0002564[?X,?Y] .
+obo:RO_0002022[?X,?Y] :- obo:RO_0002024[?X,?Y] .
+obo:RO_0002559[?X,?Y] :- obo:RO_0002566[?Y,?X] .
+obo:RO_0002566[?X,?Y] :- obo:RO_0002559[?Y,?X] .
+obo:RO_0002529[?X,?Z] :- obo:RO_0002529[?X,?Y], obo:RO_0002529[?Y,?Z] .
+obo:RO_0002485[?X,?Y] :- obo:RO_0002486[?Y,?X] .
+obo:RO_0002486[?X,?Y] :- obo:RO_0002485[?Y,?X] .
+obo:RO_0002263[?X,?Y] :- obo:RO_0004035[?X,?Y] .
+obo:RO_0002323[?X,?Y] :- obo:RO_0002325[?X,?Y] .
+obo:RO_0002200[?X,?Y] :- obo:RO_0002452[?X,?Y] .
+obo:BFO_0000004[?X1] :- obo:RO_0002231[?X,?X1] .
+obo:RO_0002335[?X,?Y] :- obo:RO_0002014[?X,?Y] .
+obo:RO_0002429[?X0,?X2] :- obo:RO_0002327[?X0,?X1], obo:RO_0002213[?X1,?X2] .
+obo:RO_0002337[?X,?Y] :- obo:RO_0002341[?X,?Y] .
+owl:sameAs[?Y1,?Y2] :- obo:RO_0002025[?X,?Y1], obo:RO_0002025[?X,?Y2] .
+obo:RO_0002309[?X,?Y] :- obo:RO_0002241[?X,?Y] .
+obo:RO_0002170[?X,?Y] :- obo:RO_0002486[?X,?Y] .
+obo:RO_0002233[?X,?X2] :- obo:RO_0002578[?X,?X1], obo:RO_0002327[?X2,?X1], obo:GO_0003674[?X1], obo:GO_0003674[?X] .
+obo:RO_0002578[?X,?Y] :- obo:RO_0002629[?X,?Y] .
+obo:RO_0002566[?X,?Y] :- obo:RO_0011002[?X,?Y] .
+obo:BFO_0000051[?X,?Y] :- obo:RO_0002473[?X,?Y] .
+obo:RO_0002328[?X,?Y] :- obo:RO_0004031[?X,?Y] .
+obo:RO_0002233[?X,?Y] :- obo:RO_0002352[?Y,?X] .
+obo:RO_0002352[?X,?Y] :- obo:RO_0002233[?Y,?X] .
+obo:BFO_0000050[?X,?Y] :- obo:RO_0002507[?X,?Y] .
+obo:RO_0004047[?X,?Y] :- obo:RO_0002304[?X,?Y] .
+obo:RO_0002630[?X2,?X] :- obo:RO_0002352[?X3,?X1], obo:RO_0002333[?X2,?X3], obo:RO_0002014[?X,?X1] .
+obo:RO_0002320[?X,?Y] :- obo:RO_0002158[?X,?Y] .
+obo:RO_0002629[?X2,?X] :- obo:RO_0002352[?X3,?X1], obo:RO_0002333[?X2,?X3], obo:RO_0002015[?X,?X1] .
+obo:RO_0002090[?X,?Y] :- obo:RO_0002412[?X,?Y] .
+obo:RO_0002334[?X,?Y] :- obo:RO_0002013[?X,?Y] .
+obo:RO_0002215[?X,?Y] :- obo:RO_0002327[?X,?Y] .
+obo:RO_0002497[?X0,?X2] :- obo:RO_0002286[?X0,?X1], obo:RO_0002497[?X1,?X2] .
+obo:BFO_0000004[?X] :- obo:RO_0002204[?X,?X1] .
+obo:RO_0000301[?X,?Z] :- obo:RO_0000301[?X,?Y], obo:RO_0000301[?Y,?Z] .
+obo:BFO_0000004[?X1] :- obo:RO_0001018[?X,?X1] .
+obo:RO_0002556[?X,?Y] :- obo:RO_0002557[?Y,?X] .
+obo:RO_0002557[?X,?Y] :- obo:RO_0002556[?Y,?X] .
+obo:RO_0000302[?X,?Z] :- obo:RO_0000302[?X,?Y], obo:RO_0000302[?Y,?Z] .
+obo:RO_0002177[?X0,?X2] :- obo:RO_0002371[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:BFO_0000004[?X] :- obo:RO_0002176[?X,?X1] .
+obo:RO_0002492[?X,?Y] :- obo:RO_0002493[?X,?Y] .
+obo:RO_0002345[?X0,?X2] :- obo:RO_0002345[?X0,?X1], obo:BFO_0000051[?X1,?X2] .
+obo:RO_0002106[?X,?Y] :- obo:RO_0002112[?Y,?X] .
+obo:RO_0002112[?X,?Y] :- obo:RO_0002106[?Y,?X] .
+obo:RO_0002022[?X,?Y] :- obo:RO_0002023[?X,?Y] .
+obo:RO_0002234[?X,?Y] :- obo:RO_0002353[?Y,?X] .
+obo:RO_0002353[?X,?Y] :- obo:RO_0002234[?Y,?X] .
+obo:RO_0002334[?X,?Y] :- obo:RO_0002022[?X,?Y] .
+obo:RO_0002162[?X0,?X2] :- obo:RO_0002215[?X0,?X1], obo:RO_0002162[?X1,?X2] .
+obo:RO_0040036[?X,?Y] :- obo:RO_0002296[?X,?Y] .
+obo:RO_0002256[?X,?Y] :- obo:RO_0002257[?Y,?X] .
+obo:RO_0002257[?X,?Y] :- obo:RO_0002256[?Y,?X] .
+foaf:image[?X1] :- obo:RO_0002026[?X,?X1] .
+obo:RO_0002506[?X,?Y] :- obo:RO_0002559[?X,?Y] .
+obo:BFO_0000015[?X] :- obo:RO_0002332[?X,?X1] .
+obo:RO_0002234[?X,?Y] :- obo:RO_0002297[?X,?Y] .
+obo:RO_0002567[?X,?Y] :- obo:RO_0002373[?X,?Y] .
+obo:RO_0002453[?X,?Y] :- obo:RO_0002557[?X,?Y] .
+obo:RO_0002021[?X,?Y] :- obo:RO_0002342[?X,?Y] .
+obo:CL_0000540[?X] :- obo:RO_0002121[?X,?X1] .
+obo:RO_0002411[?X,?Y] :- obo:RO_0002305[?X,?Y] .
+obo:CARO_0000000[?X1] :- obo:RO_0002254[?X,?X1] .
+obo:BFO_0000040[?X] :- obo:RO_0002450[?X,?X1] .
+obo:RO_0002330[?X,?Y] :- obo:RO_0002513[?X,?Y] .
+obo:RO_0002597[?X,?Y] :- obo:RO_0002599[?X,?Y] .
+obo:RO_0002635[?X,?Y] :- obo:RO_0002639[?X,?Y] .
+obo:BFO_0000040[?X] :- obo:RO_0011014[?X,?X1] .
+obo:RO_0002443[?X0,?X3] :- obo:RO_0002461[?X0,?X1], obo:RO_0002468[?X1,?X2], obo:RO_0002461[?X3,?X2] .
+obo:RO_0004010[?X,?Y] :- obo:RO_0004014[?X,?Y] .
+obo:RO_0002553[?X,?Y] :- obo:RO_0002554[?Y,?X] .
+obo:RO_0002554[?X,?Y] :- obo:RO_0002553[?Y,?X] .
+obo:RO_0002170[?X0,?X2] :- obo:RO_0002176[?X1,?X0], obo:RO_0002176[?X1,?X2] .
+obo:RO_0002630[?X1,?X2] :- obo:RO_0002630[?X,?X2], obo:RO_0002025[?X,?X1] .
+obo:RO_0004023[?X,?Y] :- obo:RO_0004019[?X,?Y] .
+obo:RO_0000056[?X,?Y] :- obo:RO_0002331[?X,?Y] .
+obo:RO_0002102[?X,?Y] :- obo:RO_0002110[?Y,?X] .
+obo:RO_0002110[?X,?Y] :- obo:RO_0002102[?Y,?X] .
+obo:RO_0002400[?X0,?X2] :- obo:RO_0002224[?X0,?X1], obo:RO_0002400[?X1,?X2] .
+obo:RO_0002219[?X,?Y] :- obo:RO_0002221[?Y,?X] .
+obo:RO_0002221[?X,?Y] :- obo:RO_0002219[?Y,?X] .
+obo:RO_0002295[?X,?Y] :- obo:RO_0002298[?X,?Y] .
+obo:RO_0002131[?X,?Y] :- obo:RO_0002526[?X,?Y] .
+obo:RO_0004019[?X,?Y] :- obo:RO_0004022[?X,?Y] .
+obo:RO_0002506[?X,?Y] :- obo:RO_0002509[?X,?Y] .
+obo:BFO_0000002[?X1] :- obo:RO_0002566[?X,?X1] .
+obo:RO_0002517[?X,?Z] :- obo:RO_0002517[?X,?Y], obo:RO_0002517[?Y,?Z] .
+obo:BFO_0000040[?X] :- obo:RO_0002570[?X,?X1] .
+obo:RO_0001018[?X0,?X2] :- obo:RO_0001025[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002519[?X,?Z] :- obo:RO_0002519[?X,?Y], obo:RO_0002519[?Y,?Z] .
+obo:RO_0002340[?X0,?X2] :- obo:RO_0002340[?X0,?X1], obo:BFO_0000051[?X1,?X2] .
+obo:CARO_0001010[?X1] :- obo:RO_0002162[?X,?X1] .
+obo:RO_0002324[?X,?Y] :- obo:RO_0002384[?X,?Y] .
+obo:RO_0011022[?X,?Y] :- obo:RO_0011023[?X,?Y] .
+obo:RO_0002518[?X,?Z] :- obo:RO_0002518[?X,?Y], obo:RO_0002518[?Y,?Z] .
+obo:RO_0002442[?X,?Y] :- obo:RO_0002456[?X,?Y] .
+obo:RO_0002440[?X,?Y] :- obo:RO_0002441[?X,?Y] .
+obo:RO_0002120[?X,?Y] :- obo:RO_0002106[?X,?Y] .
+obo:BFO_0000004[?X1] :- obo:RO_0002232[?X,?X1] .
+obo:RO_0040036[?X,?Y] :- obo:RO_0002565[?X,?Y] .
+obo:RO_0002502[?X,?Y] :- obo:RO_0002503[?X,?Y] .
+obo:RO_0002552[?X,?Y] :- obo:RO_0002300[?X,?Y] .
+obo:BFO_0000002[?X] :- obo:RO_0002008[?X,?X1] .
+obo:RO_0002323[?X,?Y] :- obo:RO_0002375[?X,?Y] .
+obo:BFO_0000050[?X2,?X1] :- obo:RO_0002327[?X2,?X], obo:BFO_0000066[?X,?X1] .
+obo:RO_0002514[?X,?Y] :- obo:RO_0002526[?X,?Y] .
+obo:BFO_0000040[?X] :- obo:RO_0002248[?X,?X1] .
+obo:RO_0002410[?X,?Y] :- obo:RO_0003311[?X,?Y] .
+obo:RO_0002516[?X,?Z] :- obo:RO_0002516[?X,?Y], obo:RO_0002516[?Y,?Z] .
+obo:RO_0002380[?X0,?X2] :- obo:RO_0002377[?X0,?X1], obo:RO_0002381[?X1,?X2] .
+obo:CL_0000000[?X1] :- obo:RO_0002356[?X,?X1] .
+obo:RO_0002439[?X,?Y] :- obo:RO_0002458[?Y,?X] .
+obo:RO_0002458[?X,?Y] :- obo:RO_0002439[?Y,?X] .
+obo:RO_0002295[?X,?Y] :- obo:RO_0002552[?X,?Y] .
+obo:RO_0002323[?X,?Y] :- obo:RO_0002170[?X,?Y] .
+obo:BFO_0000051[?X,?Y] :- obo:RO_0002180[?X,?Y] .
+obo:RO_0002448[?X0,?X3] :- obo:RO_0002327[?X0,?X1], obo:RO_0002211[?X1,?X2], obo:RO_0002333[?X2,?X3] .
+obo:BFO_0000040[?X1] :- obo:RO_0002509[?X,?X1] .
+obo:RO_0002630[?X,?Y] :- obo:RO_0002408[?X,?Y] .
+obo:RO_0002410[?X,?Y] :- obo:RO_0003302[?X,?Y] .
+obo:OGMS_0000031[?X] :- obo:RO_0004022[?X,?X1] .
+obo:RO_0002444[?X,?Y] :- obo:RO_0002445[?Y,?X] .
+obo:RO_0002445[?X,?Y] :- obo:RO_0002444[?Y,?X] .
+obo:RO_0002323[?X,?Y] :- obo:RO_0002176[?X,?Y] .
+obo:RO_0002244[?X,?Y] :- obo:RO_0002240[?X,?Y] .
+obo:RO_0002410[?X,?Y] :- obo:RO_0004018[?X,?Y] .
+obo:RO_0002476[?X,?Y] :- obo:RO_0002477[?X,?Y] .
+obo:RO_0004032[?X0,?X2] :- obo:RO_0002327[?X0,?X1], obo:RO_0004047[?X1,?X2] .
+obo:RO_0002013[?X,?Y] :- obo:RO_0002015[?X,?Y] .
+obo:RO_0002526[?X,?Y] :- obo:RO_0002525[?X,?Y] .
+obo:BFO_0000040[?X] :- obo:RO_0009001[?X,?X1] .
+obo:BFO_0000040[?X1] :- obo:RO_0011007[?X,?X1] .
+obo:RO_0000300[?X,?Z] :- obo:RO_0000300[?X,?Y], obo:RO_0000300[?Y,?Z] .
+obo:RO_0002616[?X,?Y] :- obo:RO_0002472[?X,?Y] .
+obo:RO_0002131[?X,?Y] :- obo:RO_0002433[?X,?Y] .
+obo:BFO_0000003[?X1] :- obo:RO_HOM0000000[?X,?X1], obo:BFO_0000003[?X] .
+obo:BFO_0000051[?X,?Y] :- obo:RO_0002551[?X,?Y] .
+obo:BFO_0000040[?X1] :- obo:RO_0011010[?X,?X1] .
+obo:RO_0002405[?X,?Y] :- obo:RO_0002412[?Y,?X] .
+obo:RO_0002412[?X,?Y] :- obo:RO_0002405[?Y,?X] .
+obo:RO_0002291[?X,?Y] :- obo:RO_0002293[?Y,?X] .
+obo:RO_0002293[?X,?Y] :- obo:RO_0002291[?Y,?X] .
+obo:RO_0002574[?X,?Y] :- obo:RO_0002460[?X,?Y] .
+obo:BFO_0000050[?X,?Y] :- obo:RO_0002229[?X,?Y] .
+obo:RO_0002328[?X,?Y] :- obo:RO_0002333[?X,?Y] .
+obo:BFO_0000020[?X1] :- obo:RO_0002573[?X,?X1] .
+obo:BFO_0000020[?X1] :- obo:RO_0002426[?X,?X1] .
+obo:RO_0002524[?X,?Y] :- obo:RO_0002516[?X,?Y] .
+obo:BFO_0000050[?X,?Y] :- obo:RO_0002223[?X,?Y] .
+obo:BFO_0000004[?X1] :- obo:RO_0002205[?X,?X1] .
+obo:RO_0002577[?X] :- obo:RO_0002509[?X,?X1] .
+obo:RO_0002444[?X0,?X3] :- obo:RO_0002462[?X0,?X1], obo:RO_0002468[?X1,?X2], obo:RO_0002463[?X3,?X2] .
+obo:RO_0011004[?X,?Y] :- obo:RO_0011016[?X,?Y] .
+obo:RO_0002404[?X,?Y] :- obo:RO_0002411[?Y,?X] .
+obo:RO_0002411[?X,?Y] :- obo:RO_0002404[?Y,?X] .
+obo:RO_0002258[?X,?Y] :- obo:RO_0002254[?X,?Y] .
+obo:RO_0002461[?X,?Y] :- obo:RO_0002463[?X,?Y] .
+obo:RO_0002523[?X,?Y] :- obo:RO_0002525[?X,?Y] .
+obo:OGMS_0000031[?X] :- obo:RO_0004019[?X,?X1] .
+obo:RO_0002380[?X,?Y] :- obo:RO_0002569[?Y,?X] .
+obo:RO_0002569[?X,?Y] :- obo:RO_0002380[?Y,?X] .
+obo:RO_0000300[?X,?Y] :- obo:RO_0000301[?X,?Y] .
+obo:RO_0002131[?X,?Y] :- obo:RO_0002432[?X,?Y] .
+obo:RO_0000301[?X,?Y] :- obo:RO_0002103[?X,?Y] .
+obo:RO_0011003[?X,?Y] :- obo:RO_0011022[?X,?Y] .
+obo:BFO_0000040[?X] :- obo:RO_0011010[?X,?X1] .
+obo:RO_0003302[?X,?Y] :- obo:RO_0001023[?X,?Y] .
+obo:BFO_0000040[?X] :- obo:RO_0003003[?X,?X1] .
+obo:RO_0002465[?X,?Y] :- obo:RO_0002468[?X,?Y] .
+obo:RO_0002211[?X,?Y] :- obo:RO_0002025[?X,?Y] .
+owl:topObjectProperty[?X,?Y] :- obo:RO_0002134[?X,?Y] .
+obo:RO_0002327[?X0,?X2] :- obo:RO_0002327[?X0,?X1], obo:BFO_0000051[?X1,?X2] .
+obo:RO_0002566[?X0,?X3] :- obo:RO_0002327[?X0,?X1], obo:RO_0002411[?X1,?X2], obo:RO_0002333[?X2,?X3] .
+obo:RO_0002480[?X0,?X3] :- obo:RO_0002215[?X0,?X1], obo:RO_0002482[?X1,?X2], obo:RO_0002400[?X2,?X3] .
+owl:sameAs[?Y1,?Y2] :- obo:RO_0002201[?X,?Y1], obo:RO_0002201[?X,?Y2] .
+obo:CARO_0000000[?X] :- obo:RO_0002384[?X,?X1] .
+obo:BFO_0000062[?X0,?X2] :- obo:BFO_0000050[?X0,?X1], obo:BFO_0000062[?X1,?X2] .
+obo:RO_0002527[?X,?Y] :- obo:RO_0002515[?X,?Y] .
+obo:RO_0002131[?X,?Y] :- obo:RO_0002570[?X,?Y] .
+obo:RO_0002461[?X,?Y] :- obo:RO_0002462[?X,?Y] .
+obo:RO_0040036[?X,?Y] :- obo:RO_0002552[?X,?Y] .
+obo:BFO_0000040[?X] :- obo:RO_0002007[?X,?X1] .
+obo:RO_0002516[?X,?Y] :- obo:RO_0002517[?Y,?X] .
+obo:RO_0002517[?X,?Y] :- obo:RO_0002516[?Y,?X] .
+obo:RO_0009501[?X0,?X2] :- obo:BFO_0000054[?X0,?X1], obo:RO_0002404[?X1,?X2] .
+obo:RO_0002105[?X,?Y] :- obo:RO_0002109[?Y,?X] .
+obo:RO_0002109[?X,?Y] :- obo:RO_0002105[?Y,?X] .
+obo:RO_0002130[?X,?Y] :- obo:RO_0002113[?X,?Y] .
+obo:RO_0011002[?X,?Y] :- obo:RO_0002448[?X,?Y] .
+obo:RO_0002162[?X0,?X2] :- obo:BFO_0000051[?X0,?X1], obo:RO_0002162[?X1,?X2] .
+obo:RO_0000057[?X,?Y] :- obo:RO_0002234[?X,?Y] .
+obo:RO_0000057[?X,?Y] :- obo:RO_0040036[?X,?Y] .
+obo:RO_0002526[?X,?Y] :- obo:RO_0002524[?X,?Y] .
+obo:BFO_0000141[?X] :- obo:RO_0002572[?X,?X1] .
+obo:RO_0002453[?X,?Y] :- obo:RO_0002445[?X,?Y] .
+obo:RO_0002328[?X,?Y] :- obo:RO_0002329[?X,?Y] .
+obo:RO_0002410[?X,?Y] :- obo:RO_0004028[?X,?Y] .
+obo:RO_0002497[?X,?Y] :- obo:RO_0002492[?X,?Y] .
+obo:RO_0002180[?X,?Y] :- obo:RO_0002018[?X,?Y] .
+obo:RO_0002216[?X,?Y] :- obo:RO_0002326[?X,?Y] .
+obo:RO_0002522[?X,?Y] :- obo:RO_0002524[?X,?Y] .
+obo:RO_0002328[?X,?Y] :- obo:RO_0002332[?X,?Y] .
+obo:RO_0003305[?X,?Y] :- obo:RO_0003307[?X,?Y] .
+obo:RO_0002510[?X,?Y] :- obo:RO_0002511[?Y,?X] .
+obo:RO_0002511[?X,?Y] :- obo:RO_0002510[?Y,?X] .
+obo:RO_0002450[?X,?Y] :- obo:RO_0003003[?X,?Y] .
+obo:RO_0002624[?X,?Y] :- obo:RO_0002625[?Y,?X] .
+obo:RO_0002625[?X,?Y] :- obo:RO_0002624[?Y,?X] .
+obo:OGMS_0000031[?X] :- obo:RO_0002452[?X,?X1] .
+obo:RO_0002619[?X,?Y] :- obo:RO_0002625[?X,?Y] .
+obo:RO_0002295[?X,?Y] :- obo:RO_0002343[?X,?Y] .
+obo:RO_0002013[?X,?Y] :- obo:RO_0002014[?X,?Y] .
+obo:RO_0002295[?X,?Y] :- obo:RO_0002349[?X,?Y] .
+obo:RO_0002512[?X,?Y] :- obo:RO_0002513[?Y,?X] .
+obo:RO_0002513[?X,?Y] :- obo:RO_0002512[?Y,?X] .
+obo:BFO_0000040[?X] :- obo:RO_0002375[?X,?X1] .
+obo:RO_0002297[?X,?Y] :- obo:RO_0002354[?Y,?X] .
+obo:RO_0002354[?X,?Y] :- obo:RO_0002297[?Y,?X] .
+obo:BFO_0000040[?X1] :- obo:RO_0002507[?X,?X1] .
+obo:RO_0002567[?X,?Y] :- obo:RO_0002568[?X,?Y] .
+obo:RO_0002087[?X0,?X2] :- obo:RO_0002224[?X0,?X1], obo:RO_0002230[?X1,?X2] .
+obo:RO_0002233[?X,?X2] :- obo:RO_0002025[?X,?X1], obo:RO_0002233[?X1,?X2] .
+obo:BFO_0000040[?X1] :- obo:RO_0002007[?X,?X1] .
+obo:BFO_0000040[?X1] :- obo:RO_0011003[?X,?X1] .
+obo:RO_0002170[?X,?Y] :- obo:RO_0002485[?X,?Y] .
+obo:RO_0002158[?X,?Y] :- obo:RO_HOM0000001[?X,?Y] .
+obo:RO_0002626[?X,?Y] :- obo:RO_0002627[?Y,?X] .
+obo:RO_0002627[?X,?Y] :- obo:RO_0002626[?Y,?X] .
+obo:RO_0002331[?X0,?X2] :- obo:RO_0002327[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:GO_0005634[?X] :- obo:RO_0002476[?X,?X1] .
+obo:BFO_0000051[?X,?Y] :- obo:RO_0002230[?X,?Y] .
+obo:RO_0002339[?X0,?X2] :- obo:RO_0002339[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:BFO_0000040[?X] :- obo:RO_0001020[?X,?X1] .
+obo:CARO_0001010[?X1] :- obo:RO_0008506[?X,?X1] .
+obo:RO_0004000[?X,?Y] :- obo:RO_0004006[?X,?Y] .
+obo:RO_0002410[?X,?Y] :- obo:RO_0002244[?X,?Y] .
+obo:RO_0002252[?X,?Y] :- obo:RO_0002253[?Y,?X] .
+obo:RO_0002253[?X,?Y] :- obo:RO_0002252[?Y,?X] .
+obo:RO_0002436[?X,?Y] :- obo:RO_0002447[?X,?Y] .
+obo:RO_0002472[?X,?Y] :- obo:RO_0002558[?Y,?X] .
+obo:RO_0002558[?X,?Y] :- obo:RO_0002472[?Y,?X] .
+obo:RO_0002202[?X,?Y] :- obo:RO_0002225[?X,?Y] .
+obo:RO_0002615[?X,?Y] :- obo:RO_0003301[?Y,?X] .
+obo:RO_0003301[?X,?Y] :- obo:RO_0002615[?Y,?X] .
+obo:RO_0002500[?X,?Y] :- obo:RO_0002216[?X,?Y] .
+obo:RO_0002006[?X,?Y] :- obo:RO_0002130[?Y,?X] .
+obo:RO_0002130[?X,?Y] :- obo:RO_0002006[?Y,?X] .
+obo:RO_0002327[?X,?Y] :- obo:RO_0002333[?Y,?X] .
+obo:RO_0002333[?X,?Y] :- obo:RO_0002327[?Y,?X] .
+obo:RO_0002578[?X1,?X2] :- obo:RO_0002578[?X,?X2], obo:RO_0002025[?X,?X1] .
+obo:BFO_0000040[?X1] :- obo:RO_0011009[?X,?X1] .
+obo:RO_0002353[?X,?Y] :- obo:RO_0002354[?X,?Y] .
+obo:RO_0002407[?X0,?X2] :- obo:RO_0002406[?X0,?X1], obo:RO_0002407[?X1,?X2] .
+obo:RO_0002412[?X,?Y] :- obo:RO_0002578[?X,?Y] .
+obo:BFO_0000040[?X1] :- obo:RO_0002473[?X,?X1] .
+obo:RO_0002619[?X,?Y] :- obo:RO_0008508[?X,?Y] .
+obo:CL_0000540[?X1] :- obo:RO_0000300[?X,?X1] .
+obo:RO_0002500[?X,?Y] :- obo:RO_0002608[?Y,?X] .
+obo:RO_0002608[?X,?Y] :- obo:RO_0002500[?Y,?X] .
+obo:RO_0002005[?X,?Y] :- obo:RO_0002134[?Y,?X] .
+obo:RO_0002134[?X,?Y] :- obo:RO_0002005[?Y,?X] .
+obo:CARO_0000006[?X1] :- obo:RO_0004025[?X,?X1] .
+obo:RO_0002254[?X,?Y] :- obo:RO_0002255[?Y,?X] .
+obo:RO_0002255[?X,?Y] :- obo:RO_0002254[?Y,?X] .
+obo:CARO_0000003[?X1] :- obo:RO_0002256[?X,?X1] .
+obo:RO_0011021[?X,?Y] :- obo:RO_0011009[?X,?Y] .
+obo:RO_0002385[?X,?Y] :- obo:RO_0002255[?X,?Y] .
+obo:BFO_0000002[?X] :- obo:RO_0002258[?X,?X1] .
+obo:RO_0002286[?X,?Y] :- obo:RO_0002257[?X,?Y] .
+obo:RO_0002375[?X,?Y] :- obo:RO_0002376[?X,?Y] .
+obo:BFO_0000015[?X1] :- obo:RO_0002211[?X,?X1] .
+obo:RO_0002407[?X0,?X2] :- obo:RO_0002407[?X0,?X1], obo:RO_0002406[?X1,?X2] .
+obo:RO_0002222[?X,?Y] :- obo:BFO_0000063[?X,?Y] .
+obo:RO_0002595[?X,?Y] :- obo:RO_0002584[?X,?Y] .
+obo:RO_0002202[?X,?Y] :- obo:RO_0002207[?X,?Y] .
+obo:BFO_0000015[?X] :- obo:RO_0002233[?X,?X1] .
+obo:RO_0002497[?X0,?X2] :- obo:RO_0002497[?X0,?X1], obo:RO_0002082[?X1,?X2] .
+obo:RO_0002442[?X,?Y] :- obo:RO_0002455[?X,?Y] .
+obo:RO_0002418[?X,?Y] :- obo:RO_0002012[?X,?Y] .
+obo:RO_0002023[?X,?Y] :- obo:RO_0002630[?Y,?X] .
+obo:RO_0002630[?X,?Y] :- obo:RO_0002023[?Y,?X] .
+obo:RO_0040036[?X,?Y] :- obo:RO_0002585[?X,?Y] .
+obo:RO_0002120[?X,?Y] :- obo:RO_0002105[?X,?Y] .
+obo:RO_0002411[?X,?Y] :- obo:RO_0002211[?X,?Y] .
+obo:CARO_0000003[?X] :- obo:RO_0002005[?X,?X1] .
+obo:RO_0002258[?X,?Y] :- obo:RO_0002476[?X,?Y] .
+obo:RO_0002444[?X,?Y] :- obo:RO_0002636[?X,?Y] .
+obo:RO_0002107[?X,?Y] :- obo:RO_0002108[?Y,?X] .
+obo:RO_0002108[?X,?Y] :- obo:RO_0002107[?Y,?X] .
+obo:BFO_0000040[?X1] :- obo:RO_0001022[?X,?X1] .
+obo:RO_0002203[?X,?Y] :- obo:RO_0002210[?X,?Y] .
+obo:RO_0002120[?X,?Y] :- obo:RO_0002114[?X,?Y] .
+obo:RO_0040035[?X,?Y] :- obo:RO_0004026[?X,?Y] .
+obo:BFO_0000040[?X1] :- obo:RO_0002437[?X,?X1] .
+obo:BFO_0000015[?X1] :- obo:RO_0002018[?X,?X1] .
+obo:BFO_0000040[?X1] :- obo:RO_0009002[?X,?X1] .
+obo:RO_0002445[?X,?Y] :- obo:RO_0008504[?X,?Y] .
+obo:RO_0002496[?X0,?X2] :- obo:RO_0002496[?X0,?X1], obo:BFO_0000062[?X1,?X2] .
+obo:RO_0002518[?X,?Y] :- obo:RO_0002519[?Y,?X] .
+obo:RO_0002519[?X,?Y] :- obo:RO_0002518[?Y,?X] .
+obo:BFO_0000015[?X] :- obo:RO_0002414[?X,?X1] .
+obo:RO_0002578[?X2,?X] :- obo:RO_0002352[?X3,?X1], obo:RO_0002333[?X2,?X3], obo:RO_0002013[?X,?X1] .
+obo:RO_0002018[?X1,?X] :- obo:RO_0002180[?X1,?X], obo:BFO_0000015[?X1], obo:BFO_0000015[?X] .
+obo:RO_0002216[?X,?Y] :- obo:RO_0002215[?X,?Y] .
+obo:RO_0002410[?X,?Y] :- obo:RO_0003310[?X,?Y] .
+obo:RO_0002445[?X,?Y] :- obo:RO_0002635[?X,?Y] .
+obo:RO_0002216[?X0,?X2] :- obo:RO_0002215[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:CARO_0000003[?X] :- obo:RO_0002373[?X,?X1] .
+obo:RO_0002258[?X,?Y] :- obo:RO_0002285[?X,?Y] .
+obo:RO_0002584[?X0,?X2] :- obo:BFO_0000051[?X0,?X1], obo:RO_0002215[?X1,?X2] .
+obo:BFO_0000002[?X1] :- obo:RO_0002204[?X,?X1] .
+obo:BFO_0000040[?X1] :- obo:RO_0011008[?X,?X1] .
+obo:RO_0002131[?X0,?X2] :- obo:BFO_0000051[?X0,?X1], obo:RO_0002131[?X1,?X2] .
+obo:RO_0002233[?X,?Y] :- obo:RO_0002591[?X,?Y] .
+owl:Nothing[?X] :- obo:RO_0002411[?X,?X1], obo:RO_0002131[?X,?X1] .
+owl:Nothing[?X1] :- obo:RO_0002411[?X,?X1], obo:RO_0002131[?X,?X1] .
+obo:RO_0002479[?X,?Y] :- obo:RO_0002021[?X,?Y] .
+obo:RO_0002566[?X,?Y] :- obo:RO_0002508[?X,?Y] .
+obo:BFO_0000040[?X1] :- obo:RO_0011002[?X,?X1] .
+obo:RO_0002468[?X,?X] :- obo:GO_0072519[?X] .
+obo:RO_0002509[?X,?Y] :- obo:RO_0002507[?X,?Y] .
+obo:RO_0003000[?X0,?X2] :- obo:BFO_0000066[?X1,?X0], obo:RO_0002234[?X1,?X2] .
+obo:RO_0002434[?X,?Y] :- obo:RO_0002437[?X,?Y] .
+obo:RO_0002618[?X,?Y] :- obo:RO_0008507[?X,?Y] .
+obo:RO_0002131[?X,?Y] :- obo:RO_0002130[?X,?Y] .
+obo:BFO_0000050[?X,?Y] :- obo:RO_0002375[?X,?Y] .
+obo:BFO_0000063[?X,?Y] :- obo:RO_0002411[?X,?Y] .
+obo:RO_0002162[?X0,?X2] :- obo:BFO_0000050[?X0,?X1], obo:RO_0002162[?X1,?X2] .
+obo:RO_0002287[?X0,?X2] :- obo:BFO_0000050[?X0,?X1], obo:RO_0002210[?X1,?X2] .
+obo:RO_0002431[?X,?Y] :- obo:RO_0002428[?X,?Y] .
+owl:Nothing[?X,?X] :- obo:RO_0003301[?X,?X] .
+obo:RO_0002162[?X0,?X2] :- obo:RO_0002254[?X0,?X1], obo:RO_0002162[?X1,?X2] .
+obo:RO_0002131[?X0,?X2] :- obo:BFO_0000050[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002017[?X,?Y] :- obo:RO_0002013[?X,?Y] .
+obo:RO_0002248[?X,?Y] :- obo:RO_0002249[?Y,?X] .
+obo:RO_0002249[?X,?Y] :- obo:RO_0002248[?Y,?X] .
+obo:RO_0000300[?X,?Y] :- obo:RO_0000302[?X,?Y] .
+obo:BFO_0000004[?X] :- obo:RO_0002220[?X,?X1] .
+obo:RO_0002443[?X,?Y] :- obo:RO_0002445[?X,?Y] .
+obo:RO_0000057[?X,?Y] :- obo:RO_0002233[?X,?Y] .
+obo:RO_0002440[?X,?Y] :- obo:RO_0002454[?X,?Y] .
+obo:RO_0002532[?X] :- obo:RO_0002534[?X] .
+obo:CARO_0000003[?X1] :- obo:RO_0002177[?X,?X1] .
+obo:OGMS_0000031[?X] :- obo:RO_0004023[?X,?X1] .
+obo:RO_0002488[?X,?Y] :- obo:RO_0002489[?X,?Y] .
+obo:RO_0004017[?X,?Y] :- obo:RO_0004018[?Y,?X] .
+obo:RO_0004018[?X,?Y] :- obo:RO_0004017[?Y,?X] .
+obo:OGMS_0000031[?X] :- obo:RO_0004029[?X,?X1] .
+obo:RO_0002454[?X,?Y] :- obo:RO_0002444[?X,?Y] .
+obo:CARO_0000006[?X1] :- obo:RO_0004020[?X,?X1] .
+obo:BFO_0000040[?X1] :- obo:RO_0002450[?X,?X1] .
+obo:RO_0002388[?X,?Y] :- obo:RO_0002203[?X,?Y] .
+obo:RO_0000302[?X,?Y] :- obo:RO_0002120[?X,?Y] .
+obo:RO_0002563[?X,?Y] :- obo:RO_0002465[?X,?Y] .
+obo:RO_0002162[?X,?Y] :- obo:RO_0002160[?X,?Y] .
+obo:RO_0002131[?X0,?X2] :- obo:BFO_0000051[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002387[?X,?Y] :- obo:RO_0002203[?X,?Y] .
+obo:BFO_0000040[?X] :- obo:RO_0003002[?X,?X1] .
+obo:RO_0002465[?X,?Y] :- obo:RO_0002467[?X,?Y] .
+obo:RO_0002527[?X,?Y] :- obo:RO_0002529[?X,?Y] .
+obo:CARO_0000000[?X] :- obo:RO_0002254[?X,?X1] .
+obo:RO_0002567[?X,?Y] :- obo:RO_0002372[?X,?Y] .
+obo:RO_0002024[?X,?Y] :- obo:RO_0002629[?Y,?X] .
+obo:RO_0002629[?X,?Y] :- obo:RO_0002024[?Y,?X] .
+obo:RO_0002595[?X,?Y] :- obo:RO_0002500[?X,?Y] .
+obo:RO_0002454[?X,?Y] :- obo:RO_0002556[?X,?Y] .
+obo:RO_0002411[?X,?Y] :- obo:RO_0002304[?X,?Y] .
+obo:RO_0002574[?X,?Y] :- obo:RO_0002619[?X,?Y] .
+obo:BFO_0000040[?X] :- obo:RO_0002577[?X] .
+obo:RO_0002490[?X,?Y] :- obo:RO_0002492[?X,?Y] .
+obo:RO_0002574[?X,?Y] :- obo:RO_0002438[?X,?Y] .
+obo:RO_0002444[?X,?Y] :- obo:RO_0008503[?X,?Y] .
+obo:BFO_0000040[?X1] :- obo:RO_0002248[?X,?X1] .
+obo:BFO_0000004[?X] :- obo:RO_0002202[?X,?X1] .
+obo:BFO_0000040[?X] :- obo:RO_0002325[?X,?X1] .
+obo:BFO_0000040[?X] :- obo:RO_0001021[?X,?X1] .
+obo:RO_0002295[?X,?Y] :- obo:RO_0002297[?X,?Y] .
+obo:RO_0002488[?X0,?X2] :- obo:RO_0002488[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0040036[?X,?Y] :- obo:RO_0002298[?X,?Y] .
+obo:RO_0002206[?X,?Y] :- obo:RO_0002292[?Y,?X] .
+obo:RO_0002292[?X,?Y] :- obo:RO_0002206[?Y,?X] .
+obo:BFO_0000004[?X] :- obo:RO_0010002[?X,?X1] .
+obo:RO_0002258[?X,?Y] :- obo:RO_0002226[?X,?Y] .
+obo:CARO_0000003[?X] :- obo:RO_0002004[?X,?X1] .
+obo:RO_0002635[?X,?Y] :- obo:RO_0002641[?X,?Y] .
+obo:RO_0002212[?X,?Y] :- obo:RO_0002630[?X,?Y] .
+obo:RO_0002320[?X,?Y] :- obo:RO_0002157[?X,?Y] .
+obo:RO_0002324[?X,?Y] :- obo:RO_0002295[?X,?Y] .
+obo:BFO_0000040[?X1] :- obo:RO_0002570[?X,?X1] .
+obo:RO_0002410[?X,?Y] :- obo:RO_0002595[?X,?Y] .
+foaf:image[?X] :- obo:RO_0002026[?X,?X1] .
+obo:CL_0000540[?X] :- obo:RO_0002102[?X,?X1] .
+obo:RO_0002622[?X,?Y] :- obo:RO_0002623[?Y,?X] .
+obo:RO_0002623[?X,?Y] :- obo:RO_0002622[?Y,?X] .
+obo:RO_0003304[?X,?Y] :- obo:RO_0003306[?X,?Y] .
+obo:BFO_0000040[?X1] :- obo:RO_0009001[?X,?X1] .
+obo:BFO_0000040[?X] :- obo:RO_0001018[?X,?X1] .
+obo:RO_0002103[?X,?Y] :- obo:RO_0002115[?X,?Y] .
+obo:RO_0002596[?X,?Y] :- obo:RO_0002598[?X,?Y] .
+obo:RO_0002634[?X,?Y] :- obo:RO_0002638[?X,?Y] .
+obo:RO_0002418[?X,?Y] :- obo:RO_0004046[?X,?Y] .
+obo:BFO_0000004[?X] :- obo:RO_0002150[?X,?X1] .
+obo:RO_0002610[?X,?Y] :- obo:RO_0002607[?X,?Y] .
+obo:RO_0002226[?X0,?X2] :- obo:RO_0002207[?X0,?X1], obo:RO_0001025[?X1,?X2] .
+obo:BFO_0000002[?X1] :- obo:RO_0002008[?X,?X1] .
+obo:RO_0002532[?X] :- obo:RO_0002514[?X,?X1] .
+obo:RO_0002330[?X,?Y] :- obo:RO_0002512[?X,?Y] .
+obo:RO_0002304[?X,?Y] :- obo:RO_0002213[?X,?Y] .
+obo:CARO_0001010[?X1] :- obo:RO_0008505[?X,?X1] .
+obo:RO_0002337[?X,?Y] :- obo:RO_0002313[?X,?Y] .
+obo:RO_0004010[?X,?Y] :- obo:RO_0004015[?X,?Y] .
+obo:BFO_0000017[?X] :- obo:RO_0004028[?X,?X1] .
+obo:RO_0002085[?X,?Z] :- obo:RO_0002085[?X,?Y], obo:RO_0002085[?Y,?Z] .
+obo:RO_0002258[?X,?Y] :- obo:RO_0002202[?X,?Y] .
+obo:ENVO_01000254[?X1] :- obo:RO_0002303[?X,?X1] .
+obo:RO_0002437[?X,?Y] :- obo:RO_0002446[?X,?Y] .
+obo:RO_0002121[?X0,?X2] :- obo:RO_0002121[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:BFO_0000040[?X1] :- obo:RO_0002233[?X,?X1] .
+obo:BFO_0000040[?X] :- obo:RO_0011007[?X,?X1] .
+obo:RO_0004000[?X,?Y] :- obo:RO_0004001[?X,?Y] .
+obo:BFO_0000003[?X] :- obo:RO_0002012[?X,?X1] .
+obo:RO_0002428[?X,?Y] :- obo:RO_0002429[?X,?Y] .
+obo:BFO_0000002[?X1] :- obo:RO_0002337[?X,?X1] .
+obo:BFO_0000040[?X1] :- obo:RO_0002111[?X,?X1] .
+obo:RO_0002131[?X,?Y] :- obo:RO_0002006[?X,?Y] .
+obo:RO_0002634[?X,?Y] :- obo:RO_0002640[?X,?Y] .
+obo:RO_0002586[?X,?Y] :- obo:RO_0002589[?X,?Y] .
+obo:RO_0001021[?X,?Y] :- obo:RO_0001023[?Y,?X] .
+obo:RO_0001023[?X,?Y] :- obo:RO_0001021[?Y,?X] .
+obo:RO_0002507[?X,?Y] :- obo:RO_0002508[?Y,?X] .
+obo:RO_0002508[?X,?Y] :- obo:RO_0002507[?Y,?X] .
+obo:RO_0002264[?X,?Y] :- obo:RO_0004032[?X,?Y] .
+obo:BFO_0000050[?X,?Y] :- obo:RO_0002012[?X,?Y] .
+obo:RO_0002449[?X0,?X3] :- obo:RO_0002327[?X0,?X1], obo:RO_0002630[?X1,?X2], obo:RO_0002333[?X2,?X3] .
+obo:BFO_0000015[?X] :- obo:RO_0002232[?X,?X1] .
+obo:RO_0004035[?X0,?X2] :- obo:RO_0002327[?X0,?X1], obo:RO_0002305[?X1,?X2] .
+obo:RO_0002254[?X0,?X2] :- obo:BFO_0000051[?X0,?X1], obo:RO_0002202[?X1,?X2] .
+obo:RO_0002464[?X,?Y] :- obo:RO_0002563[?X,?Y] .
+obo:RO_0011023[?X,?Y] :- obo:RO_0011007[?X,?Y] .
+obo:RO_0002286[?X,?Y] :- obo:RO_0002255[?X,?Y] .
+obo:BFO_0000004[?X] :- obo:RO_0002215[?X,?X1] .
+obo:GO_0005634[?X1] :- obo:RO_0002476[?X,?X1] .
+obo:CARO_0001001[?X1] :- obo:RO_0002005[?X,?X1] .
+obo:RO_0011021[?X,?Y] :- obo:RO_0011010[?X,?Y] .
+obo:RO_0002497[?X,?Y] :- obo:RO_0002593[?X,?Y] .
+obo:BFO_0000040[?X1] :- obo:RO_0003003[?X,?X1] .
+obo:CL_0000000[?X1] :- obo:RO_0002349[?X,?X1] .
+obo:RO_0002295[?X,?Y] :- obo:RO_0002296[?X,?Y] .
+obo:RO_0002418[?X,?Y] :- obo:RO_0004047[?X,?Y] .
+obo:RO_0002440[?X,?Y] :- obo:RO_0008502[?X,?Y] .
+obo:RO_0004000[?X,?Y] :- obo:RO_0004002[?X,?Y] .
+obo:RO_0002376[?X,?Y] :- obo:RO_0002383[?X,?Y] .
+obo:RO_0002321[?X,?Y] :- obo:RO_0002451[?X,?Y] .
+obo:RO_0040036[?X,?Y] :- obo:RO_0002313[?X,?Y] .
+obo:RO_0002409[?X0,?X2] :- obo:RO_0002408[?X0,?X1], obo:RO_0002409[?X1,?X2] .
+obo:RO_0004010[?X,?Y] :- obo:RO_0004016[?X,?Y] .
+obo:RO_0004023[?X,?Y] :- obo:RO_0004024[?X,?Y] .
+obo:CARO_0000003[?X] :- obo:RO_0002256[?X,?X1] .
+obo:RO_0002295[?X,?Y] :- obo:RO_0002315[?X,?Y] .
+obo:RO_0002330[?X,?Y] :- obo:RO_0002511[?X,?Y] .
+obo:BFO_0000004[?X1] :- obo:RO_0002150[?X,?X1] .
+obo:RO_0002596[?X,?Y] :- obo:RO_0002597[?X,?Y] .
+owl:Nothing[?X] :- obo:RO_0002404[?X,?X1], obo:RO_0002131[?X,?X1] .
+owl:Nothing[?X1] :- obo:RO_0002404[?X,?X1], obo:RO_0002131[?X,?X1] .
+obo:RO_0002618[?X,?Y] :- obo:RO_0002619[?Y,?X] .
+obo:RO_0002619[?X,?Y] :- obo:RO_0002618[?Y,?X] .
+obo:RO_0002592[?X,?Y] :- obo:RO_0002591[?X,?Y] .
+obo:RO_0002387[?X,?Y] :- obo:RO_0002388[?X,?Y] .
+obo:BFO_0000002[?X] :- obo:RO_0002206[?X,?X1] .
+obo:RO_0002629[?X,?Y] :- obo:RO_0002406[?X,?Y] .
+obo:RO_0002409[?X0,?X2] :- obo:RO_0002409[?X0,?X1], obo:RO_0002408[?X1,?X2] .
+obo:RO_0002610[?X,?Y] :- obo:RO_0003308[?X,?Y] .
+obo:RO_0002208[?X,?Y] :- obo:RO_0002209[?Y,?X] .
+obo:RO_0002209[?X,?Y] :- obo:RO_0002208[?Y,?X] .
+obo:RO_0002596[?X0,?X2] :- obo:RO_0002215[?X0,?X1], obo:RO_0002211[?X1,?X2] .
+obo:BFO_0000015[?X1] :- obo:RO_0004024[?X,?X1] .
+obo:RO_0002234[?X,?Y] :- obo:RO_0004008[?X,?Y] .
+obo:RO_0002449[?X,?Y] :- obo:RO_0003002[?X,?Y] .
+obo:RO_0002427[?X,?Y] :- obo:RO_0002404[?X,?Y] .
+obo:RO_0002324[?X,?Y] :- obo:RO_0002258[?X,?Y] .
+obo:RO_0002305[?X,?Y] :- obo:RO_0002212[?X,?Y] .
+obo:RO_0002444[?X,?Y] :- obo:RO_0002634[?X,?Y] .
+obo:RO_0002434[?X,?Y] :- obo:RO_0002436[?X,?Y] .
+obo:RO_0002437[?X,?Y] :- obo:RO_0002574[?X,?Y] .
+obo:RO_0001020[?X,?Y] :- obo:RO_0001022[?Y,?X] .
+obo:RO_0001022[?X,?Y] :- obo:RO_0001020[?Y,?X] .
+obo:RO_0002163[?X,?Y] :- obo:RO_0002220[?X,?Y] .
+obo:RO_0002130[?X0,?X2] :- obo:RO_0002130[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002440[?X,?Y] :- obo:RO_0002440[?Y,?X] .
+obo:CL_0000540[?X] :- obo:RO_0000300[?X,?X1] .
+obo:RO_0002592[?X,?Y] :- obo:RO_0002588[?X,?Y] .
+obo:RO_0004018[?X,?Y] :- obo:RO_0004010[?X,?Y] .
+obo:RO_0002411[?X,?Y] :- obo:RO_0002414[?X,?Y] .
+obo:RO_0002297[?X,?Y] :- obo:RO_0002588[?X,?Y] .
+obo:BFO_0000040[?X1] :- obo:RO_0002375[?X,?X1] .
+obo:RO_0002578[?X,?Y] :- obo:RO_0002630[?X,?Y] .
+obo:CARO_0001010[?X1] :- obo:RO_0009004[?X,?X1] .
+obo:RO_0002577[?X] :- obo:RO_0002507[?X,?X1] .
+obo:RO_0002444[?X,?Y] :- obo:RO_0002228[?X,?Y] .
+obo:BFO_0000002[?X1] :- obo:RO_0002258[?X,?X1] .
+owl:Nothing[?X,?X] :- obo:RO_0009001[?X,?X] .
+obo:RO_0002410[?X,?Y] :- obo:RO_0004023[?X,?Y] .
+obo:RO_0002379[?X0,?X2] :- obo:RO_0001025[?X0,?X1], obo:RO_0001025[?X2,?X1] .
+obo:RO_0002207[?X,?Y] :- obo:RO_0002210[?Y,?X] .
+obo:RO_0002210[?X,?Y] :- obo:RO_0002207[?Y,?X] .
+obo:RO_0002411[?X,?Z] :- obo:RO_0002411[?X,?Y], obo:RO_0002411[?Y,?Z] .
+obo:RO_0002321[?X,?Y] :- obo:RO_0008506[?X,?Y] .
+obo:BFO_0000003[?X] :- obo:RO_0002479[?X,?X1] .
+obo:RO_0040036[?X,?Y] :- obo:RO_0002355[?X,?Y] .
+obo:BFO_0000017[?X] :- obo:RO_0009501[?X,?X1] .
+obo:RO_0002232[?X0,?X2] :- obo:RO_0002230[?X0,?X1], obo:BFO_0000066[?X1,?X2] .
+owl:Nothing[?X,?X] :- obo:RO_0009002[?X,?X] .
+obo:RO_0003302[?X,?Y] :- obo:RO_0001021[?X,?Y] .
+obo:RO_0002444[?X,?Y] :- obo:RO_0002237[?X,?Y] .
+obo:BFO_0000040[?X] :- obo:RO_0011003[?X,?X1] .
+obo:RO_0002295[?X,?Y] :- obo:RO_0002357[?X,?Y] .
+obo:CARO_0001001[?X1] :- obo:RO_0002101[?X,?X1] .
+obo:BFO_0000040[?X] :- obo:RO_0011009[?X,?X1] .
+owl:Nothing[?X,?X] :- obo:RO_0009003[?X,?X] .
+obo:BFO_0000040[?X] :- obo:RO_0002449[?X,?X1] .
+obo:RO_0011003[?X,?Y] :- obo:RO_0011021[?X,?Y] .
+owl:Nothing[?X,?X] :- obo:RO_0009005[?X,?X] .
+obo:OGMS_0000031[?X] :- obo:RO_0004024[?X,?X1] .
+obo:RO_0002200[?X,?Y] :- obo:RO_0004022[?X,?Y] .
+obo:RO_0002618[?X,?Y] :- obo:RO_0002624[?X,?Y] .
+obo:RO_0002220[?X,?Y] :- obo:RO_0002219[?X,?Y] .
+obo:RO_0002574[?X,?Y] :- obo:RO_0002627[?X,?Y] .
+obo:RO_0002233[?X,?Y] :- obo:RO_0002019[?X,?Y] .
+obo:BFO_0000050[?X,?Y] :- obo:RO_0002249[?X,?Y] .
+obo:RO_0002384[?X,?Y] :- obo:RO_0002286[?X,?Y] .
+obo:RO_0002320[?X,?Y] :- obo:RO_0002156[?X,?Y] .
+obo:RO_0002574[?X,?Y] :- obo:RO_0002440[?X,?Y] .
+obo:RO_0002295[?X,?Y] :- obo:RO_0002348[?X,?Y] .
+obo:RO_0002492[?X,?Y] :- obo:RO_0002491[?X,?Y] .
+obo:RO_0002428[?X0,?X2] :- obo:RO_0002327[?X0,?X1], obo:RO_0002211[?X1,?X2] .
+obo:BFO_0000040[?X] :- obo:RO_0002434[?X,?X1] .
+obo:RO_0002479[?X0,?X2] :- obo:BFO_0000051[?X0,?X1], obo:BFO_0000066[?X1,?X2] .
+obo:BFO_0000040[?X1] :- obo:RO_0004028[?X,?X1] .
+obo:BFO_0000003[?X] :- obo:RO_0002501[?X,?X1] .
+obo:RO_0002418[?X,?Z] :- obo:RO_0002418[?X,?Y], obo:RO_0002418[?Y,?Z] .
+obo:RO_0002496[?X,?Y] :- obo:RO_0002488[?X,?Y] .
+obo:RO_0002156[?X,?Y] :- obo:RO_0002374[?X,?Y] .
+obo:RO_0002438[?X,?Y] :- obo:RO_0002469[?X,?Y] .
+obo:BFO_0000050[?X,?Y] :- obo:RO_0002571[?X,?Y] .
+obo:RO_0002321[?X,?Y] :- obo:RO_0002322[?X,?Y] .
+obo:BFO_0000015[?X] :- obo:RO_0002334[?X,?X1] .
+obo:RO_0002323[?X,?Y] :- obo:RO_0002150[?X,?Y] .
+obo:CARO_0000003[?X] :- obo:RO_0002551[?X,?X1] .
+obo:RO_0002020[?X,?Y] :- obo:RO_0002340[?X,?Y] .
+obo:RO_0002490[?X,?Y] :- obo:RO_0002488[?X,?Y] .
+obo:RO_0000056[?X,?Y] :- obo:RO_0002353[?X,?Y] .
+obo:RO_0002334[?X,?Y] :- obo:RO_0002336[?X,?Y] .
+obo:RO_0002113[?X0,?X2] :- obo:RO_0002113[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002500[?X,?Y] :- obo:RO_0002431[?X,?Y] .
+obo:RO_0010001[?X,?Y] :- obo:RO_0010002[?Y,?X] .
+obo:RO_0010002[?X,?Y] :- obo:RO_0010001[?Y,?X] .
+obo:RO_0002506[?X,?Y] :- obo:RO_0002566[?X,?Y] .
+obo:RO_0002414[?X,?Z] :- obo:RO_0002414[?X,?Y], obo:RO_0002414[?Y,?Z] .
+obo:RO_0002574[?X,?Y] :- obo:RO_0002618[?X,?Y] .
+obo:RO_0002338[?X0,?X2] :- obo:RO_0002338[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:BFO_0000063[?X0,?X2] :- obo:BFO_0000050[?X0,?X1], obo:BFO_0000063[?X1,?X2] .
+obo:RO_0004000[?X,?Y] :- obo:RO_0004010[?Y,?X] .
+obo:RO_0004010[?X,?Y] :- obo:RO_0004000[?Y,?X] .
+obo:RO_0002500[?X,?Y] :- obo:RO_0002264[?X,?Y] .
+obo:RO_0000056[?X,?Y] :- obo:RO_0002352[?X,?Y] .
+obo:CL_0000540[?X] :- obo:RO_0002100[?X,?X1] .
+obo:RO_0002225[?X0,?X2] :- obo:RO_0002207[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002337[?X,?Y] :- obo:RO_0002344[?X,?Y] .
+obo:RO_0002445[?X,?Y] :- obo:RO_0002209[?X,?Y] .
+obo:RO_0002410[?X,?Y] :- obo:RO_0002501[?X,?Y] .
+obo:RO_0003304[?X,?Y] :- obo:RO_0003305[?X,?Y] .
+obo:RO_0002323[?X,?Y] :- obo:RO_0002002[?X,?Y] .
+obo:RO_0004001[?X,?Y] :- obo:RO_0004011[?Y,?X] .
+obo:RO_0004011[?X,?Y] :- obo:RO_0004001[?Y,?X] .
+obo:RO_0002330[?X,?Y] :- obo:RO_0002206[?X,?Y] .
+obo:RO_0002295[?X,?Y] :- obo:RO_0002356[?X,?Y] .
+obo:RO_0002440[?X0,?X3] :- obo:RO_0002461[?X0,?X1], obo:RO_0002465[?X1,?X2], obo:RO_0002461[?X3,?X2] .
+obo:RO_0002286[?X,?Y] :- obo:RO_0002287[?X,?Y] .
+obo:RO_0002447[?X1,?X3] :- obo:RO_0002578[?X,?X2], obo:RO_0002333[?X2,?X3], obo:RO_0002333[?X,?X1], obo:GO_0016301[?X] .
+obo:RO_0002450[?X0,?X3] :- obo:RO_0002327[?X0,?X1], obo:RO_0002629[?X1,?X2], obo:RO_0002333[?X2,?X3] .
+obo:RO_0004025[?X0,?X2] :- obo:RO_0004025[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002438[?X,?Y] :- obo:RO_0002471[?X,?Y] .
+obo:RO_0002616[?X,?Y] :- obo:RO_0002614[?X,?Y] .
+obo:RO_0002444[?X,?Y] :- obo:RO_0002227[?X,?Y] .
+obo:RO_0002264[?X,?Y] :- obo:RO_0002431[?X,?Y] .
+obo:RO_0002436[?X,?Y] :- obo:RO_0002480[?X,?Y] .
+obo:RO_0002131[?X,?Y] :- obo:RO_0002360[?X,?Y] .
+obo:RO_0002200[?X,?Y] :- obo:RO_0002201[?Y,?X] .
+obo:RO_0002201[?X,?Y] :- obo:RO_0002200[?Y,?X] .
+obo:RO_0002336[?X,?Y] :- obo:RO_0002016[?X,?Y] .
+obo:RO_0002323[?X,?Y] :- obo:RO_0002008[?X,?Y] .
+obo:RO_0002321[?X,?Y] :- obo:RO_0008505[?X,?Y] .
+obo:RO_0002574[?X,?Y] :- obo:RO_0002626[?X,?Y] .
+obo:RO_0002314[?X0,?X2] :- obo:RO_0000052[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002597[?X0,?X2] :- obo:RO_0002215[?X0,?X1], obo:RO_0002212[?X1,?X2] .
+obo:CARO_0000003[?X] :- obo:RO_0002177[?X,?X1] .
+obo:BFO_0000040[?X] :- obo:RO_0011002[?X,?X1] .
+obo:RO_0040036[?X,?Y] :- obo:RO_0002299[?X,?Y] .
+obo:RO_0002496[?X0,?X2] :- obo:RO_0002496[?X0,?X1], obo:RO_0002082[?X1,?X2] .
+obo:BFO_0000040[?X] :- obo:RO_0011008[?X,?X1] .
+obo:RO_0002403[?X0,?X2] :- obo:RO_0002411[?X0,?X1], obo:RO_0002402[?X1,?X2] .
+obo:RO_0002435[?X,?Y] :- obo:RO_0002435[?Y,?X] .
+obo:RO_0002263[?X,?Y] :- obo:RO_0002428[?X,?Y] .
+obo:RO_0002434[?X,?Y] :- obo:RO_0002434[?Y,?X] .
+obo:RO_0002501[?X,?Y] :- obo:RO_0002427[?X,?Y] .
+obo:RO_0002102[?X0,?X2] :- obo:RO_0002102[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:CARO_0001010[?X] :- obo:RO_0002303[?X,?X1] .
+obo:RO_0002211[?X0,?X2] :- obo:RO_0002230[?X0,?X1], obo:RO_0002211[?X1,?X2] .
+obo:BFO_0000015[?X1] :- obo:RO_0002595[?X,?X1] .
+obo:RO_0002407[?X0,?X2] :- obo:RO_0002406[?X0,?X1], obo:RO_0002406[?X1,?X2] .
+obo:RO_0002482[?X,?X] :- obo:GO_0004842[?X] .
+obo:CARO_0000003[?X1] :- obo:RO_0002567[?X,?X1] .
+obo:RO_0002110[?X,?Y] :- obo:RO_0002121[?X,?Y] .
+obo:RO_0002410[?X,?Y] :- obo:RO_0002302[?X,?Y] .
+obo:RO_0002264[?X,?Y] :- obo:RO_0004033[?X,?Y] .
+obo:RO_0002334[?X,?Y] :- obo:RO_0002335[?X,?Y] .
+obo:RO_0002453[?X,?Y] :- obo:RO_0002554[?X,?Y] .
+obo:RO_0002567[?X,?Y] :- obo:RO_0002177[?X,?Y] .
+obo:CARO_0000003[?X1] :- obo:RO_0002576[?X,?X1] .
+obo:RO_0002437[?X,?Y] :- obo:RO_0002437[?Y,?X] .
+obo:RO_0002020[?X,?Y] :- obo:RO_0002345[?X,?Y] .
+obo:RO_0009001[?X,?Y] :- obo:RO_0009005[?X,?Y] .
+obo:RO_0002436[?X,?Y] :- obo:RO_0002436[?Y,?X] .
+obo:CARO_0001001[?X] :- obo:RO_0002132[?X,?X1] .
+obo:RO_0002404[?X,?Y] :- obo:RO_0002405[?X,?Y] .
+obo:RO_0004010[?X,?Y] :- obo:RO_0004011[?X,?Y] .
+owl:topObjectProperty[?X,?Y] :- obo:RO_0002111[?X,?Y] .
+obo:RO_0002320[?X,?Y] :- obo:RO_0002312[?X,?Y] .
+obo:RO_0002206[?X,?Y] :- obo:RO_0002246[?X,?Y] .
+obo:RO_0004023[?X,?Y] :- obo:RO_0004025[?X,?Y] .
+obo:RO_0002428[?X,?Y] :- obo:RO_0002430[?X,?Y] .
+obo:RO_0002330[?X,?Y] :- obo:RO_0002510[?X,?Y] .
+obo:RO_0002457[?X,?Y] :- obo:RO_0002469[?Y,?X] .
+obo:RO_0002469[?X,?Y] :- obo:RO_0002457[?Y,?X] .
+obo:CARO_0000006[?X1] :- obo:RO_0002104[?X,?X1] .
+obo:RO_0002430[?X0,?X2] :- obo:RO_0002331[?X0,?X1], obo:RO_0002212[?X1,?X2] .
+obo:RO_0002323[?X,?Y] :- obo:RO_0002131[?X,?Y] .
+obo:RO_0004034[?X0,?X2] :- obo:RO_0002327[?X0,?X1], obo:RO_0002304[?X1,?X2] .
+obo:RO_0002501[?X,?Y] :- obo:RO_0002418[?X,?Y] .
+obo:BFO_0000002[?X] :- obo:RO_0002330[?X,?X1] .
+obo:RO_0011024[?X,?Y] :- obo:RO_0011008[?X,?Y] .
+obo:RO_0002334[?X,?Z] :- obo:RO_0002334[?X,?Y], obo:RO_0002334[?Y,?Z] .
+obo:RO_0002375[?X,?Y] :- obo:RO_0002253[?X,?Y] .
+obo:BFO_0000015[?X] :- obo:RO_0002010[?X,?X1] .
+obo:BFO_0000031[?X1] :- obo:RO_0010002[?X,?X1] .
+obo:RO_0002085[?X,?Y] :- obo:RO_0002092[?Y,?X] .
+obo:RO_0002092[?X,?Y] :- obo:RO_0002085[?Y,?X] .
+obo:BFO_0000004[?X1] :- obo:RO_0002220[?X,?X1] .
+obo:RO_0002440[?X,?Y] :- obo:RO_0002453[?X,?Y] .
+obo:RO_0002443[?X,?Y] :- obo:RO_0002444[?X,?Y] .
+obo:RO_0002509[?X0,?X2] :- obo:RO_0002507[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0002532[?X] :- obo:RO_0002533[?X] .
+obo:RO_0004007[?X,?Y] :- obo:RO_0004008[?X,?Y] .
+obo:RO_0002407[?X0,?X2] :- obo:RO_0002409[?X0,?X1], obo:RO_0002409[?X1,?X2] .
+obo:RO_0002211[?X,?Y] :- obo:RO_0002213[?X,?Y] .
+obo:RO_0002131[?X,?Y] :- obo:BFO_0000050[?X,?Y] .
+obo:RO_0002204[?X,?Y] :- obo:RO_0002205[?Y,?X] .
+obo:RO_0002205[?X,?Y] :- obo:RO_0002204[?Y,?X] .
+obo:RO_0002212[?X,?Y] :- obo:RO_0002409[?X,?Y] .
+obo:BFO_0000017[?X1] :- obo:RO_0004010[?X,?X1] .
+obo:ENVO_01000254[?X1] :- obo:RO_0002322[?X,?X1] .
+obo:RO_0002376[?Y,?X] :- obo:RO_0002378[?X,?Y] .
+obo:RO_0002564[?X,?Y] :- obo:RO_0002482[?X,?Y] .
+obo:RO_0002445[?X,?Y] :- obo:RO_0002625[?X,?Y] .
+obo:RO_0010002[?X0,?X2] :- obo:RO_0000059[?X0,?X1], obo:RO_0000053[?X1,?X2] .
+obo:RO_0002497[?X0,?X2] :- obo:RO_0002497[?X0,?X1], obo:BFO_0000063[?X1,?X2] .
+obo:RO_0004005[?X,?Y] :- obo:RO_0004015[?Y,?X] .
+obo:RO_0004015[?X,?Y] :- obo:RO_0004005[?Y,?X] .
+obo:RO_0002488[?X,?Y] :- obo:RO_0002491[?X,?Y] .
+obo:RO_0002465[?X,?Y] :- obo:RO_0002466[?X,?Y] .
+obo:RO_0002310[?X] :- obo:RO_0002244[?X,?X1] .
+obo:BFO_0000040[?X] :- obo:RO_0003001[?X,?X1] .
+obo:RO_0002231[?X0,?X2] :- obo:RO_0002224[?X0,?X1], obo:BFO_0000066[?X1,?X2] .
+obo:RO_0004006[?X,?Y] :- obo:RO_0004016[?Y,?X] .
+obo:RO_0004016[?X,?Y] :- obo:RO_0004006[?Y,?X] .
+obo:BFO_0000031[?X] :- obo:RO_0010001[?X,?X1] .
+obo:RO_0002528[?X,?Y] :- obo:RO_0002531[?X,?Y] .
+obo:RO_0002329[?X0,?X2] :- obo:BFO_0000050[?X0,?X1], obo:RO_0002215[?X1,?X2] .
+obo:RO_0002418[?X,?Y] :- obo:RO_0002010[?X,?Y] .
+obo:RO_0002410[?X,?Y] :- obo:RO_0004000[?X,?Y] .
+obo:RO_0002328[?X,?Y] :- obo:RO_0002216[?X,?Y] .
+obo:RO_0002514[?X,?Y] :- obo:RO_0002523[?X,?Y] .
+obo:CARO_0001010[?X] :- obo:RO_0008505[?X,?X1] .
+obo:RO_0002444[?X,?Y] :- obo:RO_0002236[?X,?Y] .
+obo:RO_0011002[?X,?Y] :- obo:RO_0011004[?X,?Y] .
+obo:RO_0002409[?X,?Z] :- obo:RO_0002409[?X,?Y], obo:RO_0002409[?Y,?Z] .
+obo:RO_0004004[?X,?Y] :- obo:RO_0004014[?Y,?X] .
+obo:RO_0004014[?X,?Y] :- obo:RO_0004004[?Y,?X] .
+obo:RO_0002202[?X,?Y] :- obo:RO_0002203[?Y,?X] .
+obo:RO_0002203[?X,?Y] :- obo:RO_0002202[?Y,?X] .
+obo:BFO_0000040[?X1] :- obo:RO_0002325[?X,?X1] .
+obo:RO_0002244[?X,?Y] :- obo:RO_0002243[?X,?Y] .
+obo:RO_0002323[?X,?Y] :- obo:RO_0002026[?X,?Y] .
+obo:RO_0003302[?X,?Y] :- obo:RO_0001022[?X,?Y] .
+obo:BFO_0000004[?X1] :- obo:RO_0004026[?X,?X1] .
+obo:RO_0002527[?X,?Y] :- obo:RO_0002528[?X,?Y] .
+obo:BFO_0000003[?X1] :- obo:RO_0002012[?X,?X1] .
+obo:OGMS_0000031[?X] :- obo:RO_0004025[?X,?X1] .
+obo:GO_0004872[?X] :- obo:RO_0002019[?X,?X1] .
+obo:RO_0002487[?X,?Y] :- obo:RO_0002497[?X,?Y] .
+obo:RO_0002410[?X,?Y] :- obo:RO_0009501[?X,?Y] .
+obo:BFO_0000040[?X1] :- obo:RO_0011004[?X,?X1] .
+obo:BFO_0000040[?X] :- obo:RO_0009004[?X,?X1] .
+obo:BFO_0000040[?X1] :- obo:RO_0011013[?X,?X1] .
+obo:RO_0002429[?X0,?X2] :- obo:RO_0002331[?X0,?X1], obo:RO_0002213[?X1,?X2] .
+obo:RO_0002407[?X,?Z] :- obo:RO_0002407[?X,?Y], obo:RO_0002407[?Y,?Z] .
+obo:RO_0002206[?X,?Y] :- obo:RO_0002291[?X,?Y] .
+obo:RO_0002532[?X1] :- obo:RO_0002514[?X,?X1] .
+obo:RO_0002619[?X,?Y] :- obo:RO_0002623[?X,?Y] .
+obo:RO_0004002[?X,?Y] :- obo:RO_0004012[?Y,?X] .
+obo:RO_0004012[?X,?Y] :- obo:RO_0004002[?Y,?X] .
+obo:CARO_0000003[?X] :- obo:RO_0002111[?X,?X1] .
+obo:RO_0002427[?X,?Y] :- obo:RO_0002334[?X,?Y] .
+obo:RO_0002131[?X0,?X2] :- obo:RO_0002131[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:BFO_0000004[?X1] :- obo:RO_0002202[?X,?X1] .
+obo:CARO_0000006[?X1] :- obo:RO_0002206[?X,?X1] .
+obo:RO_0004003[?X,?Y] :- obo:RO_0004013[?Y,?X] .
+obo:RO_0004013[?X,?Y] :- obo:RO_0004003[?Y,?X] .
+obo:RO_0002525[?X,?Y] :- obo:RO_0002519[?X,?Y] .
+obo:RO_0011004[?X,?Y] :- obo:RO_0011013[?X,?Y] .
+obo:RO_0002496[?X0,?X2] :- obo:RO_0002258[?X0,?X1], obo:RO_0002496[?X1,?X2] .
+obo:RO_0002170[?X,?Y] :- obo:RO_0002179[?X,?Y] .
+obo:RO_0002220[?X,?Y] :- obo:RO_0002221[?X,?Y] .
+obo:GO_0003674[?X] :- obo:GO_0003824[?X] .
+obo:GO_0003824[?X] :- obo:GO_0016874[?X] .
+obo:GO_0003824[?X] :- obo:GO_0016740[?X] .
+obo:GO_0016881[?X] :- obo:GO_0019787[?X] .
+obo:GO_0019787[?X] :- obo:GO_0004842[?X] .
+obo:GO_0016772[?X] :- obo:GO_0016301[?X] .
+obo:GO_0016874[?X] :- obo:GO_0016879[?X] .
+obo:GO_0016740[?X] :- obo:GO_0016772[?X] .
+obo:GO_0016879[?X] :- obo:GO_0016881[?X] .
+obo:RO_HOM0000053[?X,?Y] :- obo:RO_HOM0000053[?Y,?X] .
+obo:RO_HOM0000022[?X,?Y] :- obo:RO_HOM0000073[?X,?Y] .
+obo:RO_HOM0000002[?X,?Y] :- obo:RO_HOM0000004[?X,?Y] .
+obo:RO_HOM0000046[?X,?Y] :- obo:RO_HOM0000046[?Y,?X] .
+obo:RO_HOM0000034[?X,?Y] :- obo:RO_HOM0000026[?X,?Y] .
+obo:RO_HOM0000060[?X,?Y] :- obo:RO_HOM0000060[?Y,?X] .
+obo:RO_HOM0000001[?X,?Y] :- obo:RO_HOM0000007[?X,?Y] .
+obo:RO_HOM0000011[?X,?Y] :- obo:RO_HOM0000024[?X,?Y] .
+obo:RO_HOM0000007[?X,?Y] :- obo:RO_HOM0000018[?X,?Y] .
+obo:RO_HOM0000007[?X,?Y] :- obo:RO_HOM0000047[?X,?Y] .
+obo:RO_HOM0000052[?X,?Y] :- obo:RO_HOM0000052[?Y,?X] .
+obo:RO_HOM0000018[?X,?Y] :- obo:RO_HOM0000061[?X,?Y] .
+obo:RO_HOM0000066[?X,?Y] :- obo:RO_HOM0000074[?X,?Y] .
+obo:RO_HOM0000004[?X,?Y] :- obo:RO_HOM0000033[?X,?Y] .
+obo:RO_HOM0000051[?X,?Y] :- obo:RO_HOM0000051[?Y,?X] .
+owl:Nothing[?X,?Y] :- obo:RO_HOM0000029[?X,?Y], obo:RO_HOM0000030[?X,?Y] .
+obo:RO_HOM0000045[?X,?Y] :- obo:RO_HOM0000045[?Y,?X] .
+obo:RO_HOM0000037[?X,?Y] :- obo:RO_HOM0000037[?Y,?X] .
+obo:RO_HOM0000028[?X,?Y] :- obo:RO_HOM0000029[?X,?Y] .
+obo:RO_HOM0000058[?X,?Y] :- obo:RO_HOM0000057[?X,?Y] .
+obo:RO_HOM0000044[?X,?Y] :- obo:RO_HOM0000044[?Y,?X] .
+obo:RO_HOM0000036[?X,?Y] :- obo:RO_HOM0000036[?Y,?X] .
+obo:RO_HOM0000003[?X,?Y] :- obo:RO_HOM0000074[?X,?Y] .
+obo:RO_HOM0000050[?X,?Y] :- obo:RO_HOM0000050[?Y,?X] .
+obo:RO_HOM0000043[?X,?Y] :- obo:RO_HOM0000043[?Y,?X] .
+obo:RO_HOM0000042[?X,?Y] :- obo:RO_HOM0000042[?Y,?X] .
+obo:RO_HOM0000029[?X,?Y] :- obo:RO_HOM0000029[?Y,?X] .
+obo:RO_HOM0000047[?X,?Y] :- obo:RO_HOM0000046[?X,?Y] .
+obo:RO_HOM0000007[?X,?Y] :- obo:RO_HOM0000036[?X,?Y] .
+obo:RO_HOM0000028[?X,?Y] :- obo:RO_HOM0000028[?Y,?X] .
+obo:RO_HOM0000027[?X,?Y] :- obo:RO_HOM0000027[?Y,?X] .
+obo:RO_HOM0000007[?X,?Y] :- obo:RO_HOM0000062[?X,?Y] .
+obo:RO_HOM0000010[?X,?Y] :- obo:RO_HOM0000013[?X,?Y] .
+obo:RO_HOM0000029[?X,?Y] :- obo:RO_HOM0000032[?X,?Y] .
+obo:RO_HOM0000034[?X,?Y] :- obo:RO_HOM0000034[?Y,?X] .
+obo:RO_HOM0000073[?X,?Y] :- obo:RO_HOM0000073[?Y,?X] .
+owl:Nothing[?X,?Y] :- obo:RO_HOM0000023[?X,?Y], obo:RO_HOM0000024[?X,?Y] .
+obo:RO_HOM0000066[?X,?Y] :- obo:RO_HOM0000027[?X,?Y] .
+owl:Nothing[?X,?Y] :- obo:RO_HOM0000071[?X,?Y], obo:RO_HOM0000072[?X,?Y] .
+obo:RO_HOM0000066[?X,?Y] :- obo:RO_HOM0000066[?Y,?X] .
+obo:RO_HOM0000010[?X,?Y] :- obo:RO_HOM0000012[?X,?Y] .
+obo:RO_HOM0000065[?X,?Y] :- obo:RO_HOM0000062[?X,?Y] .
+obo:RO_HOM0000029[?X,?Y] :- obo:RO_HOM0000031[?X,?Y] .
+obo:RO_HOM0000003[?X,?Y] :- obo:RO_HOM0000044[?X,?Y] .
+obo:RO_HOM0000058[?X,?Y] :- obo:RO_HOM0000058[?Y,?X] .
+obo:RO_HOM0000072[?X,?Y] :- obo:RO_HOM0000072[?Y,?X] .
+obo:RO_HOM0000030[?X,?Y] :- obo:RO_HOM0000052[?X,?Y] .
+obo:RO_HOM0000065[?X,?Y] :- obo:RO_HOM0000065[?Y,?X] .
+obo:RO_HOM0000057[?X,?Y] :- obo:RO_HOM0000057[?Y,?X] .
+obo:RO_HOM0000071[?X,?Y] :- obo:RO_HOM0000071[?Y,?X] .
+obo:RO_HOM0000037[?X,?Y] :- obo:RO_HOM0000034[?X,?Y] .
+obo:RO_HOM0000063[?X,?Y] :- obo:RO_HOM0000063[?Y,?X] .
+obo:RO_HOM0000005[?X,?Y] :- obo:RO_HOM0000044[?X,?Y] .
+obo:RO_HOM0000049[?X,?Y] :- obo:RO_HOM0000049[?Y,?X] .
+obo:RO_HOM0000017[?X,?Y] :- obo:RO_HOM0000020[?X,?Y] .
+obo:RO_HOM0000062[?X,?Y] :- obo:RO_HOM0000062[?Y,?X] .
+obo:RO_HOM0000050[?X,?Y] :- obo:RO_HOM0000060[?X,?Y] .
+obo:RO_HOM0000011[?X,?Y] :- obo:RO_HOM0000012[?X,?Y] .
+obo:RO_HOM0000062[?X,?Y] :- obo:RO_HOM0000054[?X,?Y] .
+obo:RO_HOM0000048[?X,?Y] :- obo:RO_HOM0000048[?Y,?X] .
+obo:RO_HOM0000000[?X,?Y] :- obo:RO_HOM0000065[?X,?Y] .
+obo:RO_HOM0000011[?X,?Y] :- obo:RO_HOM0000050[?X,?Y] .
+obo:RO_HOM0000055[?X,?Y] :- obo:RO_HOM0000055[?Y,?X] .
+obo:RO_HOM0000019[?X,?Y] :- obo:RO_HOM0000020[?X,?Y] .
+obo:RO_HOM0000047[?X,?Y] :- obo:RO_HOM0000047[?Y,?X] .
+obo:RO_HOM0000061[?X,?Y] :- obo:RO_HOM0000061[?Y,?X] .
+obo:RO_HOM0000006[?X,?Y] :- obo:RO_HOM0000015[?X,?Y] .
+obo:RO_HOM0000054[?X,?Y] :- obo:RO_HOM0000054[?Y,?X] .
+obo:RO_HOM0000000[?X,?Y] :- obo:RO_HOM0000001[?X,?Y] .
+obo:RO_HOM0000007[?X,?Y] :- obo:RO_HOM0000063[?X,?Y] .
+obo:RO_HOM0000017[?X,?Y] :- obo:RO_HOM0000054[?X,?Y] .
+obo:RO_HOM0000006[?X,?Y] :- obo:RO_HOM0000006[?Y,?X] .
+obo:RO_HOM0000005[?X,?Y] :- obo:RO_HOM0000005[?Y,?X] .
+owl:Nothing[?X,?Y] :- obo:RO_HOM0000011[?X,?Y], obo:RO_HOM0000017[?X,?Y] .
+obo:RO_HOM0000012[?X,?Y] :- obo:RO_HOM0000012[?Y,?X] .
+obo:RO_HOM0000004[?X,?Y] :- obo:RO_HOM0000004[?Y,?X] .
+obo:RO_HOM0000008[?X,?Y] :- obo:RO_HOM0000066[?X,?Y] .
+obo:RO_HOM0000011[?X,?Y] :- obo:RO_HOM0000011[?Y,?X] .
+obo:RO_HOM0000003[?X,?Y] :- obo:RO_HOM0000003[?Y,?X] .
+obo:RO_HOM0000007[?X,?Y] :- obo:RO_HOM0000037[?X,?Y] .
+obo:RO_HOM0000011[?X,?Y] :- obo:RO_HOM0000049[?X,?Y] .
+obo:RO_HOM0000010[?X,?Y] :- obo:RO_HOM0000010[?Y,?X] .
+obo:RO_HOM0000036[?X,?Y] :- obo:RO_HOM0000048[?X,?Y] .
+obo:RO_HOM0000002[?X,?Y] :- obo:RO_HOM0000002[?Y,?X] .
+obo:RO_HOM0000007[?X,?Y] :- obo:RO_HOM0000043[?X,?Y] .
+obo:RO_HOM0000011[?X,?Y] :- obo:RO_HOM0000055[?X,?Y] .
+obo:RO_HOM0000001[?X,?Y] :- obo:RO_HOM0000006[?X,?Y] .
+obo:RO_HOM0000007[?X,?Y] :- obo:RO_HOM0000075[?X,?Y] .
+obo:RO_HOM0000017[?X,?Y] :- obo:RO_HOM0000034[?X,?Y] .
+obo:RO_HOM0000011[?X,?Y] :- obo:RO_HOM0000023[?X,?Y] .
+obo:RO_HOM0000007[?X,?Y] :- obo:RO_HOM0000017[?X,?Y] .
+owl:Nothing[?X,?Y] :- obo:RO_HOM0000049[?X,?Y], obo:RO_HOM0000050[?X,?Y] .
+obo:RO_HOM0000069[?X,?Y] :- obo:RO_HOM0000069[?Y,?X] .
+obo:RO_HOM0000000[?X,?Y] :- obo:RO_HOM0000003[?X,?Y] .
+obo:RO_HOM0000006[?X,?Y] :- obo:RO_HOM0000014[?X,?Y] .
+obo:RO_HOM0000007[?X,?Y] :- obo:RO_HOM0000011[?X,?Y] .
+obo:RO_HOM0000003[?X,?Y] :- obo:RO_HOM0000058[?X,?Y] .
+obo:RO_HOM0000075[?X,?Y] :- obo:RO_HOM0000075[?Y,?X] .
+obo:RO_HOM0000002[?X,?Y] :- obo:RO_HOM0000009[?X,?Y] .
+obo:RO_HOM0000068[?X,?Y] :- obo:RO_HOM0000068[?Y,?X] .
+obo:RO_HOM0000001[?X,?Y] :- obo:RO_HOM0000001[?Y,?X] .
+obo:RO_HOM0000029[?X,?Y] :- obo:RO_HOM0000051[?X,?Y] .
+obo:RO_HOM0000019[?X,?Y] :- obo:RO_HOM0000060[?X,?Y] .
+obo:RO_HOM0000034[?X,?Y] :- obo:RO_HOM0000025[?X,?Y] .
+obo:RO_HOM0000074[?X,?Y] :- obo:RO_HOM0000074[?Y,?X] .
+obo:RO_HOM0000008[?X,?Y] :- obo:RO_HOM0000072[?X,?Y] .
+obo:RO_HOM0000000[?X,?Y] :- obo:RO_HOM0000000[?Y,?X] .
+obo:RO_HOM0000026[?X,?Y] :- obo:RO_HOM0000026[?Y,?X] .
+obo:RO_HOM0000000[?X,?Y] :- obo:RO_HOM0000002[?X,?Y] .
+obo:RO_HOM0000006[?X,?Y] :- obo:RO_HOM0000071[?X,?Y] .
+obo:RO_HOM0000006[?X,?Y] :- obo:RO_HOM0000016[?X,?Y] .
+obo:RO_HOM0000033[?X,?Y] :- obo:RO_HOM0000033[?Y,?X] .
+obo:RO_HOM0000018[?X,?Y] :- obo:RO_HOM0000053[?X,?Y] .
+obo:RO_HOM0000025[?X,?Y] :- obo:RO_HOM0000025[?Y,?X] .
+obo:RO_HOM0000006[?X,?Y] :- obo:RO_HOM0000010[?X,?Y] .
+obo:RO_HOM0000019[?X,?Y] :- obo:RO_HOM0000019[?Y,?X] .
+obo:RO_HOM0000032[?X,?Y] :- obo:RO_HOM0000032[?Y,?X] .
+obo:RO_HOM0000031[?X,?Y] :- obo:RO_HOM0000031[?Y,?X] .
+obo:RO_HOM0000007[?X,?Y] :- obo:RO_HOM0000019[?X,?Y] .
+obo:RO_HOM0000001[?X,?Y] :- obo:RO_HOM0000008[?X,?Y] .
+obo:RO_HOM0000024[?X,?Y] :- obo:RO_HOM0000024[?Y,?X] .
+obo:RO_HOM0000018[?X,?Y] :- obo:RO_HOM0000018[?Y,?X] .
+obo:RO_HOM0000007[?X,?Y] :- obo:RO_HOM0000042[?X,?Y] .
+obo:RO_HOM0000030[?X,?Y] :- obo:RO_HOM0000030[?Y,?X] .
+obo:RO_HOM0000011[?X,?Y] :- obo:RO_HOM0000022[?X,?Y] .
+obo:RO_HOM0000017[?X,?Y] :- obo:RO_HOM0000017[?Y,?X] .
+obo:RO_HOM0000007[?X,?Y] :- obo:RO_HOM0000045[?X,?Y] .
+obo:RO_HOM0000016[?X,?Y] :- obo:RO_HOM0000016[?Y,?X] .
+owl:Nothing[?X,?Y] :- obo:RO_HOM0000016[?X,?Y], obo:RO_HOM0000062[?X,?Y] .
+obo:RO_HOM0000009[?X,?Y] :- obo:RO_HOM0000009[?Y,?X] .
+obo:RO_HOM0000023[?X,?Y] :- obo:RO_HOM0000023[?Y,?X] .
+owl:Nothing[?X,?Y] :- obo:RO_HOM0000001[?X,?Y], obo:RO_HOM0000002[?X,?Y] .
+obo:RO_HOM0000015[?X,?Y] :- obo:RO_HOM0000015[?Y,?X] .
+obo:RO_HOM0000005[?X,?Y] :- obo:RO_HOM0000057[?X,?Y] .
+obo:RO_HOM0000002[?X,?Y] :- obo:RO_HOM0000005[?X,?Y] .
+owl:Nothing[?X,?Y] :- obo:RO_HOM0000042[?X,?Y], obo:RO_HOM0000043[?X,?Y] .
+obo:RO_HOM0000022[?X,?Y] :- obo:RO_HOM0000022[?Y,?X] .
+obo:RO_HOM0000018[?X,?Y] :- obo:RO_HOM0000068[?X,?Y] .
+obo:RO_HOM0000028[?X,?Y] :- obo:RO_HOM0000030[?X,?Y] .
+obo:RO_HOM0000014[?X,?Y] :- obo:RO_HOM0000014[?Y,?X] .
+obo:RO_HOM0000008[?X,?Y] :- obo:RO_HOM0000008[?Y,?X] .
+obo:RO_HOM0000011[?X,?Y] :- obo:RO_HOM0000069[?X,?Y] .
+obo:RO_HOM0000008[?X,?Y] :- obo:RO_HOM0000028[?X,?Y] .
+obo:RO_HOM0000020[?X,?Y] :- obo:RO_HOM0000020[?Y,?X] .
+obo:RO_HOM0000013[?X,?Y] :- obo:RO_HOM0000013[?Y,?X] .
+obo:RO_HOM0000007[?X,?Y] :- obo:RO_HOM0000007[?Y,?X] .
+obo:RO_HOM0000017[?X,?Y] :- obo:RO_HOM0000048[?X,?Y] .
+obo:RO_HOM0000053[?X,?Y] :- obo:RO_HOM0000073[?X,?Y] .
+obo:RO_0002087[?X,?Y] :- obo:RO_0002090[?Y,?X] .
+obo:RO_0002090[?X,?Y] :- obo:RO_0002087[?Y,?X] .
+obo:RO_0002084[?X,?Y] :- obo:RO_0002093[?Y,?X] .
+obo:RO_0002093[?X,?Y] :- obo:RO_0002084[?Y,?X] .
+obo:BFO_0000062[?X,?Y] :- obo:RO_0002087[?X,?Y] .
+obo:RO_0002222[?X,?Y] :- obo:RO_0002084[?X,?Y] .
+obo:RO_0002222[?X,?Y] :- obo:RO_0002081[?X,?Y] .
+obo:BFO_0000062[?X,?Z] :- obo:BFO_0000062[?X,?Y], obo:BFO_0000062[?Y,?Z] .
+obo:BFO_0000003[?X1] :- obo:BFO_0000063[?X,?X1] .
+obo:BFO_0000062[?X,?Y] :- obo:BFO_0000063[?Y,?X] .
+obo:BFO_0000063[?X,?Y] :- obo:BFO_0000062[?Y,?X] .
+obo:RO_0002229[?X,?Y] :- obo:RO_0002230[?Y,?X] .
+obo:RO_0002230[?X,?Y] :- obo:RO_0002229[?Y,?X] .
+obo:RO_0002222[?X,?Y] :- obo:RO_0002230[?X,?Y] .
+obo:BFO_0000062[?X0,?X2] :- obo:RO_0002092[?X0,?X1], obo:BFO_0000062[?X1,?X2] .
+obo:BFO_0000003[?X] :- obo:RO_0002091[?X,?X1] .
+obo:RO_0002083[?X,?Z] :- obo:RO_0002083[?X,?Y], obo:RO_0002083[?Y,?Z] .
+obo:RO_0002230[?X,?Z] :- obo:RO_0002230[?X,?Y], obo:RO_0002230[?Y,?Z] .
+obo:BFO_0000062[?X0,?X2] :- obo:RO_0002091[?X0,?X1], obo:BFO_0000062[?X1,?X2] .
+obo:RO_0002222[?X,?Y] :- obo:RO_0002091[?X,?Y] .
+obo:RO_0002222[?X,?Y] :- obo:RO_0002089[?X,?Y] .
+obo:RO_0002224[?X,?Z] :- obo:RO_0002224[?X,?Y], obo:RO_0002224[?Y,?Z] .
+obo:RO_0002222[?X,?Y] :- obo:RO_0002086[?X,?Y] .
+obo:RO_0002082[?X,?Z] :- obo:RO_0002082[?X,?Y], obo:RO_0002082[?Y,?Z] .
+obo:BFO_0000003[?X1] :- obo:RO_0002222[?X,?X1] .
+obo:RO_0002093[?X,?Y] :- obo:RO_0002092[?X,?Y] .
+obo:RO_0002089[?X,?Z] :- obo:RO_0002089[?X,?Y], obo:RO_0002089[?Y,?Z] .
+obo:BFO_0000063[?X,?Z] :- obo:BFO_0000063[?X,?Y], obo:BFO_0000063[?Y,?Z] .
+obo:BFO_0000003[?X1] :- obo:BFO_0000062[?X,?X1] .
+obo:RO_0002222[?X,?Y] :- obo:RO_0002093[?X,?Y] .
+obo:RO_0002086[?X0,?X2] :- obo:RO_0002093[?X0,?X1], obo:BFO_0000062[?X1,?X2] .
+obo:RO_0002222[?X,?Y] :- obo:RO_0002224[?X,?Y] .
+obo:RO_0002222[?X,?Y] :- obo:RO_0002088[?X,?Y] .
+obo:BFO_0000063[?X,?Y] :- obo:RO_0002090[?X,?Y] .
+obo:BFO_0000003[?X] :- obo:BFO_0000063[?X,?X1] .
+obo:RO_0002086[?X,?Y] :- obo:BFO_0000062[?X,?Y] .
+obo:BFO_0000003[?X1] :- obo:RO_0002091[?X,?X1] .
+obo:RO_0002081[?X,?Y] :- obo:RO_0002083[?X,?Y] .
+obo:RO_0002222[?X,?Y] :- obo:RO_0002229[?X,?Y] .
+obo:RO_0002089[?X0,?X2] :- obo:RO_0002091[?X0,?X1], obo:BFO_0000060[?X1,?X2] .
+obo:BFO_0000060[?X,?Z] :- obo:BFO_0000060[?X,?Y], obo:BFO_0000060[?Y,?Z] .
+obo:RO_0002222[?X,?Y] :- obo:RO_0002223[?X,?Y] .
+obo:RO_0002223[?X,?Y] :- obo:RO_0002224[?Y,?X] .
+obo:RO_0002224[?X,?Y] :- obo:RO_0002223[?Y,?X] .
+obo:RO_0002081[?X,?Y] :- obo:RO_0002082[?X,?Y] .
+obo:BFO_0000003[?X] :- obo:BFO_0000062[?X,?X1] .
+obo:RO_0002092[?X,?Z] :- obo:RO_0002092[?X,?Y], obo:RO_0002092[?Y,?Z] .
+obo:BFO_0000003[?X] :- obo:RO_0002222[?X,?X1] .
+obo:RO_0002088[?X,?Y] :- obo:RO_0002091[?Y,?X] .
+obo:RO_0002091[?X,?Y] :- obo:RO_0002088[?Y,?X] .
+obo:RO_0002086[?X,?Z] :- obo:RO_0002086[?X,?Y], obo:RO_0002086[?Y,?Z] .
+obo:RO_0001025[?X,?Z] :- obo:RO_0001025[?X,?Y], obo:RO_0001025[?Y,?Z] .
+obo:BFO_0000003[?X] :- obo:RO_0000057[?X,?X1] .
+obo:RO_0000053[?X,?Y] :- obo:RO_0000086[?X,?Y] .
+obo:BFO_0000066[?X,?Y] :- obo:BFO_0000067[?Y,?X] .
+obo:BFO_0000067[?X,?Y] :- obo:BFO_0000066[?Y,?X] .
+obo:BFO_0000017[?X1] :- obo:BFO_0000055[?X,?X1] .
+obo:BFO_0000034[?X] :- obo:RO_0000079[?X,?X1] .
+obo:RO_0000052[?X,?Y] :- obo:RO_0000079[?X,?Y] .
+obo:BFO_0000023[?X1] :- obo:RO_0000087[?X,?X1] .
+obo:RO_0000052[?X,?Y] :- obo:RO_0000080[?X,?Y] .
+obo:BFO_0000050[?X,?Z] :- obo:BFO_0000050[?X,?Y], obo:BFO_0000050[?Y,?Z] .
+obo:BFO_0000066[?X0,?X2] :- obo:BFO_0000050[?X0,?X1], obo:BFO_0000066[?X1,?X2] .
+obo:BFO_0000004[?X1] :- obo:RO_0001025[?X,?X1] .
+obo:BFO_0000034[?X1] :- obo:RO_0000085[?X,?X1] .
+owl:Nothing[?X] :- obo:BFO_0000002[?X], obo:BFO_0000050[?X,?X1], obo:BFO_0000003[?X1] .
+owl:Nothing[?X] :- obo:BFO_0000003[?X], obo:BFO_0000050[?X,?X1], obo:BFO_0000002[?X1] .
+obo:BFO_0000054[?X,?Y] :- obo:BFO_0000055[?Y,?X] .
+obo:BFO_0000055[?X,?Y] :- obo:BFO_0000054[?Y,?X] .
+obo:BFO_0000002[?X] :- obo:RO_0000056[?X,?X1] .
+obo:BFO_0000003[?X] :- obo:BFO_0000066[?X,?X1] .
+obo:BFO_0000031[?X] :- obo:RO_0000058[?X,?X1] .
+obo:BFO_0000050[?X,?Y] :- obo:RO_0002350[?X,?Y] .
+obo:RO_0001015[?X,?Y] :- obo:RO_0001025[?Y,?X] .
+obo:RO_0001025[?X,?Y] :- obo:RO_0001015[?Y,?X] .
+obo:RO_0001015[?X,?Z] :- obo:RO_0001015[?X,?Y], obo:RO_0001015[?Y,?Z] .
+obo:RO_0000080[?X,?Y] :- obo:RO_0000086[?Y,?X] .
+obo:RO_0000086[?X,?Y] :- obo:RO_0000080[?Y,?X] .
+obo:BFO_0000015[?X1] :- obo:BFO_0000054[?X,?X1] .
+obo:RO_0000052[?X,?Y] :- obo:RO_0000092[?X,?Y] .
+obo:BFO_0000015[?X] :- obo:BFO_0000055[?X,?X1] .
+obo:BFO_0000003[?X1] :- obo:RO_0000056[?X,?X1] .
+obo:BFO_0000004[?X1] :- obo:BFO_0000066[?X,?X1] .
+obo:BFO_0000004[?X] :- obo:RO_0001025[?X,?X1] .
+obo:RO_0000056[?X,?Y] :- obo:RO_0000057[?Y,?X] .
+obo:RO_0000057[?X,?Y] :- obo:RO_0000056[?Y,?X] .
+owl:Nothing[?X,?X] :- obo:RO_0002351[?X,?X] .
+obo:BFO_0000051[?X,?Y] :- obo:RO_0002351[?X,?Y] .
+obo:RO_0000081[?X,?Y] :- obo:RO_0000087[?Y,?X] .
+obo:RO_0000087[?X,?Y] :- obo:RO_0000081[?Y,?X] .
+obo:BFO_0000040[?X] :- obo:RO_0002002[?X,?X1] .
+obo:RO_0002000[?X,?Y] :- obo:RO_0002002[?Y,?X] .
+obo:RO_0002002[?X,?Y] :- obo:RO_0002000[?Y,?X] .
+obo:RO_0002350[?X,?Y] :- obo:RO_0002351[?Y,?X] .
+obo:RO_0002351[?X,?Y] :- obo:RO_0002350[?Y,?X] .
+obo:RO_0000053[?X,?Y] :- obo:RO_0000091[?X,?Y] .
+obo:RO_0000052[?X,?Y] :- obo:RO_0000081[?X,?Y] .
+obo:RO_0000053[?X,?Y] :- obo:RO_0000085[?X,?Y] .
+obo:RO_0000091[?X,?Y] :- obo:RO_0000092[?Y,?X] .
+obo:RO_0000092[?X,?Y] :- obo:RO_0000091[?Y,?X] .
+obo:BFO_0000004[?X] :- obo:RO_0000085[?X,?X1] .
+obo:BFO_0000019[?X1] :- obo:RO_0000086[?X,?X1] .
+obo:BFO_0000004[?X] :- obo:RO_0001025[?X,?X1] .
+owl:Nothing[?X,?X1] :- obo:BFO_0000006[?X], obo:RO_0001025[?X,?X1] .
+obo:BFO_0000020[?X1] :- obo:RO_0000053[?X,?X1] .
+obo:RO_0000079[?X,?Y] :- obo:RO_0000085[?Y,?X] .
+obo:RO_0000085[?X,?Y] :- obo:RO_0000079[?Y,?X] .
+obo:BFO_0000066[?X0,?X2] :- obo:BFO_0000066[?X0,?X1], obo:BFO_0000050[?X1,?X2] .
+obo:RO_0000058[?X,?Y] :- obo:RO_0000059[?Y,?X] .
+obo:RO_0000059[?X,?Y] :- obo:RO_0000058[?Y,?X] .
+obo:BFO_0000004[?X] :- obo:RO_0000087[?X,?X1] .
+obo:BFO_0000141[?X1] :- obo:RO_0002002[?X,?X1] .
+obo:BFO_0000016[?X1] :- obo:RO_0000091[?X,?X1] .
+obo:BFO_0000050[?X,?Y] :- obo:BFO_0000051[?Y,?X] .
+obo:BFO_0000051[?X,?Y] :- obo:BFO_0000050[?Y,?X] .
+obo:BFO_0000051[?X,?Z] :- obo:BFO_0000051[?X,?Y], obo:BFO_0000051[?Y,?Z] .
+obo:BFO_0000020[?X] :- obo:RO_0000059[?X,?X1] .
+obo:RO_0000052[?X,?Y] :- obo:RO_0000053[?Y,?X] .
+obo:RO_0000053[?X,?Y] :- obo:RO_0000052[?Y,?X] .
+obo:BFO_0000002[?X1] :- obo:RO_0000057[?X,?X1] .
+obo:BFO_0000020[?X1] :- obo:RO_0000058[?X,?X1] .
+obo:BFO_0000031[?X1] :- obo:RO_0000059[?X,?X1] .
+obo:RO_0001000[?X,?Y] :- obo:RO_0001001[?Y,?X] .
+obo:RO_0001001[?X,?Y] :- obo:RO_0001000[?Y,?X] .
+obo:BFO_0000017[?X] :- obo:BFO_0000054[?X,?X1] .
+obo:BFO_0000004[?X1] :- obo:RO_0001025[?X,?X1] .
+owl:Nothing[?X,?X1] :- obo:BFO_0000006[?X1], obo:RO_0001025[?X,?X1] .
+obo:RO_0000053[?X,?Y] :- obo:RO_0000087[?X,?Y] .
+obo:BFO_0000004[?X] :- obo:RO_0000091[?X,?X1] .
+obo:PATO_0000052[?X] :- obo:PATO_0001199[?X] .
+obo:PATO_0000051[?X] :- obo:PATO_0000052[?X] .
+obo:PATO_0001241[?X] :- obo:PATO_0000051[?X] .
+obo:PATO_0000141[?X] :- obo:PATO_0002124[?X] .
+obo:PATO_0000001[?X] :- obo:PATO_0001241[?X] .
+obo:PATO_0000051[?X] :- obo:PATO_0000141[?X] .
+obo:CARO_0000003[?X] :- obo:GO_0016020[?X] .
+obo:GO_0044456[?X] :- obo:GO_0042734[?X] .
+obo:GO_0044464[?X] :- obo:GO_0005634[?X] .
+obo:GO_0042995[?X] :- obo:GO_0043005[?X] .
+obo:GO_0044456[?X] :- obo:GO_0045211[?X] .
+obo:GO_0044464[?X] :- obo:GO_0044456[?X] .
+obo:CARO_0000003[?X] :- obo:GO_0044464[?X] .
+obo:GO_0044464[?X] :- obo:GO_0042995[?X] .
+obo:GO_0016020[?X] :- obo:GO_0045211[?X] .
+obo:GO_0043005[?X] :- obo:GO_0030424[?X] .
+obo:GO_0016020[?X] :- obo:GO_0042734[?X] .
+obo:BFO_0000015[?X] :- obo:GO_0008150[?X] .
+obo:GO_0043005[?X] :- obo:GO_0030425[?X] .
+obo:CARO_0000003[?X] :- obo:GO_0045202[?X] .
+owl:Nothing[?X] :- obo:BFO_0000040[?X], obo:BFO_0000141[?X] .
+owl:Nothing[?X] :- obo:BFO_0000017[?X], obo:BFO_0000019[?X] .
+owl:Nothing[?X] :- obo:BFO_0000002[?X], obo:BFO_0000003[?X] .
+owl:Nothing[?X] :- obo:BFO_0000016[?X], obo:BFO_0000023[?X] .
+owl:Nothing[?X] :- obo:BFO_0000004[?X], obo:BFO_0000020[?X] .
+owl:Nothing[?X] :- obo:BFO_0000004[?X], obo:BFO_0000031[?X] .
+owl:Nothing[?X] :- obo:BFO_0000020[?X], obo:BFO_0000031[?X] .
+obo:BFO_0000040[?X] :- obo:CARO_0000006[?X] .
+obo:CARO_0000003[?X] :- obo:CL_0000000[?X] .
+obo:BFO_0000004[?X] :- obo:CARO_0030000[?X] .
+obo:CARO_0030000[?X] :- obo:CARO_0000000[?X] .
+obo:CARO_0010000[?X] :- obo:CARO_0000011[?X] .
+obo:CARO_0000003[?X] :- obo:CARO_0010000[?X] .
+obo:CARO_0001000[?X] :- obo:CARO_0001001[?X] .
+obo:RO_0002577[?X] :- obo:CARO_0000011[?X] .
+obo:BFO_0000020[?X] :- obo:PATO_0000001[?X] .
+obo:CL_0000000[?X] :- obo:CL_0000540[?X] .
+obo:ENVO_01000254[?X] :- obo:ENVO_00000428[?X] .
+obo:PATO_0000052[?X] :- obo:PATO_0002009[?X] .
+obo:CL_0000000[?X1] :- obo:RO_0002207[?X,?X1], obo:CL_0000000[?X] .
+obo:RO_0002577[?X] :- obo:ENVO_01000254[?X] .
+obo:CARO_0010000[?X1] :- obo:RO_0002207[?X,?X1], obo:CARO_0010000[?X] .
+obo:BFO_0000016[?X] :- obo:OGMS_0000031[?X] .
+obo:PATO_0000001[?X] :- obo:UPHENO_0001001[?X] .
+obo:BFO_0000040[?X] :- obo:CARO_0001010[?X] .
+obo:CARO_0000003[?X] :- obo:CARO_0001000[?X] .
+obo:CARO_0000000[?X] :- obo:CARO_0000006[?X] .
+obo:BFO_0000141[?X] :- obo:CARO_0000007[?X] .
+obo:CARO_0000006[?X] :- obo:CARO_0000003[?X] .
+obo:PATO_0002009[?X] :- obo:PATO_0000402[?X] .
+obo:PATO_0000051[?X] :- obo:PATO_0000052[?X] .
+obo:BFO_0000019[?X] :- obo:PATO_0000051[?X] .
+obo:BFO_0000015[?X] :- obo:GO_0003674[?X] .
+obo:RO_0000087[?X,?Y] :- obo:RO_0002262[?X,?Y] .
+obo:RO_0000087[?X,?Y] :- obo:RO_0002260[?X,?Y] .
+obo:RO_0000087[?X,?Y] :- obo:RO_0002261[?X,?Y] .
+obo:BFO_0000020[?X] :- obo:BFO_0000019[?X] .
+obo:BFO_0000017[?X] :- obo:BFO_0000016[?X] .
+obo:BFO_0000002[?X] :- obo:BFO_0000031[?X] .
+obo:BFO_0000003[?X] :- obo:BFO_0000015[?X] .
+obo:BFO_0000002[?X] :- obo:BFO_0000020[?X] .
+obo:BFO_0000002[?X] :- obo:BFO_0000004[?X] .
+obo:BFO_0000020[?X] :- obo:BFO_0000017[?X] .
+obo:BFO_0000004[?X] :- obo:BFO_0000141[?X] .
+obo:BFO_0000004[?X] :- obo:BFO_0000040[?X] .
+go:ObsoleteClass[?X] :- obo:BFO_0000005[?X] .
+obo:BFO_0000016[?X] :- obo:BFO_0000034[?X] .
+obo:BFO_0000141[?X] :- obo:BFO_0000006[?X] .
+obo:BFO_0000017[?X] :- obo:BFO_0000023[?X] .
+obo:GO_0044403[?X] :- obo:GO_0085031[?X] .
+obo:GO_0007610[?X] :- obo:GO_0051705[?X] .
+obo:GO_0008150[?X] :- obo:GO_0051704[?X] .
+obo:GO_0050896[?X] :- obo:GO_0007610[?X] .
+obo:GO_0007631[?X] :- obo:GO_0051816[?X] .
+obo:GO_0044419[?X] :- obo:GO_0044403[?X] .
+obo:GO_0051704[?X] :- obo:GO_0044419[?X] .
+obo:GO_0044403[?X] :- obo:GO_0072519[?X] .
+obo:GO_0007610[?X] :- obo:GO_0007631[?X] .
+obo:GO_0008150[?X] :- obo:GO_0050896[?X] .
+obo:GO_0044419[?X] :- obo:GO_0051702[?X] .
+obo:GO_0044403[?X] :- obo:GO_0085030[?X] .
+obo:GO_0051702[?X] :- obo:GO_0051850[?X] .
+obo:GO_0051704[?X] :- obo:GO_0051705[?X] .
+obo:GO_0051816[?X] :- obo:GO_0051850[?X] .
+obo:GO_0051705[?X] :- obo:GO_0051850[?X] .
+obo:BFO_0000020[?X1] :- obo:BFO_0000050[?X,?X1], obo:BFO_0000020[?X] .
+obo:BFO_0000031[?X1] :- obo:BFO_0000050[?X,?X1], obo:BFO_0000031[?X] .
+obo:BFO_0000002[?X1] :- obo:RO_HOM0000000[?X,?X1], obo:BFO_0000002[?X] .
+obo:BFO_0000003[?X1] :- obo:BFO_0000050[?X,?X1], obo:BFO_0000003[?X] .
+obo:BFO_0000002[?X1] :- obo:BFO_0000050[?X,?X1], obo:BFO_0000002[?X] .
+obo:BFO_0000003[?X1] :- obo:RO_HOM0000000[?X,?X1], obo:BFO_0000003[?X] .
+obo:BFO_0000004[?X1] :- obo:BFO_0000050[?X,?X1], obo:BFO_0000004[?X] .
+obo:BFO_0000017[?X1] :- obo:BFO_0000050[?X,?X1], obo:BFO_0000017[?X] .
+obo:BFO_0000019[?X1] :- obo:BFO_0000050[?X,?X1], obo:BFO_0000019[?X] .
+owl:Nothing[?X] :- obo:BFO_0000141[?X], obo:BFO_0000051[?X,?X1], obo:BFO_0000040[?X1] .
+owl:Nothing[?X] :- obo:BFO_0000040[?X], obo:BFO_0000050[?X,?X1], obo:BFO_0000141[?X1] .

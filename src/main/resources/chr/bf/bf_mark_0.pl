@@ -114,8 +114,8 @@ num_updates(N) \ extract_input(X,Y) <=>
 		
 	
 % check if next update available after deriving a fact
-applied_rules(1,O), num_updates(U), current_update(U) ==> 
-	member(O,[add,fwd]) |
+applied_rules(_,O), num_updates(U), current_update(U) ==> 
+	member(O,[ins,fwd]) |
 	read_stream(0.0).	
 
 
@@ -141,11 +141,12 @@ update(del,[F|Fs],U) <=>
 %-----------------
 % no duplicates
 % save mark if duplicate is marked
-fact(F,O,M1,_) \ fact(F,O,M2,_) <=> M1 = M2.
+%fact(F,O,M1,_) \ fact(F,O,M2,_) <=> M1 = M2.
+fact(F,O,_,_) \ fact(F,O,_,_) <=> true.
 
 % mark facts that are deleted by next update
 fact(F,_,M,_) \ pending_fact(F,del,_) <=>
-	var(M) |
+	% var(M) |
 	M = 1.
 	
 

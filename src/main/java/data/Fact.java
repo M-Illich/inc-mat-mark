@@ -1,6 +1,12 @@
 package data;
 
+import java.util.List;
+
 public class Fact extends Atom {
+	
+	public Fact(String predicate, List<String> arguments) {
+		super(predicate, arguments);
+	}
 
 	/**
 	 * 

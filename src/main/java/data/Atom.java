@@ -10,8 +10,8 @@ public class Atom {
 	public List<String> arguments;
 
 	public Atom(String predicate, List<String> arguments) {
-		this.predicate = predicate;
-		this.arguments = arguments;
+		this.predicate = ensureCorrectFormat(predicate);
+		this.arguments = arguments.stream().map(a -> ensureCorrectFormat(a)).toList();
 	}
 
 	/**
@@ -21,7 +21,8 @@ public class Atom {
 	 *               {@code predicate(arg1, arg2, ...)} or
 	 *               {@code predicate[arg1, ...]} where {@code arg1} etc. start with
 	 *               a lowercase letter for constants and either an uppercase letter
-	 *               or {@code ?} for variables
+	 *               or {@code ?} for variables. Note that arguments must not
+	 *               contain any commas.
 	 * 
 	 */
 	public Atom(String string) {
@@ -38,17 +39,10 @@ public class Atom {
 		}
 
 		String[] parts = string.substring(1, string.length() - 1).split(",");
+
 		for (int i = 0; i < parts.length; i++) {
 			String s = parts[i].trim();
-
-			// surround elements that contain colon with '...' for compatibility with
-			// SWI-Prolog
-			if (s.contains(":")) {
-				s = "'" + s + "'";
-			}
-			// ensure correct format of variables for SWI-Prolog
-			s = ensureUppercaseVariables(s);
-
+			s = ensureCorrectFormat(s);
 			parts[i] = s;
 
 		}
@@ -58,15 +52,23 @@ public class Atom {
 	}
 
 	/**
-	 * Transform variables that start with ? into ones that start with uppercase in
-	 * the given String, e.g., {@code p(?x)} turns into {@code p(X)}
+	 * Ensure compatibility with SWI-Prolog by writing variables with uppercase
+	 * letters and by surrounding elements that contain colon with '...', e.g.,
+	 * {@code p(?x, a:B)} turns into {@code p(X, 'a:B')}.
 	 * 
-	 * @param atom {@code String} of an atom
-	 * @return {@code String}
+	 * @param arg {@code String} representing the predicate or some argument of an
+	 *            atom
+	 * @return {@code String} of potentially adapted version of {@code arg}
 	 */
-	public String ensureUppercaseVariables(String atom) {
+	public String ensureCorrectFormat(String arg) {
 
-		char[] chars = atom.toCharArray();
+		// surround elements that contain colon with '...' for compatibility with
+		// SWI-Prolog
+		if (arg.contains(":")) {
+			arg = "'" + arg + "'";
+		}
+
+		char[] chars = arg.toCharArray();
 		for (int i = 0; i < chars.length; i++) {
 			if (chars[i] == '?') {
 				i++;

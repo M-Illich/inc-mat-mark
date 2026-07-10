@@ -142,13 +142,14 @@ update(O,[F|Fs],U) <=>
 	
 %-----------------
 % no duplicates
+fact(F,O,_,_) \ fact(F,O,_,_) <=> true.
 % save mark if duplicate is marked
-fact(F,add,M1,_) \ fact(F,add,M2,_) <=> check_neg_mark([M2],M1).
-fact([P|L],del,M1,_) \ fact([P|L],del,M2,_) <=> check_pos_mark([(P,del,M2)],M1).
+%fact(F,add,M1,_) \ fact(F,add,M2,_) <=> check_neg_mark([M2],M1).
+%fact([P|L],del,M1,_) \ fact([P|L],del,M2,_) <=> check_pos_mark([(P,del,M2)],M1).
 
 % mark facts that are changed by next update
 fact(F,O1,M,_) \ pending_fact(F,O2,_) <=>
-	var(M),
+	%var(M),
 	O1 \== O2 |
 	M = 1.
 		

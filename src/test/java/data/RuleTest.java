@@ -17,10 +17,10 @@ public class RuleTest {
 	}
 
 	@Test
-	public void testRemoveSingletonVariables() {
+	public void testReplaceSingletonVariables() {
 		Rule r1 = new Rule("h(X,Y) :- b2(Y,X), b1(X,Z) .");
 		Rule rExp = new Rule("h(X,Y) :- b2(Y,X), b1(X,_) .");
-		r1.removeSingletonVariables();
+		r1.replaceSingletonVariables();
 		assertEquals(rExp.toString(), r1.toString());
 	}
 

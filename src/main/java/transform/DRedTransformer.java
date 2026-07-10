@@ -139,16 +139,22 @@ public class DRedTransformer extends Transformer {
 			chr += ",O" + (i + 1);
 		}
 		chr += "]) | ";
-		// add marking if needed
-		if (withMark) {
-			chr += "check_pos_mark([(" + rule.body.get(0).predicate + ",O1,M1)";
-			for (int i = 1; i < rule.body.size(); i++) {
-				chr += ",(" + rule.body.get(i).predicate + ",O" + (i + 1) + ",M" + (i + 1) + ")";
+
+		if (rule.body.size() == 1) {
+			// directly use marking variable of body atom for head
+			chr += "fact(" + rule.head.toString() + ",del" + (withMark ? ",M1" : "") + ",U), applied_rules(1,del).";
+		} else {
+			// add marking if needed
+			if (withMark) {
+				chr += "check_pos_mark([(" + rule.body.get(0).predicate + ",O1,M1)";
+				for (int i = 1; i < rule.body.size(); i++) {
+					chr += ",(" + rule.body.get(i).predicate + ",O" + (i + 1) + ",M" + (i + 1) + ")";
+				}
+				chr += "],M), ";
 			}
-			chr += "],M), ";
+			// add new head
+			chr += "fact(" + rule.head.toString() + ",del" + (withMark ? ",M" : "") + ",U), applied_rules(1,del).";
 		}
-		// add new head
-		chr += "fact(" + rule.head.toString() + ",del" + (withMark ? ",M" : "") + ",U), applied_rules(1,del).";
 
 		return chr;
 	}
@@ -176,16 +182,70 @@ public class DRedTransformer extends Transformer {
 			chr += con.toString() + ", ";
 		}
 		chr += "true | ";
-		// add marking if needed
-		if (withMark) {
-			chr += "check_neg_mark([M1";
-			for (int i = 1; i < rule.body.size(); i++) {
-				chr += ",M" + (i + 1);
+
+		if (rule.body.size() == 1) {
+			// directly use marking variable of body atom for head
+			chr += "fact(" + rule.head.toString() + ",add" + (withMark ? ",M1" : "") + ",U), applied_rules(1,red).";
+		} else {
+			// add marking if needed
+			if (withMark) {
+				chr += "check_neg_mark([M1";
+				for (int i = 1; i < rule.body.size(); i++) {
+					chr += ",M" + (i + 1);
+				}
+				chr += "],M), ";
 			}
-			chr += "],M), ";
+			// add new head
+			chr += "fact(" + rule.head.toString() + ",add" + (withMark ? ",M" : "") + ",U), applied_rules(1,red).";
 		}
-		// add new head
-		chr += "fact(" + rule.head.toString() + ",add" + (withMark ? ",M" : "") + ",U), applied_rules(1,red).";
+
+		return chr;
+	}
+
+	/**
+	 * Create the CHR rule for the insertion phase of algorithm based on the given
+	 * Datalog rule.
+	 * 
+	 * @param rule     A {@link Rule}
+	 * @param withMark {@code boolean} States whether or not the rule should include
+	 *                 fact marking
+	 * @return A {@code String} with the transformed CHR rule
+	 */
+	public String createInsertRule(Rule rule, boolean withMark) {
+
+		// initialize transformed rule
+		String chr = "phase(5)";
+		// add transformed body atoms
+		for (int i = 0; i < rule.body.size(); i++) {
+			chr += ", fact(" + rule.body.get(i).toString() + ",add" + (withMark ? ",M" + (i + 1) : "") + ",U" + (i + 1)
+					+ ")";
+		}
+		// add guard conditions
+		chr += " ==> ";
+		for (Constraint con : rule.constraints) {
+			chr += con.toString() + ", ";
+		}
+		chr += "member(U,[U1";
+		for (int i = 1; i < rule.body.size(); i++) {
+			chr += ",U" + (i + 1);
+		}
+		chr += "]) | ";
+
+		if (rule.body.size() == 1) {
+			// directly use marking variable of body atom for head
+			chr += "fact(" + rule.head.toString() + ",add" + (withMark ? ",M1" : "") + ",U), applied_rules(1,ins).";
+		} else {
+			// add marking if needed
+			if (withMark) {
+				chr += "check_neg_mark([M1";
+				for (int i = 1; i < rule.body.size(); i++) {
+					chr += ",M" + (i + 1);
+				}
+				chr += "],M), ";
+			}
+			// add new head
+			chr += "fact(" + rule.head.toString() + ",add" + (withMark ? ",M" : "") + ",U), applied_rules(1,ins).";
+		}
 
 		return chr;
 	}
