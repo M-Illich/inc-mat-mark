@@ -2,7 +2,7 @@ package data;
 
 import java.util.List;
 
-public class Fact extends Atom {
+public class Fact extends Atom implements Comparable<Fact> {
 	
 	public Fact(String predicate, List<String> arguments) {
 		super(predicate, arguments);
@@ -32,6 +32,23 @@ public class Fact extends Atom {
 			}
 		}
 		return true;
+	}
+
+	@Override
+	public int compareTo(Fact o) {
+		// compare predicates
+		int c = this.predicate.compareTo(o.predicate);
+		// compare arguments
+		if (c == 0) {
+			// compare number of arguments
+			Integer.compare(this.arguments.size(), o.arguments.size());
+			// compare individual arguments
+			for (int i = 0; i < this.arguments.size() && c == 0; i++) {
+				c = this.arguments.get(i).compareTo(o.arguments.get(i));
+			}
+		}
+		
+		return c;
 	}
 
 }

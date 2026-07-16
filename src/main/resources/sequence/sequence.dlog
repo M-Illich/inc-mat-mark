@@ -1,0 +1,4 @@
+edge1(X,Y) :- edge(X,Y) .
+edge2(X,Y) :- edge1(X,Y) .
+edge3(X,Y) :- edge2(X,Y) .
+edge4(X,Y) :- edge3(X,Y) .

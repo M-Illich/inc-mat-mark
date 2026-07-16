@@ -21,7 +21,7 @@ public class StreamToProlog {
 	 * communicates over the provided local port
 	 * 
 	 * @param localPort {@code int} local port used by server for update stream
-	 * @param file      {@code String} name of SWI-Prolog file stored in
+	 * @param algorithmFile      {@code String} name of SWI-Prolog file stored in
 	 *                  {@code src/main/resources}
 	 * @return {@link Process} object for executed command
 	 */

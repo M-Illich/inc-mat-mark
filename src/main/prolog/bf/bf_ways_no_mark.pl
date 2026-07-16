@@ -1,7 +1,5 @@
 /*
-Backward/Forward 
-
-connections among ways of OSM map data based on GPS tracks
+Backward/Forward (without Marking)
 */
 
 :- use_module(library(chr)).
@@ -124,21 +122,8 @@ fact(F,del,U) \ fact(F,add,U2) <=> U = U2.
 
 
 % -- find every directly affected fact that needs to be checked --
-phase(1), 
-fact([nextInWay,X1,Y1,Z1],O1,_), fact([nextInWay,X2,Y2,Z2],O2,_) \ fact([connection,Z1,Z2],add,U) <=> 
-	Z1 \== Z2,
-	member(del,[O1,O2]),
-	(X1 == X2 ; X1 == Y2 ; Y1 == X2 ; Y1 == Y2) |
-	fact([connection,Z1,Z2],chk,U),
-	applied_rules(1,del).
-	
-phase(1), 
-fact([connection,X,Y],O1,_), fact([connection,Y,Z],O2,_) \ fact([connection,X,Z],add,U) <=> 
-	member(del,[O1,O2]),
-	X \== Y |
-	fact([connection,X,Z],chk,U),
-	applied_rules(1,del).
-
+phase(1), fact([nextInWay, X1, Y1, Z1],O1,_), fact([nextInWay, X2, Y2, Z2],O2,_) \ fact([connection, Z1, Z2],add,U) <=> Z1 \== Z2, (X1 == X2 ; X1 == Y2 ; Y1 == X2 ; Y1 == Y2), member(del,[O1,O2]) | fact([connection, Z1, Z2],chk,U), applied_rules(1,del).
+phase(1), fact([connection, X, Y],O1,_), fact([connection, Y, Z],O2,_) \ fact([connection, X, Z],add,U) <=> X \== Y, member(del,[O1,O2]) | fact([connection, X, Z],chk,U), applied_rules(1,del).
 
 % -- delete already processed del-facts to avoid repetitions with new del-facts --
 phase(1) <=> phase(2).
@@ -155,74 +140,17 @@ phase(3) \ fact(F,chk,U) <=> fact(F,chk1,U), check_done.
 
 % fact can be proven
 fact(F,prv,_) \ fact(F,_,_) <=> true.
-	
-
-% - forward -
 fact([P|L],chk1,U) <=> explicit(P) | fact([P|L],prv,U).
-
-fact([nextInWay,X1,Y1,Z1],prv,_), fact([nextInWay,X2,Y2,Z2],prv,_) \ fact([connection,Z1,Z2],O,U) <=>
-	member(O,[chk,chk1]),
-	Z1 \== Z2,
-	(X1 == X2 ; X1 == Y2 ; Y1 == X2 ; Y1 == Y2) |
-	fact([connection,Z1,Z2],prv,U),
-	applied_rules(1,fwd).
 	
-fact([connection,X,Y],prv,_), fact([connection,Y,Z],prv,_)  \ fact([connection,X,Z],O,U) <=>
-	member(O,[chk,chk1]),
-	X \== Y |
-	fact([connection,X,Z],prv,U),
-	applied_rules(1,fwd).
+% - forward -
+fact([nextInWay, X1, Y1, Z1],prv,_), fact([nextInWay, X2, Y2, Z2],prv,_) \ fact([connection, Z1, Z2],O,U) <=> Z1 \== Z2, (X1 == X2 ; X1 == Y2 ; Y1 == X2 ; Y1 == Y2), member(O,[chk,chk1]) | fact([connection, Z1, Z2],prv,U), applied_rules(1,fwd).
+fact([connection, X, Y],prv,_), fact([connection, Y, Z],prv,_) \ fact([connection, X, Z],O,U) <=> X \== Y, member(O,[chk,chk1]) | fact([connection, X, Z],prv,U), applied_rules(1,fwd).
 
 
 % - backward -
-fact([connection,Z1,Z2],chk1,_), fact([nextInWay,X1,Y1,Z1],O1,U1), fact([nextInWay,X2,Y2,Z2],O2,U2) ==>
-	\+member(del,[O1,O2]),
-	(X1 == X2 ; X1 == Y2 ; Y1 == X2 ; Y1 == Y2) |
-	fact([nextInWay,X1,Y1,Z1],chk1,U1), 
-	fact([nextInWay,X2,Y2,Z2],chk1,U2),	
-	applied_rules(1,bwd).
-	
-fact([connection,X,Z],chk1,_), fact([connection,X,Y],O1,U1), fact([connection,Y,Z],O2,U2) ==>
-	\+member(del,[O1,O2]),
-	X \== Y |
-	fact([connection,X,Y],chk1,U1), 
-	fact([connection,Y,Z],chk1,U2),	
-	applied_rules(1,bwd).	
-	
-/*
-fact([connection,Z1,Z2],chk1,_) \
-fact([nextInWay,X1,Y1,Z1],add,U1), fact([nextInWay,X2,Y2,Z2],add,U2) <=>
-	(X1 == X2 ; X1 == Y2 ; Y1 == X2 ; Y1 == Y2) |
-	fact([nextInWay,X1,Y1,Z1],prv,U1), 
-	fact([nextInWay,X2,Y2,Z2],prv,U2),	
-	applied_rules(1,bwd).
-fact([connection,Z1,Z2],chk1,_), 
-fact([nextInWay,X1,Y1,Z1],prv,_) \ fact([nextInWay,X2,Y2,Z2],add,U2) <=>
-	(X1 == X2 ; X1 == Y2 ; Y1 == X2 ; Y1 == Y2) |
-	fact([nextInWay,X2,Y2,Z2],prv,U2),	
-	applied_rules(1,bwd).
-fact([connection,Z1,Z2],chk1,_), 
-fact([nextInWay,X2,Y2,Z2],prv,_) \ fact([nextInWay,X1,Y1,Z1],add,U1) <=>
-	(X1 == X2 ; X1 == Y2 ; Y1 == X2 ; Y1 == Y2) |
-	fact([nextInWay,X1,Y1,Z1],prv,U1), 
-	applied_rules(1,bwd).
-	
-fact([connection,X,Z],chk1,_) \ fact([connection,X,Y],add,U1), fact([connection,Y,Z],add,U2) <=>
-	X \== Y |
-	fact([connection,X,Y],chk1,U1), 
-	fact([connection,Y,Z],chk1,U2),	
-	applied_rules(1,bwd).
-fact([connection,X,Z],chk1,_), fact([connection,X,Y],O1,_) \ fact([connection,Y,Z],add,U2) <=>
-	member(O1, [chk1, prv]),
-	X \== Y |
-	fact([connection,Y,Z],chk1,U2),	
-	applied_rules(1,bwd).	
-fact([connection,X,Z],chk1,_), fact([connection,Y,Z],O2,_) \ fact([connection,X,Y],add,U1)<=>
-	member(O2, [chk1, prv]),
-	X \== Y |
-	fact([connection,X,Y],chk1,U1),	
-	applied_rules(1,bwd).	
-*/
+fact([connection, Z1, Z2],chk1,_), fact([nextInWay, X1, Y1, Z1],O1,U1), fact([nextInWay, X2, Y2, Z2],O2,U2) ==> Z1 \== Z2, (X1 == X2 ; X1 == Y2 ; Y1 == X2 ; Y1 == Y2), \+member(del,[O1,O2]) | fact([nextInWay, X1, Y1, Z1],chk1,U1), fact([nextInWay, X2, Y2, Z2],chk1,U2), applied_rules(1,bwd).
+fact([connection, X, Z],chk1,_), fact([connection, X, Y],O1,U1), fact([connection, Y, Z],O2,U2) ==> X \== Y, \+member(del,[O1,O2]) | fact([connection, X, Y],chk1,U1), fact([connection, Y, Z],chk1,U2), applied_rules(1,bwd).
+
 	
 % turn facts without proof into del-facts
 check_done \ fact(F,chk1,U) <=> fact(F,del,U).
@@ -251,20 +179,8 @@ num_updates(U) \ update(add,[F|Fs]) <=>
 	update(add,Fs).
 	
 % -- compute new derivable facts	--
-phase(5),  num_updates(U), 
-fact([nextInWay,X1,Y1,Z1],add,U1), fact([nextInWay,X2,Y2,Z2],add,U2) ==> 
-	member(U,[U1,U2]),
-	Z1 \== Z2,
-	(X1 == X2 ; X1 == Y2 ; Y1 == X2 ; Y1 == Y2) |
-	fact([connection,Z1,Z2],add,U),
-	applied_rules(1,ins).
-phase(5),  num_updates(U), 
-fact([connection,X,Y],add,U1), fact([connection,Y,Z],add,U2) ==> 
-	member(U,[U1,U2]),
-	X \== Y |	
-	fact([connection,X,Z],add,U),
-	applied_rules(1,ins).
-
+phase(5), fact([nextInWay, X1, Y1, Z1],add,U1), fact([nextInWay, X2, Y2, Z2],add,U2) ==> Z1 \== Z2, (X1 == X2 ; X1 == Y2 ; Y1 == X2 ; Y1 == Y2), member(U,[U1,U2]) | fact([connection, Z1, Z2],add,U), applied_rules(1,ins).
+phase(5), fact([connection, X, Y],add,U1), fact([connection, Y, Z],add,U2) ==> X \== Y, member(U,[U1,U2]) | fact([connection, X, Z],add,U), applied_rules(1,ins).
 
 %----------------
 % -- write materialization to stream --

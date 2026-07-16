@@ -21,7 +21,7 @@ public class UpdateStreamRun extends StreamToProlog {
 	/**
 	 * name of file containing SWI-Prolog code to be executed
 	 */
-	String file;
+	String algorithmFile;
 
 	/**
 	 * list of answer sets for each stated query
@@ -68,7 +68,7 @@ public class UpdateStreamRun extends StreamToProlog {
 			ServerSocket serverSocket = new ServerSocket(0);
 
 			// execute prolog file
-			Process prologCall = callProlog(serverSocket.getLocalPort(), file);
+			Process prologCall = callProlog(serverSocket.getLocalPort(), algorithmFile);
 
 			// accept connection from prolog file
 			Socket clientSocket = serverSocket.accept();
@@ -107,13 +107,13 @@ public class UpdateStreamRun extends StreamToProlog {
 
 	/**
 	 * 
-	 * @param file         {@code String} name of file containing SWI-Prolog code to
-	 *                     be executed
-	 * @param updateFolder {@code String} name of folder where each stream update is
-	 *                     stored as file
+	 * @param algorithmFile {@code String} name of file containing SWI-Prolog code
+	 *                      to be executed
+	 * @param updateFolder  {@code String} name of folder where each stream update
+	 *                      is stored as file
 	 */
-	public UpdateStreamRun(String file, String updateFolder) {
-		this.file = file;
+	public UpdateStreamRun(String algorithmFile, String updateFolder) {
+		this.algorithmFile = algorithmFile;
 		this.updateFolder = updateFolder;
 		this.updateList = loadUpdates(updateFolder);
 		this.statistics = new Statistics();
@@ -122,13 +122,13 @@ public class UpdateStreamRun extends StreamToProlog {
 
 	/**
 	 * 
-	 * @param file       {@code String} name of file containing SWI-Prolog code to
-	 *                   be executed
-	 * @param updateList {@link List} of {@link Update} objects that will be
-	 *                   processed
+	 * @param algorithmFile {@code String} name of file containing SWI-Prolog code
+	 *                      to be executed
+	 * @param updateList    {@link List} of {@link Update} objects that will be
+	 *                      processed
 	 */
 	public UpdateStreamRun(String file, List<Update> updateList) {
-		this.file = file;
+		this.algorithmFile = file;
 		this.updateList = updateList;
 		this.statistics = new Statistics();
 
@@ -165,7 +165,7 @@ public class UpdateStreamRun extends StreamToProlog {
 
 		// go through updates
 		for (int i = 1; i <= updateList.size(); i++) {
-			u = updateList.get(i-1);
+			u = updateList.get(i - 1);
 
 			// store updated explicit dataset
 			dataset.addAll(u.added);

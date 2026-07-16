@@ -44,8 +44,8 @@ public class BFTransformerTest {
 				
 		bfTr = new BFTransformer(rules);
 		
-		fileNoMark = bfTr.createCHRProgram("test", false);
-		fileMark = bfTr.createCHRProgram("test", true);
+		fileNoMark = bfTr.createCHRProgram("Ways", false);
+		fileMark = bfTr.createCHRProgram("Ways", true);
 		
 		new PrologTest().testProlog(fileNoMark, fileMark, "src/main/prolog/materialize_ways.pl", "src/test/resources/updates_ways");
 

@@ -47,8 +47,8 @@ public class DRedTransformerTest {
 
 		dt = new DRedTransformer(rules);
 
-		fileNoMark = dt.createCHRProgram("test", false);
-		fileMark = dt.createCHRProgram("test", true);
+		fileNoMark = dt.createCHRProgram("Ways", false);
+		fileMark = dt.createCHRProgram("Ways", true);
 
 		new PrologTest().testProlog(fileNoMark, fileMark, "src/main/prolog/materialize_ways.pl",
 				"src/test/resources/updates_ways");

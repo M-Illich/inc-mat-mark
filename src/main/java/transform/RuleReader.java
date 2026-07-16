@@ -17,7 +17,7 @@ import data.Rule;
 public class RuleReader {
 
 	public File srcFile;
-	List<Rule> rules;
+	public List<Rule> rules;
 
 	/**
 	 * store how many rules exist (value) with certain number of body atoms (key)
