@@ -22,7 +22,7 @@ import transform.UpdatesCreator;
 
 public class Evaluation {
 
-	final static int REPETITIONS = 1; // TODO
+	final static int REPETITIONS = 5;
 	final static Set<String> ALGORITHMS = Set.of("dred", "bf");
 	final static Set<String> TEST_CASES = Set.of("random", "random-large", "batch", "overlap", "scale-update",
 			"scale-data", "real");
@@ -36,12 +36,27 @@ public class Evaluation {
 
 	public static void main(String[] args) throws Exception {
 
-		// TODO use args
 		String algorithm = "dred";
-		String testCase = "real";
-		String knowledgeBase = "path";
-		int testRun = 0;
+		String testCase = "random";
+		String knowledgeBase = "lubm";
+		int testRun = 1;
+		
+		if (args.length == 4) {
+			algorithm = args[0];
+			testCase = args[1];
+			knowledgeBase = args[2];
+			testRun = Integer.parseInt(args[3]);
+		}
 
+		if (!ALGORITHMS.contains(algorithm)) {
+			throw new Exception("Invalid algorithm.");
+		}
+		if (!TEST_CASES.contains(testCase)) {
+			throw new Exception("Invalid test case.");
+		}
+		if (!KNOWLEDGE_BASES.contains(knowledgeBase)) {
+			throw new Exception("Invalid knowledge base.");
+		}
 		if (testRun < 0 || testRun > 2) {
 			throw new Exception("Invalid test run selection.");
 		}
@@ -56,16 +71,6 @@ public class Evaluation {
 
 	private static void performEvaluation(String algorithm, String testCase, String knowledgeBase, int testRun)
 			throws Exception {
-
-		if (!ALGORITHMS.contains(algorithm)) {
-			throw new Exception("Invalid algorithm.");
-		}
-		if (!TEST_CASES.contains(testCase)) {
-			throw new Exception("Invalid test case.");
-		}
-		if (!KNOWLEDGE_BASES.contains(knowledgeBase)) {
-			throw new Exception("Invalid knowledge base.");
-		}
 
 		// default setting for random test case
 		int dataPoolSize = 200;
@@ -108,9 +113,12 @@ public class Evaluation {
 			realTest = true;
 		}
 
+		System.out.println(
+				"Algorithm: " + algorithm + "  --  Knowledge base: " + knowledgeBase + "  --  Test run: " + testRun);
+
 		if (realTest) {
 			List<Update> updates = new UpdateStreamRun("",
-					"src/main/resources/updates/ways/updates_track" + testRun).updateList;
+					"src/main/resources/ways/updates_track" + testRun).updateList;
 
 			// prepare directories to store statistics
 			String directory = "results/" + algorithm + "/" + testCase + "/" + knowledgeBase + "/" + "updates_track"
@@ -153,15 +161,6 @@ public class Evaluation {
 		}
 	}
 
-	/**
-	 * TODO
-	 * 
-	 * @param algorithm
-	 * @param knowledgeBase
-	 * @param directory
-	 * @param testRunName
-	 * @param updates
-	 */
 	private static void processAlgorithms(String algorithm, String knowledgeBase, String directory, String testRunName,
 			List<Update> updates) {
 		for (String approach : List.of("no_mark", "mark")) {
@@ -169,11 +168,12 @@ public class Evaluation {
 			String chrFile = "src/main/prolog/" + algorithm + "/" + algorithm + "_" + knowledgeBase + "_" + approach
 					+ ".pl";
 			// process update stream
+			System.out.println();
 			System.out.println("Approach: " + approach);
 			// collect statistics
 			List<Statistics> stats = new LinkedList<>();
-			for (int run = 1; run <= REPETITIONS; run++) {
-				System.out.println("Run: " + run);
+			for (int round = 1; round <= REPETITIONS; round++) {
+				System.out.println("Round: " + round);
 				UpdateStreamRun usr = new UpdateStreamRun(chrFile, updates);
 				usr.execute(false, false, false);
 				stats.add(usr.statistics);
@@ -183,12 +183,6 @@ public class Evaluation {
 		}
 	}
 
-	/**
-	 * TODO
-	 * 
-	 * @param directory
-	 * @param stats
-	 */
 	private static void storeStatistics(String directory, List<Statistics> stats) {
 		try {
 			Files.createDirectories(Paths.get(directory));
@@ -234,13 +228,6 @@ public class Evaluation {
 
 	}
 
-	/**
-	 * TODO
-	 * 
-	 * @param knowledgeBase
-	 * @param dataPoolSize
-	 * @return
-	 */
 	private static LinkedHashSet<Fact> loadDataPool(String knowledgeBase, int dataPoolSize) {
 		LinkedHashSet<Fact> dataPool;
 

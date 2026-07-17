@@ -6,7 +6,6 @@ import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.List;
 
-
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Statement;
@@ -19,55 +18,17 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 
 import data.Fact;
-import data.Rule;
-
 
 /**
  * Extract Datalog facts from RDF and OWL ontologies
  */
 public class FactExtracter {
 
-	public static void main(String[] args) {
-		try {
-			
-			
-			String testCase = "relations"; // "path"; // "sequence"; //  "dbpedia"; // "family"; // "lubm"; // claros";
-										
-			System.out.println("Test case: " + testCase);
-			System.out.println();
-
-			// read rules
-			System.out.println("Read rules.");
-			RuleReader rr = new RuleReader(new File("src/main/resources/" + testCase + "/" + testCase + ".dlog"));
-			rr.ruleSizes.forEach((k, v) -> System.out.println("  Rule body size " + k + ": " + v));
-			List<Rule> rules = rr.rules;
-//			for (Rule r : rr.rules) {
-//				System.out.println(r.toString());
-//			}
-			System.out.println();
-
-			// transform Datalog rules into CHR programs
-			System.out.println("Transform rules into CHR.");
-//			DRedTransformer trf = new DRedTransformer(rules);
-			BFTransformer trf = new BFTransformer(rules);
-			String chrNoMark = trf.createCHRProgram(testCase, false);
-			String chrMark = trf.createCHRProgram(testCase, true);
-			System.out.println(chrNoMark);
-			System.out.println(chrMark);
-			
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-
-	}
-
 	/**
-	 * TODO
+	 * Extract facts from an RDF file
 	 * 
-	 * @param file
-	 * @return
+	 * @param file {@link File} where OWL statements are stored
+	 * @return {@link LinkedHashSet} of {@link Fact} objects
 	 */
 	public static LinkedHashSet<Fact> getFactsFromOWL(File file) {
 		LinkedHashSet<Fact> facts = new LinkedHashSet<>();
@@ -111,8 +72,9 @@ public class FactExtracter {
 	 * Extract facts from an RDF file
 	 * 
 	 * @param algorithmFile {@link File} where RDF triples are stored
-	 * @param lang {@link String} that states what RDF language is used; options are
-	 *             {@code "RDF/XML"}, {@code"N-TRIPLE"}, or {@code "TURTLE"}
+	 * @param lang          {@link String} that states what RDF language is used;
+	 *                      options are {@code "RDF/XML"}, {@code"N-TRIPLE"}, or
+	 *                      {@code "TURTLE"}
 	 * @return {@link LinkedHashSet} of {@link Fact} objects
 	 */
 	public static LinkedHashSet<Fact> getFactsFromRDF(File file, String lang) {

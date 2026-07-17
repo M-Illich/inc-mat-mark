@@ -11,8 +11,9 @@ import java.util.Map;
 import data.Rule;
 
 /**
- * read Datalog rules in the form of {@code head :- body1, body2, ..., .} from a
- * file and convert them into {@link Rule} objects
+ * Read Datalog rules in the form of {@code head :- body1, body2, ..., .} from a
+ * file and convert them into {@link Rule} objects. 
+ * Note: We assume that rules do not contain any constraints, like comparisons (=, <, ...)
  */
 public class RuleReader {
 
@@ -22,7 +23,7 @@ public class RuleReader {
 	/**
 	 * store how many rules exist (value) with certain number of body atoms (key)
 	 */
-	Map<Integer, Integer> ruleSizes;
+	public Map<Integer, Integer> ruleSizes;
 
 	public RuleReader(File fileName) {
 		srcFile = fileName;

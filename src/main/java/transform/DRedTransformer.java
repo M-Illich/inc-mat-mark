@@ -26,13 +26,7 @@ public class DRedTransformer extends Transformer {
 		this.explicitPredicates = getExplicitPredicates(ruleSet);
 	}
 
-	/**
-	 * 
-	 * @param name     {@link String} as name for CHR program
-	 * @param withMark {@code boolean} which states whether the algorithm should
-	 *                 include marking or not
-	 * @return {@link String} address of file that contains CHR program
-	 */
+	
 	public String createCHRProgram(String name, boolean withMark) {
 
 		// initialize CHR file

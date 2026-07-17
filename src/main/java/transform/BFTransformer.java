@@ -16,11 +16,6 @@ import data.Rule;
  */
 public class BFTransformer extends Transformer {
 
-	/*
-	 * TODO insertion rules requires different marking operation than Transformer
-	 * (predicate,mark) instead of only mark
-	 */
-
 	/**
 	 * 
 	 * @param ruleSet {@link List} of {@link Rule} objects representing (positive)
@@ -31,24 +26,16 @@ public class BFTransformer extends Transformer {
 		this.explicitPredicates = getExplicitPredicates(ruleSet);
 	}
 
-	/**
-	 * 
-	 * @param ruleset
-	 * @param name    {@link String} as name for CHR program
-	 * @param mark    {@code boolean} which states whether the algorithm should
-	 *                include marking or not
-	 * @return {@link String} address of file that contains CHR program
-	 */
-	public String createCHRProgram(String name, boolean mark) {
+	public String createCHRProgram(String name, boolean withMark) {
 
 		// initialize CHR file
-		String fileName = "src/main/prolog/bf/bf_" + name + (mark ? "" : "_no") + "_mark.pl";
+		String fileName = "src/main/prolog/bf/bf_" + name + (withMark ? "" : "_no") + "_mark.pl";
 		File chrFile = new File(fileName);
 		try {
 			// initialize CHR program
 			BufferedWriter writer = new BufferedWriter(new FileWriter(chrFile));
 			BufferedReader reader = new BufferedReader(
-					new FileReader(new File("src/main/resources/chr/bf/bf_" + (mark ? "" : "no_") + "mark_0.pl")));
+					new FileReader(new File("src/main/resources/chr/bf/bf_" + (withMark ? "" : "no_") + "mark_0.pl")));
 			String line;
 			while ((line = reader.readLine()) != null) {
 				writer.write(line);
@@ -58,13 +45,13 @@ public class BFTransformer extends Transformer {
 
 			// add deletion rules
 			for (Rule rule : ruleSet) {
-				writer.write(createDeleteRule(rule, mark));
+				writer.write(createDeleteRule(rule, withMark));
 				writer.newLine();
 			}
 
 			// load next part
 			reader = new BufferedReader(
-					new FileReader(new File("src/main/resources/chr/bf/bf_" + (mark ? "" : "no_") + "mark_1.pl")));
+					new FileReader(new File("src/main/resources/chr/bf/bf_" + (withMark ? "" : "no_") + "mark_1.pl")));
 			while ((line = reader.readLine()) != null) {
 				writer.write(line);
 				writer.newLine();
@@ -75,7 +62,7 @@ public class BFTransformer extends Transformer {
 			writer.write("% - forward -");
 			writer.newLine();
 			for (Rule rule : ruleSet) {
-				writer.write(createForwardRule(rule, mark));
+				writer.write(createForwardRule(rule, withMark));
 				writer.newLine();
 			}
 			writer.write("");
@@ -87,7 +74,7 @@ public class BFTransformer extends Transformer {
 			writer.write("% - backward -");
 			writer.newLine();
 			for (Rule rule : ruleSet) {
-				writer.write(createBackwardRule(rule, mark));
+				writer.write(createBackwardRule(rule, withMark));
 				writer.newLine();
 			}
 			writer.write("");
@@ -95,7 +82,7 @@ public class BFTransformer extends Transformer {
 
 			// add part before insertion phase
 			reader = new BufferedReader(
-					new FileReader(new File("src/main/resources/chr/bf/bf_" + (mark ? "" : "no_") + "mark_2.pl")));
+					new FileReader(new File("src/main/resources/chr/bf/bf_" + (withMark ? "" : "no_") + "mark_2.pl")));
 			while ((line = reader.readLine()) != null) {
 				writer.write(line);
 				writer.newLine();
@@ -104,13 +91,13 @@ public class BFTransformer extends Transformer {
 
 			// add insertion rules
 			for (Rule rule : ruleSet) {
-				writer.write(createInsertRule(rule, mark));
+				writer.write(createInsertRule(rule, withMark));
 				writer.newLine();
 			}
 
 			// end CHR file
 			reader = new BufferedReader(
-					new FileReader(new File("src/main/resources/chr/bf/bf_" + (mark ? "" : "no_") + "mark_3.pl")));
+					new FileReader(new File("src/main/resources/chr/bf/bf_" + (withMark ? "" : "no_") + "mark_3.pl")));
 			while ((line = reader.readLine()) != null) {
 				writer.write(line);
 				writer.newLine();
@@ -177,10 +164,7 @@ public class BFTransformer extends Transformer {
 			chr += "fact(" + bodyStrings.get(i).toString() + ",chk1" + (withMark ? ",M" + (i + 1) : "") + ",U" + (i + 1)
 					+ "), ";
 		}
-//		for (int i = 0; i < rule.body.size(); i++) {
-//			chr += "fact(" + rule.body.get(i).toString() + ",chk1" + (withMark ? ",M" + (i + 1) : "") + ",U" + (i + 1)
-//					+ "), ";
-//		}
+
 		chr += "applied_rules(1,bwd).";
 
 		return chr;

@@ -57,7 +57,10 @@ public class Rule {
 		replaceSingletonVariables();
 
 		/*
-		 * TODO handle rules with constraints, e.g., X < Y etc.
+		 * TODO handle rules with constraints, e.g., X < Y etc. 
+		 * NOTE: For our evaluation, we only consider knowledge bases where rules do not 
+		 * have constraints (except for "ways" where constraints are explicitly defined 
+		 * and not read from file)
 		 */
 		this.constraints = new LinkedList<>();
 
@@ -114,14 +117,10 @@ public class Rule {
 							newArgs.remove(j + 1);
 							atom.arguments = newArgs;
 						}
-
 					}
 				}
-
 			}
-
 		}
-
 	}
 
 	public String toString() {

@@ -52,5 +52,14 @@ public abstract class Transformer {
 		return predicates;
 	}
 
-	
+	/**
+	 * Create a CHR program based on the transformer's set of rules
+	 * 
+	 * @param name     {@link String} as name for created CHR program
+	 * @param withMark {@code boolean} which states whether the algorithm should
+	 *                 include marking or not
+	 * @return {@link String} address of file that contains CHR program
+	 */
+	public abstract String createCHRProgram(String name, boolean withMark);
+
 }

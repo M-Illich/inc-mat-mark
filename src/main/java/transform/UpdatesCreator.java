@@ -31,12 +31,6 @@ public class UpdatesCreator {
 	}
 
 	/**
-	 * TODO - choose facts that share arguments for higher chance of rule
-	 * applications (?) - option to define overlaps between updates (part of
-	 * previous update's insertions appears in next update's deletions)
-	 */
-
-	/**
 	 * Create a sequence of random updates where each update adds and deletes the
 	 * same number of facts, except for the first update
 	 * 
