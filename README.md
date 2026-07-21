@@ -32,12 +32,16 @@ The selection and execution of the tests is done in the `Evaluation` class.
     java -jar inc-mat-mark-1.0.jar A C K R
     ```
 	with the following options:
+
 	`A` (algorithm): `dred` or `bf`
+
 	`C` (test case): `random`, `random-large`, `batch`, `overlap`, `scale-update`, `scale-data`, or `real`
+
 	`K` (knowledge base): `path`, `sequence`, `claros`, `dbpedia`, `family`, `lubm`, `relations`, or `ways` (only with `C` = `real`)
+
 	`R` (test run): `0`, `1`, or `2`, where each run uses a different, predefined update stream
 
-3. Once the evaluation is finished, the measured statistics (time etc.) will be available in `csv`-files in the folder `results`.
+4. Once the evaluation is finished, the measured statistics (time etc.) will be available in `csv`-files in the folder `results`.
 	
 
 # Option 2: Execution with Docker
