@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Hungarian_people_of_Slovenian_descent', 'a26:Category:Hungarian_people_by_ethnic_or_national_origin')).
+add('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:Heads_of_state_in_the_Middle_East')).
+add('skos:broader'('a26:Category:610_mm_gauge_railway_locomotives', 'a26:Category:2_ft_gauge_locomotives')).
+add('skos:broader'('a26:Category:American_racquetball_players', 'a26:Category:American_sportspeople')).
+add('skos:broader'('a26:Category:Adaptations_of_works_by_Luigi_Pirandello', 'a26:Category:Adaptations_of_works_by_writer')).
+delete('skos:broader'('a26:Category:Monument_types', 'a26:Category:Monuments_and_memorials')).
+delete('skos:broader'('a26:Category:British_adventure_films', 'a26:Category:British_films_by_genre')).
+delete('skos:broader'('a26:Category:1285_in_England', 'a26:Category:1285_in_Europe')).
+delete('skos:broader'('a26:Category:Housing_in_Scotland', 'a26:Category:Housing_in_the_United_Kingdom')).
+delete('skos:broader'('a26:Category:Roman_Catholic_Church_in_Slovakia', 'a26:Category:Roman_Catholic_Church_in_Europe')).

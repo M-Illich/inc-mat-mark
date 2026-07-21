@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:2009_in_Catalan_sport', 'a26:Category:2009_in_Spanish_sport')).
+add('skos:broader'('a26:Category:History_of_ethnic_groups_in_Romania', 'a26:Category:History_by_ethnic_group')).
+add('skos:broader'('a26:Category:Mythological_sword_fighters', 'a26:Category:Mythological_characters')).
+add('skos:broader'('a26:Category:Member_states_of_the_United_Nations', 'a26:Category:United_Nations')).
+add('skos:broader'('a26:Category:Trials_in_the_United_States', 'a26:Category:Trials_by_country')).
+delete('skos:broader'('a26:Category:Monument_types', 'a26:Category:Monuments_and_memorials')).
+delete('skos:broader'('a26:Category:Islands_of_the_Irish_Sea', 'a26:Category:Irish_Sea')).
+delete('skos:broader'('a26:Category:Ancient_Greek_sites_in_Egypt', 'a26:Category:Archaeological_sites_in_Egypt')).
+delete('skos:broader'('a26:Category:Peruvian_sport_shooters', 'a26:Category:Peruvian_sportspeople')).
+delete('skos:broader'('a26:Category:Bielsk_County', 'a26:Category:Land_counties_of_Podlaskie_Voivodeship')).

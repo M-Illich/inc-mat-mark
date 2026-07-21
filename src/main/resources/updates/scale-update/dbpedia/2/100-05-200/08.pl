@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Scots_law_formal_titles', 'a26:Category:Scots_law')).
+add('skos:broader'('a26:Category:Table_tennis_in_North_America', 'a26:Category:Sport_in_North_America_by_sport')).
+add('skos:broader'('a26:Category:Organizations_based_in_the_United_States_by_state', 'a26:Category:Society_of_the_United_States_by_state')).
+add('skos:broader'('a26:Category:1977_establishments_in_British_Columbia', 'a26:Category:Establishments_in_British_Columbia_by_year')).
+add('skos:broader'('a26:Category:Irish_entertainers', 'a26:Category:Entertainment_in_Ireland')).
+delete('skos:broader'('a26:Category:Dukes_of_Choiseul', 'a26:Category:Dukes_of_France')).
+delete('skos:broader'('a26:Category:African_culture_by_nationality', 'a26:Category:African_culture')).
+delete('skos:broader'('a26:Category:1285_in_England', 'a26:Category:1280s_in_England')).
+delete('skos:broader'('a26:Category:Programming_language_topics', 'a26:Category:Computer_languages')).
+delete('skos:broader'('a26:Category:Organizations_based_in_the_United_States_by_state', 'a26:Category:Organizations_by_country_subdivision')).

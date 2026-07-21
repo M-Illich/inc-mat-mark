@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:People_from_Madrid', 'a26:Category:Madrid')).
+add('skos:broader'('a26:Category:2nd_millennium_in_South_Carolina', 'a26:Category:2nd_millennium_in_the_United_States')).
+add('skos:broader'('a26:Category:1285_in_England', 'a26:Category:1285_in_Europe')).
+add('skos:broader'('a26:Category:Long-distance_footpaths_in_Wales', 'a26:Category:Footpaths_in_Wales')).
+add('skos:broader'('a26:Category:Dog_breeds', 'a26:Category:Dog_breeding')).
+delete('skos:broader'('a26:Category:Conspiracy_theories', 'a26:Category:Conspiracy')).
+delete('skos:broader'('a26:Category:KMFDM', 'a26:Category:Wikipedia_categories_named_after_German_musical_groups')).
+delete('skos:broader'('a26:Category:Theatres_in_New_York_City', 'a26:Category:Theatre_in_New_York_City')).
+delete('skos:broader'('a26:Category:Exoplanet_catalogues', 'a26:Category:Exoplanetology')).
+delete('skos:broader'('a26:Category:Conspiracy_theories', 'a26:Category:Fringe_theory')).

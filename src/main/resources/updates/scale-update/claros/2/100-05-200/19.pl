@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=941793')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1401765')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=608239')).
+add('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/spoleto')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=2088305&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=618846')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=475040')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1130108')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=633414')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=633411')).

@@ -1,0 +1,10 @@
+add('obo:RO_0002463'('obo:Continuant40649', 'obo:Occurrent11840')).
+add('obo:RO_0002012'('obo:Occurrent8785', 'obo:Occurrent65197')).
+add('obo:RO_0002614'('obo:Continuant18461', 'obo:Continuant27770')).
+add('obo:RO_0002588'('obo:BiologicalProcess70543', 'obo:Continuant21623')).
+add('obo:RO_0002489'('obo:Continuant31471', 'obo:Occurrent63919')).
+delete('obo:RO_0003307'('obo:Continuant19712', 'obo:Continuant61507')).
+delete('obo:RO_0002408'('obo:Occurrent24815', 'obo:Occurrent80631')).
+delete('obo:RO_0011008'('obo:Continuant8158', 'obo:Continuant29236')).
+delete('obo:RO_0002568'('obo:Continuant77172', 'obo:Continuant23192')).
+delete('obo:RO_0002322'('obo:Continuant11547', 'obo:Continuant42224')).

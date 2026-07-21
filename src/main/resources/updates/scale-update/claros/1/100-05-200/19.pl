@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=941809&method=min&width=141&height=111')).
+add('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/kozan')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1498922&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=448478')).
+add('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/cavdarhisar')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1421677')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=629747&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=473654')).
+delete('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/cerveteri')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1663317')).

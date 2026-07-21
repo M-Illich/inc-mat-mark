@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=393920&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=473656')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=797260')).
+add('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/suwaida')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1130109')).
+delete('a1:E48_Place_Name'('http://arachne.uni-koeln.de/vocabulary/place#orchomenos-arkadien')).
+delete('a1:E48_Place_Name'('http://arachne.uni-koeln.de/vocabulary/place#sedeinga')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=627319&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1401762')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=781558')).

@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Italian_Romani_people', 'a26:Category:Italian_people_by_ethnic_or_national_origin')).
+add('skos:broader'('a26:Category:20th-century_American_sculptors', 'a26:Category:20th-century_sculptors')).
+add('skos:broader'('a26:Category:People_from_the_Las_Vegas_Valley', 'a26:Category:People_by_populated_place_in_Nevada')).
+add('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:18th-century_monarchs')).
+add('skos:broader'('a26:Category:Populated_places_in_Rio_Grande_do_Sul', 'a26:Category:Geography_of_Rio_Grande_do_Sul')).
+delete('skos:broader'('a26:Category:Brazilian_films', 'a26:Category:Works_by_Brazilian_people')).
+delete('skos:broader'('a26:Category:Populated_places_in_Los_Angeles_County_California', 'a26:Category:Geography_of_Los_Angeles_County_California')).
+delete('skos:broader'('a26:Category:Algebraic_topology', 'a26:Category:Topology')).
+delete('skos:broader'('a26:Category:Theatres_in_New_York_City', 'a26:Category:Theatre_in_New_York_City')).
+delete('skos:broader'('a26:Category:Screenshots_of_Windows_Server', 'a26:Category:Windows_Server')).

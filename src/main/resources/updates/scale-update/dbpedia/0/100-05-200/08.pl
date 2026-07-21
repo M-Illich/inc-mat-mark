@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Works_set_on_the_London_Underground', 'a26:Category:London_Underground')).
+add('skos:broader'('a26:Category:Landforms_of_Petersburg_Borough_Alaska', 'a26:Category:Geography_of_Petersburg_Borough_Alaska')).
+add('skos:broader'('a26:Category:20th-century_American_sculptors', 'a26:Category:American_sculptors_by_century')).
+add('skos:broader'('a26:Category:Member_states_of_the_United_Nations', 'a26:Category:History_of_the_United_Nations')).
+add('skos:broader'('a26:Category:Universities_and_colleges_in_Alameda_County_California', 'a26:Category:Universities_and_colleges_in_California_by_county')).
+delete('skos:broader'('a26:Category:Indiana_politicians_by_party', 'a26:Category:Indiana_politicians')).
+delete('skos:broader'('a26:Category:Parishes_of_Valka_District', 'a26:Category:Parishes_of_Latvia')).
+delete('skos:broader'('a26:Category:Ethnic_groups_in_Arizona', 'a26:Category:Ethnic_groups_in_the_United_States_by_state')).
+delete('skos:broader'('a26:Category:Clarinetists', 'a26:Category:Clarinets')).
+delete('skos:broader'('a26:Category:International_water_polo_competitions_hosted_by_France', 'a26:Category:Water_polo_competitions_in_France')).

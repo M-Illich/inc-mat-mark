@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Northwest_Territories_territorial_electoral_districts', 'a26:Category:Canadian_provincial_and_territorial_electoral_districts')).
+add('skos:broader'('a26:Category:Five-year_plans', 'a26:Category:Economic_planning')).
+add('skos:broader'('a26:Category:Random_House_books', 'a26:Category:Books_by_publisher')).
+add('skos:broader'('a26:Category:Major_League_Baseball_players_with_retired_numbers', 'a26:Category:Major_League_Baseball_players')).
+add('skos:broader'('a26:Category:Brazilian_films', 'a26:Category:Films_by_country')).
+delete('skos:broader'('a26:Category:2nd_millennium_in_South_Carolina', 'a26:Category:2nd_millennium_in_the_United_States')).
+delete('skos:broader'('a26:Category:Altötting_district', 'a26:Category:Upper_Bavaria')).
+delete('skos:broader'('a26:Category:South_Somerset', 'a26:Category:Non-metropolitan_districts_of_Somerset')).
+delete('skos:broader'('a26:Category:Populated_places_in_Rio_Grande_do_Sul', 'a26:Category:Populated_places_in_the_South_Region_Brazil')).
+delete('skos:broader'('a26:Category:Clarinetists', 'a26:Category:Clarinets')).

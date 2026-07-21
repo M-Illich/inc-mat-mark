@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Conglomerate_companies_of_France', 'a26:Category:Conglomerate_companies_by_country')).
+add('skos:broader'('a26:Category:Algebraic_topology', 'a26:Category:Abstract_algebra')).
+add('skos:broader'('a26:Category:Professional_Indoor_Football_League_teams', 'a26:Category:Indoor_American_football_teams_in_the_United_States_by_league')).
+add('skos:broader'('a26:Category:Advanced_Micro_Devices', 'a26:Category:Manufacturing_companies_of_the_United_States')).
+add('skos:broader'('a26:Category:Ministry_band_members', 'a26:Category:Ministry_band')).
+delete('skos:broader'('a26:Category:Documentary_films_about_homelessness_in_the_United_States', 'a26:Category:Documentary_films_about_poverty_in_the_United_States')).
+delete('skos:broader'('a26:Category:Soap_opera_actors_by_nationality', 'a26:Category:Categories_by_nationality')).
+delete('skos:broader'('a26:Category:South_African_people_of_Zimbabwean_descent', 'a26:Category:South_Africa_Zimbabwe_relations')).
+delete('skos:broader'('a26:Category:Fashion_events_in_the_United_Kingdom', 'a26:Category:British_fashion')).
+delete('skos:broader'('a26:Category:Geography_of_the_Northern_Territory', 'a26:Category:Geography_of_Australia_by_state_or_territory')).

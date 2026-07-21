@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:French_silent_short_films', 'a26:Category:Silent_short_films')).
+add('skos:broader'('a26:Category:Organizations_based_in_the_United_States_by_state', 'a26:Category:Organizations_by_country_subdivision')).
+add('skos:broader'('a26:Category:Member_states_of_the_United_Nations', 'a26:Category:History_of_the_United_Nations')).
+add('skos:broader'('a26:Category:Businesspeople_from_London', 'a26:Category:English_businesspeople_by_city')).
+add('skos:broader'('a26:Category:A-Class_Museums_articles', 'a26:Category:A-Class_articles')).
+delete('skos:broader'('a26:Category:Buildings_and_structures_in_Dickinson_County_Iowa', 'a26:Category:Buildings_and_structures_in_Iowa_by_county')).
+delete('skos:broader'('a26:Category:Hungarian_people_of_Slovenian_descent', 'a26:Category:Hungarian_people_by_ethnic_or_national_origin')).
+delete('skos:broader'('a26:Category:Landforms_of_Petersburg_Borough_Alaska', 'a26:Category:Geography_of_Petersburg_Borough_Alaska')).
+delete('skos:broader'('a26:Category:Irish_entertainers', 'a26:Category:Entertainment_in_Ireland')).
+delete('skos:broader'('a26:Category:Historic_districts_in_Adams_County_Pennsylvania', 'a26:Category:History_of_Adams_County_Pennsylvania')).

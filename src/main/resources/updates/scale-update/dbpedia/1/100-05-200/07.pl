@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Algebraic_topology', 'a26:Category:Topology')).
+add('skos:broader'('a26:Category:South_Somerset', 'a26:Category:Local_government_in_Somerset')).
+add('skos:broader'('a26:Category:Third_Doctor_stories', 'a26:Category:Doctor_Who_stories')).
+add('skos:broader'('a26:Category:Roman_Catholic_Church_in_Slovakia', 'a26:Category:Roman_Catholic_Church_in_Europe')).
+add('skos:broader'('a26:Category:Scots_law_formal_titles', 'a26:Category:Scottish_titles')).
+delete('skos:broader'('a26:Category:2012_television_films', 'a26:Category:2012_films')).
+delete('skos:broader'('a26:Category:Professional_Indoor_Football_League_teams', 'a26:Category:Indoor_American_football_teams_in_the_United_States_by_league')).
+delete('skos:broader'('a26:Category:Pirate_Party_Germany', 'a26:Category:Liberal_parties_in_Germany')).
+delete('skos:broader'('a26:Category:Adaptations_of_works_by_Luigi_Pirandello', 'a26:Category:Adaptations_of_works_by_writer')).
+delete('skos:broader'('a26:Category:Parma_FC_players', 'a26:Category:Footballers_in_Italy_by_club')).

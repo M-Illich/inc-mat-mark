@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Documentary_films_about_homelessness_in_the_United_States', 'a26:Category:Documentary_films_about_poverty_in_the_United_States')).
+add('skos:broader'('a26:Category:19th_century_in_Staffordshire', 'a26:Category:19th_century_in_England')).
+add('skos:broader'('a26:Category:Scots_law_formal_titles', 'a26:Category:Scots_law')).
+add('skos:broader'('a26:Category:Census-designated_places_in_Tennessee', 'a26:Category:Populated_places_in_Tennessee')).
+add('skos:broader'('a26:Category:Populated_places_in_Rio_Grande_do_Sul', 'a26:Category:Populated_places_in_the_South_Region_Brazil')).
+delete('skos:broader'('a26:Category:Arab_people_of_the_Arab_Byzantine_wars', 'a26:Category:People_of_the_Arab_Byzantine_wars')).
+delete('skos:broader'('a26:Category:Major_League_Baseball_players_with_retired_numbers', 'a26:Category:Major_League_Baseball_players')).
+delete('skos:broader'('a26:Category:American_racquetball_players', 'a26:Category:American_sportspeople')).
+delete('skos:broader'('a26:Category:Blackened_death_metal_musical_groups', 'a26:Category:Blackened_death_metal')).
+delete('skos:broader'('a26:Category:MCG_objects', 'a26:Category:MCG_objects')).

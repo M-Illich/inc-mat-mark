@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Castles_in_Midlothian', 'a26:Category:Visitor_attractions_in_Midlothian')).
+add('skos:broader'('a26:Category:Random_House_books', 'a26:Category:Books_by_publisher')).
+add('skos:broader'('a26:Category:Ethnic_groups_in_Arizona', 'a26:Category:Ethnic_groups_in_the_United_States_by_state')).
+add('skos:broader'('a26:Category:Songwriters_from_Texas', 'a26:Category:Musicians_from_Texas')).
+add('skos:broader'('a26:Category:Screenshots_of_Windows_Server', 'a26:Category:Windows_Server')).
+delete('skos:broader'('a26:Category:Conspiracy_theories', 'a26:Category:Conspiracy')).
+delete('skos:broader'('a26:Category:Clarinetists', 'a26:Category:Woodwind_musicians')).
+delete('skos:broader'('a26:Category:Turkish_Football_Federation_presidents', 'a26:Category:Turkish_Football_Federation')).
+delete('skos:broader'('a26:Category:Association_football_international_competitions_squad_navigational_boxes', 'a26:Category:Association_football_international_competitions_navigational_boxes')).
+delete('skos:broader'('a26:Category:Redirects_with_possibilities', 'a26:Category:Redirects_from_subtopics')).

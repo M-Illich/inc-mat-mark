@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:History_of_ethnic_groups_in_Romania', 'a26:Category:History_by_ethnic_group')).
+add('skos:broader'('a26:Category:KMFDM', 'a26:Category:Wikipedia_categories_named_after_German_musical_groups')).
+add('skos:broader'('a26:Category:Philippine_society', 'a26:Category:Philippines')).
+add('skos:broader'('a26:Category:University_of_Benghazi_faculty', 'a26:Category:Faculty_by_university_or_college_in_Libya')).
+add('skos:broader'('a26:Category:Dog_breeds', 'a26:Category:Mammal_breeds')).
+delete('skos:broader'('a26:Category:People_from_Madrid', 'a26:Category:Madrid')).
+delete('skos:broader'('a26:Category:Compositions_in_E_minor', 'a26:Category:Compositions_by_key')).
+delete('skos:broader'('a26:Category:Nama_people', 'a26:Category:Namibian_people_by_ethnic_or_national_origin')).
+delete('skos:broader'('a26:Category:Visitor_attractions_in_Ulsan', 'a26:Category:Tourism_in_Ulsan')).
+delete('skos:broader'('a26:Category:MCG_objects', 'a26:Category:Astronomical_catalogues')).

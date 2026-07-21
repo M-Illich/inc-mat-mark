@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:International_water_polo_competitions_hosted_by_France', 'a26:Category:International_water_polo_competitions_by_host')).
+add('skos:broader'('a26:Category:20th-century_American_sculptors', 'a26:Category:20th-century_American_people')).
+add('skos:broader'('a26:Category:South_African_people_of_Zimbabwean_descent', 'a26:Category:South_Africa_Zimbabwe_relations')).
+add('skos:broader'('a26:Category:Programming_language_topics', 'a26:Category:Software_engineering')).
+add('skos:broader'('a26:Category:Parma_FC_players', 'a26:Category:Footballers_in_Italy_by_club')).
+delete('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:Heads_of_state_in_the_Middle_East')).
+delete('skos:broader'('a26:Category:Clarinetists', 'a26:Category:Woodwind_musicians')).
+delete('skos:broader'('a26:Category:Organizations_based_in_the_United_States_by_state', 'a26:Category:Organizations_based_in_the_United_States')).
+delete('skos:broader'('a26:Category:International_water_polo_competitions_hosted_by_France', 'a26:Category:International_sports_competitions_hosted_by_France')).
+delete('skos:broader'('a26:Category:Ethnic_groups_in_Arizona', 'a26:Category:Ethnic_groups_in_the_United_States_by_state')).

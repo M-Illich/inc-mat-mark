@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1421676')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=2015516')).
+add('a1:E48_Place_Name'('http://arachne.uni-koeln.de/vocabulary/depository#agios-demetrios')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=473650')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1130109')).
+delete('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/kozan')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=647365')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=493935')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=647734')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=641142')).

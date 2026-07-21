@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Castles_in_Midlothian', 'a26:Category:Visitor_attractions_in_Midlothian')).
+add('skos:broader'('a26:Category:Fashion_events_in_the_United_Kingdom', 'a26:Category:British_fashion')).
+add('skos:broader'('a26:Category:Organizations_based_in_the_United_States_by_state', 'a26:Category:Organizations_by_country_subdivision')).
+add('skos:broader'('a26:Category:Businesspeople_from_London', 'a26:Category:British_businesspeople')).
+add('skos:broader'('a26:Category:19th_century_in_Staffordshire', 'a26:Category:Centuries_in_Staffordshire')).
+delete('skos:broader'('a26:Category:African_culture_by_nationality', 'a26:Category:Culture_by_nationality')).
+delete('skos:broader'('a26:Category:Random_House_books', 'a26:Category:Books_by_publisher')).
+delete('skos:broader'('a26:Category:Austrian_Football_Bundesliga_players', 'a26:Category:Association_football_players_by_competition')).
+delete('skos:broader'('a26:Category:Duroch_Islands', 'a26:Category:Trinity_Peninsula')).
+delete('skos:broader'('a26:Category:Housing_in_Scotland', 'a26:Category:Scottish_architecture')).

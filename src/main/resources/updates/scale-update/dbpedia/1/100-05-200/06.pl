@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Defunct_American_football_teams', 'a26:Category:Defunct_sports_teams')).
+add('skos:broader'('a26:Category:Major_League_Baseball_players_with_retired_numbers', 'a26:Category:Major_League_Baseball_players')).
+add('skos:broader'('a26:Category:Universities_and_colleges_in_Alameda_County_California', 'a26:Category:Universities_and_colleges_in_California_by_county')).
+add('skos:broader'('a26:Category:Adaptations_of_works_by_Luigi_Pirandello', 'a26:Category:Adaptations_of_works_by_writer')).
+add('skos:broader'('a26:Category:Screenshots_of_Windows_Server', 'a26:Category:Windows_Server')).
+delete('skos:broader'('a26:Category:Peruvian_sport_shooters', 'a26:Category:Sport_shooters_by_nationality')).
+delete('skos:broader'('a26:Category:Populated_places_in_Rio_Grande_do_Sul', 'a26:Category:Populated_places_in_Brazil_by_state')).
+delete('skos:broader'('a26:Category:Historic_districts_in_Adams_County_Pennsylvania', 'a26:Category:Geography_of_Adams_County_Pennsylvania')).
+delete('skos:broader'('a26:Category:Soap_opera_actors_by_nationality', 'a26:Category:Television_actors_by_nationality')).
+delete('skos:broader'('a26:Category:Ministry_band_members', 'a26:Category:Ministry_band')).

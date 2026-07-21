@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=579713')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=456158&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=895543&method=min&width=141&height=111')).
+add('a1:E48_Place_Name'('http://arachne.uni-koeln.de/vocabulary/place#orchomenos-arkadien')).
+add('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/kilisik')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=469132&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=488710&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1401765')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=797263')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=455892&method=min&width=141&height=111')).

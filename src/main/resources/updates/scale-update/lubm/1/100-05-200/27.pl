@@ -1,0 +1,10 @@
+add('a1:GraduateStudent'('http://www.Department1.University0.edu/GraduateStudent7')).
+add('a1:UndergraduateStudent'('http://www.Department0.University0.edu/UndergraduateStudent248')).
+add('a1:UndergraduateStudent'('http://www.Department2.University0.edu/UndergraduateStudent75')).
+add('a1:GraduateCourse'('http://www.Department0.University0.edu/GraduateCourse37')).
+add('a1:GraduateStudent'('http://www.Department2.University0.edu/GraduateStudent103')).
+delete('a1:UndergraduateStudent'('http://www.Department1.University0.edu/UndergraduateStudent275')).
+delete('a1:UndergraduateStudent'('http://www.Department1.University0.edu/UndergraduateStudent45')).
+delete('a1:UndergraduateStudent'('http://www.Department1.University0.edu/UndergraduateStudent314')).
+delete('a1:GraduateStudent'('http://www.Department0.University0.edu/GraduateStudent14')).
+delete('a1:UndergraduateStudent'('http://www.Department1.University0.edu/UndergraduateStudent185')).

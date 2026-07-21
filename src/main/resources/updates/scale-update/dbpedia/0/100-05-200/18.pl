@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:1977_establishments_in_British_Columbia', 'a26:Category:1977_in_British_Columbia')).
+add('skos:broader'('a26:Category:Soap_opera_actors_by_nationality', 'a26:Category:Categories_by_nationality')).
+add('skos:broader'('a26:Category:20th-century_American_sculptors', 'a26:Category:20th-century_sculptors')).
+add('skos:broader'('a26:Category:Duroch_Islands', 'a26:Category:Trinity_Peninsula')).
+add('skos:broader'('a26:Category:Clarinetists', 'a26:Category:Clarinets')).
+delete('skos:broader'('a26:Category:Mythological_sword_fighters', 'a26:Category:Mythological_characters')).
+delete('skos:broader'('a26:Category:Organizations_based_in_the_United_States_by_state', 'a26:Category:Organizations_by_country_subdivision')).
+delete('skos:broader'('a26:Category:South_Somerset', 'a26:Category:Non-metropolitan_districts_of_Somerset')).
+delete('skos:broader'('a26:Category:Universities_and_colleges_in_Alameda_County_California', 'a26:Category:Universities_and_colleges_in_California_by_county')).
+delete('skos:broader'('a26:Category:Literary_motifs', 'a26:Category:Elements_of_fiction')).

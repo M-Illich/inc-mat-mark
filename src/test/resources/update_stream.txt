@@ -1,4 +1,4 @@
-[[nextInWay, 3, 4, 3], [nextInWay, 2, 3, 2], [nextInWay, 1, 2, 1]]
+[[nextInWay, 2, 3, 2], [nextInWay, 3, 4, 3], [nextInWay, 1, 2, 1]]
 []
 [[nextInWay, 4, 5, 3]]
 [[nextInWay, 1, 2, 1]]

@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:South_African_people_of_Zimbabwean_descent', 'a26:Category:South_Africa_Zimbabwe_relations')).
+add('skos:broader'('a26:Category:Peers', 'a26:Category:British_people_by_rank')).
+add('skos:broader'('a26:Category:20th-century_American_sculptors', 'a26:Category:20th-century_sculptors')).
+add('skos:broader'('a26:Category:Programming_language_topics', 'a26:Category:Computer_languages')).
+add('skos:broader'('a26:Category:Blackened_death_metal_musical_groups', 'a26:Category:Blackened_death_metal')).
+delete('skos:broader'('a26:Category:Buildings_and_structures_in_Dickinson_County_Iowa', 'a26:Category:Buildings_and_structures_in_Iowa_by_county')).
+delete('skos:broader'('a26:Category:Privy_councils', 'a26:Category:Oligarchs')).
+delete('skos:broader'('a26:Category:Fashion_events_in_the_United_Kingdom', 'a26:Category:British_fashion')).
+delete('skos:broader'('a26:Category:Defunct_American_football_teams', 'a26:Category:Defunct_sports_teams')).
+delete('skos:broader'('a26:Category:Conglomerate_companies_of_France', 'a26:Category:Companies_of_France')).

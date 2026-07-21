@@ -65,7 +65,12 @@ public class Atom {
 		// surround elements that contain colon with '...' for compatibility with
 		// SWI-Prolog
 		if (arg.contains(":")) {
-			arg = "'" + arg + "'";
+			if (!arg.startsWith("'")) {
+				arg = "'" + arg;
+			}
+			if (!arg.endsWith("'")) {
+				arg += "'";
+			}
 		}
 
 		char[] chars = arg.toCharArray();
@@ -96,10 +101,15 @@ public class Atom {
 	/**
 	 * Transforms atom {@code p(a1,a2,...)} into a String {@code [p,a1,a2,...]}
 	 */
-	public String toString() {
+	public String toBracketString() {
 		LinkedList<String> atomList = new LinkedList<>(arguments);
 		atomList.addFirst(predicate);
 		return atomList.toString();
+	}
+
+	public String toString() {
+		String args = arguments.toString().substring(1, arguments.toString().length() - 1);
+		return predicate + "(" + args + ")";
 	}
 
 	@Override

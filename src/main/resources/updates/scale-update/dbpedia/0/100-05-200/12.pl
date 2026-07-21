@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Injuries_of_ankle_and_foot', 'a26:Category:Injuries_by_region_of_body')).
+add('skos:broader'('a26:Category:People_from_Madrid', 'a26:Category:Madrid')).
+add('skos:broader'('a26:Category:American_Airlines_people', 'a26:Category:American_Airlines')).
+add('skos:broader'('a26:Category:Soap_opera_actors_by_nationality', 'a26:Category:Television_actors_by_nationality')).
+add('skos:broader'('a26:Category:Parma_FC_players', 'a26:Category:Footballers_in_Italy_by_club')).
+delete('skos:broader'('a26:Category:Houses_in_the_City_of_Westminster', 'a26:Category:Buildings_and_structures_in_the_City_of_Westminster')).
+delete('skos:broader'('a26:Category:Fashion_events_in_the_United_Kingdom', 'a26:Category:British_fashion')).
+delete('skos:broader'('a26:Category:Geography_of_Greene_County_New_York', 'a26:Category:Geography_of_the_Hudson_Valley')).
+delete('skos:broader'('a26:Category:Conglomerate_companies_of_France', 'a26:Category:Companies_of_France')).
+delete('skos:broader'('a26:Category:British_tubists', 'a26:Category:Tubists_by_nationality')).

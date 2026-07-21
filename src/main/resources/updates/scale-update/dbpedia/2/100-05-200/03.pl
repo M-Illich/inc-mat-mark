@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Conspiracy_theories', 'a26:Category:Conspiracy')).
+add('skos:broader'('a26:Category:Buildings_and_structures_in_Dickinson_County_Iowa', 'a26:Category:Buildings_and_structures_in_Iowa_by_county')).
+add('skos:broader'('a26:Category:Populated_places_in_Galikash_County', 'a26:Category:Populated_places_in_Golestan_Province')).
+add('skos:broader'('a26:Category:Parma_FC_players', 'a26:Category:Footballers_in_Italy_by_club')).
+add('skos:broader'('a26:Category:Edmonton_Oilers_broadcasters', 'a26:Category:National_Hockey_League_broadcasters')).
+delete('skos:broader'('a26:Category:Iowa_Libertarians', 'a26:Category:Iowa_politicians_by_party')).
+delete('skos:broader'('a26:Category:Indiana_politicians_by_party', 'a26:Category:Indiana_politicians')).
+delete('skos:broader'('a26:Category:19th_century_in_Staffordshire', 'a26:Category:19th_century_in_England')).
+delete('skos:broader'('a26:Category:Duroch_Islands', 'a26:Category:Trinity_Peninsula')).
+delete('skos:broader'('a26:Category:Graphemes', 'a26:Category:Units_of_morphological_analysis')).

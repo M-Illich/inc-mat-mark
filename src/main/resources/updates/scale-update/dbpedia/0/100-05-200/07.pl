@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Ancient_Greek_sites_in_Egypt', 'a26:Category:Ptolemaic_colonies')).
+add('skos:broader'('a26:Category:Cyclists_from_Western_Australia', 'a26:Category:Sportspeople_from_Western_Australia_by_sport')).
+add('skos:broader'('a26:Category:1285_in_England', 'a26:Category:1285_in_Europe')).
+add('skos:broader'('a26:Category:Ancient_Greek_sites_in_Egypt', 'a26:Category:Archaeological_sites_in_Egypt')).
+add('skos:broader'('a26:Category:Organizations_based_in_the_United_States_by_state', 'a26:Category:Organizations_by_country_subdivision')).
+delete('skos:broader'('a26:Category:Algebraic_topology', 'a26:Category:Topology')).
+delete('skos:broader'('a26:Category:American_racquetball_players', 'a26:Category:Racquetball_players_by_nationality')).
+delete('skos:broader'('a26:Category:Analytical_chemistry', 'a26:Category:Analysis')).
+delete('skos:broader'('a26:Category:Parma_FC_players', 'a26:Category:Footballers_in_Italy_by_club')).
+delete('skos:broader'('a26:Category:People_from_Madrid', 'a26:Category:Madrilenian_people')).

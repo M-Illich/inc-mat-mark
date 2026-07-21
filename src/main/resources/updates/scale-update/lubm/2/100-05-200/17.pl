@@ -1,0 +1,10 @@
+add('a1:advisor'('http://www.Department2.University0.edu/UndergraduateStudent425', 'http://www.Department2.University0.edu/AssistantProfessor0')).
+add('a1:emailAddress'('http://www.Department1.University0.edu/UndergraduateStudent167', '"UndergraduateStudent167@Department1.University0.edu"^^xsd:string')).
+add('a1:publicationAuthor'('http://www.Department0.University0.edu/FullProfessor4/Publication0', 'http://www.Department0.University0.edu/FullProfessor4')).
+add('a1:takesCourse'('http://www.Department1.University0.edu/UndergraduateStudent405', 'http://www.Department1.University0.edu/Course48')).
+add('a1:takesCourse'('http://www.Department1.University0.edu/GraduateStudent90', 'http://www.Department1.University0.edu/GraduateCourse4')).
+delete('a1:takesCourse'('http://www.Department2.University0.edu/UndergraduateStudent78', 'http://www.Department2.University0.edu/Course46')).
+delete('a1:telephone'('http://www.Department0.University0.edu/UndergraduateStudent85', '"xxx-xxx-xxxx"^^xsd:string')).
+delete('a1:takesCourse'('http://www.Department2.University0.edu/UndergraduateStudent257', 'http://www.Department2.University0.edu/Course18')).
+delete('a1:emailAddress'('http://www.Department0.University0.edu/GraduateStudent96', '"GraduateStudent96@Department0.University0.edu"^^xsd:string')).
+delete('a1:takesCourse'('http://www.Department2.University0.edu/UndergraduateStudent125', 'http://www.Department2.University0.edu/Course17')).

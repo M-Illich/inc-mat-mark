@@ -1,0 +1,10 @@
+add('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/metapontum')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=473655')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1672070&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=627319&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=633414')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=473657')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=469132&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=643839')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=2015517')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=631655')).

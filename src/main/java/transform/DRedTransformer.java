@@ -120,10 +120,10 @@ public class DRedTransformer extends Transformer {
 
 		// add transformed body atoms
 		for (int i = 0; i < rule.body.size(); i++) {
-			chr += ", fact(" + rule.body.get(i).toString() + ",O" + (i + 1) + (withMark ? ",M" + (i + 1) : "") + ",_)";
+			chr += ", fact(" + rule.body.get(i).toBracketString() + ",O" + (i + 1) + (withMark ? ",M" + (i + 1) : "") + ",_)";
 		}
 		// add changing head atom
-		chr += " \\ fact(" + rule.head.toString() + ",add" + (withMark ? ",_" : "") + ",U) <=> ";
+		chr += " \\ fact(" + rule.head.toBracketString() + ",add" + (withMark ? ",_" : "") + ",U) <=> ";
 		// add guard conditions
 		for (Constraint con : rule.constraints) {
 			chr += con.toString() + ", ";
@@ -136,7 +136,7 @@ public class DRedTransformer extends Transformer {
 
 		if (rule.body.size() == 1) {
 			// directly use marking variable of body atom for head
-			chr += "fact(" + rule.head.toString() + ",del" + (withMark ? ",M1" : "") + ",U), applied_rules(1,del).";
+			chr += "fact(" + rule.head.toBracketString() + ",del" + (withMark ? ",M1" : "") + ",U), applied_rules(1,del).";
 		} else {
 			// add marking if needed
 			if (withMark) {
@@ -147,7 +147,7 @@ public class DRedTransformer extends Transformer {
 				chr += "],M), ";
 			}
 			// add new head
-			chr += "fact(" + rule.head.toString() + ",del" + (withMark ? ",M" : "") + ",U), applied_rules(1,del).";
+			chr += "fact(" + rule.head.toBracketString() + ",del" + (withMark ? ",M" : "") + ",U), applied_rules(1,del).";
 		}
 
 		return chr;
@@ -167,10 +167,10 @@ public class DRedTransformer extends Transformer {
 		String chr = "phase(2)";
 		// add transformed body atoms
 		for (int i = 0; i < rule.body.size(); i++) {
-			chr += ", fact(" + rule.body.get(i).toString() + ",add" + (withMark ? ",M" + (i + 1) : "") + ",_)";
+			chr += ", fact(" + rule.body.get(i).toBracketString() + ",add" + (withMark ? ",M" + (i + 1) : "") + ",_)";
 		}
 		// add changing head atom
-		chr += " \\ fact(" + rule.head.toString() + ",del" + (withMark ? ",_" : "") + ",U) <=> ";
+		chr += " \\ fact(" + rule.head.toBracketString() + ",del" + (withMark ? ",_" : "") + ",U) <=> ";
 		// add guard conditions
 		for (Constraint con : rule.constraints) {
 			chr += con.toString() + ", ";
@@ -179,7 +179,7 @@ public class DRedTransformer extends Transformer {
 
 		if (rule.body.size() == 1) {
 			// directly use marking variable of body atom for head
-			chr += "fact(" + rule.head.toString() + ",add" + (withMark ? ",M1" : "") + ",U), applied_rules(1,red).";
+			chr += "fact(" + rule.head.toBracketString() + ",add" + (withMark ? ",M1" : "") + ",U), applied_rules(1,red).";
 		} else {
 			// add marking if needed
 			if (withMark) {
@@ -190,7 +190,7 @@ public class DRedTransformer extends Transformer {
 				chr += "],M), ";
 			}
 			// add new head
-			chr += "fact(" + rule.head.toString() + ",add" + (withMark ? ",M" : "") + ",U), applied_rules(1,red).";
+			chr += "fact(" + rule.head.toBracketString() + ",add" + (withMark ? ",M" : "") + ",U), applied_rules(1,red).";
 		}
 
 		return chr;
@@ -211,7 +211,7 @@ public class DRedTransformer extends Transformer {
 		String chr = "phase(5)";
 		// add transformed body atoms
 		for (int i = 0; i < rule.body.size(); i++) {
-			chr += ", fact(" + rule.body.get(i).toString() + ",add" + (withMark ? ",M" + (i + 1) : "") + ",U" + (i + 1)
+			chr += ", fact(" + rule.body.get(i).toBracketString() + ",add" + (withMark ? ",M" + (i + 1) : "") + ",U" + (i + 1)
 					+ ")";
 		}
 		// add guard conditions
@@ -227,7 +227,7 @@ public class DRedTransformer extends Transformer {
 
 		if (rule.body.size() == 1) {
 			// directly use marking variable of body atom for head
-			chr += "fact(" + rule.head.toString() + ",add" + (withMark ? ",M1" : "") + ",U), applied_rules(1,ins).";
+			chr += "fact(" + rule.head.toBracketString() + ",add" + (withMark ? ",M1" : "") + ",U), applied_rules(1,ins).";
 		} else {
 			// add marking if needed
 			if (withMark) {
@@ -238,7 +238,7 @@ public class DRedTransformer extends Transformer {
 				chr += "],M), ";
 			}
 			// add new head
-			chr += "fact(" + rule.head.toString() + ",add" + (withMark ? ",M" : "") + ",U), applied_rules(1,ins).";
+			chr += "fact(" + rule.head.toBracketString() + ",add" + (withMark ? ",M" : "") + ",U), applied_rules(1,ins).";
 		}
 
 		return chr;

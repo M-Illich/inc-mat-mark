@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Conspiracy_theories', 'a26:Category:Conspiracy')).
+add('skos:broader'('a26:Category:Great_Officers_of_State_of_England', 'a26:Category:Great_Officers_of_State')).
+add('skos:broader'('a26:Category:1285_in_England', 'a26:Category:1285_in_Europe')).
+add('skos:broader'('a26:Category:Edmonton_Oilers_broadcasters', 'a26:Category:National_Hockey_League_broadcasters')).
+add('skos:broader'('a26:Category:Theatres_in_New_York_City', 'a26:Category:Visitor_attractions_in_New_York_City')).
+delete('skos:broader'('a26:Category:Aguadilla_Isabela_San_Sebastián_metropolitan_area', 'a26:Category:Metropolitan_areas_of_Puerto_Rico')).
+delete('skos:broader'('a26:Category:Algebraic_topology', 'a26:Category:Abstract_algebra')).
+delete('skos:broader'('a26:Category:Carleton_University', 'a26:Category:Universities_and_colleges_in_Ottawa')).
+delete('skos:broader'('a26:Category:Companies_based_in_Atlanta_Georgia', 'a26:Category:Companies_based_in_Georgia_U.S._state_by_city')).
+delete('skos:broader'('a26:Category:19th_century_in_Staffordshire', 'a26:Category:Centuries_in_Staffordshire')).

@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Italian_Romani_people', 'a26:Category:Italian_people_by_ethnic_or_national_origin')).
+add('skos:broader'('a26:Category:People_from_Madrid', 'a26:Category:Madrid')).
+add('skos:broader'('a26:Category:MCG_objects', 'a26:Category:MCG_objects')).
+add('skos:broader'('a26:Category:Redirects_with_possibilities', 'a26:Category:Redirects_from_subtopics')).
+add('skos:broader'('a26:Category:Płock_County', 'a26:Category:Land_counties_of_Masovian_Voivodeship')).
+delete('skos:broader'('a26:Category:Scots_law_formal_titles', 'a26:Category:Scots_law')).
+delete('skos:broader'('a26:Category:Clarinetists', 'a26:Category:Woodwind_musicians')).
+delete('skos:broader'('a26:Category:Mythological_sword_fighters', 'a26:Category:Mythological_characters')).
+delete('skos:broader'('a26:Category:Businesspeople_from_London', 'a26:Category:English_businesspeople_by_city')).
+delete('skos:broader'('a26:Category:American_football_teams_in_Denmark', 'a26:Category:American_football_teams_in_Europe_by_country')).

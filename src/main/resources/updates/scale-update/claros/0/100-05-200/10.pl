@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=640400&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=2015514')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=647366&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=386313')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=625312')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=412782&method=min&width=141&height=111')).
+delete('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/elateia')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=627319&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=531260&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=2088305&method=min&width=141&height=111')).

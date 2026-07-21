@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Houses_in_the_City_of_Westminster', 'a26:Category:Buildings_and_structures_in_the_City_of_Westminster')).
+add('skos:broader'('a26:Category:Organizations_based_in_the_United_States_by_state', 'a26:Category:Organizations_by_country_subdivision')).
+add('skos:broader'('a26:Category:Screenshots_of_Windows_Server', 'a26:Category:Windows_Server')).
+add('skos:broader'('a26:Category:19th_century_in_Staffordshire', 'a26:Category:Centuries_in_Staffordshire')).
+add('skos:broader'('a26:Category:British_tubists', 'a26:Category:Tubists_by_nationality')).
+delete('skos:broader'('a26:Category:Privy_councils', 'a26:Category:Oligarchs')).
+delete('skos:broader'('a26:Category:Parma_FC_players', 'a26:Category:Parma_FC')).
+delete('skos:broader'('a26:Category:1977_establishments_in_British_Columbia', 'a26:Category:Establishments_in_British_Columbia_by_year')).
+delete('skos:broader'('a26:Category:Dog_breeds', 'a26:Category:Mammal_breeds')).
+delete('skos:broader'('a26:Category:Edmonton_Oilers_broadcasters', 'a26:Category:National_Hockey_League_broadcasters')).

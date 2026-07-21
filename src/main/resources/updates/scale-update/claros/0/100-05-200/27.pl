@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=455755&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1401765')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=726329&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=386313')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=455892&method=min&width=141&height=111')).
+delete('a1:E48_Place_Name'('http://arachne.uni-koeln.de/vocabulary/place#isopata')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=940806')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=647738')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=627319&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=781557')).

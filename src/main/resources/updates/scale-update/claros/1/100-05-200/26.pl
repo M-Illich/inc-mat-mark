@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=475041')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=2005772&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=2015517')).
+add('a1:E48_Place_Name'('http://arachne.uni-koeln.de/vocabulary/place#orchomenos-arkadien')).
+add('a1:E48_Place_Name'('http://arachne.uni-koeln.de/vocabulary/place#sedeinga')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=573052&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=574406&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=940806')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1421675')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=806616')).

@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Visitor_attractions_in_Ulsan', 'a26:Category:Visitor_attractions_in_South_Korea_by_city')).
+add('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:Middle_Eastern_monarchs')).
+add('skos:broader'('a26:Category:Bielsk_County', 'a26:Category:Land_counties_of_Podlaskie_Voivodeship')).
+add('skos:broader'('a26:Category:Turkish_Football_Federation_presidents', 'a26:Category:Turkish_Football_Federation')).
+add('skos:broader'('a26:Category:Housing_in_Scotland', 'a26:Category:Scottish_architecture')).
+delete('skos:broader'('a26:Category:Iowa_Libertarians', 'a26:Category:Iowa_politicians_by_party')).
+delete('skos:broader'('a26:Category:Parishes_of_Valka_District', 'a26:Category:Parishes_of_Latvia')).
+delete('skos:broader'('a26:Category:1285_in_England', 'a26:Category:1280s_in_England')).
+delete('skos:broader'('a26:Category:American_racquetball_players', 'a26:Category:American_sportspeople')).
+delete('skos:broader'('a26:Category:Businesspeople_from_London', 'a26:Category:British_businesspeople')).

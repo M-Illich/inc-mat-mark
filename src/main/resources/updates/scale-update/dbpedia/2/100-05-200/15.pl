@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Soap_opera_actors_by_nationality', 'a26:Category:Categories_by_nationality')).
+add('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:Middle_Eastern_monarchs')).
+add('skos:broader'('a26:Category:Major_League_Baseball_players_with_retired_numbers', 'a26:Category:Major_League_Baseball_players')).
+add('skos:broader'('a26:Category:Analytical_chemistry', 'a26:Category:Analysis')).
+add('skos:broader'('a26:Category:Duroch_Islands', 'a26:Category:Trinity_Peninsula')).
+delete('skos:broader'('a26:Category:Italian_Romani_people', 'a26:Category:Italian_people_by_ethnic_or_national_origin')).
+delete('skos:broader'('a26:Category:People_from_the_Las_Vegas_Valley', 'a26:Category:People_by_populated_place_in_Nevada')).
+delete('skos:broader'('a26:Category:Rulers_of_Baden', 'a26:Category:German_monarchs')).
+delete('skos:broader'('a26:Category:The_Football_League_representative_players', 'a26:Category:The_Football_League_players')).
+delete('skos:broader'('a26:Category:Bielsk_County', 'a26:Category:Land_counties_of_Podlaskie_Voivodeship')).

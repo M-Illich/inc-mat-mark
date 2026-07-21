@@ -50,5 +50,14 @@ public class AtomTest {
 		assertEquals("Y", a.ensureCorrectFormat("Y"));
 		assertEquals("'a:B'", a.ensureCorrectFormat("a:B"));
 	}
+	
+	@Test
+	public void testStringFormats() {
+		Atom a = new Atom("p", List.of("?x", "?Ab", "a:Z"));	
+		assertEquals("p(X, Ab, 'a:Z')", a.toString());
+		assertEquals("[p, X, Ab, 'a:Z']", a.toBracketString());
+		
+
+	}
 
 }

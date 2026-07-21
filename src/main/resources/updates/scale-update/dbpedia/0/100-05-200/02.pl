@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Houses_in_the_City_of_Westminster', 'a26:Category:Buildings_and_structures_in_the_City_of_Westminster')).
+add('skos:broader'('a26:Category:American_racquetball_players', 'a26:Category:Racquetball_players_by_nationality')).
+add('skos:broader'('a26:Category:Association_football_international_competitions_squad_navigational_boxes', 'a26:Category:Association_football_international_competitions_navigational_boxes')).
+add('skos:broader'('a26:Category:Clarinetists', 'a26:Category:Clarinets')).
+add('skos:broader'('a26:Category:Bender_Moldova', 'a26:Category:Districts_of_Moldova')).
+delete('skos:broader'('a26:Category:Northwest_Territories_territorial_electoral_districts', 'a26:Category:Canadian_provincial_and_territorial_electoral_districts')).
+delete('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:Middle_Eastern_monarchs')).
+delete('skos:broader'('a26:Category:Austrian_Football_Bundesliga_players', 'a26:Category:Association_football_players_by_competition')).
+delete('skos:broader'('a26:Category:Professional_Indoor_Football_League_teams', 'a26:Category:Indoor_American_football_teams_in_the_United_States_by_league')).
+delete('skos:broader'('a26:Category:Peruvian_sport_shooters', 'a26:Category:Peruvian_sportspeople')).

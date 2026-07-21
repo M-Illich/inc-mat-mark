@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Populated_places_in_Galikash_County', 'a26:Category:Populated_places_in_Golestan_Province')).
+add('skos:broader'('a26:Category:Ancient_Greek_sites_in_Egypt', 'a26:Category:Archaeological_sites_in_Egypt')).
+add('skos:broader'('a26:Category:19th_century_in_Yorkshire', 'a26:Category:Centuries_in_Yorkshire')).
+add('skos:broader'('a26:Category:Programming_language_topics', 'a26:Category:Software_engineering')).
+add('skos:broader'('a26:Category:Irish_entertainers', 'a26:Category:Entertainment_in_Ireland')).
+delete('skos:broader'('a26:Category:Random_House_books', 'a26:Category:Books_by_publishing_company_of_the_United_States')).
+delete('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:18th-century_monarchs')).
+delete('skos:broader'('a26:Category:Analytical_chemistry', 'a26:Category:Analysis')).
+delete('skos:broader'('a26:Category:Brazilian_films', 'a26:Category:Films_by_country')).
+delete('skos:broader'('a26:Category:Theatres_in_New_York_City', 'a26:Category:Visitor_attractions_in_New_York_City')).

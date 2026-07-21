@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Geography_of_Greene_County_New_York', 'a26:Category:Geography_of_the_Hudson_Valley')).
+add('skos:broader'('a26:Category:Brazilian_films', 'a26:Category:Films_by_country')).
+add('skos:broader'('a26:Category:Historic_districts_in_Adams_County_Pennsylvania', 'a26:Category:History_of_Adams_County_Pennsylvania')).
+add('skos:broader'('a26:Category:Steampunk_films', 'a26:Category:Science_fiction_films_by_genre')).
+add('skos:broader'('a26:Category:Roman_Catholic_Church_in_Slovakia', 'a26:Category:Roman_Catholic_Church_in_Europe')).
+delete('skos:broader'('a26:Category:Parma_FC_players', 'a26:Category:Parma_FC')).
+delete('skos:broader'('a26:Category:Populated_places_in_Galikash_County', 'a26:Category:Populated_places_in_Golestan_Province')).
+delete('skos:broader'('a26:Category:South_African_people_of_Zimbabwean_descent', 'a26:Category:South_Africa_Zimbabwe_relations')).
+delete('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:18th-century_rulers')).
+delete('skos:broader'('a26:Category:Monument_types', 'a26:Category:Archaeology_of_structures')).

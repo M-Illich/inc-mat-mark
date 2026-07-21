@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Algebraic_topology', 'a26:Category:Topology')).
+add('skos:broader'('a26:Category:Clarinetists', 'a26:Category:Musicians_by_instrument')).
+add('skos:broader'('a26:Category:Great_Officers_of_State_of_England', 'a26:Category:Great_Officers_of_State')).
+add('skos:broader'('a26:Category:Roman_Catholic_Church_in_Slovakia', 'a26:Category:Roman_Catholic_Church_in_Europe')).
+add('skos:broader'('a26:Category:Dog_breeds', 'a26:Category:Mammal_breeds')).
+delete('skos:broader'('a26:Category:North_American_culture_by_country', 'a26:Category:North_American_culture')).
+delete('skos:broader'('a26:Category:2012_television_films', 'a26:Category:2012_films')).
+delete('skos:broader'('a26:Category:Peruvian_sport_shooters', 'a26:Category:Peruvian_sportspeople')).
+delete('skos:broader'('a26:Category:Castles_in_Midlothian', 'a26:Category:Buildings_and_structures_in_Midlothian')).
+delete('skos:broader'('a26:Category:British_tubists', 'a26:Category:Tubists_by_nationality')).

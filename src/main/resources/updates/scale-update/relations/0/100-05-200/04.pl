@@ -1,0 +1,10 @@
+add('obo:RO_0002471'('obo:Continuant10296', 'obo:Continuant99105')).
+add('obo:RO_0002408'('obo:Occurrent81767', 'obo:Occurrent50328')).
+add('obo:RO_0002408'('obo:Occurrent24815', 'obo:Occurrent2397')).
+add('obo:RO_0002471'('obo:Continuant10296', 'obo:Continuant13407')).
+add('obo:RO_0002491'('obo:Continuant1', 'obo:Occurrent27469')).
+delete('obo:RO_0011016'('obo:Continuant77172', 'obo:Continuant4793')).
+delete('obo:RO_0002568'('obo:Continuant77172', 'obo:Continuant89428')).
+delete('obo:RO_0002246'('obo:Continuant70259', 'obo:Continuant33574')).
+delete('obo:RO_0002471'('obo:Continuant10296', 'obo:Continuant13816')).
+delete('obo:RO_0002478'('obo:Continuant59009', 'obo:Continuant9200')).

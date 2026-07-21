@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:North_American_culture_by_country', 'a26:Category:North_American_culture')).
+add('skos:broader'('a26:Category:Dukes_of_Choiseul', 'a26:Category:Dukes_of_France')).
+add('skos:broader'('a26:Category:Defunct_American_football_teams', 'a26:Category:Defunct_sports_teams')).
+add('skos:broader'('a26:Category:Buildings_and_structures_in_Teton_County_Wyoming', 'a26:Category:Buildings_and_structures_in_Wyoming_by_county')).
+add('skos:broader'('a26:Category:Member_states_of_the_United_Nations', 'a26:Category:United_Nations')).
+delete('skos:broader'('a26:Category:KMFDM', 'a26:Category:Wikipedia_categories_named_after_German_musical_groups')).
+delete('skos:broader'('a26:Category:Major_League_Baseball_players_with_retired_numbers', 'a26:Category:Major_League_Baseball_players')).
+delete('skos:broader'('a26:Category:Housing_in_Scotland', 'a26:Category:Housing_in_the_United_Kingdom')).
+delete('skos:broader'('a26:Category:A-Class_Museums_articles', 'a26:Category:A-Class_articles')).
+delete('skos:broader'('a26:Category:Third_Doctor_stories', 'a26:Category:Doctor_Who_stories')).

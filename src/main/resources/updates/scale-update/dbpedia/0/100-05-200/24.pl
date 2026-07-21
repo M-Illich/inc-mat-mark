@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Indiana_Whigs', 'a26:Category:Whig_Party_United_States_politicians')).
+add('skos:broader'('a26:Category:American_Airlines_people', 'a26:Category:American_Airlines')).
+add('skos:broader'('a26:Category:Historic_districts_in_Adams_County_Pennsylvania', 'a26:Category:Historic_districts_in_Pennsylvania_by_county')).
+add('skos:broader'('a26:Category:Member_states_of_the_United_Nations', 'a26:Category:History_of_the_United_Nations')).
+add('skos:broader'('a26:Category:Scots_law_formal_titles', 'a26:Category:Scottish_titles')).
+delete('skos:broader'('a26:Category:Compositions_in_E_minor', 'a26:Category:Compositions_by_key')).
+delete('skos:broader'('a26:Category:Random_House_books', 'a26:Category:Books_by_publisher')).
+delete('skos:broader'('a26:Category:Duroch_Islands', 'a26:Category:Trinity_Peninsula')).
+delete('skos:broader'('a26:Category:Table_tennis_in_North_America', 'a26:Category:Sport_in_North_America_by_sport')).
+delete('skos:broader'('a26:Category:Redirects_with_possibilities', 'a26:Category:Redirects_from_subtopics')).

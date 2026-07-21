@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Altötting_district', 'a26:Category:Upper_Bavaria')).
+add('skos:broader'('a26:Category:Neighbourhoods_of_Helsinki', 'a26:Category:Geography_of_Helsinki')).
+add('skos:broader'('a26:Category:Rulers_of_Baden', 'a26:Category:German_monarchs')).
+add('skos:broader'('a26:Category:Woody_Guthrie', 'a26:Category:Guthrie_family')).
+add('skos:broader'('a26:Category:Solar_phenomena', 'a26:Category:Stellar_phenomena')).
+delete('skos:broader'('a26:Category:Italian_Romani_people', 'a26:Category:Italian_people_by_ethnic_or_national_origin')).
+delete('skos:broader'('a26:Category:People_from_Madrid', 'a26:Category:Madrid')).
+delete('skos:broader'('a26:Category:Populated_places_in_Los_Angeles_County_California', 'a26:Category:Populated_places_in_California_by_county')).
+delete('skos:broader'('a26:Category:Films_shot_in_Hong_Kong', 'a26:Category:Hong_Kong_culture')).
+delete('skos:broader'('a26:Category:Duroch_Islands', 'a26:Category:Trinity_Peninsula')).

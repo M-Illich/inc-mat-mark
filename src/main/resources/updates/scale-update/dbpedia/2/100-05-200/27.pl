@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:African_culture_by_nationality', 'a26:Category:African_culture')).
+add('skos:broader'('a26:Category:South_Somerset', 'a26:Category:Local_government_in_Somerset')).
+add('skos:broader'('a26:Category:Mythological_sword_fighters', 'a26:Category:Mythological_characters')).
+add('skos:broader'('a26:Category:Transport_in_Greater_Moncton', 'a26:Category:Transport_in_New_Brunswick_by_city')).
+add('skos:broader'('a26:Category:Peruvian_sport_shooters', 'a26:Category:Peruvian_sportspeople')).
+delete('skos:broader'('a26:Category:Populated_places_in_Los_Angeles_County_California', 'a26:Category:Geography_of_Los_Angeles_County_California')).
+delete('skos:broader'('a26:Category:19th_century_in_Yorkshire', 'a26:Category:Centuries_in_Yorkshire')).
+delete('skos:broader'('a26:Category:Chantilly_Racecourse', 'a26:Category:Wikipedia_categories_named_after_sports_venues')).
+delete('skos:broader'('a26:Category:MCG_objects', 'a26:Category:MCG_objects')).
+delete('skos:broader'('a26:Category:Companies_based_in_Atlanta_Georgia', 'a26:Category:Companies_based_in_Georgia_U.S._state_by_city')).

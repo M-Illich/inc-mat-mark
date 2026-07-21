@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Italian_Romani_people', 'a26:Category:Italian_people_by_ethnic_or_national_origin')).
+add('skos:broader'('a26:Category:Dukes_of_Choiseul', 'a26:Category:Dukes_of_France')).
+add('skos:broader'('a26:Category:Historic_districts_in_Adams_County_Pennsylvania', 'a26:Category:Buildings_and_structures_in_Adams_County_Pennsylvania')).
+add('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:18th-century_monarchs_in_Asia')).
+add('skos:broader'('a26:Category:Brazilian_films', 'a26:Category:Cinema_of_Brazil')).
+delete('skos:broader'('a26:Category:Houses_in_the_City_of_Westminster', 'a26:Category:Buildings_and_structures_in_the_City_of_Westminster')).
+delete('skos:broader'('a26:Category:Clarinetists', 'a26:Category:Musicians_by_instrument')).
+delete('skos:broader'('a26:Category:Nama_people', 'a26:Category:Namibian_people_by_ethnic_or_national_origin')).
+delete('skos:broader'('a26:Category:Screenshots_of_Windows_Server', 'a26:Category:Windows_Server')).
+delete('skos:broader'('a26:Category:Clarinetists', 'a26:Category:Clarinets')).

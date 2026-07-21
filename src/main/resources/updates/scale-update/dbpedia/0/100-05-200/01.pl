@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Analytical_chemistry', 'a26:Category:Chemistry')).
+add('skos:broader'('a26:Category:Graphical_user_interface_testing', 'a26:Category:Software_testing_tools')).
+add('skos:broader'('a26:Category:Screenshots_of_Windows_Server', 'a26:Category:Screenshots_of_Microsoft_Windows')).
+add('skos:broader'('a26:Category:Literary_motifs', 'a26:Category:Elements_of_fiction')).
+add('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:18th-century_rulers')).
+delete('skos:broader'('a26:Category:Cyclists_from_Western_Australia', 'a26:Category:Sportspeople_from_Western_Australia_by_sport')).
+delete('skos:broader'('a26:Category:Five-year_plans', 'a26:Category:Economic_planning')).
+delete('skos:broader'('a26:Category:Ancient_Greek_sites_in_Egypt', 'a26:Category:Archaeological_sites_in_Egypt')).
+delete('skos:broader'('a26:Category:International_water_polo_competitions_hosted_by_France', 'a26:Category:International_sports_competitions_hosted_by_France')).
+delete('skos:broader'('a26:Category:Edmonton_Oilers_broadcasters', 'a26:Category:National_Hockey_League_broadcasters')).

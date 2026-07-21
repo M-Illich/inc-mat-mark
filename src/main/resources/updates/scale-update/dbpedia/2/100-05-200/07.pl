@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Castles_in_Midlothian', 'a26:Category:Visitor_attractions_in_Midlothian')).
+add('skos:broader'('a26:Category:1285_in_England', 'a26:Category:1280s_in_England')).
+add('skos:broader'('a26:Category:Explosions_in_England', 'a26:Category:Disasters_in_England')).
+add('skos:broader'('a26:Category:Long-distance_footpaths_in_Wales', 'a26:Category:Footpaths_in_Wales')).
+add('skos:broader'('a26:Category:Literary_motifs', 'a26:Category:Elements_of_fiction')).
+delete('skos:broader'('a26:Category:Programming_language_topics', 'a26:Category:Software_engineering')).
+delete('skos:broader'('a26:Category:Songwriters_from_Texas', 'a26:Category:Musicians_from_Texas')).
+delete('skos:broader'('a26:Category:DC_Comics-related_lists', 'a26:Category:Comic_lists_by_franchise')).
+delete('skos:broader'('a26:Category:British_tubists', 'a26:Category:Tubists_by_nationality')).
+delete('skos:broader'('a26:Category:Housing_in_Scotland', 'a26:Category:Scottish_architecture')).

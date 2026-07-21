@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Privy_councils', 'a26:Category:Oligarchs')).
+add('skos:broader'('a26:Category:Islands_of_the_Irish_Sea', 'a26:Category:Irish_Sea')).
+add('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:Heads_of_state_in_the_Middle_East')).
+add('skos:broader'('a26:Category:Programming_language_topics', 'a26:Category:Software_engineering')).
+add('skos:broader'('a26:Category:Turkish_Football_Federation_presidents', 'a26:Category:Turkish_Football_Federation')).
+delete('skos:broader'('a26:Category:Analytical_chemistry', 'a26:Category:Chemistry')).
+delete('skos:broader'('a26:Category:Algebraic_topology', 'a26:Category:Abstract_algebra')).
+delete('skos:broader'('a26:Category:Neighbourhoods_of_Helsinki', 'a26:Category:Geography_of_Helsinki')).
+delete('skos:broader'('a26:Category:Organizations_based_in_the_United_States_by_state', 'a26:Category:Organizations_by_country_subdivision')).
+delete('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:18th-century_rulers')).

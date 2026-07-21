@@ -1,0 +1,10 @@
+add(edge(8, 76)).
+add(edge(49, 100)).
+add(edge(90, 45)).
+add(edge(105, 32)).
+add(edge(48, 96)).
+delete(edge(108, 2)).
+delete(edge(19, 44)).
+delete(edge(25, 108)).
+delete(edge(48, 94)).
+delete(edge(73, 45)).

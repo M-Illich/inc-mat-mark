@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Populated_places_in_Los_Angeles_County_California', 'a26:Category:Geography_of_Los_Angeles_County_California')).
+add('skos:broader'('a26:Category:Five-year_plans', 'a26:Category:Economic_planning')).
+add('skos:broader'('a26:Category:Islands_of_the_Irish_Sea', 'a26:Category:Islands_of_the_North_Atlantic_Ocean')).
+add('skos:broader'('a26:Category:Austrian_Football_Bundesliga_players', 'a26:Category:Austrian_Football_Bundesliga')).
+add('skos:broader'('a26:Category:Płock_County', 'a26:Category:Land_counties_of_Masovian_Voivodeship')).
+delete('skos:broader'('a26:Category:Compositions_in_E_minor', 'a26:Category:Compositions_by_key')).
+delete('skos:broader'('a26:Category:History_of_ethnic_groups_in_Romania', 'a26:Category:History_by_ethnic_group')).
+delete('skos:broader'('a26:Category:South_Somerset', 'a26:Category:Local_government_in_Somerset')).
+delete('skos:broader'('a26:Category:Member_states_of_the_United_Nations', 'a26:Category:History_of_the_United_Nations')).
+delete('skos:broader'('a26:Category:Soap_opera_actors_by_nationality', 'a26:Category:Television_actors_by_nationality')).

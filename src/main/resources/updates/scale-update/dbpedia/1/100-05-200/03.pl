@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Visitor_attractions_in_Ulsan', 'a26:Category:Visitor_attractions_in_South_Korea_by_city')).
+add('skos:broader'('a26:Category:Buildings_and_structures_in_Teton_County_Wyoming', 'a26:Category:Buildings_and_structures_in_Wyoming_by_county')).
+add('skos:broader'('a26:Category:Duroch_Islands', 'a26:Category:Trinity_Peninsula')).
+add('skos:broader'('a26:Category:Steampunk_films', 'a26:Category:Science_fiction_films_by_genre')).
+add('skos:broader'('a26:Category:Brazilian_films', 'a26:Category:Cinema_of_Brazil')).
+delete('skos:broader'('a26:Category:Analytical_chemistry', 'a26:Category:Chemistry')).
+delete('skos:broader'('a26:Category:People_from_Perth-Andover', 'a26:Category:People_from_Victoria_County_New_Brunswick')).
+delete('skos:broader'('a26:Category:Universities_and_colleges_in_Alameda_County_California', 'a26:Category:Universities_and_colleges_in_California_by_county')).
+delete('skos:broader'('a26:Category:Italian_Romani_people', 'a26:Category:Romani_in_Italy')).
+delete('skos:broader'('a26:Category:Housing_in_Scotland', 'a26:Category:Scottish_architecture')).

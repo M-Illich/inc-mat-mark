@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=473656')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=412782&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=390076&method=min&width=141&height=111')).
+add('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/serres')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1341473')).
+delete('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/kozan')).
+delete('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/suwaida')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=359374')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=2029096')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=940809')).

@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:British_adventure_films', 'a26:Category:British_films_by_genre')).
+add('skos:broader'('a26:Category:Programming_language_topics', 'a26:Category:Computer_languages')).
+add('skos:broader'('a26:Category:University_of_Benghazi_faculty', 'a26:Category:Faculty_by_university_or_college_in_Libya')).
+add('skos:broader'('a26:Category:Historic_districts_in_Adams_County_Pennsylvania', 'a26:Category:History_of_Adams_County_Pennsylvania')).
+add('skos:broader'('a26:Category:Songwriters_from_Texas', 'a26:Category:Musicians_from_Texas')).
+delete('skos:broader'('a26:Category:2009_in_Catalan_sport', 'a26:Category:2009_in_Spanish_sport')).
+delete('skos:broader'('a26:Category:Castles_in_Midlothian', 'a26:Category:Visitor_attractions_in_Midlothian')).
+delete('skos:broader'('a26:Category:Islands_of_the_Irish_Sea', 'a26:Category:Islands_by_ocean_or_sea')).
+delete('skos:broader'('a26:Category:Census-designated_places_in_Tennessee', 'a26:Category:Populated_places_in_Tennessee')).
+delete('skos:broader'('a26:Category:Buildings_and_structures_in_Teton_County_Wyoming', 'a26:Category:Buildings_and_structures_in_Wyoming_by_county')).

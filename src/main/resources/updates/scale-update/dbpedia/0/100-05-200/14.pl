@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Aguadilla_Isabela_San_Sebastián_metropolitan_area', 'a26:Category:Metropolitan_areas_of_Puerto_Rico')).
+add('skos:broader'('a26:Category:Scots_law_formal_titles', 'a26:Category:Scots_law')).
+add('skos:broader'('a26:Category:Graphical_user_interface_testing', 'a26:Category:Software_testing_tools')).
+add('skos:broader'('a26:Category:American_racquetball_players', 'a26:Category:Racquetball_players_by_nationality')).
+add('skos:broader'('a26:Category:Conglomerate_companies_of_France', 'a26:Category:Companies_of_France')).
+delete('skos:broader'('a26:Category:People_from_Madrid', 'a26:Category:Madrid')).
+delete('skos:broader'('a26:Category:Islands_of_the_Irish_Sea', 'a26:Category:Islands_by_ocean_or_sea')).
+delete('skos:broader'('a26:Category:Landforms_of_Petersburg_Borough_Alaska', 'a26:Category:Geography_of_Petersburg_Borough_Alaska')).
+delete('skos:broader'('a26:Category:Screenshots_of_Windows_Server', 'a26:Category:Windows_Server')).
+delete('skos:broader'('a26:Category:People_from_Madrid', 'a26:Category:Madrilenian_people')).

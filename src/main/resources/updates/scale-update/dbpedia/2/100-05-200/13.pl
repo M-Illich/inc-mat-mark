@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Hungarian_people_of_Slovenian_descent', 'a26:Category:Hungarian_people_by_ethnic_or_national_origin')).
+add('skos:broader'('a26:Category:Compositions_in_E_minor', 'a26:Category:Compositions_by_key')).
+add('skos:broader'('a26:Category:19th_century_in_Yorkshire', 'a26:Category:Centuries_in_Yorkshire')).
+add('skos:broader'('a26:Category:Transportation_in_Maine_by_county', 'a26:Category:Maine_counties')).
+add('skos:broader'('a26:Category:Association_football_international_competitions_squad_navigational_boxes', 'a26:Category:Association_football_international_competitions_navigational_boxes')).
+delete('skos:broader'('a26:Category:South_African_people_of_Zimbabwean_descent', 'a26:Category:South_Africa_Zimbabwe_relations')).
+delete('skos:broader'('a26:Category:1285_in_England', 'a26:Category:1285_in_Europe')).
+delete('skos:broader'('a26:Category:Programming_language_topics', 'a26:Category:Computer_languages')).
+delete('skos:broader'('a26:Category:Historic_districts_in_Adams_County_Pennsylvania', 'a26:Category:Buildings_and_structures_in_Adams_County_Pennsylvania')).
+delete('skos:broader'('a26:Category:Buddhist_titles', 'a26:Category:Titles')).

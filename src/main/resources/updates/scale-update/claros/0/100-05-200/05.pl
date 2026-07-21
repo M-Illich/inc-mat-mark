@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1521896')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=634432&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=631655')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=3446091')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=2015433&method=min&width=141&height=111')).
+delete('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/yarm_tepe')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=451527&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=623321&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=742024&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=806616')).

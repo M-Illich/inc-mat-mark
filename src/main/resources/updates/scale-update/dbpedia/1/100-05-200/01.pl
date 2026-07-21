@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Graphical_user_interface_testing', 'a26:Category:Software_testing_tools')).
+add('skos:broader'('a26:Category:Housing_in_Scotland', 'a26:Category:Housing_in_the_United_Kingdom')).
+add('skos:broader'('a26:Category:Organizations_based_in_the_United_States_by_state', 'a26:Category:Society_of_the_United_States_by_state')).
+add('skos:broader'('a26:Category:Universities_and_colleges_in_Alameda_County_California', 'a26:Category:Universities_and_colleges_in_California_by_county')).
+add('skos:broader'('a26:Category:Parma_FC_players', 'a26:Category:Footballers_in_Italy_by_club')).
+delete('skos:broader'('a26:Category:Italian_Romani_people', 'a26:Category:Italian_people_by_ethnic_or_national_origin')).
+delete('skos:broader'('a26:Category:French_silent_short_films', 'a26:Category:Silent_short_films')).
+delete('skos:broader'('a26:Category:Defunct_American_football_teams', 'a26:Category:Defunct_sports_teams')).
+delete('skos:broader'('a26:Category:Mythological_sword_fighters', 'a26:Category:Mythological_characters')).
+delete('skos:broader'('a26:Category:Brazilian_films', 'a26:Category:Cinema_of_Brazil')).

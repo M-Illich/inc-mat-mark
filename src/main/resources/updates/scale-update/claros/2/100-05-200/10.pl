@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=941795')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1419609')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=623321&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=448478')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=579711')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=806624&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=623553')).
+delete('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/mavrommation')).
+delete('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/cavdarhisar')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=647804&method=min&width=141&height=111')).

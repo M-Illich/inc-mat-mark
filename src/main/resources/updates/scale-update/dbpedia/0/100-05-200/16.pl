@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Northwest_Territories_territorial_electoral_districts', 'a26:Category:Canadian_provincial_and_territorial_electoral_districts')).
+add('skos:broader'('a26:Category:Parma_FC_players', 'a26:Category:Parma_FC')).
+add('skos:broader'('a26:Category:Peruvian_sport_shooters', 'a26:Category:Sport_shooters_by_nationality')).
+add('skos:broader'('a26:Category:Conspiracy_theories', 'a26:Category:Fringe_theory')).
+add('skos:broader'('a26:Category:Mythological_sword_fighters', 'a26:Category:Mythological_characters')).
+delete('skos:broader'('a26:Category:1977_establishments_in_British_Columbia', 'a26:Category:1977_in_British_Columbia')).
+delete('skos:broader'('a26:Category:Transportation_in_Maine_by_county', 'a26:Category:Maine_counties')).
+delete('skos:broader'('a26:Category:Long-distance_footpaths_in_Wales', 'a26:Category:Footpaths_in_Wales')).
+delete('skos:broader'('a26:Category:Chantilly_Racecourse', 'a26:Category:Wikipedia_categories_named_after_sports_venues')).
+delete('skos:broader'('a26:Category:Visitor_attractions_in_Ulsan', 'a26:Category:Tourism_in_Ulsan')).

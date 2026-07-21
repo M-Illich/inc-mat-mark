@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Professional_Indoor_Football_League_teams', 'a26:Category:Indoor_American_football_teams_in_the_United_States_by_league')).
+add('skos:broader'('a26:Category:Programming_language_topics', 'a26:Category:Software_engineering')).
+add('skos:broader'('a26:Category:Turkish_Football_Federation_presidents', 'a26:Category:Turkish_Football_Federation')).
+add('skos:broader'('a26:Category:Housing_in_Scotland', 'a26:Category:Scottish_architecture')).
+add('skos:broader'('a26:Category:People_from_Madrid', 'a26:Category:Madrilenian_people')).
+delete('skos:broader'('a26:Category:2012_television_films', 'a26:Category:2012_films')).
+delete('skos:broader'('a26:Category:Historic_districts_in_Adams_County_Pennsylvania', 'a26:Category:Buildings_and_structures_in_Adams_County_Pennsylvania')).
+delete('skos:broader'('a26:Category:Philippine_society', 'a26:Category:Philippines')).
+delete('skos:broader'('a26:Category:Rulers_of_Baden', 'a26:Category:German_monarchs')).
+delete('skos:broader'('a26:Category:Treaties_of_the_Grand_Duchy_of_Hesse', 'a26:Category:Treaties_of_Germany')).

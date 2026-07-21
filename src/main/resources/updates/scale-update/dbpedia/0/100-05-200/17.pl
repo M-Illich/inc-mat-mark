@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Conspiracy_theories', 'a26:Category:Conspiracy')).
+add('skos:broader'('a26:Category:Films_shot_in_Hong_Kong', 'a26:Category:Hong_Kong_culture')).
+add('skos:broader'('a26:Category:Albums_by_Ugandan_artists', 'a26:Category:Works_by_Ugandan_people')).
+add('skos:broader'('a26:Category:Carleton_University', 'a26:Category:Universities_and_colleges_in_Ottawa')).
+add('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:18th-century_monarchs_in_Asia')).
+delete('skos:broader'('a26:Category:Northwest_Territories_territorial_electoral_districts', 'a26:Category:Canadian_provincial_and_territorial_electoral_districts')).
+delete('skos:broader'('a26:Category:Dog_breeds', 'a26:Category:Dogs')).
+delete('skos:broader'('a26:Category:Brazilian_films', 'a26:Category:Films_by_country')).
+delete('skos:broader'('a26:Category:Turkish_Football_Federation_presidents', 'a26:Category:Turkish_Football_Federation')).
+delete('skos:broader'('a26:Category:Adaptations_of_works_by_Luigi_Pirandello', 'a26:Category:Adaptations_of_works_by_writer')).

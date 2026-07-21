@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Northwest_Territories_territorial_electoral_districts', 'a26:Category:Canadian_provincial_and_territorial_electoral_districts')).
+add('skos:broader'('a26:Category:Populated_places_in_Los_Angeles_County_California', 'a26:Category:Geography_of_Los_Angeles_County_California')).
+add('skos:broader'('a26:Category:South_Somerset', 'a26:Category:Non-metropolitan_districts_of_Somerset')).
+add('skos:broader'('a26:Category:Populated_places_in_Rio_Grande_do_Sul', 'a26:Category:Populated_places_in_the_South_Region_Brazil')).
+add('skos:broader'('a26:Category:Long-distance_footpaths_in_Wales', 'a26:Category:Footpaths_in_Wales')).
+delete('skos:broader'('a26:Category:2nd_millennium_in_South_Carolina', 'a26:Category:2nd_millennium_in_the_United_States')).
+delete('skos:broader'('a26:Category:Great_Officers_of_State_of_England', 'a26:Category:Great_Officers_of_State')).
+delete('skos:broader'('a26:Category:Random_House_books', 'a26:Category:Books_by_publishing_company_of_the_United_States')).
+delete('skos:broader'('a26:Category:Conglomerate_companies_of_France', 'a26:Category:Companies_of_France')).
+delete('skos:broader'('a26:Category:Płock_County', 'a26:Category:Land_counties_of_Masovian_Voivodeship')).

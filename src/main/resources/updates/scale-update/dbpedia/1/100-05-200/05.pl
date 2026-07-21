@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Compositions_in_E_minor', 'a26:Category:Compositions_by_key')).
+add('skos:broader'('a26:Category:Bielsk_County', 'a26:Category:Land_counties_of_Podlaskie_Voivodeship')).
+add('skos:broader'('a26:Category:Treaties_of_the_Grand_Duchy_of_Hesse', 'a26:Category:Treaties_of_Germany')).
+add('skos:broader'('a26:Category:Castles_in_Midlothian', 'a26:Category:Buildings_and_structures_in_Midlothian')).
+add('skos:broader'('a26:Category:MCG_objects', 'a26:Category:Astronomical_catalogues')).
+delete('skos:broader'('a26:Category:Major_League_Baseball_players_with_retired_numbers', 'a26:Category:Major_League_Baseball_players')).
+delete('skos:broader'('a26:Category:Austrian_Football_Bundesliga_players', 'a26:Category:Austrian_Football_Bundesliga')).
+delete('skos:broader'('a26:Category:Clarinetists', 'a26:Category:Woodwind_musicians')).
+delete('skos:broader'('a26:Category:Transportation_in_Maine_by_county', 'a26:Category:Maine_counties')).
+delete('skos:broader'('a26:Category:Steampunk_films', 'a26:Category:Science_fiction_films_by_genre')).

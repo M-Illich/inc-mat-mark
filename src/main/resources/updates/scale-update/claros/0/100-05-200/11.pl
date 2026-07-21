@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=941796')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=726329&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=2039133')).
+add('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/nea_palatia')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=647481&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=2015514')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=623553')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=448478')).
+delete('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/aquino')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=386313')).

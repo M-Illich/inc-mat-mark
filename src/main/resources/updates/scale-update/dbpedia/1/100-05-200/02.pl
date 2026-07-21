@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Populated_places_in_Los_Angeles_County_California', 'a26:Category:Geography_of_Los_Angeles_County_California')).
+add('skos:broader'('a26:Category:Populated_places_in_Galikash_County', 'a26:Category:Populated_places_in_Golestan_Province')).
+add('skos:broader'('a26:Category:Parishes_of_Valka_District', 'a26:Category:Parishes_of_Latvia')).
+add('skos:broader'('a26:Category:South_Somerset', 'a26:Category:Non-metropolitan_districts_of_Somerset')).
+add('skos:broader'('a26:Category:Transportation_in_Maine_by_county', 'a26:Category:Maine_counties')).
+delete('skos:broader'('a26:Category:Literary_motifs', 'a26:Category:Fiction_by_topic')).
+delete('skos:broader'('a26:Category:People_from_the_Las_Vegas_Valley', 'a26:Category:People_by_populated_place_in_Nevada')).
+delete('skos:broader'('a26:Category:American_racquetball_players', 'a26:Category:Racquetball_players_by_nationality')).
+delete('skos:broader'('a26:Category:American_football_teams_in_Denmark', 'a26:Category:American_football_teams_in_Europe_by_country')).
+delete('skos:broader'('a26:Category:People_from_Madrid', 'a26:Category:Madrilenian_people')).

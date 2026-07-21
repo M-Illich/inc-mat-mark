@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Five-year_plans', 'a26:Category:Economic_planning')).
+add('skos:broader'('a26:Category:Algebraic_topology', 'a26:Category:Abstract_algebra')).
+add('skos:broader'('a26:Category:Parishes_of_Valka_District', 'a26:Category:Parishes_of_Latvia')).
+add('skos:broader'('a26:Category:Bielsk_County', 'a26:Category:Land_counties_of_Podlaskie_Voivodeship')).
+add('skos:broader'('a26:Category:Irish_entertainers', 'a26:Category:Entertainment_in_Ireland')).
+delete('skos:broader'('a26:Category:Iowa_Libertarians', 'a26:Category:Iowa_politicians_by_party')).
+delete('skos:broader'('a26:Category:Populated_places_in_Rio_Grande_do_Sul', 'a26:Category:Populated_places_in_Brazil_by_state')).
+delete('skos:broader'('a26:Category:Blackened_death_metal_musical_groups', 'a26:Category:Blackened_death_metal')).
+delete('skos:broader'('a26:Category:Programming_language_topics', 'a26:Category:Software_engineering')).
+delete('skos:broader'('a26:Category:Brazilian_films', 'a26:Category:Films_by_country')).

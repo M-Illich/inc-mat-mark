@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:People_from_Madrid', 'a26:Category:Madrid')).
+add('skos:broader'('a26:Category:2012_television_films', 'a26:Category:2012_films')).
+add('skos:broader'('a26:Category:Housing_in_Scotland', 'a26:Category:Housing_in_the_United_Kingdom')).
+add('skos:broader'('a26:Category:Trials_in_the_United_States', 'a26:Category:Trials_by_country')).
+add('skos:broader'('a26:Category:Roman_Catholic_Church_in_Slovakia', 'a26:Category:Roman_Catholic_Church_in_Europe')).
+delete('skos:broader'('a26:Category:History_of_ethnic_groups_in_Romania', 'a26:Category:History_by_ethnic_group')).
+delete('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:Heads_of_state_in_the_Middle_East')).
+delete('skos:broader'('a26:Category:20th-century_American_sculptors', 'a26:Category:American_sculptors_by_century')).
+delete('skos:broader'('a26:Category:Chantilly_Racecourse', 'a26:Category:Wikipedia_categories_named_after_sports_venues')).
+delete('skos:broader'('a26:Category:Solar_phenomena', 'a26:Category:Stellar_phenomena')).

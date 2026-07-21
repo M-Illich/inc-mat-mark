@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:African_culture_by_nationality', 'a26:Category:Culture_by_nationality')).
+add('skos:broader'('a26:Category:Austrian_Football_Bundesliga_players', 'a26:Category:Austrian_Football_Bundesliga')).
+add('skos:broader'('a26:Category:Transportation_in_Maine_by_county', 'a26:Category:Maine_counties')).
+add('skos:broader'('a26:Category:19th_century_in_Yorkshire', 'a26:Category:Centuries_in_Yorkshire')).
+add('skos:broader'('a26:Category:Housing_in_Scotland', 'a26:Category:Scottish_architecture')).
+delete('skos:broader'('a26:Category:Visitor_attractions_in_Ulsan', 'a26:Category:Visitor_attractions_in_South_Korea_by_city')).
+delete('skos:broader'('a26:Category:Peers', 'a26:Category:British_people_by_rank')).
+delete('skos:broader'('a26:Category:Albums_by_Ugandan_artists', 'a26:Category:Works_by_Ugandan_people')).
+delete('skos:broader'('a26:Category:Graphical_user_interface_testing', 'a26:Category:Software_testing_tools')).
+delete('skos:broader'('a26:Category:Treaties_of_the_Grand_Duchy_of_Hesse', 'a26:Category:Treaties_of_Germany')).

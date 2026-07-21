@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Hungarian_people_of_Slovenian_descent', 'a26:Category:Hungarian_people_by_ethnic_or_national_origin')).
+add('skos:broader'('a26:Category:Parishes_of_Valka_District', 'a26:Category:Parishes_of_Latvia')).
+add('skos:broader'('a26:Category:Culture_by_language', 'a26:Category:Cultures')).
+add('skos:broader'('a26:Category:Third_Doctor_stories', 'a26:Category:Doctor_Who_stories')).
+add('skos:broader'('a26:Category:Advanced_Micro_Devices', 'a26:Category:Manufacturing_companies_of_the_United_States')).
+delete('skos:broader'('a26:Category:Universities_and_colleges_in_Alameda_County_California', 'a26:Category:Education_in_Alameda_County_California')).
+delete('skos:broader'('a26:Category:Organizations_based_in_the_United_States_by_state', 'a26:Category:Organizations_by_country_subdivision')).
+delete('skos:broader'('a26:Category:Universities_and_colleges_in_Alameda_County_California', 'a26:Category:Universities_and_colleges_in_California_by_county')).
+delete('skos:broader'('a26:Category:Parma_FC_players', 'a26:Category:Footballers_in_Italy_by_club')).
+delete('skos:broader'('a26:Category:Scots_law_formal_titles', 'a26:Category:Scottish_titles')).

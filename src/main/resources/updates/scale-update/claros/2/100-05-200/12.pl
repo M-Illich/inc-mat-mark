@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=3446092')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=1894117')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=781463&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=625312')).
+add('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/bergkamen')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=493936')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=469132&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=456158&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1486660')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=3446091')).

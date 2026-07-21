@@ -44,6 +44,43 @@ public class UpdateStreamRun extends StreamToProlog {
 	public List<Update> updateList;
 
 	/**
+	 * 
+	 * @param algorithmFile {@code String} name of file containing SWI-Prolog code
+	 *                      to be executed
+	 * @param updateFolder  {@code String} name of folder where each stream update
+	 *                      is stored as file
+	 */
+	public UpdateStreamRun(String algorithmFile, String updateFolder) {
+		this.algorithmFile = algorithmFile;
+		this.updateFolder = updateFolder;
+		this.updateList = loadUpdates(updateFolder);
+		this.statistics = new Statistics();
+	}
+
+	/**
+	 * 
+	 * @param algorithmFile {@code String} name of file containing SWI-Prolog code
+	 *                      to be executed
+	 * @param updateList    {@link List} of {@link Update} objects that will be
+	 *                      processed
+	 */
+	public UpdateStreamRun(String file, List<Update> updateList) {
+		this.algorithmFile = file;
+		this.updateList = updateList;
+		this.statistics = new Statistics();
+	}
+	
+	
+	
+	public UpdateStreamRun() {
+		this.algorithmFile = null;
+		this.updateList = null;
+		this.statistics = null;
+
+	}
+	
+
+	/**
 	 * Process a stream of updates that adapt a graph by adding and deleting edges.
 	 * The updates are created randomly based on the caller's attributes. The Prolog
 	 * code in {@code file} incrementally maintains the materialization of the
@@ -102,35 +139,6 @@ public class UpdateStreamRun extends StreamToProlog {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
-	}
-
-	/**
-	 * 
-	 * @param algorithmFile {@code String} name of file containing SWI-Prolog code
-	 *                      to be executed
-	 * @param updateFolder  {@code String} name of folder where each stream update
-	 *                      is stored as file
-	 */
-	public UpdateStreamRun(String algorithmFile, String updateFolder) {
-		this.algorithmFile = algorithmFile;
-		this.updateFolder = updateFolder;
-		this.updateList = loadUpdates(updateFolder);
-		this.statistics = new Statistics();
-
-	}
-
-	/**
-	 * 
-	 * @param algorithmFile {@code String} name of file containing SWI-Prolog code
-	 *                      to be executed
-	 * @param updateList    {@link List} of {@link Update} objects that will be
-	 *                      processed
-	 */
-	public UpdateStreamRun(String file, List<Update> updateList) {
-		this.algorithmFile = file;
-		this.updateList = updateList;
-		this.statistics = new Statistics();
 
 	}
 
@@ -194,6 +202,8 @@ public class UpdateStreamRun extends StreamToProlog {
 				String[] us = u.toString().split("]:");
 				System.out.println(i + ": " + us[0] + "]");
 				System.out.println("    " + us[1]);
+				// print size
+				System.out.println(" add: " + u.added.size() + "  --  del: " + u.deleted.size());
 				// print size of overlap with previous update
 				System.out.println(" Overlap with previous: replaced del = " + replaced_del.size()
 						+ " - replaced add = " + replaced_add.size());
@@ -201,8 +211,9 @@ public class UpdateStreamRun extends StreamToProlog {
 
 			// write update to stream (if not empty)
 			if (!(u.added.isEmpty() && u.deleted.isEmpty())) {
-				out.println(u.added.toString());
-				out.println(u.deleted.toString());
+				// transform facts into bracket format (lists in Prolog/CHR)
+				out.println(createBracketString(u.added));
+				out.println(createBracketString(u.deleted));
 
 				// collect statistics about number of changed facts
 				noNull++;
@@ -217,12 +228,6 @@ public class UpdateStreamRun extends StreamToProlog {
 
 			}
 
-//			System.out.println(i + " add: " + u.added.size() + "  --  del: " + u.deleted.size());
-
-			if (printUpdates) {
-				// there is a query directly after each update (asking for every fact)
-				System.out.println("query " + i);
-			}
 		}
 
 		// indicate end of stream
@@ -245,7 +250,7 @@ public class UpdateStreamRun extends StreamToProlog {
 	 *             Datalog fact {@code p(a2, a2)}
 	 * @return {@link Update} with {@code add} and {@code delete} sets based on file
 	 */
-	Update readUpdate(File file) {
+	public Update readUpdate(File file) {
 
 		Set<Fact> addFacts = new HashSet<>();
 		Set<Fact> deleteFacts = new HashSet<>();
@@ -291,6 +296,26 @@ public class UpdateStreamRun extends StreamToProlog {
 		}
 
 		return updates;
+	}
+
+	/**
+	 * Create a {@code String} representation for a set of facts where each fact
+	 * {@code p(a,b)} is written in the bracket format {@code [p, a, b]}.
+	 * 
+	 * @param facts {@link Set} of {@link Fact}
+	 * @return {@code String} of the form {@code [[p, a, b], [q, a], ...]}
+	 */
+	public String createBracketString(Set<Fact> facts) {
+
+		String string = "";
+		if (!facts.isEmpty()) {
+			for (Fact f : facts) {
+				string += f.toBracketString() + ", ";
+			}
+			string = string.substring(0, string.length() - 2);
+		}
+
+		return "[" + string + "]";
 	}
 
 }

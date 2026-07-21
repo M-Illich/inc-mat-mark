@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1421677')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=941795')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=647365')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=806616')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=641144')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=808002')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=579343')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=647804&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=2015433&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1427285&method=min&width=141&height=111')).

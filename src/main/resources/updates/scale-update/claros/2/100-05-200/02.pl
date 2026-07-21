@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=727373&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=722720&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=456171&method=min&width=141&height=111')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=781558')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=940809')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=579343')).
+delete('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/golhisar')).
+delete('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/kilisik')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=641144')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1125772')).

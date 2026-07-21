@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:2nd_millennium_in_South_Carolina', 'a26:Category:2nd_millennium_in_the_United_States')).
+add('skos:broader'('a26:Category:Populated_places_in_Los_Angeles_County_California', 'a26:Category:Populated_places_in_California_by_county')).
+add('skos:broader'('a26:Category:Universities_and_colleges_in_Alameda_County_California', 'a26:Category:Education_in_Alameda_County_California')).
+add('skos:broader'('a26:Category:Carleton_University', 'a26:Category:Universities_in_Ontario')).
+add('skos:broader'('a26:Category:Geography_of_the_Northern_Territory', 'a26:Category:Geography_of_Australia_by_state_or_territory')).
+delete('skos:broader'('a26:Category:Documentary_films_about_homelessness_in_the_United_States', 'a26:Category:Documentary_films_about_poverty_in_the_United_States')).
+delete('skos:broader'('a26:Category:Privy_councils', 'a26:Category:Oligarchs')).
+delete('skos:broader'('a26:Category:Visitor_attractions_in_Ulsan', 'a26:Category:Visitor_attractions_in_South_Korea_by_city')).
+delete('skos:broader'('a26:Category:Historic_districts_in_Adams_County_Pennsylvania', 'a26:Category:Geography_of_Adams_County_Pennsylvania')).
+delete('skos:broader'('a26:Category:American_football_teams_in_Denmark', 'a26:Category:American_football_teams_in_Europe_by_country')).

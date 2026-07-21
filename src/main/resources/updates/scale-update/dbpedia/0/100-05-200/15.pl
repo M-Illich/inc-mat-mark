@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Theatres_in_New_York_City', 'a26:Category:Theatre_in_New_York_City')).
+add('skos:broader'('a26:Category:Austrian_Football_Bundesliga_players', 'a26:Category:Association_football_players_by_competition')).
+add('skos:broader'('a26:Category:Visitor_attractions_in_Ulsan', 'a26:Category:Tourism_in_Ulsan')).
+add('skos:broader'('a26:Category:19th_century_in_Staffordshire', 'a26:Category:Centuries_in_Staffordshire')).
+add('skos:broader'('a26:Category:Bender_Moldova', 'a26:Category:Districts_of_Moldova')).
+delete('skos:broader'('a26:Category:Indiana_Whigs', 'a26:Category:Whig_Party_United_States_politicians')).
+delete('skos:broader'('a26:Category:1285_in_England', 'a26:Category:1285_in_Europe')).
+delete('skos:broader'('a26:Category:Graphemes', 'a26:Category:Units_of_morphological_analysis')).
+delete('skos:broader'('a26:Category:Historic_districts_in_Adams_County_Pennsylvania', 'a26:Category:History_of_Adams_County_Pennsylvania')).
+delete('skos:broader'('a26:Category:Soap_opera_actors_by_nationality', 'a26:Category:Television_actors_by_nationality')).

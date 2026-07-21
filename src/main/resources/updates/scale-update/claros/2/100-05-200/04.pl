@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=941796')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=941794')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=631657')).
+add('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/shahrestan-e_andimeshk')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=789977&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=803411')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=2088308')).
+delete('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/spoleto')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1653226&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=647481&method=min&width=141&height=111')).

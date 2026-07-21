@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=579713')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=3446093')).
+add('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/aquino')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=3446094')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1343041&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=475040')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=393903')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=807878')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=2088305&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1900374')).

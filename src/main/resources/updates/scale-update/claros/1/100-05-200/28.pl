@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1421677')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=727488')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=2025938')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=633410')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1663316')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=640400&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=726329&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=1486669&method=min&width=141&height=111')).
+delete('a1:E48_Place_Name'('http://arachne.uni-koeln.de/vocabulary/place#ka-r-abu-elal')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=412716&method=min&width=141&height=111')).

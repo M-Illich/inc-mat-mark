@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Peruvian_sport_shooters', 'a26:Category:Sport_shooters_by_nationality')).
+add('skos:broader'('a26:Category:Programming_language_topics', 'a26:Category:Computer_languages')).
+add('skos:broader'('a26:Category:Philippine_society', 'a26:Category:Philippines')).
+add('skos:broader'('a26:Category:Castles_in_Midlothian', 'a26:Category:Buildings_and_structures_in_Midlothian')).
+add('skos:broader'('a26:Category:Housing_in_Scotland', 'a26:Category:Scottish_architecture')).
+delete('skos:broader'('a26:Category:Algebraic_topology', 'a26:Category:Topology')).
+delete('skos:broader'('a26:Category:Member_states_of_the_United_Nations', 'a26:Category:Member_states_by_organization')).
+delete('skos:broader'('a26:Category:Transportation_in_Maine_by_county', 'a26:Category:Maine_counties')).
+delete('skos:broader'('a26:Category:Populated_places_in_Rio_Grande_do_Sul', 'a26:Category:Geography_of_Rio_Grande_do_Sul')).
+delete('skos:broader'('a26:Category:Advanced_Micro_Devices', 'a26:Category:Manufacturing_companies_of_the_United_States')).

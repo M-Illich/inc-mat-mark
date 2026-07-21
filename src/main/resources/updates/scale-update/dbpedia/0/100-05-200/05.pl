@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:2nd_millennium_in_South_Carolina', 'a26:Category:2nd_millennium_in_the_United_States')).
+add('skos:broader'('a26:Category:Exoplanet_catalogues', 'a26:Category:Exoplanetology')).
+add('skos:broader'('a26:Category:Peruvian_sport_shooters', 'a26:Category:Peruvian_sportspeople')).
+add('skos:broader'('a26:Category:Roman_Catholic_Church_in_Slovakia', 'a26:Category:Roman_Catholic_Church_in_Europe')).
+add('skos:broader'('a26:Category:Monument_types', 'a26:Category:Archaeology_of_structures')).
+delete('skos:broader'('a26:Category:Monument_types', 'a26:Category:Monuments_and_memorials')).
+delete('skos:broader'('a26:Category:Privy_councils', 'a26:Category:Oligarchs')).
+delete('skos:broader'('a26:Category:Castles_in_Midlothian', 'a26:Category:Visitor_attractions_in_Midlothian')).
+delete('skos:broader'('a26:Category:Dukes_of_Choiseul', 'a26:Category:Dukes_of_France')).
+delete('skos:broader'('a26:Category:Explosions_in_England', 'a26:Category:Disasters_in_England')).

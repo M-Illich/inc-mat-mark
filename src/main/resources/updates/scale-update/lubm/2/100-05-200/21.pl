@@ -1,0 +1,10 @@
+add('a1:takesCourse'('http://www.Department2.University0.edu/UndergraduateStudent257', 'http://www.Department2.University0.edu/Course18')).
+add('a1:takesCourse'('http://www.Department0.University0.edu/UndergraduateStudent186', 'http://www.Department0.University0.edu/Course45')).
+add('a1:publicationAuthor'('http://www.Department1.University0.edu/AssociateProfessor10/Publication15', 'http://www.Department1.University0.edu/AssociateProfessor10')).
+add('a1:publicationAuthor'('http://www.Department1.University0.edu/AssociateProfessor0/Publication15', 'http://www.Department1.University0.edu/AssociateProfessor0')).
+add('a1:teachingAssistantOf'('http://www.Department0.University0.edu/GraduateStudent44', 'http://www.Department0.University0.edu/Course45')).
+delete('a1:teacherOf'('http://www.Department2.University0.edu/AssociateProfessor8', 'http://www.Department2.University0.edu/GraduateCourse20')).
+delete('a1:takesCourse'('http://www.Department2.University0.edu/UndergraduateStudent118', 'http://www.Department2.University0.edu/Course2')).
+delete('a1:takesCourse'('http://www.Department0.University0.edu/UndergraduateStudent125', 'http://www.Department0.University0.edu/Course34')).
+delete('a1:takesCourse'('http://www.Department1.University0.edu/GraduateStudent25', 'http://www.Department1.University0.edu/GraduateCourse10')).
+delete('a1:takesCourse'('http://www.Department0.University0.edu/UndergraduateStudent147', 'http://www.Department0.University0.edu/Course46')).

@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Iowa_Libertarians', 'a26:Category:Iowa_politicians_by_party')).
+add('skos:broader'('a26:Category:People_from_the_Las_Vegas_Valley', 'a26:Category:People_by_populated_place_in_Nevada')).
+add('skos:broader'('a26:Category:Random_House_books', 'a26:Category:Books_by_publishing_company_of_the_United_States')).
+add('skos:broader'('a26:Category:Irish_entertainers', 'a26:Category:Irish_people_by_occupation')).
+add('skos:broader'('a26:Category:Dog_breeds', 'a26:Category:Dog_breeding')).
+delete('skos:broader'('a26:Category:Five-year_plans', 'a26:Category:Economic_planning')).
+delete('skos:broader'('a26:Category:Exoplanet_catalogues', 'a26:Category:Exoplanetology')).
+delete('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:18th-century_monarchs')).
+delete('skos:broader'('a26:Category:Analytical_chemistry', 'a26:Category:Analysis')).
+delete('skos:broader'('a26:Category:Advanced_Micro_Devices', 'a26:Category:Manufacturing_companies_of_the_United_States')).

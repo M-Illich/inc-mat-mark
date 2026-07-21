@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Altötting_district', 'a26:Category:Upper_Bavaria')).
+add('skos:broader'('a26:Category:People_from_Perth-Andover', 'a26:Category:People_from_Victoria_County_New_Brunswick')).
+add('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:18th-century_monarchs')).
+add('skos:broader'('a26:Category:Turkish_Football_Federation_presidents', 'a26:Category:Turkish_Football_Federation')).
+add('skos:broader'('a26:Category:British_tubists', 'a26:Category:Tubists_by_nationality')).
+delete('skos:broader'('a26:Category:Brazilian_films', 'a26:Category:Works_by_Brazilian_people')).
+delete('skos:broader'('a26:Category:1977_establishments_in_British_Columbia', 'a26:Category:1977_in_British_Columbia')).
+delete('skos:broader'('a26:Category:Fashion_events_in_the_United_Kingdom', 'a26:Category:British_fashion')).
+delete('skos:broader'('a26:Category:Historic_districts_in_Adams_County_Pennsylvania', 'a26:Category:Geography_of_Adams_County_Pennsylvania')).
+delete('skos:broader'('a26:Category:Theatres_in_New_York_City', 'a26:Category:Visitor_attractions_in_New_York_City')).

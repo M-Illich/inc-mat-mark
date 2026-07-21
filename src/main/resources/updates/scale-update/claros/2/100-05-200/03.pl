@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=727488')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=2015517')).
+add('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/kozan')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=633410')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=579711')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=941795')).
+delete('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/metapontum')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=451527&method=min&width=141&height=111')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=386313')).
+delete('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/shahrestan-e_andimeshk')).

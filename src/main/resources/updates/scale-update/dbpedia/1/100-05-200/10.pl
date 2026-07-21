@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Clarinetists', 'a26:Category:Woodwind_musicians')).
+add('skos:broader'('a26:Category:Blackened_death_metal_musical_groups', 'a26:Category:Blackened_death_metal')).
+add('skos:broader'('a26:Category:Historic_districts_in_Adams_County_Pennsylvania', 'a26:Category:Geography_of_Adams_County_Pennsylvania')).
+add('skos:broader'('a26:Category:1977_establishments_in_British_Columbia', 'a26:Category:Establishments_in_British_Columbia_by_year')).
+add('skos:broader'('a26:Category:Soap_opera_actors_by_nationality', 'a26:Category:Television_actors_by_nationality')).
+delete('skos:broader'('a26:Category:KMFDM', 'a26:Category:Wikipedia_categories_named_after_German_musical_groups')).
+delete('skos:broader'('a26:Category:Transportation_in_Maine_by_county', 'a26:Category:Maine_counties')).
+delete('skos:broader'('a26:Category:Graphemes', 'a26:Category:Writing_systems')).
+delete('skos:broader'('a26:Category:The_Football_League_representative_players', 'a26:Category:The_Football_League_players')).
+delete('skos:broader'('a26:Category:Third_Doctor_stories', 'a26:Category:Doctor_Who_stories')).

@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Literary_motifs', 'a26:Category:Fiction_by_topic')).
+add('skos:broader'('a26:Category:Compositions_in_E_minor', 'a26:Category:Compositions_by_key')).
+add('skos:broader'('a26:Category:Member_states_of_the_United_Nations', 'a26:Category:United_Nations')).
+add('skos:broader'('a26:Category:Blackened_death_metal_musical_groups', 'a26:Category:Blackened_death_metal')).
+add('skos:broader'('a26:Category:Graphemes', 'a26:Category:Units_of_morphological_analysis')).
+delete('skos:broader'('a26:Category:Albums_by_Ugandan_artists', 'a26:Category:Works_by_Ugandan_people')).
+delete('skos:broader'('a26:Category:Former_country_articles_requiring_restructuring', 'a26:Category:WikiProject_Former_countries')).
+delete('skos:broader'('a26:Category:Explosions_in_England', 'a26:Category:Disasters_in_England')).
+delete('skos:broader'('a26:Category:Professional_Indoor_Football_League_teams', 'a26:Category:Indoor_American_football_teams_in_the_United_States_by_league')).
+delete('skos:broader'('a26:Category:Roman_Catholic_Church_in_Slovakia', 'a26:Category:Roman_Catholic_Church_in_Europe')).

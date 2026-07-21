@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Populated_places_in_Galikash_County', 'a26:Category:Populated_places_in_Golestan_Province')).
+add('skos:broader'('a26:Category:Castles_in_Midlothian', 'a26:Category:Visitor_attractions_in_Midlothian')).
+add('skos:broader'('a26:Category:2012_television_films', 'a26:Category:2012_films')).
+add('skos:broader'('a26:Category:Analytical_chemistry', 'a26:Category:Analysis')).
+add('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:18th-century_monarchs_in_Asia')).
+delete('skos:broader'('a26:Category:American_Airlines_people', 'a26:Category:American_Airlines')).
+delete('skos:broader'('a26:Category:Graphical_user_interface_testing', 'a26:Category:Software_testing_tools')).
+delete('skos:broader'('a26:Category:Businesspeople_from_London', 'a26:Category:English_businesspeople_by_city')).
+delete('skos:broader'('a26:Category:DC_Comics-related_lists', 'a26:Category:Comic_lists_by_franchise')).
+delete('skos:broader'('a26:Category:Bender_Moldova', 'a26:Category:Districts_of_Moldova')).

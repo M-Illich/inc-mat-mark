@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Populated_places_in_Los_Angeles_County_California', 'a26:Category:Geography_of_Los_Angeles_County_California')).
+add('skos:broader'('a26:Category:Algebraic_topology', 'a26:Category:Topology')).
+add('skos:broader'('a26:Category:Austrian_Football_Bundesliga_players', 'a26:Category:Association_football_players_by_competition')).
+add('skos:broader'('a26:Category:DC_Comics-related_lists', 'a26:Category:Comic_lists_by_franchise')).
+add('skos:broader'('a26:Category:British_tubists', 'a26:Category:Tubists_by_nationality')).
+delete('skos:broader'('a26:Category:Clarinetists', 'a26:Category:Musicians_by_instrument')).
+delete('skos:broader'('a26:Category:Neighbourhoods_of_Helsinki', 'a26:Category:Geography_of_Helsinki')).
+delete('skos:broader'('a26:Category:Explosions_in_England', 'a26:Category:Disasters_in_England')).
+delete('skos:broader'('a26:Category:Organizations_based_in_the_United_States_by_state', 'a26:Category:Society_of_the_United_States_by_state')).
+delete('skos:broader'('a26:Category:Association_football_international_competitions_squad_navigational_boxes', 'a26:Category:Association_football_international_competitions_navigational_boxes')).

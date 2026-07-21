@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Brazilian_films', 'a26:Category:Works_by_Brazilian_people')).
+add('skos:broader'('a26:Category:Explosions_in_England', 'a26:Category:Disasters_in_England')).
+add('skos:broader'('a26:Category:Historic_districts_in_Adams_County_Pennsylvania', 'a26:Category:Buildings_and_structures_in_Adams_County_Pennsylvania')).
+add('skos:broader'('a26:Category:Brazilian_films', 'a26:Category:Films_by_country')).
+add('skos:broader'('a26:Category:Third_Doctor_stories', 'a26:Category:Doctor_Who_stories')).
+delete('skos:broader'('a26:Category:Literary_motifs', 'a26:Category:Fiction_by_topic')).
+delete('skos:broader'('a26:Category:Islands_of_the_Irish_Sea', 'a26:Category:Islands_of_the_North_Atlantic_Ocean')).
+delete('skos:broader'('a26:Category:History_of_ethnic_groups_in_Romania', 'a26:Category:History_by_ethnic_group')).
+delete('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:18th-century_monarchs_in_Asia')).
+delete('skos:broader'('a26:Category:Housing_in_Scotland', 'a26:Category:Scottish_architecture')).

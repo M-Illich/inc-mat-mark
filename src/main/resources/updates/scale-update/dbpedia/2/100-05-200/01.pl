@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Literary_motifs', 'a26:Category:Fiction_by_topic')).
+add('skos:broader'('a26:Category:Populated_places_in_Los_Angeles_County_California', 'a26:Category:Populated_places_in_California_by_county')).
+add('skos:broader'('a26:Category:People_from_Perth-Andover', 'a26:Category:People_from_Victoria_County_New_Brunswick')).
+add('skos:broader'('a26:Category:Major_League_Baseball_players_with_retired_numbers', 'a26:Category:Major_League_Baseball_players')).
+add('skos:broader'('a26:Category:Visitor_attractions_in_Ulsan', 'a26:Category:Tourism_in_Ulsan')).
+delete('skos:broader'('a26:Category:Populated_places_in_Galikash_County', 'a26:Category:Populated_places_in_Golestan_Province')).
+delete('skos:broader'('a26:Category:French_silent_short_films', 'a26:Category:Silent_short_films')).
+delete('skos:broader'('a26:Category:People_from_the_Las_Vegas_Valley', 'a26:Category:People_by_populated_place_in_Nevada')).
+delete('skos:broader'('a26:Category:American_racquetball_players', 'a26:Category:American_sportspeople')).
+delete('skos:broader'('a26:Category:Populated_places_in_Rio_Grande_do_Sul', 'a26:Category:Populated_places_in_the_South_Region_Brazil')).

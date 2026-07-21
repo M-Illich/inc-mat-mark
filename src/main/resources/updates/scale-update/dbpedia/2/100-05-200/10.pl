@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Five-year_plans', 'a26:Category:Economic_planning')).
+add('skos:broader'('a26:Category:Islands_of_the_Irish_Sea', 'a26:Category:Islands_by_ocean_or_sea')).
+add('skos:broader'('a26:Category:Landforms_of_Petersburg_Borough_Alaska', 'a26:Category:Geography_of_Petersburg_Borough_Alaska')).
+add('skos:broader'('a26:Category:Populated_places_in_Rio_Grande_do_Sul', 'a26:Category:Populated_places_in_the_South_Region_Brazil')).
+add('skos:broader'('a26:Category:Italian_Romani_people', 'a26:Category:Romani_in_Italy')).
+delete('skos:broader'('a26:Category:Member_states_of_the_United_Nations', 'a26:Category:United_Nations')).
+delete('skos:broader'('a26:Category:Universities_and_colleges_in_Alameda_County_California', 'a26:Category:Universities_and_colleges_in_California_by_county')).
+delete('skos:broader'('a26:Category:Brazilian_films', 'a26:Category:Films_by_country')).
+delete('skos:broader'('a26:Category:Songwriters_from_Texas', 'a26:Category:Musicians_from_Texas')).
+delete('skos:broader'('a26:Category:Roman_Catholic_Church_in_Slovakia', 'a26:Category:Roman_Catholic_Church_in_Europe')).

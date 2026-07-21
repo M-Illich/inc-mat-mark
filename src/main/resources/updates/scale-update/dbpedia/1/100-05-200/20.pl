@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Works_set_on_the_London_Underground', 'a26:Category:London_Underground')).
+add('skos:broader'('a26:Category:Albums_by_Ugandan_artists', 'a26:Category:Works_by_Ugandan_people')).
+add('skos:broader'('a26:Category:Member_states_of_the_United_Nations', 'a26:Category:Member_states_by_organization')).
+add('skos:broader'('a26:Category:Populated_places_in_Rio_Grande_do_Sul', 'a26:Category:Populated_places_in_Brazil_by_state')).
+add('skos:broader'('a26:Category:American_racquetball_players', 'a26:Category:American_sportspeople')).
+delete('skos:broader'('a26:Category:Islands_of_the_Irish_Sea', 'a26:Category:Islands_by_ocean_or_sea')).
+delete('skos:broader'('a26:Category:South_African_people_of_Zimbabwean_descent', 'a26:Category:South_Africa_Zimbabwe_relations')).
+delete('skos:broader'('a26:Category:Member_states_of_the_United_Nations', 'a26:Category:History_of_the_United_Nations')).
+delete('skos:broader'('a26:Category:Turkish_Football_Federation_presidents', 'a26:Category:Turkish_Football_Federation')).
+delete('skos:broader'('a26:Category:Advanced_Micro_Devices', 'a26:Category:Manufacturing_companies_of_the_United_States')).

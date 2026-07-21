@@ -10,6 +10,7 @@ import java.util.Set;
 
 import data.Fact;
 import eval.StreamToProlog;
+import eval.UpdateStreamRun;
 
 public class SimpleMaterialization extends StreamToProlog {
 
@@ -17,7 +18,7 @@ public class SimpleMaterialization extends StreamToProlog {
 	 * name of Prolog file where materialization approach is saved
 	 */
 	public String file;
-	
+
 	/**
 	 * dataset for which the materialization has to be created
 	 */
@@ -53,7 +54,7 @@ public class SimpleMaterialization extends StreamToProlog {
 			BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
 			// provide dataset over stream
-			out.println(dataset.toString());
+			out.println(new UpdateStreamRun().createBracketString(dataset));
 
 			// read materialization
 			materialization = readAnswers(in, false, false).getFirst();

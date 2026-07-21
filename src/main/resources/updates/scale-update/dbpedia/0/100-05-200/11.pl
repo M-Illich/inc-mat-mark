@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Buildings_and_structures_in_Dickinson_County_Iowa', 'a26:Category:Buildings_and_structures_in_Iowa_by_county')).
+add('skos:broader'('a26:Category:History_of_ethnic_groups_in_Romania', 'a26:Category:History_by_ethnic_group')).
+add('skos:broader'('a26:Category:Islands_of_the_Irish_Sea', 'a26:Category:Irish_Sea')).
+add('skos:broader'('a26:Category:Populated_places_in_Rio_Grande_do_Sul', 'a26:Category:Populated_places_in_Brazil_by_state')).
+add('skos:broader'('a26:Category:Businesspeople_from_London', 'a26:Category:English_businesspeople_by_city')).
+delete('skos:broader'('a26:Category:Scots_law_formal_titles', 'a26:Category:Scots_law')).
+delete('skos:broader'('a26:Category:Random_House_books', 'a26:Category:Books_by_publisher')).
+delete('skos:broader'('a26:Category:Member_states_of_the_United_Nations', 'a26:Category:History_of_the_United_Nations')).
+delete('skos:broader'('a26:Category:20th-century_American_sculptors', 'a26:Category:American_sculptors_by_century')).
+delete('skos:broader'('a26:Category:Irish_entertainers', 'a26:Category:Entertainment_in_Ireland')).

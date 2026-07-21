@@ -1,0 +1,10 @@
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=643839')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=633410')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=359374')).
+add('a1:E48_Place_Name'('http://id.clarosnet.org/places/metamorphoses/placename/andravida')).
+add('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=579711')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=386310')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=397542&method=min&width=141&height=111')).
+delete('a1:E48_Place_Name'('http://arachne.uni-koeln.de/vocabulary/place#ka-r-abu-elal')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.phpKey=2039133')).
+delete('a1:E38_Image'('http://arachne.uni-koeln.de/arachne/images/image.php/key=2015433&method=min&width=141&height=111')).

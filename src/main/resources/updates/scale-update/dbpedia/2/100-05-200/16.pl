@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Populated_places_in_Los_Angeles_County_California', 'a26:Category:Geography_of_Los_Angeles_County_California')).
+add('skos:broader'('a26:Category:Parma_FC_players', 'a26:Category:Parma_FC')).
+add('skos:broader'('a26:Category:South_African_people_of_Zimbabwean_descent', 'a26:Category:South_Africa_Zimbabwe_relations')).
+add('skos:broader'('a26:Category:Pirate_Party_Germany', 'a26:Category:Liberal_parties_in_Germany')).
+add('skos:broader'('a26:Category:Graphemes', 'a26:Category:Units_of_morphological_analysis')).
+delete('skos:broader'('a26:Category:Literary_motifs', 'a26:Category:Fiction_by_topic')).
+delete('skos:broader'('a26:Category:Populated_places_in_Rio_Grande_do_Sul', 'a26:Category:Populated_places_in_Brazil_by_state')).
+delete('skos:broader'('a26:Category:Irish_entertainers', 'a26:Category:Irish_people_by_occupation')).
+delete('skos:broader'('a26:Category:American_racquetball_players', 'a26:Category:Racquetball_players_by_nationality')).
+delete('skos:broader'('a26:Category:Graphemes', 'a26:Category:Writing_systems')).

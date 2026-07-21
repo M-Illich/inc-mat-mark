@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Italian_Romani_people', 'a26:Category:Italian_people_by_ethnic_or_national_origin')).
+add('skos:broader'('a26:Category:Monument_types', 'a26:Category:Monuments_and_memorials')).
+add('skos:broader'('a26:Category:Algebraic_topology', 'a26:Category:Abstract_algebra')).
+add('skos:broader'('a26:Category:Pirate_Party_Germany', 'a26:Category:Liberal_parties_in_Germany')).
+add('skos:broader'('a26:Category:Historic_districts_in_Adams_County_Pennsylvania', 'a26:Category:Geography_of_Adams_County_Pennsylvania')).
+delete('skos:broader'('a26:Category:Transport_in_Greater_Moncton', 'a26:Category:Transport_in_New_Brunswick_by_city')).
+delete('skos:broader'('a26:Category:Programming_language_topics', 'a26:Category:Software_engineering')).
+delete('skos:broader'('a26:Category:Irish_entertainers', 'a26:Category:Entertainment_in_Ireland')).
+delete('skos:broader'('a26:Category:Dog_breeds', 'a26:Category:Dog_breeding')).
+delete('skos:broader'('a26:Category:Dog_breeds', 'a26:Category:Mammal_breeds')).

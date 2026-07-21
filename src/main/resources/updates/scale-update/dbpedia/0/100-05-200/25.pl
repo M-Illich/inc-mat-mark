@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:Monument_types', 'a26:Category:Monuments_and_memorials')).
+add('skos:broader'('a26:Category:Conglomerate_companies_of_France', 'a26:Category:Conglomerate_companies_by_country')).
+add('skos:broader'('a26:Category:Arab_people_of_the_Arab_Byzantine_wars', 'a26:Category:People_of_the_Arab_Byzantine_wars')).
+add('skos:broader'('a26:Category:Turkish_Football_Federation_presidents', 'a26:Category:Turkish_Football_Federation')).
+add('skos:broader'('a26:Category:Adaptations_of_works_by_Luigi_Pirandello', 'a26:Category:Adaptations_of_works_by_writer')).
+delete('skos:broader'('a26:Category:Analytical_chemistry', 'a26:Category:Chemistry')).
+delete('skos:broader'('a26:Category:Algebraic_topology', 'a26:Category:Abstract_algebra')).
+delete('skos:broader'('a26:Category:Roman_Catholic_Church_in_Slovakia', 'a26:Category:Roman_Catholic_Church_in_Europe')).
+delete('skos:broader'('a26:Category:Businesspeople_from_London', 'a26:Category:British_businesspeople')).
+delete('skos:broader'('a26:Category:Iowa_Libertarians', 'a26:Category:Libertarian_Party_United_States_politicians')).

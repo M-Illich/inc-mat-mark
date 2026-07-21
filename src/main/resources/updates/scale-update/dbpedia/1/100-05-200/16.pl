@@ -1,0 +1,10 @@
+add('skos:broader'('a26:Category:18th-century_monarchs_in_the_Middle_East', 'a26:Category:Heads_of_state_in_the_Middle_East')).
+add('skos:broader'('a26:Category:MCG_objects', 'a26:Category:MCG_objects')).
+add('skos:broader'('a26:Category:Treaties_of_the_Grand_Duchy_of_Hesse', 'a26:Category:Treaties_of_Germany')).
+add('skos:broader'('a26:Category:Clarinetists', 'a26:Category:Clarinets')).
+add('skos:broader'('a26:Category:MCG_objects', 'a26:Category:Astronomical_catalogues')).
+delete('skos:broader'('a26:Category:Injuries_of_ankle_and_foot', 'a26:Category:Injuries_by_region_of_body')).
+delete('skos:broader'('a26:Category:Algebraic_topology', 'a26:Category:Topology')).
+delete('skos:broader'('a26:Category:19th_century_in_Yorkshire', 'a26:Category:Centuries_in_Yorkshire')).
+delete('skos:broader'('a26:Category:Trials_in_the_United_States', 'a26:Category:Trials_by_country')).
+delete('skos:broader'('a26:Category:Literary_motifs', 'a26:Category:Elements_of_fiction')).
