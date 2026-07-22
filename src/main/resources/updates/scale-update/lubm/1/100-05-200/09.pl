@@ -1,10 +1,10 @@
-add('a1:UndergraduateStudent'('http://www.Department0.University0.edu/UndergraduateStudent155')).
-add('a1:GraduateStudent'('http://www.Department1.University0.edu/GraduateStudent24')).
-add('a1:UndergraduateStudent'('http://www.Department2.University0.edu/UndergraduateStudent379')).
-add('a1:ResearchAssistant'('http://www.Department0.University0.edu/GraduateStudent93')).
-add('a1:GraduateStudent'('http://www.Department2.University0.edu/GraduateStudent104')).
-delete('a1:ResearchAssistant'('http://www.Department2.University0.edu/GraduateStudent90')).
-delete('a1:UndergraduateStudent'('http://www.Department2.University0.edu/UndergraduateStudent203')).
-delete('a1:GraduateCourse'('http://www.Department0.University0.edu/GraduateCourse46')).
-delete('a1:FullProfessor'('http://www.Department0.University0.edu/FullProfessor6')).
-delete('a1:ResearchAssistant'('http://www.Department1.University0.edu/GraduateStudent50')).
+add('a1:emailAddress'('http://www.Department0.University0.edu/GraduateStudent15', '"GraduateStudent15@Department0.University0.edu"^^xsd:string')).
+add('a1:takesCourse'('http://www.Department2.University0.edu/GraduateStudent84', 'http://www.Department2.University0.edu/GraduateCourse46')).
+add('a1:takesCourse'('http://www.Department2.University0.edu/UndergraduateStudent10', 'http://www.Department2.University0.edu/Course36')).
+add('a1:publicationAuthor'('http://www.Department2.University0.edu/AssociateProfessor10/Publication11', 'http://www.Department2.University0.edu/AssociateProfessor10')).
+add('a1:mastersDegreeFrom'('http://www.Department2.University0.edu/FullProfessor5', 'http://www.University300.edu')).
+delete('a1:emailAddress'('http://www.Department2.University0.edu/UndergraduateStudent75', '"UndergraduateStudent75@Department2.University0.edu"^^xsd:string')).
+delete('a1:undergraduateDegreeFrom'('http://www.Department1.University0.edu/GraduateStudent13', 'http://www.University721.edu')).
+delete('a1:telephone'('http://www.Department2.University0.edu/UndergraduateStudent81', '"xxx-xxx-xxxx"^^xsd:string')).
+delete('a1:telephone'('http://www.Department0.University0.edu/UndergraduateStudent290', '"xxx-xxx-xxxx"^^xsd:string')).
+delete('a1:telephone'('http://www.Department1.University0.edu/UndergraduateStudent429', '"xxx-xxx-xxxx"^^xsd:string')).

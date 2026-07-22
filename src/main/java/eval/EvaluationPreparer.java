@@ -150,15 +150,15 @@ public class EvaluationPreparer {
 			break;
 		case "scale-update":
 			updateNumber = 30;
-			initialUpdateSizes = new LinkedList<>(List.of(100, 100, 100, 100, 100, 100, 100, 100, 100, 100));
-			updateSizes = new LinkedList<>(List.of(5, 10, 15, 20, 25, 30, 35, 40, 45, 50));
+			initialUpdateSizes = new LinkedList<>(List.of(100, 100, 100, 100, 100, 100, 100, 100));
+			updateSizes = new LinkedList<>(List.of(5, 10, 15, 20, 25, 30, 35, 40));
 			testRunOffset = 12;
 			break;
 		case "scale-data":
-			dataPoolSize = 2000;
+			dataPoolSize = 1000;
 			updateNumber = 10;
-			initialUpdateSizes = new LinkedList<>(List.of(100, 200, 300, 400, 500));
-			updateSizes = new LinkedList<>(List.of(10, 20, 30, 40, 50));
+			initialUpdateSizes = new LinkedList<>(List.of(200, 300, 400));
+			updateSizes = new LinkedList<>(List.of(20, 30, 40));
 			testRunOffset = 15;
 		}
 

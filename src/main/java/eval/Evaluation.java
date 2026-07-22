@@ -11,7 +11,7 @@ import java.util.Set;
 
 public class Evaluation {
 
-	final static int REPETITIONS = 5;
+	static int REPETITIONS = 5;
 	final static Set<String> ALGORITHMS = Set.of("dred", "bf");
 	final static Set<String> TEST_CASES = Set.of("random", "random-large", "batch", "overlap", "scale-update",
 			"scale-data", "real");
@@ -58,6 +58,11 @@ public class Evaluation {
 
 		System.out.println("Algorithm: " + algorithm + "  --  Test case: " + testCase + "  --  Knowledge base: "
 				+ knowledgeBase + "  --  Test run: " + testRun);
+
+		// less repetitions for scale-data case due to very long processing times
+		if (testCase == "scale-data") {
+			REPETITIONS = 3;
+		}
 
 		// load predefined update streams from files
 		String streamFoldersFile = "src/main/resources/updates/" + testCase + "/" + knowledgeBase + "/" + testRun + "/";
