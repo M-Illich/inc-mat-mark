@@ -63,7 +63,11 @@ public class Evaluation {
 		String streamFoldersFile = "src/main/resources/updates/" + testCase + "/" + knowledgeBase + "/" + testRun + "/";
 		String[] streamFolders = new File(streamFoldersFile).list();
 		for (String streamFolder : streamFolders) {
-			System.out.println("Initial dataset size - update size - data pool size: " + streamFolder);
+			if (testCase == "real") {
+				System.out.println(streamFolder);
+			} else {
+				System.out.println("Initial dataset size - update size - data pool size: " + streamFolder);
+			}
 
 			// prepare directories to store statistics
 			String statsDirectory = "results/" + algorithm + "/" + testCase + "/" + knowledgeBase + "/" + testRun;
