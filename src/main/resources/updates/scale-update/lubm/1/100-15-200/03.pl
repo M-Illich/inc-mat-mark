@@ -1,30 +1,30 @@
-add('a1:emailAddress'('http://www.Department0.University0.edu/UndergraduateStudent185', '"UndergraduateStudent185@Department0.University0.edu"^^xsd:string')).
-add('a1:takesCourse'('http://www.Department1.University0.edu/UndergraduateStudent337', 'http://www.Department1.University0.edu/Course17')).
-add('a1:takesCourse'('http://www.Department0.University0.edu/GraduateStudent16', 'http://www.Department0.University0.edu/GraduateCourse2')).
-add('a1:telephone'('http://www.Department1.University0.edu/GraduateStudent29', '"xxx-xxx-xxxx"^^xsd:string')).
-add('a1:emailAddress'('http://www.Department1.University0.edu/UndergraduateStudent70', '"UndergraduateStudent70@Department1.University0.edu"^^xsd:string')).
-add('a1:telephone'('http://www.Department1.University0.edu/UndergraduateStudent281', '"xxx-xxx-xxxx"^^xsd:string')).
-add('a1:undergraduateDegreeFrom'('http://www.Department1.University0.edu/GraduateStudent27', 'http://www.University398.edu')).
-add('a1:teacherOf'('http://www.Department0.University0.edu/AssociateProfessor2', 'http://www.Department0.University0.edu/Course13')).
-add('a1:doctoralDegreeFrom'('http://www.Department0.University0.edu/AssociateProfessor10', 'http://www.University2.edu')).
-add('a1:takesCourse'('http://www.Department0.University0.edu/UndergraduateStudent3', 'http://www.Department0.University0.edu/Course18')).
-add('a1:publicationAuthor'('http://www.Department2.University0.edu/FullProfessor0/Publication4', 'http://www.Department2.University0.edu/FullProfessor0')).
-add('a1:publicationAuthor'('http://www.Department2.University0.edu/AssistantProfessor5/Publication4', 'http://www.Department2.University0.edu/GraduateStudent44')).
-add('a1:telephone'('http://www.Department1.University0.edu/UndergraduateStudent402', '"xxx-xxx-xxxx"^^xsd:string')).
-add('a1:telephone'('http://www.Department1.University0.edu/GraduateStudent72', '"xxx-xxx-xxxx"^^xsd:string')).
-add('a1:takesCourse'('http://www.Department1.University0.edu/UndergraduateStudent94', 'http://www.Department1.University0.edu/Course35')).
-delete('a1:telephone'('http://www.Department0.University0.edu/UndergraduateStudent254', '"xxx-xxx-xxxx"^^xsd:string')).
-delete('a1:takesCourse'('http://www.Department0.University0.edu/UndergraduateStudent222', 'http://www.Department0.University0.edu/Course48')).
-delete('a1:publicationAuthor'('http://www.Department2.University0.edu/FullProfessor5/Publication5', 'http://www.Department2.University0.edu/GraduateStudent111')).
-delete('a1:publicationAuthor'('http://www.Department1.University0.edu/AssociateProfessor3/Publication4', 'http://www.Department1.University0.edu/AssociateProfessor3')).
-delete('a1:publicationAuthor'('http://www.Department2.University0.edu/AssociateProfessor6/Publication3', 'http://www.Department2.University0.edu/GraduateStudent109')).
-delete('a1:emailAddress'('http://www.Department2.University0.edu/Lecturer4', '"Lecturer4@Department2.University0.edu"^^xsd:string')).
-delete('a1:telephone'('http://www.Department2.University0.edu/UndergraduateStudent310', '"xxx-xxx-xxxx"^^xsd:string')).
-delete('a1:publicationAuthor'('http://www.Department2.University0.edu/FullProfessor3/Publication3', 'http://www.Department2.University0.edu/GraduateStudent51')).
-delete('a1:takesCourse'('http://www.Department1.University0.edu/UndergraduateStudent104', 'http://www.Department1.University0.edu/Course22')).
-delete('a1:emailAddress'('http://www.Department0.University0.edu/UndergraduateStudent199', '"UndergraduateStudent199@Department0.University0.edu"^^xsd:string')).
-delete('a1:takesCourse'('http://www.Department1.University0.edu/UndergraduateStudent172', 'http://www.Department1.University0.edu/Course21')).
-delete('a1:takesCourse'('http://www.Department1.University0.edu/UndergraduateStudent17', 'http://www.Department1.University0.edu/Course13')).
-delete('a1:publicationAuthor'('http://www.Department1.University0.edu/AssociateProfessor4/Publication14', 'http://www.Department1.University0.edu/GraduateStudent113')).
-delete('a1:publicationAuthor'('http://www.Department0.University0.edu/FullProfessor5/Publication1', 'http://www.Department0.University0.edu/GraduateStudent63')).
-delete('a1:emailAddress'('http://www.Department1.University0.edu/GraduateStudent125', '"GraduateStudent125@Department1.University0.edu"^^xsd:string')).
+add('a1:UndergraduateStudent'('http://www.Department2.University0.edu/UndergraduateStudent48')).
+add('a1:UndergraduateStudent'('http://www.Department1.University0.edu/UndergraduateStudent376')).
+add('a1:UndergraduateStudent'('http://www.Department1.University0.edu/UndergraduateStudent32')).
+add('a1:GraduateStudent'('http://www.Department2.University0.edu/GraduateStudent77')).
+add('a1:UndergraduateStudent'('http://www.Department1.University0.edu/UndergraduateStudent165')).
+add('a1:UndergraduateStudent'('http://www.Department2.University0.edu/UndergraduateStudent334')).
+add('a1:UndergraduateStudent'('http://www.Department1.University0.edu/UndergraduateStudent172')).
+add('a1:UndergraduateStudent'('http://www.Department0.University0.edu/UndergraduateStudent31')).
+add('a1:AssociateProfessor'('http://www.Department2.University0.edu/AssociateProfessor12')).
+add('a1:GraduateCourse'('http://www.Department1.University0.edu/GraduateCourse4')).
+add('a1:UndergraduateStudent'('http://www.Department2.University0.edu/UndergraduateStudent263')).
+add('a1:AssistantProfessor'('http://www.Department2.University0.edu/AssistantProfessor0')).
+add('a1:GraduateStudent'('http://www.Department1.University0.edu/GraduateStudent59')).
+add('a1:GraduateStudent'('http://www.Department1.University0.edu/GraduateStudent18')).
+add('a1:UndergraduateStudent'('http://www.Department2.University0.edu/UndergraduateStudent38')).
+delete('a1:UndergraduateStudent'('http://www.Department0.University0.edu/UndergraduateStudent169')).
+delete('a1:UndergraduateStudent'('http://www.Department0.University0.edu/UndergraduateStudent147')).
+delete('a1:GraduateCourse'('http://www.Department0.University0.edu/GraduateCourse0')).
+delete('a1:UndergraduateStudent'('http://www.Department2.University0.edu/UndergraduateStudent416')).
+delete('a1:UndergraduateStudent'('http://www.Department2.University0.edu/UndergraduateStudent378')).
+delete('a1:UndergraduateStudent'('http://www.Department0.University0.edu/UndergraduateStudent315')).
+delete('a1:ResearchAssistant'('http://www.Department2.University0.edu/GraduateStudent47')).
+delete('a1:UndergraduateStudent'('http://www.Department2.University0.edu/UndergraduateStudent264')).
+delete('a1:UndergraduateStudent'('http://www.Department2.University0.edu/UndergraduateStudent288')).
+delete('a1:UndergraduateStudent'('http://www.Department0.University0.edu/UndergraduateStudent319')).
+delete('a1:UndergraduateStudent'('http://www.Department1.University0.edu/UndergraduateStudent59')).
+delete('a1:UndergraduateStudent'('http://www.Department0.University0.edu/UndergraduateStudent271')).
+delete('a1:GraduateStudent'('http://www.Department2.University0.edu/GraduateStudent24')).
+delete('a1:UndergraduateStudent'('http://www.Department0.University0.edu/UndergraduateStudent281')).
+delete('a1:UndergraduateStudent'('http://www.Department0.University0.edu/UndergraduateStudent201')).

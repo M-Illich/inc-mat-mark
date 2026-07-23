@@ -11,7 +11,6 @@ import java.util.Set;
 
 public class Evaluation {
 
-	static int REPETITIONS = 5;
 	final static Set<String> ALGORITHMS = Set.of("dred", "bf");
 	final static Set<String> TEST_CASES = Set.of("random", "random-large", "batch", "overlap", "scale-update",
 			"scale-data", "real");
@@ -59,9 +58,10 @@ public class Evaluation {
 		System.out.println("Algorithm: " + algorithm + "  --  Test case: " + testCase + "  --  Knowledge base: "
 				+ knowledgeBase + "  --  Test run: " + testRun);
 
-		// less repetitions for scale-data case due to very long processing times
-		if (testCase == "scale-data") {
-			REPETITIONS = 3;
+		int repetitions = 5;
+		// less repetitions for "scale" cases due to longer processing times
+		if (testCase.startsWith("scale")) {
+			repetitions = 3;
 		}
 
 		// load predefined update streams from files
@@ -78,14 +78,14 @@ public class Evaluation {
 			String statsDirectory = "results/" + algorithm + "/" + testCase + "/" + knowledgeBase + "/" + testRun;
 
 			// perform evaluation
-			processAlgorithms(algorithm, knowledgeBase, statsDirectory, streamFoldersFile + streamFolder);
+			processAlgorithms(algorithm, knowledgeBase, statsDirectory, streamFoldersFile + streamFolder, repetitions);
 
 		}
 
 	}
 
 	private static void processAlgorithms(String algorithm, String knowledgeBase, String statisticsDirectory,
-			String updateFolder) {
+			String updateFolder, int repetitions) {
 		for (String approach : List.of("no_mark", "mark")) {
 			// get CHR code with algorithm
 			String chrFile = "src/main/prolog/" + algorithm + "/" + algorithm + "_" + knowledgeBase + "_" + approach
@@ -97,7 +97,7 @@ public class Evaluation {
 			System.out.println();
 			System.out.println("Approach: " + approach);
 			List<Statistics> stats = new LinkedList<>();
-			for (int round = 1; round <= REPETITIONS; round++) {
+			for (int round = 1; round <= repetitions; round++) {
 				System.out.println("Round: " + round);
 				UpdateStreamRun usr = new UpdateStreamRun(chrFile, updateFolder);
 				usr.execute(false, false, false);

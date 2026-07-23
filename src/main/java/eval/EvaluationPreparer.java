@@ -149,7 +149,7 @@ public class EvaluationPreparer {
 			testRunOffset = 9;
 			break;
 		case "scale-update":
-			updateNumber = 30;
+			updateNumber = 20;
 			initialUpdateSizes = new LinkedList<>(List.of(100, 100, 100, 100, 100, 100, 100, 100));
 			updateSizes = new LinkedList<>(List.of(5, 10, 15, 20, 25, 30, 35, 40));
 			testRunOffset = 12;
@@ -194,8 +194,8 @@ public class EvaluationPreparer {
 					String num = StringUtils.leftPad("" + j, (updates.size() + "").length(), "0");
 					writeUpdateToFile(updates.get(j), directory + testRunName + "/" + num);
 				}
-
 			}
+			System.out.println();
 
 		} catch (Exception e) {
 			e.printStackTrace();
